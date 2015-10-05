@@ -1,0 +1,15 @@
+
+{%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+<div class="container">
+{%- block title %}
+  {%- if title %}
+  <div class="page-header">
+    <h1>{{ title }}</h1>
+  </div>
+  {%- endif %}
+{%- endblock title %}
+{{ flashed_messages() }}
+{%- block body %}
+  {{ body }}
+{%- endblock body %}
+</div>
