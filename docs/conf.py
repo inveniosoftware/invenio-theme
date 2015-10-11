@@ -24,9 +24,7 @@
 
 from __future__ import print_function
 
-import sys
 import os
-import shlex
 
 import sphinx.environment
 from docutils.utils import get_source_line

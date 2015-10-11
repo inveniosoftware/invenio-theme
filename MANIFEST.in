@@ -24,6 +24,7 @@
 
 include .editorconfig
 include .dockerignore
+include .tx/config
 include *.rst
 include *.sh
 include *.txt
@@ -40,3 +41,9 @@ recursive-include invenio_theme *.less
 recursive-include misc *.py
 recursive-include misc *.rst
 recursive-include tests *.py
+
+# added by check_manifest.py
+recursive-include example *.html
+recursive-include example *.py
+recursive-include invenio_theme *.po
+recursive-include invenio_theme *.svg

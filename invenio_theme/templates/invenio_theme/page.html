@@ -1,6 +1,6 @@
 {# -*- coding: utf-8 -*- -#}
 <!DOCTYPE html>
-<html{%- if g.ln %} lang="{{ g.ln|safe }}"{%- if is_language_rtl(g.ln) %} dir="rtl"{% endif %}{%- endif %}>
+<html{% if html_css_classes %} class="{{ html_css_classes|join(' ') }}"{% endif %}{%- if g.ln %} lang="{{ g.ln|safe }}"{%- if is_language_rtl(g.ln) %} dir="rtl"{% endif %}{%- endif %}>
   <head>
     {%- block head %}
     {%- block head_meta %}
@@ -16,7 +16,7 @@
     {%- endif %}
     {%- endblock head_meta %}
     {%- block head_title %}
-    {%- set title = title or config.THEME_SITENAME or 'Invenio' %}
+    {%- set title = title or _(config.THEME_SITENAME) or _('Invenio') %}
     <title>{{title}}</title>
     {%- endblock head_title %}
     {%- block head_links %}

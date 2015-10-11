@@ -5,12 +5,12 @@
       {%- block navbar_header %}
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">{{_('Toggle navigation')}}</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        {% block brand %}<a class="navbar-brand" href="/">{{config.THEME_SITENAME}}</a>{% endblock %}
+        {% block brand %}<a class="navbar-brand" href="/">{{_(config.THEME_SITENAME)}}</a>{% endblock %}
       </div>
       {%- endblock navbar_header %}
       {%- block navbar_inner %}
@@ -28,14 +28,14 @@
           {%- endfor %}
         </ul>
         {%- block navbar_right %}
-{% include "invenio_theme/header_login.html" %}
-        {% endblock navbar_right %}
+{%- include "invenio_theme/header_login.html" %}
+        {%- endblock navbar_right %}
       </div>
       {%- endblock navbar_inner %}
     </div>
   </nav>
   {%- endblock navbar %}
   {%- block breadcrumbs %}
-{% include "invenio_theme/breadcrumbs.html" %}
+{%- include "invenio_theme/breadcrumbs.html" %}
   {%- endblock breadcrumbs %}
 </header>

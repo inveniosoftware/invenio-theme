@@ -26,4 +26,4 @@ Authors
 
 Invenio standard theme.
 
-- Invenio Collaboration <info@invenio-software.org>
+- Lars Holm Nielsen <lars.holm.nielsen@cern.ch>

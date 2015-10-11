@@ -68,7 +68,7 @@ Collect static files
 --------------------
 
 Next, we copy the static files from the Python packages into the Flask
-applications static folder:
+application's static folder:
 
 .. code-block:: console
 
@@ -116,32 +116,37 @@ Last but not least we start our test server:
 
 """
 
-from __future__ import print_function, absolute_import
+from __future__ import absolute_import, print_function
 
-from os.path import join, dirname
+from os.path import dirname, join
 
 import jinja2
 from flask import Flask, render_template, request
+from flask_babelex import gettext as _
+from flask_babelex import Babel
 from flask_breadcrumbs import register_breadcrumb
 from flask_cli import FlaskCLI
 from flask_menu import register_menu
 from invenio_assets import InvenioAssets
 
 from invenio_theme import InvenioTheme
-from invenio_theme.bundles import js, css
+from invenio_theme.bundles import css, js
 
 # Create Flask application
 app = Flask(__name__)
 app.config.update(
     DEBUG=True,
     ERRORS={
-        '401': 'Unauthorized',
-        '403': 'Forbidden',
-        '404': 'Page not found',
-        '500': 'Internal server error',
-    }
+        '401': _('Unauthorized'),
+        '403': _('Forbidden'),
+        '404': _('Page not found'),
+        '500': _('Internal server error'),
+    },
+    BABEL_DEFAULT_LOCALE='da',
 )
+# Compatibility layer between Flask 0.10/1.0
 FlaskCLI(app)
+Babel(app)
 
 # Set jinja loader to first grab templates from the app's folder.
 app.jinja_loader = jinja2.ChoiceLoader([
@@ -161,7 +166,7 @@ assets.env.register('invenio_theme_css', css)
 # Register menu items
 item = theme.menu.submenu('main.errors')
 item.register(
-    '', 'Error pages', active_when=lambda: request.endpoint == "error",
+    '', _('Error pages'), active_when=lambda: request.endpoint == "error",
     order=2
 )
 for err, title in app.config['ERRORS'].items():
@@ -174,8 +179,8 @@ for err, title in app.config['ERRORS'].items():
 
 
 @app.route('/')
-@register_breadcrumb(app, 'main.base', 'Base page')
-@register_menu(app, 'main.base', 'Base page', order=1)
+@register_breadcrumb(app, 'main.base', _('Base page'))
+@register_menu(app, 'main.base', _('Base page'), order=1)
 def index():
     """Simple test view."""
     return render_template('index.html')
@@ -186,4 +191,8 @@ def error(err):
     """Render error."""
     if err in app.config['ERRORS']:
         return render_template('invenio_theme/%s.html' % err)
-    return "Invalid error code."
+    return _("Invalid error code.")
+
+
+if __name__ == "__main__":
+    app.run()

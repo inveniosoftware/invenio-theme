@@ -37,15 +37,17 @@ tests_require = [
     'check-manifest>=0.25',
     'coverage>=4.0',
     'isort>=4.2.2',
+    'pep257>=0.7.0',
     'pytest-cache>=1.0',
     'pytest-cov>=1.8.0',
     'pytest-pep8>=1.0.6',
     'pytest>=2.8.0',
+    'Flask-CLI>=0.2.1',
 ]
 
 extras_require = {
     'docs': [
-        "Sphinx>=1.3",
+        'Sphinx>=1.3',
     ],
     'tests': tests_require,
 }
@@ -59,16 +61,16 @@ setup_requires = [
 ]
 
 install_requires = [
+    "Flask-BabelEx>=0.9.2",
     "Flask-Breadcrumbs>=0.3.0",
     "Flask-Menu>=0.4.0",
-    "invenio-assets>=0.1.0.dev20150000",
+    #  "invenio-assets>=0.1.0.dev20150000",
 ]
 
 packages = find_packages()
 
 
 class PyTest(TestCommand):
-
     """PyTest Test."""
 
     user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
@@ -88,8 +90,11 @@ class PyTest(TestCommand):
     def finalize_options(self):
         """Finalize pytest."""
         TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
+        if hasattr(self, '_test_args'):
+            self.test_suite = ''
+        else:
+            self.test_args = []
+            self.test_suite = True
 
     def run_tests(self):
         """Run tests."""
@@ -120,8 +125,11 @@ setup(
     platforms='any',
     entry_points={
         'invenio_assets.bundles': [
-            'invenio_theme_css = invenio_theme.bundles.css',
-            'invenio_theme_js = invenio_theme.bundles.js',
+            'invenio_theme_css = invenio_theme.bundles:css',
+            'invenio_theme_js = invenio_theme.bundles:js',
+        ],
+        "invenio_i18n.translations": [
+            "messages = invenio_theme"
         ],
     },
     extras_require=extras_require,

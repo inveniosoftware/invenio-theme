@@ -27,12 +27,12 @@
 from __future__ import absolute_import, print_function
 
 from flask import Blueprint
+from flask_babelex import gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
 
 class InvenioTheme(object):
-
     """Invenio theme extension."""
 
     def __init__(self, app=None, **kwargs):
@@ -67,5 +67,10 @@ class InvenioTheme(object):
 
     def init_config(self, config):
         """Initialize configuration."""
-        config.setdefault("THEME_SITENAME", "Invenio")
+        config.setdefault("THEME_SITENAME", _("Invenio"))
         config.setdefault("THEME_GOOGLE_SITE_VERIFICATION", [])
+        config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')
+        config.setdefault(
+            'THEME_BASE_TEMPLATE', config['BASE_TEMPLATE'])
+        config.setdefault(
+            'THEME_ERROR_TEMPLATE', 'invenio_theme/error.html')

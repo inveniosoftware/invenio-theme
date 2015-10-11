@@ -1,6 +1,5 @@
-{% extends "invenio_theme/error.html" %}
-
+{% extends config.THEME_ERROR_TEMPLATE %}
 
 {% block message %}
-  <h1><i class="fa fa-flash"></i> Internal server error</h1>
+  <h1><i class="fa fa-flash"></i> {{_('Internal server error')}}</h1>
 {% endblock message %}

@@ -1,6 +1,6 @@
-{% extends "invenio_theme/page.html" %}
+{% extends config.THEME_BASE_TEMPLATE %}
 
-{% block content %}
+{% block page_body %}
 <div class="container error-page">
 <div class="row">
   {% block message %}{% endblock message %}

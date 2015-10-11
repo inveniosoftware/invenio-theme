@@ -28,12 +28,15 @@
 from __future__ import absolute_import, print_function
 
 import pytest
-
 from flask import Flask
+from flask_babelex import Babel
+from flask_cli import FlaskCLI
 
 
 @pytest.fixture()
 def app():
     """Flask app fixture."""
     app = Flask('myapp')
+    FlaskCLI(app)
+    Babel(app)
     return app

@@ -1,7 +1,7 @@
-{% extends "invenio_theme/error.html" %}
+{% extends config.THEME_ERROR_TEMPLATE %}
 
 {% block message %}
-  <h1><i class="fa fa-flash"></i> Page not found</h1>
-  <p>The page you where looking for could not be found.</p>
+  <h1><i class="fa fa-flash"></i> {{_('Page not found')}}</h1>
+  <p>{{_('The page you where looking for could not be found.')}}</p>
 {% endblock message %}
 
