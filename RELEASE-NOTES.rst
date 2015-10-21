@@ -1,8 +1,8 @@
 ======================
- Invenio Theme v0.1.0
+ Invenio Theme v1.0.0
 ======================
 
-Invenio Theme v0.1.0 was released on TBD, 2015.
+Invenio Theme v1.0.0 was released on TBD, 2015.
 
 About
 -----
@@ -19,7 +19,7 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-theme==0.1.0
+   $ pip install invenio-theme==1.0.0
 
 Documentation
 -------------
