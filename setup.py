@@ -64,7 +64,6 @@ install_requires = [
     "Flask-BabelEx>=0.9.2",
     "Flask-Breadcrumbs>=0.3.0",
     "Flask-Menu>=0.4.0",
-    #  "invenio-assets>=0.1.0.dev20150000",
 ]
 
 packages = find_packages()
@@ -124,12 +123,15 @@ setup(
     include_package_data=True,
     platforms='any',
     entry_points={
+        'invenio_base.apps': [
+            'invenio_theme = invenio_theme:InvenioTheme'
+        ],
         'invenio_assets.bundles': [
             'invenio_theme_css = invenio_theme.bundles:css',
             'invenio_theme_js = invenio_theme.bundles:js',
         ],
-        "invenio_i18n.translations": [
-            "messages = invenio_theme"
+        'invenio_i18n.translations': [
+            'messages = invenio_theme'
         ],
     },
     extras_require=extras_require,
