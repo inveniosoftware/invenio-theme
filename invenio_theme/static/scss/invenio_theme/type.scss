@@ -1,15 +1,15 @@
 .text-white {
-  color: @text-white;
+  color: $text-white;
 
   a,
   a:focus,
   a:hover {
-    color: @text-white;
+    color: $text-white;
   }
 }
 
 a.text-white,
 a.text-white:focus,
 a.text-white:hover {
-  color: @text-white;
+  color: $text-white;
 }

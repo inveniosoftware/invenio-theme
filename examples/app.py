@@ -43,7 +43,7 @@ First collect bower requirements from registered bundles:
        "dependencies": {
            "font-awesome": "~4.4.0",
            "almond": "~0.3.1",
-           "bootstrap": "~3.3.5"
+           "bootstrap-sass": "~3.3.5"
        },
        "name": "app"
    }
@@ -60,7 +60,7 @@ Now install bower requirements (requires that bower is already installed):
    $ cd ../static/bower_components
    $  ls -1
    almond
-   bootstrap
+   bootstrap-sass
    font-awesome
    jquery
 
@@ -78,15 +78,15 @@ application's static folder:
    Collect static from blueprints
    invenio_theme:js/base.js symbolink link created
    invenio_theme:js/settings.js symbolink link created
-   invenio_theme:less/body.less symbolink link created
-   invenio_theme:less/cover.less symbolink link created
-   invenio_theme:less/footer.less symbolink link created
-   invenio_theme:less/input-icon.less symbolink link created
-   invenio_theme:less/navbar.less symbolink link created
-   invenio_theme:less/sidebarnav.less symbolink link created
-   invenio_theme:less/styles.less symbolink link created
-   invenio_theme:less/type.less symbolink link created
-   invenio_theme:less/variables.less symbolink link created
+   invenio_theme:scss/body.scss symbolink link created
+   invenio_theme:scss/cover.scss symbolink link created
+   invenio_theme:scss/footer.scss symbolink link created
+   invenio_theme:scss/input-icon.scss symbolink link created
+   invenio_theme:scss/navbar.scss symbolink link created
+   invenio_theme:scss/sidebarnav.scss symbolink link created
+   invenio_theme:scss/styles.scss symbolink link created
+   invenio_theme:scss/type.scss symbolink link created
+   invenio_theme:scss/variables.scss symbolink link created
    259 of 270 files already present
    Done collecting.
 
@@ -98,6 +98,7 @@ Next, we build the webassets bundles:
 
 .. code-block:: console
 
+   $ npm install -g node-sass clean-css requirejs uglify-js
    $ cd ../../
    $ flask -a app.py assets build
    app

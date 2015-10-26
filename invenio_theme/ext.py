@@ -77,6 +77,7 @@ class InvenioTheme(object):
 
     def init_config(self, config):
         """Initialize configuration."""
+        config.setdefault('SASS_BIN', 'node-sass')
         config.setdefault("THEME_SITENAME", _("Invenio"))
         config.setdefault("THEME_GOOGLE_SITE_VERIFICATION", [])
         config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')

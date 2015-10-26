@@ -39,12 +39,12 @@ from flask_assets import Bundle
 from invenio_assets import BowerBundle
 
 css = BowerBundle(
-    'less/invenio_theme/styles.less',
-    filters='less, cleancss',
+    'scss/invenio_theme/styles.scss',
+    filters='scss, cleancss',
     output='gen/styles.%(version)s.css',
     bower={
         "almond": "~0.3.1",
-        "bootstrap": "~3.3.5",
+        "bootstrap-sass": "~3.3.5",
         "font-awesome": "~4.4.0"
     }
 )

@@ -50,7 +50,7 @@ def test_version():
 
 def test_bundles():
     """Test bundles."""
-    assert 'bootstrap' in bundles.css.bower
+    assert 'bootstrap-sass' in bundles.css.bower
     assert bundles.js
 
 
@@ -59,6 +59,7 @@ def test_init(app):
     theme = InvenioTheme(app)
     assert theme.menu is not None
     assert 'THEME_SITENAME' in app.config
+    assert 'SASS_BIN' in app.config
 
 
 def test_init_app(app):
@@ -68,6 +69,7 @@ def test_init_app(app):
     theme.init_app(app)
     assert theme.menu is not None
     assert 'THEME_SITENAME' in app.config
+    assert 'SASS_BIN' in app.config
 
 
 def test_render_template(app):

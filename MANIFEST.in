@@ -37,7 +37,7 @@ recursive-include docs *.rst
 recursive-include docs Makefile
 recursive-include invenio_theme *.html
 recursive-include invenio_theme *.js
-recursive-include invenio_theme *.less
+recursive-include invenio_theme *.scss
 recursive-include misc *.py
 recursive-include misc *.rst
 recursive-include tests *.py

@@ -1,0 +1,13 @@
+@import "variables";
+
+// Setting the path to fonts files.
+$icon-font-path: "/static/bower_components/bootstrap-sass/assets/fonts/";
+$fa-font-path: "/static/bower_components/font-awesome/fonts";
+
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "../../bower_components/font-awesome/scss/font-awesome";
+
+@import "type";
+@import "body";
+@import "footer";
+@import "input-icon";

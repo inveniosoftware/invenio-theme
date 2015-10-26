@@ -21,7 +21,7 @@ require.config({
   baseUrl: "/static/",
   paths: {
     jquery: "bower_components/jquery/dist/jquery",
-    bootstrap: "bower_components/bootstrap/dist/js/bootstrap"
+    bootstrap: "bower_components/bootstrap-sass/assets/javascripts/bootstrap"
   },
   shim: {
     jquery: {
