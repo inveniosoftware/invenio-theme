@@ -105,6 +105,25 @@ def test_page_template_blocks(app):
             "invenio_theme/page.html", blocks, base_tpl=base_tpl)
 
 
+def test_cover_template_blocks(app):
+    """Test template blocks in page.html."""
+    base_tpl = r"""{% extends 'invenio_theme/page_cover.html' %}
+    {% block css %}{% endblock %}
+    {% block javascript %}{% endblock %}
+    """
+
+    # Test template API
+    blocks = [
+        'cover_body', 'page_header', 'page_body', 'page_footer'
+    ]
+    InvenioTheme(app)
+    InvenioAssets(app)
+
+    with app.test_request_context():
+        assert_template_blocks(
+            "invenio_theme/page_cover.html", blocks, base_tpl=base_tpl)
+
+
 def test_settings_template_blocks(app):
     """Test template blocks in settings/content.html."""
     base_tpl = r"""{% extends 'invenio_theme/settings/content.html' %}

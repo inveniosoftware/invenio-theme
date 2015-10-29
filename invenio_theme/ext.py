@@ -72,12 +72,13 @@ class InvenioTheme(object):
         config.setdefault("THEME_GOOGLE_SITE_VERIFICATION", [])
         config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')
         config.setdefault(
-            'COVER_TEMPLATE', 'invenio_theme/settings/content.html')
+            'COVER_TEMPLATE', 'invenio_theme/page_cover.html')
         config.setdefault(
             'SETTINGS_TEMPLATE', 'invenio_theme/settings/content.html')
         config.setdefault(
             'THEME_BASE_TEMPLATE', config['BASE_TEMPLATE'])
-        config.setdefault('THEME_COVER_TEMPLATE', config['COVER_TEMPLATE'])
+        config.setdefault(
+            'THEME_COVER_TEMPLATE', config['COVER_TEMPLATE'])
         config.setdefault(
             'THEME_SETTINGS_TEMPLATE', config['SETTINGS_TEMPLATE'])
         config.setdefault(
