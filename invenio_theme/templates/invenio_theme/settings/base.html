@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-#
+{#
 # This file is part of Invenio.
 # Copyright (C) 2015 CERN.
 #
@@ -20,11 +19,11 @@
 #
 # In applying this license, CERN does not
 # waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# as an Intergovernmental Organization or submit itself to any jurisdiction.#}
 
+{% extends "invenio_theme/page.html" %}
 
-pep257 invenio_theme && \
-check-manifest --ignore ".travis-*" && \
-sphinx-build -qnNW docs docs/_build/html && \
-python setup.py test && \
-sphinx-build -qnNW -b doctest docs docs/_build/doctest
+{% block page_body %}
+  {% block settings_menu %}{% endblock %}
+  {% block settings_content %}{% endblock %}
+{% endblock %}

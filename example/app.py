@@ -127,6 +127,7 @@ from flask_babelex import Babel
 from flask_breadcrumbs import register_breadcrumb
 from flask_cli import FlaskCLI
 from flask_menu import register_menu
+
 from invenio_assets import InvenioAssets
 
 from invenio_theme import InvenioTheme
@@ -193,6 +194,35 @@ def error(err):
         return render_template('invenio_theme/%s.html' % err)
     return _("Invalid error code.")
 
+
+@app.route('/settings')
+@register_menu(app, 'main.settings', _('Settings'))
+def settings():
+    """Test page for settings templates."""
+    return render_template('settings/base.html')
+
+
+@register_menu(app, 'settings.example_app', _('Menu Header'), order=1)
+def _module_menu_header():
+    """Helper function for registering top category for module settings.
+
+    Not visible in default template.
+    """
+    return render_template('settings/content1.html')
+
+
+@app.route('/settings/1')
+@register_menu(app, 'settings.example_app.item1', _('Item 1'), order=1)
+def settings_item_1():
+    """Setting form route and menu registration."""
+    return render_template('settings/item1.html')
+
+
+@app.route('/settings/2')
+@register_menu(app, 'settings.example_app.item2', _('Item 2'), order=2)
+def settings_item_2():
+    """Setting form route and menu registration."""
+    return render_template('settings/item2.html')
 
 if __name__ == "__main__":
     app.run()

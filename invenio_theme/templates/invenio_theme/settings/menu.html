@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-#
+{#
 # This file is part of Invenio.
 # Copyright (C) 2015 CERN.
 #
@@ -20,11 +19,23 @@
 #
 # In applying this license, CERN does not
 # waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.
+# as an Intergovernmental Organization or submit itself to any jurisdiction.#}
 
+{%- extends "invenio_theme/settings/base.html" -%}
 
-pep257 invenio_theme && \
-check-manifest --ignore ".travis-*" && \
-sphinx-build -qnNW docs docs/_build/html && \
-python setup.py test && \
-sphinx-build -qnNW -b doctest docs docs/_build/doctest
+{% block settings_menu %}
+<div class="col-sm-3 col-md-3 col-pad-left-0">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading"><strong>{{ _('Settings') }}</strong></div>
+        <ul class="list-group">
+        {%- for item in current_menu.submenu('settings').children if item.visible %}
+            {%- for subitem in item.children %}
+                <a href="{{ subitem.url }}" class="list-group-item{% if subitem.active %} active{% endif %}">{{ subitem.text|safe }}</a>
+            {%- endfor %}
+        {%- endfor %}
+        </ul>
+      </div>
+    </div>
+</div>
+{% endblock %}
