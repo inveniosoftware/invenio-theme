@@ -32,6 +32,9 @@ from flask_babelex import gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
+from .views import insufficient_permissions, internal_error, page_not_found, \
+    unauthorized
+
 
 class InvenioTheme(object):
     """Invenio theme extension."""
@@ -63,6 +66,12 @@ class InvenioTheme(object):
         )
         app.register_blueprint(blueprint)
 
+        # Register errors handlers.
+        app.register_error_handler(401, unauthorized)
+        app.register_error_handler(403, insufficient_permissions)
+        app.register_error_handler(404, page_not_found)
+        app.register_error_handler(500, internal_error)
+
         # Save reference to self on object
         app.extensions['invenio-theme'] = self
 
@@ -83,3 +92,11 @@ class InvenioTheme(object):
             'THEME_SETTINGS_TEMPLATE', config['SETTINGS_TEMPLATE'])
         config.setdefault(
             'THEME_ERROR_TEMPLATE', 'invenio_theme/error.html')
+        config.setdefault(
+            'THEME_401_TEMPLATE', 'invenio_theme/401.html')
+        config.setdefault(
+            'THEME_403_TEMPLATE', 'invenio_theme/403.html')
+        config.setdefault(
+            'THEME_404_TEMPLATE', 'invenio_theme/404.html')
+        config.setdefault(
+            'THEME_500_TEMPLATE', 'invenio_theme/500.html')
