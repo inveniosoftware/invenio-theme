@@ -187,6 +187,14 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/cover')
+@register_breadcrumb(app, 'main.base', _('Cover page'))
+@register_menu(app, 'main.base', _('Cover page'), order=1)
+def cover():
+    """Simple test view."""
+    return render_template('cover.html')
+
+
 @app.route('/errors/<err>')
 def error(err):
     """Render error."""
