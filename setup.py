@@ -63,7 +63,7 @@ setup_requires = [
 install_requires = [
     "Flask-BabelEx>=0.9.2",
     "Flask-Breadcrumbs>=0.3.0",
-    "Flask-Menu>=0.4.0",
+    "Flask-Menu>=0.5.0",
 ]
 
 packages = find_packages()
