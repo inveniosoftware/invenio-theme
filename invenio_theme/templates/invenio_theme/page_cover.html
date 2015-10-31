@@ -23,15 +23,45 @@
 
 {% extends config.THEME_BASE_TEMPLATE %}
 
-{% block page_header %}
-    {# Empty block to prevent inclusion of header #}
-{% endblock page_header %}
+{%- set html_css_classes=['cover-page'] %}
+{%- set body_css_classes=['cover-page'] %}
 
-{% block page_body %}
-    {% block cover_body %}
-    {% endblock cover_body %}
-{% endblock page_body %}
-
-{% block page_footer %}
-    {# Empty block to prevent inclusion of footer #}
-{% endblock page_footer %}
+{%- block body %}
+{%- block browserupgrade %}
+<!--[if lt IE 8]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+{%- endblock browserupgrade %}
+<div class="site-wrapper">
+  {% block page_header %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <a href="/"><h1 class="text-center masthead-brand">{{_(config.THEME_SITENAME)}}</h1></a>
+      </div>
+    </div>
+  </div>
+  {% endblock page_header%}
+  {%- block page_body %}
+  <div class="container">
+    <div class="row">
+      {% block panel %}
+      <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            {% block panel_content %}
+            <h3 class="text-center panel-free-title">{{_(panel_title)}}</h3>
+            {% endblock panel_content %}
+          </div>
+        </div>
+      </div>
+      {% endblock panel %}
+    </div>
+  </div>
+  {%- endblock page_body %}
+  {% block page_footer %}
+  {% endblock page_footer %}
+</div>
+{%- block javascript %}{% include "invenio_theme/javascript.html" %}{% endblock javascript %}
+{%- block trackingcode %}{% include "invenio_theme/trackingcode.html" %}{% endblock %}
+{%- endblock body %}

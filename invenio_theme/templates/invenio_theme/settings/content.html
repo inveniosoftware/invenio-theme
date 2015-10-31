@@ -25,16 +25,16 @@
 
 {% block settings_content %}
 <div class="col-sm-9 col-md-9 col-pad-right-0">
-    <div class="panel-group panel-bot-margin">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <strong>{{ current_menu.active_item.text|safe }}</strong>
-            </div>
-            <div class="panel-body">
-                {%- block settings_form -%}
-                {%- endblock settings_form -%}
-            </div>
-        </div>
+  <div class="panel-group panel-bot-margin">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <strong>{{ current_menu.active_item.text|safe }}</strong>
+      </div>
+      <div class="panel-body">
+        {%- block settings_form -%}
+        {%- endblock settings_form -%}
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}
