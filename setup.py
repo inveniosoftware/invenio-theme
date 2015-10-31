@@ -64,6 +64,7 @@ install_requires = [
     "Flask-BabelEx>=0.9.2",
     "Flask-Breadcrumbs>=0.3.0",
     "Flask-Menu>=0.5.0",
+    "jsmin>=2.1.6",
 ]
 
 packages = find_packages()

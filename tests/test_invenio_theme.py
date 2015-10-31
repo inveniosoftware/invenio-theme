@@ -108,13 +108,14 @@ def test_page_template_blocks(app):
 def test_cover_template_blocks(app):
     """Test template blocks in page.html."""
     base_tpl = r"""{% extends 'invenio_theme/page_cover.html' %}
+    {% set panel_title = 'Test' %}
     {% block css %}{% endblock %}
     {% block javascript %}{% endblock %}
     """
 
     # Test template API
     blocks = [
-        'cover_body', 'page_header', 'page_body', 'page_footer'
+        'panel', 'page_header', 'page_body', 'page_footer', 'panel_content'
     ]
     InvenioTheme(app)
     InvenioAssets(app)
