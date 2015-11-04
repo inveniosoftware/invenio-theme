@@ -28,3 +28,4 @@ Invenio standard theme.
 
 - Lars Holm Nielsen <lars.holm.nielsen@cern.ch>
 - Sami Hiltunen <sami.mikael.hiltunen@cern.ch>
+- Jiri Kuncar <jiri.kuncar@cern.ch>

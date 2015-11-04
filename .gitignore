@@ -57,5 +57,5 @@ docs/_build/
 target/
 
 # Example instance folder
-example/instance/
-example/static/
+examples/instance/
+examples/static/

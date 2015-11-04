@@ -31,7 +31,7 @@ First collect bower requirements from registered bundles:
 
 .. code-block:: console
 
-   $ cd example
+   $ cd examples
    $ flask -a app.py bower
    app
    Writing instance/bower.json
