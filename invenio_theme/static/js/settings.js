@@ -31,4 +31,4 @@ require.config({
       deps: ["jquery"]
     }
   }
-});
+})
