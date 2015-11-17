@@ -24,20 +24,19 @@
 
 """Minimal Flask application for development.
 
-Installing bower requirements
------------------------------
+Installing npm requirements
+---------------------------
 
-First collect bower requirements from registered bundles:
+First collect npm, requirements from registered bundles:
 
 .. code-block:: console
 
    $ cd examples
-   $ flask -a app.py bower
+   $ flask -a app.py npm
    app
-   Writing instance/bower.json
-   Writing instance/.bowerrc
-   $ cd instance
-   $ cat bower.json
+   Writing static/package.json
+   $ cd static
+   $ cat package.json
    {
        "version": "",
        "dependencies": {
@@ -47,17 +46,15 @@ First collect bower requirements from registered bundles:
        },
        "name": "app"
    }
-   $ cat .bowerrc
-   {"directory": "../static/bower_components"}
 
 
-Now install bower requirements (requires that bower is already installed):
+Now install npm requirements (requires that npm is already installed):
 
 .. code-block:: console
 
-   $ bower install
+   $ npm install
    ...
-   $ cd ../static/bower_components
+   $ cd node_modules
    $  ls -1
    almond
    bootstrap-sass

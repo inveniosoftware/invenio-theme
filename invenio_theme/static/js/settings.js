@@ -20,8 +20,8 @@
 require.config({
   baseUrl: "/static/",
   paths: {
-    jquery: "bower_components/jquery/dist/jquery",
-    bootstrap: "bower_components/bootstrap-sass/assets/javascripts/bootstrap"
+    jquery: "node_modules/jquery/jquery",
+    bootstrap: "node_modules/bootstrap-sass/assets/javascripts/bootstrap"
   },
   shim: {
     jquery: {

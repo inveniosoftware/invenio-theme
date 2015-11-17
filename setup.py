@@ -44,7 +44,7 @@ tests_require = [
     'pytest>=2.8.0',
     'Flask-CLI>=0.2.1',
     'Jinja2>=2.8',
-    "invenio-assets>=1.0.0a1",
+    "invenio-assets>=1.0.0a3",
 ]
 
 extras_require = {

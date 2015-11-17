@@ -50,7 +50,7 @@ def test_version():
 
 def test_bundles():
     """Test bundles."""
-    assert 'bootstrap-sass' in bundles.css.bower
+    assert 'bootstrap-sass' in bundles.css.npm
     assert bundles.js
 
 

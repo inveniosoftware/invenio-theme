@@ -36,25 +36,29 @@ Include in page using:
 from __future__ import absolute_import, print_function
 
 from flask_assets import Bundle
-from invenio_assets import BowerBundle
+from invenio_assets import NpmBundle
 
-css = BowerBundle(
+css = NpmBundle(
     'scss/invenio_theme/styles.scss',
     filters='scss, cleancss',
     output='gen/styles.%(version)s.css',
-    bower={
+    npm={
         "almond": "~0.3.1",
         "bootstrap-sass": "~3.3.5",
-        "font-awesome": "~4.4.0"
+        "font-awesome": "~4.4.0",
+        "jquery": "~1.9.1"
     }
 )
 
 js = Bundle(
-    BowerBundle(
-        'bower_components/almond/almond.js',
+    NpmBundle(
+        'node_modules/almond/almond.js',
         'js/settings.js',
         filters='uglifyjs',
-        bower={"almond": "~0.3.1", }
+        npm={
+            "almond": "~0.3.1",
+            "jquery": "~1.9.1"
+        }
     ),
     Bundle(
         'js/base.js',
