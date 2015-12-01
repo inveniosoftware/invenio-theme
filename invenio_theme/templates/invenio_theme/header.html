@@ -35,6 +35,10 @@
     </div>
   </nav>
   {%- endblock navbar %}
+  {%- block flashmessages %}
+  {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+  {{ flashed_messages() }}
+  {%- endblock %}
   {%- block breadcrumbs %}
 {%- include "invenio_theme/breadcrumbs.html" %}
   {%- endblock breadcrumbs %}

@@ -1,26 +1,26 @@
-# Translations template for invenio-theme.
+# Danish translations for invenio-theme.
 # Copyright (C) 2015 CERN
 # This file is distributed under the same license as the invenio-theme
 # project.
-# 
+#
 # Translators:
-# larshankat <lars.holm.nielsen@cern.ch>, 2015
+# Lars Holm Nielsen <lars.holm.nielsen@cern.ch>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme\n"
+"Project-Id-Version:  invenio-theme\n"
 "Report-Msgid-Bugs-To: info@invenio-software.org\n"
-"POT-Creation-Date: 2015-10-10 09:48+0200\n"
+"POT-Creation-Date: 2015-12-01 13:27+0100\n"
 "PO-Revision-Date: 2015-10-10 11:03+0000\n"
-"Last-Translator: larshankat <lars.holm.nielsen@cern.ch>\n"
-"Language-Team: Danish (http://www.transifex.com/zenodo/invenio-theme/language/da/)\n"
+"Last-Translator: Lars Holm Nielsen <lars.holm.nielsen@cern.ch>\n"
+"Language: da\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.1.1\n"
-"Language: da\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: invenio_theme/core.py:71
+#: invenio_theme/ext.py:81
 msgid "Invenio"
 msgstr "Invenio"
 
@@ -45,17 +45,33 @@ msgid "Page not found"
 msgstr "Siden kunne ikke findes"
 
 #: invenio_theme/templates/invenio_theme/404.html:5
-msgid "The page you where looking for could not be found."
-msgstr "Siden du prøver at tilgå kunne ikke blevet fundet."
+msgid "The page you are looking for could not be found."
+msgstr "Siden du prøver at tilgå findes ikke."
 
-#: invenio_theme/templates/invenio_theme/500.html:5
+#: invenio_theme/templates/invenio_theme/500.html:4
 msgid "Internal server error"
 msgstr "Intern serverfejl"
 
 #: invenio_theme/templates/invenio_theme/footer.html:4
 msgid "Powered by Invenio"
-msgstr "Powered by Invenio"
+msgstr "Powered af Invenio"
 
 #: invenio_theme/templates/invenio_theme/header.html:8
 msgid "Toggle navigation"
 msgstr "Vis menu"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:4
+msgid "Log in"
+msgstr "Log ind"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:5
+msgid "Sign up"
+msgstr "Opret profil"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:9
+msgid "Log out"
+msgstr "Log ud"
+
+#: invenio_theme/templates/invenio_theme/settings/menu.html:30
+msgid "Settings"
+msgstr "Indstillinger"

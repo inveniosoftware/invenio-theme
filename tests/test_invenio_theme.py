@@ -149,7 +149,7 @@ def test_header_template_blocks(app):
     """Test template blokcs in header.html."""
     blocks = [
         'navbar', 'navbar_header', 'brand', 'navbar_inner', 'navbar_right',
-        'breadcrumbs',
+        'breadcrumbs', 'flashmessages',
     ]
     InvenioTheme(app)
     InvenioAssets(app)

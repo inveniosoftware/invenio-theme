@@ -55,7 +55,7 @@ Now install npm requirements (requires that npm is already installed):
    $ npm install
    ...
    $ cd node_modules
-   $  ls -1
+   $ ls -1
    almond
    bootstrap-sass
    font-awesome
@@ -110,7 +110,7 @@ Last but not least we start our test server:
 
 .. code-block:: console
 
-   $ flask -a app.py run --debugger --reload
+   $ flask -a app.py --debug run
 
 """
 
@@ -119,17 +119,31 @@ from __future__ import absolute_import, print_function
 from os.path import dirname, join
 
 import jinja2
-from flask import Flask, render_template, request
-from flask_babelex import gettext as _
+from flask import Flask, flash, render_template, request
+from flask_babelex import gettext
 from flask_babelex import Babel
 from flask_breadcrumbs import register_breadcrumb
 from flask_cli import FlaskCLI
 from flask_menu import register_menu
-
 from invenio_assets import InvenioAssets
+from speaklater import make_lazy_string
 
 from invenio_theme import InvenioTheme
 from invenio_theme.bundles import css, js
+
+try:
+    from invenio_i18n import InvenioI18N
+except ImportError:
+    InvenioI18N = None
+
+
+def lazy_gettext(*args, **kwargs):
+    """Lazy gettext.
+
+    https://github.com/mrjoes/flask-babelex/pull/8
+    """
+    return make_lazy_string(gettext, *args, **kwargs)
+_ = lazy_gettext
 
 # Create Flask application
 app = Flask(__name__)
@@ -142,10 +156,14 @@ app.config.update(
         '500': _('Internal server error'),
     },
     BABEL_DEFAULT_LOCALE='da',
+    SECRET_KEY='CHANGEME'
 )
 # Compatibility layer between Flask 0.10/1.0
 FlaskCLI(app)
-Babel(app)
+if InvenioI18N is not None:
+    InvenioI18N(app)
+else:
+    Babel(app)
 
 # Set jinja loader to first grab templates from the app's folder.
 app.jinja_loader = jinja2.ChoiceLoader([
@@ -162,11 +180,12 @@ assets.init_cli(app.cli)
 assets.env.register('invenio_theme_js', js)
 assets.env.register('invenio_theme_css', css)
 
+
 # Register menu items
 item = theme.menu.submenu('main.errors')
 item.register(
     '', _('Error pages'), active_when=lambda: request.endpoint == "error",
-    order=2
+    order=3
 )
 for err, title in app.config['ERRORS'].items():
     item = theme.menu.submenu('main.errors.err%s' % err)
@@ -187,13 +206,15 @@ def index():
 
 @app.route('/cover')
 @register_breadcrumb(app, 'main.base', _('Cover page'))
-@register_menu(app, 'main.base', _('Cover page'), order=1)
+@register_menu(app, 'main.base', _('Cover page'), order=2)
 def cover():
     """Simple test view."""
+    flash('This is a message for the end user.',
+          category=request.args.get('category', 'success'))
     return render_template('cover.html')
 
 
-@app.route('/errors/<err>')
+@app.route('/errors/<err>/')
 def error(err):
     """Render error."""
     if err in app.config['ERRORS']:
@@ -201,30 +222,33 @@ def error(err):
     return _("Invalid error code.")
 
 
-@app.route('/settings')
-@register_menu(app, 'main.settings', _('Settings'))
+@app.route('/flash/')
+@register_menu(app, 'main.flash', _('Message flashing'), order=4)
+def flashmessage():
+    """Flash a message."""
+    flash('This is a message for the end user.',
+          category=request.args.get('category', 'success'))
+    return render_template('index.html')
+
+
+@app.route('/settings/')
+@register_menu(app, 'main.settings', _('Settings'), order=5)
+@register_menu(app, 'settings.example_app', _('Panel Header'), order=1)
 def settings():
     """Test page for settings templates."""
     return render_template('settings/base.html')
 
 
-@register_menu(app, 'settings.example_app', _('Menu Header'), order=1)
-def _module_menu_header():
-    """Helper function for registering top category for module settings.
-
-    Not visible in default template.
-    """
-    return render_template('settings/content1.html')
-
-
-@app.route('/settings/1')
+@app.route('/settings/1/')
 @register_menu(app, 'settings.example_app.item1', _('Item 1'), order=1)
 def settings_item_1():
     """Setting form route and menu registration."""
+    flash('This is a message for the end user.',
+          category=request.args.get('category', 'success'))
     return render_template('settings/item1.html')
 
 
-@app.route('/settings/2')
+@app.route('/settings/2/')
 @register_menu(app, 'settings.example_app.item2', _('Item 2'), order=2)
 def settings_item_2():
     """Setting form route and menu registration."""

@@ -31,7 +31,6 @@ from flask import Blueprint, abort
 
 def test_page_error_handler_401(app_error_handler):
     """Testing error handler with 401 error code."""
-
     # Creation of Blueprint.
     blueprint = Blueprint('simple_page', __name__,
                           template_folder='templates')
@@ -54,7 +53,6 @@ def test_page_error_handler_401(app_error_handler):
 
 def test_page_error_handler_403(app_error_handler):
     """Testing error handler with 403 error code."""
-
     # Creation of Blueprint.
     blueprint = Blueprint('simple_page', __name__,
                           template_folder='templates')
@@ -88,7 +86,6 @@ def test_page_error_handler_404(app_error_handler):
 
 def test_page_error_handler_500(app_error_handler):
     """Testing error handler with 401 error code."""
-
     # Creation of Blueprint.
     blueprint = Blueprint('simple_page', __name__,
                           template_folder='templates')

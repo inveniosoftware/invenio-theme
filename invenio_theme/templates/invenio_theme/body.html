@@ -1,5 +1,3 @@
-
-{%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
 <div class="container">
 {%- block title %}
   {%- if title %}
@@ -8,7 +6,6 @@
   </div>
   {%- endif %}
 {%- endblock title %}
-{{ flashed_messages() }}
 {%- block body %}
   {{ body }}
 {%- endblock body %}

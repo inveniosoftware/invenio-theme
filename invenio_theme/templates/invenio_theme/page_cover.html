@@ -33,11 +33,17 @@
 <![endif]-->
 {%- endblock browserupgrade %}
 <div class="site-wrapper">
+{%- block flashmessages %}
+{%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+{{ flashed_messages() }}
+{%- endblock flashmessages %}
   {% block page_header %}
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <a href="/"><h1 class="text-center masthead-brand">{{_(config.THEME_SITENAME)}}</h1></a>
+        {%- block brand %}
+        <a href="/"><img class="text-center masthead-brand" src="{{ url_for('static', filename='images/invenio.svg')}}" alt="{{_(config.THEME_SITENAME)}}" width="250px"/></a>
+        {%- endblock %}
       </div>
     </div>
   </div>
@@ -50,7 +56,7 @@
         <div class="panel panel-default">
           <div class="panel-body">
             {% block panel_content %}
-            <h3 class="text-center panel-free-title">{{_(panel_title)}}</h3>
+            <h3 class="text-center panel-free-title">{{ panel_title }}</h3>
             {% endblock panel_content %}
           </div>
         </div>
