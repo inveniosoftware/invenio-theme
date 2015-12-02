@@ -1,11 +1,28 @@
-/* Links */
-/*
- * Base structure
- */
+// This file is part of Invenio.
+// Copyright (C) 2015 CERN.
+//
+// Invenio is free software; you can redistribute it
+// and/or modify it under the terms of the GNU General Public License as
+// published by the Free Software Foundation; either version 2 of the
+// License, or (at your option) any later version.
+//
+// Invenio is distributed in the hope that it will be
+// useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+// General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Invenio; if not, write to the
+// Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+// MA 02111-1307, USA.
+//
+// In applying this license, CERN does not
+// waive the privileges and immunities granted to it by virtue of its status
+// as an Intergovernmental Organization or submit itself to any jurisdiction.
+
 $cover-panel-padding: 40px;
 $brand-font-family: $font-family-sans-serif;
-$color1: #e6e6e6;
-$color1-gradient: darken($color1, 15%);
+$color1-gradient: $color1;
 
 html.cover-page,
 body.cover-page {
@@ -14,11 +31,8 @@ body.cover-page {
 }
 
 body.cover-page {
-  color: #fff;
   text-align: center;
-  @include gradient-vertical(
-    $start-color: $color1,
-    $end-color: $color1-gradient);
+  background-color: $color1;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -29,9 +43,6 @@ body.cover-page {
 
   .masthead-brand {
     font-family: $brand-font-family;
-    //font-weight: $brand-font-weight;
-    //font-size: $brand-font-size;
-    color: $text-white;
     margin: $cover-panel-padding*2 0;
   }
   .panel {
@@ -40,9 +51,6 @@ body.cover-page {
   }
   .panel-free-title {
     margin: $cover-panel-padding 0;
-  }
-  h3 {
-    // color: $brand-primary;
   }
   .panel-body {
     padding-left: $cover-panel-padding;
@@ -56,31 +64,6 @@ body.cover-page {
     padding-bottom: $cover-panel-padding/2;
     border-bottom-left-radius: $border-radius-large*2;
     border-bottom-right-radius: $border-radius-large*2;
-  }
-
-  .sign-up {
-    text-align: left;
-    $cover-signup-margin: 30px;
-
-    h1, h2, h3, h4, h5, form {
-      margin-top: $cover-signup-margin;
-    }
-
-    form {
-      margin-bottom: $cover-signup-margin;
-    }
-
-    p {
-      font-size: floor(($font-size-base * 1.20));
-    }
-
-    a, a:hover, a:active {
-      color: $text-white;
-    }
-  }
-  .sign-up-benefits {
-    p {
-      color: lighten($color1, 60%);
-    }
+    background-color: $navbar-default-border;
   }
 }

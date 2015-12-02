@@ -19,7 +19,8 @@
 #
 # In applying this license, CERN does not
 # waive the privileges and immunities granted to it by virtue of its status
-# as an Intergovernmental Organization or submit itself to any jurisdiction.#}
+# as an Intergovernmental Organization or submit itself to any jurisdiction.
+#}
 
 {% extends config.THEME_BASE_TEMPLATE %}
 
@@ -42,7 +43,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         {%- block brand %}
-        <a href="/"><img class="text-center masthead-brand" src="{{ url_for('static', filename='images/invenio.svg')}}" alt="{{_(config.THEME_SITENAME)}}" width="250px"/></a>
+        <a href="/"><img class="text-center masthead-brand" src="{{ url_for('static', filename=config.THEME_LOGO)}}" alt="{{_(config.THEME_SITENAME)}}" width="250px"/></a>
         {%- endblock %}
       </div>
     </div>

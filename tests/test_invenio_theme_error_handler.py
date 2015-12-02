@@ -80,7 +80,7 @@ def test_page_error_handler_404(app_error_handler):
         assert response.status_code == 404
         assert b'<h1><i class="fa fa-flash"></i>' in response.data
         assert b'Page not found</h1>' in response.data
-        assert b'<p>The page you where looking for' in response.data
+        assert b'<p>The page you are looking for' in response.data
         assert b'could not be found.</p>' in response.data
 
 

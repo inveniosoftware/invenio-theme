@@ -44,7 +44,7 @@ tests_require = [
     'pytest>=2.8.0',
     'Flask-CLI>=0.2.1',
     'Jinja2>=2.8',
-    "invenio-assets>=1.0.0a3",
+    'invenio-assets>=1.0.0a3',
 ]
 
 extras_require = {
@@ -63,10 +63,10 @@ setup_requires = [
 ]
 
 install_requires = [
-    "Flask-BabelEx>=0.9.2",
-    "Flask-Breadcrumbs>=0.3.0",
-    "Flask-Menu>=0.5.0",
-    "jsmin>=2.1.6",
+    'Flask-BabelEx>=0.9.2',
+    'Flask-Breadcrumbs>=0.3.0',
+    'Flask-Menu>=0.5.0',
+    'jsmin>=2.1.6',
 ]
 
 packages = find_packages()

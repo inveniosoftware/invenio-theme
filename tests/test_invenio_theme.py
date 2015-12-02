@@ -128,8 +128,8 @@ def test_cover_template_blocks(app):
 
 
 def test_settings_template_blocks(app):
-    """Test template blocks in settings/content.html."""
-    base_tpl = r"""{% extends 'invenio_theme/settings/content.html' %}
+    """Test template blocks in page_settings.html."""
+    base_tpl = r"""{% extends 'invenio_theme/page_settings.html' %}
     {% block css %}{% endblock %}
     {% block javascript %}{% endblock %}
     """
@@ -142,7 +142,7 @@ def test_settings_template_blocks(app):
 
     with app.test_request_context():
         assert_template_blocks(
-            'invenio_theme/settings/content.html', blocks, base_tpl=base_tpl)
+            'invenio_theme/page_settings.html', blocks, base_tpl=base_tpl)
 
 
 def test_header_template_blocks(app):
