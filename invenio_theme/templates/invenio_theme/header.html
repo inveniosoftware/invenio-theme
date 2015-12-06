@@ -44,6 +44,7 @@
       {%- endblock navbar_header %}
       {%- block navbar_inner %}
       <div id="navbar" class="navbar-collapse collapse">
+        {% block navbar_nav %}
         <ul class="nav navbar-nav">
           {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
           {%- if item.children -%}
@@ -56,6 +57,7 @@
           {%- endif %}
           {%- endfor %}
         </ul>
+        {% endblock navbar_nav %}
         {%- block navbar_right %}
 {%- include "invenio_theme/header_login.html" %}
         {%- endblock navbar_right %}
