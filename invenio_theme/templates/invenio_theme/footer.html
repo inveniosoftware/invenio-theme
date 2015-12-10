@@ -25,8 +25,18 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-12" style="text-align: right;">
-      <hr />
-      {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
+        <hr />
+        <ul class="list-unstyled">
+          {% if config.I18N_LANGUAGES %}
+            {% from "invenio_i18n/macros/language_selector.html" import language_selector %}
+            <li>
+              {{ language_selector() }}
+            </li>
+          {% endif %}
+          <li>
+            {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
