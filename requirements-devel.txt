@@ -24,3 +24,4 @@
 
 -e git+https://github.com/inveniosoftware/flask-menu.git#egg=Flask-Menu
 -e git+https://github.com/inveniosoftware/flask-breadcrumbs.git#egg=Flask-Breadcrumbs
+-e git+https://github.com/inveniosoftware/invenio-i18n.git#egg=invenio-i18n
