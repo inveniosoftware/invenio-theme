@@ -27,8 +27,8 @@
 {% block page_body %}
 <div class="container">
   <div class="row">
-    {%- block settings_menu %}
       <div class="col-sm-3 col-md-3 col-pad-left-0">
+        {%- block settings_menu %}
         <div class="panel-group">
           <div class="panel panel-default">
             <div class="panel-heading"><strong>{{ _('Settings') }}</strong></div>
@@ -43,10 +43,10 @@
             </ul>
           </div>
         </div>
+        {%- endblock %}
       </div>
-    {%- endblock %}
-    {%- block settings_content %}
       <div class="col-sm-9 col-md-9 col-pad-right-0">
+        {%- block settings_content %}
         <div class="panel-group panel-bot-margin">
           <div class="panel panel-default">
             <div class="panel-heading">
@@ -54,14 +54,16 @@
               <strong>{{ current_menu.active_item.text|safe }}</strong>
               {%- endblock %}
             </div>
+            {%- block settings_body %}
             <div class="panel-body">
               {%- block settings_form %}
               {%- endblock settings_form %}
             </div>
+            {%- endblock settings_body %}
           </div>
         </div>
+        {%- endblock %}
       </div>
-    {%- endblock %}
   </div>
 </div>
 {% endblock %}
