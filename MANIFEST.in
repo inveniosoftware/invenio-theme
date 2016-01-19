@@ -47,3 +47,6 @@ recursive-include examples *.html
 recursive-include examples *.py
 recursive-include invenio_theme *.po
 recursive-include invenio_theme *.svg
+recursive-include invenio_theme *.eot
+recursive-include invenio_theme *.ttf
+recursive-include invenio_theme *.woff
