@@ -1,8 +1,8 @@
 ========================
- Invenio Theme v1.0.0a7
+ Invenio Theme v1.0.0a8
 ========================
 
-Invenio Theme v1.0.0a7 was released on December 18, 2015.
+Invenio Theme v1.0.0a8 was released on February 5, 2016.
 
 About
 -----
@@ -19,7 +19,7 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-theme==1.0.0a7
+   $ pip install invenio-theme==1.0.0a8
 
 Documentation
 -------------
