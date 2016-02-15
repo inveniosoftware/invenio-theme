@@ -1,6 +1,6 @@
 {#
 # This file is part of Invenio.
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -44,20 +44,34 @@
       {%- endblock navbar_header %}
       {%- block navbar_inner %}
       <div id="navbar" class="navbar-collapse collapse">
-        {% block navbar_nav %}
+        {%- block navbar_nav %}
+        {%- if config['THEME_SEARCHBAR'] %}
+        {%- block navbar_search %}
+        <form class="navbar-form navbar-left" action="{{config.THEME_SEARCH_ENDPOINT}}" role="search">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" class="form-control" name="q" placeholder="{{_('Search')}}">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </form>
+        {%- endblock navbar_search %}
+        {%- endif %}
         <ul class="nav navbar-nav">
           {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
-          {%- if item.children -%}
+          {%- if item.children %}
           <li class="dropdown{{ ' active' if item.active else ''}}">
             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="{{ item.url }}">{{ item.text|safe }} <b class="caret"></b></a>
             <ul class="dropdown-menu">{{ loop(item.children|sort(attribute='order')) }}</ul>
           </li>
-          {%- else -%}
+          {%- else %}
             <li{{ ' class="active"'|safe if item.active and loop.depth == 1 else '' }}><a href="{{ item.url }}">{{ item.text|safe }}</a></li>
           {%- endif %}
           {%- endfor %}
         </ul>
-        {% endblock navbar_nav %}
+        {%- endblock navbar_nav %}
         {%- block navbar_right %}
 {%- include "invenio_theme/header_login.html" %}
         {%- endblock navbar_right %}

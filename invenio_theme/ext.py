@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -25,7 +25,6 @@
 """Invenio standard theme."""
 
 from __future__ import absolute_import, print_function
-
 
 from flask import Blueprint
 from flask_babelex import gettext as _
@@ -88,6 +87,8 @@ class InvenioTheme(object):
         config.setdefault(
             'SETTINGS_TEMPLATE', 'invenio_theme/page_settings.html')
         config.setdefault(
+            'HEADER_TEMPLATE', 'invenio_theme/header.html')
+        config.setdefault(
             'THEME_BASE_TEMPLATE', config['BASE_TEMPLATE'])
         config.setdefault(
             'THEME_COVER_TEMPLATE', config['COVER_TEMPLATE'])
@@ -103,3 +104,6 @@ class InvenioTheme(object):
             'THEME_404_TEMPLATE', 'invenio_theme/404.html')
         config.setdefault(
             'THEME_500_TEMPLATE', 'invenio_theme/500.html')
+
+        config.setdefault('THEME_SEARCHBAR', True)
+        config.setdefault('THEME_SEARCH_ENDPOINT', '/search')
