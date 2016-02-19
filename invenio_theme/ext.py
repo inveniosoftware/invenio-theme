@@ -27,7 +27,7 @@
 from __future__ import absolute_import, print_function
 
 from flask import Blueprint
-from flask_babelex import gettext as _
+from flask_babelex import lazy_gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
@@ -64,6 +64,10 @@ class InvenioTheme(object):
             static_folder='static',
         )
         app.register_blueprint(blueprint)
+
+        # Initialize brea
+        item = self.menu.submenu('breadcrumbs')
+        item.register(app.config['THEME_BREADCRUMB_ROOT_ENDPOINT'], _('Home'))
 
         # Register errors handlers.
         app.register_error_handler(401, unauthorized)
@@ -107,3 +111,4 @@ class InvenioTheme(object):
 
         config.setdefault('THEME_SEARCHBAR', True)
         config.setdefault('THEME_SEARCH_ENDPOINT', '/search')
+        config.setdefault('THEME_BREADCRUMB_ROOT_ENDPOINT', '')
