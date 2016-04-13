@@ -1,6 +1,6 @@
 {#
 # This file is part of Invenio.
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -26,4 +26,7 @@
 
 {% block message %}
   <h1><i class="fa fa-flash"></i> {{_('Internal server error')}}</h1>
+  {% if g.sentry_event_id %}
+  <p><small class="text-muted">{{_('Error identifier')}}: {{ g.sentry_event_id }}</small></p>
+  {% endif %}
 {% endblock message %}
