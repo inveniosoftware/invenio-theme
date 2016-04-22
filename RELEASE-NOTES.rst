@@ -1,8 +1,8 @@
 =========================
- Invenio Theme v1.0.0a10
+ Invenio Theme v1.0.0a11
 =========================
 
-Invenio Theme v1.0.0a10 was released on February 29, 2016.
+Invenio Theme v1.0.0a11 was released on April 22, 2016.
 
 About
 -----
@@ -19,7 +19,7 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-theme==1.0.0a10
+   $ pip install invenio-theme==1.0.0a11
 
 Documentation
 -------------
