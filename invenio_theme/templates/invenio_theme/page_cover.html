@@ -43,7 +43,17 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         {%- block brand %}
-        <a href="/"><img class="text-center masthead-brand" src="{{ url_for('static', filename=config.THEME_LOGO)}}" alt="{{_(config.THEME_SITENAME)}}" width="250px"/></a>
+          {%- if config.THEME_LOGO %}
+            <a href="/">
+              <img class="text-center masthead-brand"
+                   src="{{ url_for('static', filename=config.THEME_LOGO)}}"
+                   alt="{{ _(config.THEME_SITENAME) }}" width="250px"/>
+            </a>
+          {%- elif config.THEME_SITENAME %}
+            <a href="/" class="text-center masthead-brand">
+              {{ _(config.THEME_SITENAME) }}
+            </a>
+          {% endif %}
         {%- endblock %}
       </div>
     </div>
