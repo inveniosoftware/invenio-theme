@@ -30,6 +30,8 @@ from flask import Blueprint
 from flask_babelex import lazy_gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
+from werkzeug.exceptions import Forbidden, InternalServerError, NotFound, \
+    Unauthorized
 
 from .views import insufficient_permissions, internal_error, page_not_found, \
     unauthorized
@@ -70,10 +72,10 @@ class InvenioTheme(object):
         item.register(app.config['THEME_BREADCRUMB_ROOT_ENDPOINT'], _('Home'))
 
         # Register errors handlers.
-        app.register_error_handler(401, unauthorized)
-        app.register_error_handler(403, insufficient_permissions)
-        app.register_error_handler(404, page_not_found)
-        app.register_error_handler(500, internal_error)
+        app.register_error_handler(Unauthorized, unauthorized)
+        app.register_error_handler(Forbidden, insufficient_permissions)
+        app.register_error_handler(NotFound, page_not_found)
+        app.register_error_handler(InternalServerError, internal_error)
 
         # Save reference to self on object
         app.extensions['invenio-theme'] = self
