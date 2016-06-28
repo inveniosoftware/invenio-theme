@@ -120,7 +120,7 @@ setup(
     keywords='invenio',
     license='GPLv2',
     author='Invenio Collaboration',
-    author_email='info@invenio-software.org',
+    author_email='info@inveniosoftware.org',
     url='https://github.com/inveniosoftware/invenio-theme',
     packages=packages,
     zip_safe=False,

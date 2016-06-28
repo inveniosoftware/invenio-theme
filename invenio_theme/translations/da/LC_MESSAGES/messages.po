@@ -8,7 +8,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version:  invenio-theme\n"
-"Report-Msgid-Bugs-To: info@invenio-software.org\n"
+"Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2015-12-01 13:27+0100\n"
 "PO-Revision-Date: 2015-10-10 11:03+0000\n"
 "Last-Translator: Lars Holm Nielsen <lars.holm.nielsen@cern.ch>\n"
