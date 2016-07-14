@@ -123,7 +123,6 @@ from flask import Flask, flash, render_template, request
 from flask_babelex import gettext
 from flask_babelex import Babel
 from flask_breadcrumbs import register_breadcrumb
-from flask_cli import FlaskCLI
 from flask_menu import register_menu
 from invenio_assets import InvenioAssets
 from speaklater import make_lazy_string

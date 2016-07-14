@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -35,7 +35,6 @@ import jinja2
 import pytest
 from flask import Flask
 from flask_babelex import Babel
-from flask_cli import FlaskCLI
 from invenio_i18n import InvenioI18N
 
 from invenio_theme import InvenioTheme
@@ -45,7 +44,6 @@ from invenio_theme import InvenioTheme
 def app():
     """Flask app fixture."""
     app = Flask('myapp')
-    FlaskCLI(app)
     Babel(app)
     InvenioI18N(app)
     return app
