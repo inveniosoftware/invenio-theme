@@ -49,6 +49,7 @@ css = NpmBundle(
         "jquery": "~1.9.1"
     }
 )
+"""Default CSS bundle with Almond, Bootstrap, Font-Awesome and JQuery."""
 
 js = Bundle(
     NpmBundle(
@@ -67,3 +68,4 @@ js = Bundle(
     filters='jsmin',
     output="gen/packed.%(version)s.js",
 )
+"""Default JavaScript bundle with Almond, JQuery and RequireJS."""

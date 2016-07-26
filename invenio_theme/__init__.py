@@ -24,6 +24,41 @@
 
 """Invenio standard theme.
 
+Invenio-Theme is a core Invenio package responsible for configuration of Jinja2
+templates used to render base, cover and error pages. There are various
+predefined error handler for most common application exceptions.
+
+It mainly consists of:
+
+- `Menu and breadcrums` - for basic site navigation using `Flask-Menu
+  <https://pythonhosted.org/flask-menu/>`_ and `Flask-Breadcrumbs
+  <https://pythonhosted.org/flask-breadcrumbs/>`_.
+- `Templates and static files` - for integration with `Bootstrap
+  <https://getbootstrap.com/>`_ HTML, CSS and JS framework.
+- `Error handlers` - for showing user-friendly 401, 402, 404, and 500 error
+  pages.
+
+Initialization
+--------------
+First create a Flask application and initialize
+:class:`~invenio_theme.ext.InvenioTheme` extension.
+
+>>> from flask import Flask
+>>> from invenio_theme import InvenioTheme
+>>> app = Flask('myapp')
+>>> theme = InvenioTheme(app)
+
+.. note::
+
+   There is a new blueprint registered during initialization in order to enable
+   loading of files from template and static folders.
+
+In order for the following examples to work, you need to work within an Flask
+application context so let's push one:
+
+>>> ctx = app.app_context()
+>>> ctx.push()
+
 Configuration
 -------------
 

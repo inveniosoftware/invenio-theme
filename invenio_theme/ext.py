@@ -39,7 +39,11 @@ class InvenioTheme(object):
     """Invenio theme extension."""
 
     def __init__(self, app=None, **kwargs):
-        """Extension initialization."""
+        r"""Extension initialization.
+
+        :param app: An instance of :class:`~flask.Flask`.
+        :param \**kwargs: Keyword arguments are passed to ``init_app`` method.
+        """
         self.menu_ext = Menu()
         self.menu = None
         self.breadcrumbs = Breadcrumbs()
@@ -47,8 +51,11 @@ class InvenioTheme(object):
         if app:
             self.init_app(app, **kwargs)
 
-    def init_app(self, app, assets=None, **kwargs):
-        """Initialize application object."""
+    def init_app(self, app, **kwargs):
+        """Initialize application object.
+
+        :param app: An instance of :class:`~flask.Flask`.
+        """
         self.init_config(app.config)
 
         # Initialize extensions
@@ -65,7 +72,7 @@ class InvenioTheme(object):
         )
         app.register_blueprint(blueprint)
 
-        # Initialize brea
+        # Initialize breadcrumbs.
         item = self.menu.submenu('breadcrumbs')
         item.register(app.config['THEME_BREADCRUMB_ROOT_ENDPOINT'], _('Home'))
 
@@ -79,12 +86,15 @@ class InvenioTheme(object):
         app.extensions['invenio-theme'] = self
 
     def init_config(self, config):
-        """Initialize configuration."""
+        """Initialize configuration.
+
+        :param config: A dict like object where default values should be set.
+        """
         config.setdefault('SASS_BIN', 'node-sass')
-        config.setdefault("THEME_SITENAME", _("Invenio"))
-        config.setdefault("THEME_LOGO", "images/invenio-color.svg")
-        config.setdefault("REQUIREJS_CONFIG", 'js/build.js')
-        config.setdefault("THEME_GOOGLE_SITE_VERIFICATION", [])
+        config.setdefault('THEME_SITENAME', _('Invenio'))
+        config.setdefault('THEME_LOGO', 'images/invenio-color.svg')
+        config.setdefault('REQUIREJS_CONFIG', 'js/build.js')
+        config.setdefault('THEME_GOOGLE_SITE_VERIFICATION', [])
         config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')
         config.setdefault(
             'COVER_TEMPLATE', 'invenio_theme/page_cover.html')

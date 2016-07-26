@@ -25,6 +25,17 @@
 API Docs
 ========
 
-invenio_theme
--------------
+.. automodule:: invenio_theme.ext
+   :members:
 
+Bundles
+-------
+
+.. automodule:: invenio_theme.bundles
+   :members:
+
+Handlers
+--------
+
+.. automodule:: invenio_theme.views
+   :members:

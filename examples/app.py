@@ -32,8 +32,8 @@ First collect npm, requirements from registered bundles:
 .. code-block:: console
 
    $ cd examples
-   $ flask -a app.py npm
-   app
+   $ export FLASK_APP=app.py
+   $ flask npm
    Writing static/package.json
    $ cd static
    $ cat package.json
@@ -70,7 +70,7 @@ application's static folder:
 .. code-block:: console
 
    $ cd ../../
-   $ flask -a app.py collect -v
+   $ flask collect -v
    app
    Collect static from blueprints
    invenio_theme:js/base.js symbolink link created
@@ -97,7 +97,7 @@ Next, we build the webassets bundles:
 
    $ npm install -g node-sass clean-css requirejs uglify-js
    $ cd ../../
-   $ flask -a app.py assets build
+   $ flask assets build
    app
    Building bundle: gen/styles.%(version)s.css
    Building bundle: gen/packed.%(version)s.js
@@ -110,7 +110,7 @@ Last but not least we start our test server:
 
 .. code-block:: console
 
-   $ flask -a app.py --debug run
+   $ flask --debug run
 
 """
 
@@ -157,8 +157,6 @@ app.config.update(
     BABEL_DEFAULT_LOCALE='da',
     SECRET_KEY='CHANGEME'
 )
-# Compatibility layer between Flask 0.10/1.0
-FlaskCLI(app)
 if InvenioI18N is not None:
     InvenioI18N(app)
 else:
@@ -252,6 +250,3 @@ def settings_item_1():
 def settings_item_2():
     """Setting form route and menu registration."""
     return render_template('settings/item2.html')
-
-if __name__ == "__main__":
-    app.run()
