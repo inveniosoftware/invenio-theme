@@ -36,6 +36,7 @@ import pytest
 from flask import Flask
 from flask_babelex import Babel
 from flask_cli import FlaskCLI
+from invenio_i18n import InvenioI18N
 
 from invenio_theme import InvenioTheme
 
@@ -46,6 +47,7 @@ def app():
     app = Flask('myapp')
     FlaskCLI(app)
     Babel(app)
+    InvenioI18N(app)
     return app
 
 
@@ -80,5 +82,6 @@ def app_error_handler(request):
 
     app.testing = True
     Babel(app)
+    InvenioI18N(app)
     InvenioTheme(app)
     return app
