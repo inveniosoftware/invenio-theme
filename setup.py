@@ -99,7 +99,9 @@ setup(
         ],
         'invenio_assets.bundles': [
             'invenio_theme_css = invenio_theme.bundles:css',
+            'invenio_theme_admin_css = invenio_theme.bundles:admin_css',
             'invenio_theme_js = invenio_theme.bundles:js',
+            'invenio_theme_admin_js = invenio_theme.bundles:admin_js',
         ],
         'invenio_i18n.translations': [
             'messages = invenio_theme',

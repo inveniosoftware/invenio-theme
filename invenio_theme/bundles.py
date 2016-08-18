@@ -28,7 +28,7 @@ Include in page using:
 
 .. code-block:: html
 
-    {%- asset "thinkbio.modules.theme:css" %}
+    {%- asset "invenio_theme.bundles:css" %}
     <script src="{{ASSET_URL}}" ></script>
     {%- end asset %}
 """
@@ -52,6 +52,20 @@ css = NpmBundle(
 )
 """Default CSS bundle with Almond, Bootstrap, Font-Awesome and JQuery."""
 
+admin_css = NpmBundle(
+    'node_modules/admin-lte/dist/css/AdminLTE.min.css',
+    'node_modules/admin-lte/dist/css/skins/{0}.min.css'.format(
+        # current_app.config.get('ADMIN_UI_SKIN')
+        'skin-blue'
+    ),
+    filters='cleancss',
+    output='gen/styles.admin.%(version)s.css',
+    npm={
+        'admin-lte': '~2.3.6',
+    }
+)
+"""Default style for admin interface."""
+
 js = Bundle(
     NpmBundle(
         'node_modules/almond/almond.js',
@@ -70,3 +84,13 @@ js = Bundle(
     output="gen/packed.%(version)s.js",
 )
 """Default JavaScript bundle with Almond, JQuery and RequireJS."""
+
+admin_js = NpmBundle(
+    'js/invenio_theme/admin.js',
+    'node_modules/admin-lte/dist/js/app.js',
+    output='gen/admin.%(version)s.js',
+    filters='requirejs',
+    npm={
+        'select2': '~4.0.2',
+    }
+)

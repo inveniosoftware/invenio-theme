@@ -122,3 +122,6 @@ class InvenioTheme(object):
         config.setdefault('THEME_SEARCHBAR', True)
         config.setdefault('THEME_SEARCH_ENDPOINT', '/search')
         config.setdefault('THEME_BREADCRUMB_ROOT_ENDPOINT', '')
+        # Integration with Invenio-Admin:
+        config.setdefault(
+            'ADMIN_BASE_TEMPLATE', 'invenio_theme/admin.html')
