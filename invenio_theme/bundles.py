@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015 CERN.
+# Copyright (C) 2015, 2016 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -40,7 +40,8 @@ from invenio_assets import NpmBundle
 
 css = NpmBundle(
     'scss/invenio_theme/styles.scss',
-    filters='scss, cleancss',
+    depends=('scss/invenio_theme/*.scss', ),
+    filters='node-scss, cleancss',
     output='gen/styles.%(version)s.css',
     npm={
         "almond": "~0.3.1",
