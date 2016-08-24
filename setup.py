@@ -41,7 +41,6 @@ tests_require = [
     'pytest-cov>=1.8.0',
     'pytest-pep8>=1.0.6',
     'pytest>=2.8.0',
-    'Flask-CLI>=0.2.1',
     'Jinja2>=2.8',
 ]
 
@@ -62,10 +61,10 @@ setup_requires = [
 ]
 
 install_requires = [
+    'Flask>=0.11.1',
     'Flask-BabelEx>=0.9.2',
     'Flask-Breadcrumbs>=0.3.0',
     'Flask-Menu>=0.5.0',
-    'Flask>=0.11',
     'invenio-assets>=1.0.0b2',
     'invenio-i18n>=1.0.0a4',
     'jsmin>=2.1.6',
