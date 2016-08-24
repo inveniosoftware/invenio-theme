@@ -137,8 +137,8 @@ html_theme_options = {
     'github_banner': True,
     'show_powered_by': False,
     'extra_nav_links': {
-        'invenio-theme@GitHub': 'http://github.com/inveniosoftware/invenio-theme',
-        'invenio-theme@PyPI': 'http://pypi.python.org/pypi/invenio-theme/',
+        'invenio-theme@GitHub': 'https://github.com/inveniosoftware/invenio-theme',
+        'invenio-theme@PyPI': 'https://pypi.python.org/pypi/invenio-theme/',
     }
 }
 
@@ -324,3 +324,6 @@ intersphinx_mapping = {
     'https://docs.python.org/': None,
     'flask': ('http://flask.pocoo.org/docs/latest/', None),
 }
+
+# Autodoc configuraton.
+autoclass_content = 'both'
