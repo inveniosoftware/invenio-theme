@@ -11,13 +11,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2016-08-26 09:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Alizee Pace <alizee.pace@gmail.com>, 2016\n"
-"Language-Team: Danish (https://www.transifex.com/inveniosoftware/teams/23537/da/)\n"
+"Language-Team: Spanish (https://www.transifex.com/inveniosoftware/teams/23537/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"Language: da\n"
+"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: invenio_theme/ext.py:77
@@ -26,27 +25,27 @@ msgstr ""
 
 #: invenio_theme/ext.py:94
 msgid "Invenio"
-msgstr "Invenio"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/401.html:28
 msgid "Unauthorized"
-msgstr "Adgang nægtet"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/401.html:29
 msgid "You need to be authenticated to view this page."
-msgstr "Du skal være logget ind for at kunne se denne side."
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/403.html:28
 msgid "Permission required"
-msgstr "Forbudt"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/403.html:29
 msgid "You do not have sufficient permissions to view this page."
-msgstr "Du har ikke rettigheder til at kunne se denne side."
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/404.html:28
 msgid "Page not found"
-msgstr "Siden kunne ikke findes"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/404.html:29
 msgid "The page you are looking for could not be found."
@@ -54,7 +53,7 @@ msgstr ""
 
 #: invenio_theme/templates/invenio_theme/500.html:28
 msgid "Internal server error"
-msgstr "Intern serverfejl"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/500.html:30
 msgid "Error identifier"
@@ -67,7 +66,7 @@ msgstr ""
 
 #: invenio_theme/templates/invenio_theme/header.html:31
 msgid "Toggle navigation"
-msgstr "Vis menu"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/header.html:53
 msgid "Search"
