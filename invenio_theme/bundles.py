@@ -52,33 +52,43 @@ css = NpmBundle(
 )
 """Default CSS bundle with Almond, Bootstrap, Font-Awesome and JQuery."""
 
-admin_css = NpmBundle(
+admin_lte_css = NpmBundle(
     'node_modules/admin-lte/dist/css/AdminLTE.min.css',
     'node_modules/admin-lte/dist/css/skins/{0}.min.css'.format(
         # current_app.config.get('ADMIN_UI_SKIN')
         'skin-blue'
     ),
     filters='cleancss',
-    output='gen/styles.admin.%(version)s.css',
+    output='gen/styles.admin-lte.%(version)s.css',
     npm={
         'admin-lte': '~2.3.6',
     }
 )
+"""Admin LTE CSS."""
+
+admin_css = NpmBundle(
+    'scss/invenio_theme/admin.scss',
+    filters='node-scss,cleancss',
+    output="gen/styles.admin.%(version)s.css"
+)
 """Default style for admin interface."""
 
+# FIXME: This bundle doesn't build without the output
+# being added to the js/base.js bundle.
 js = Bundle(
     NpmBundle(
         'node_modules/almond/almond.js',
         'js/settings.js',
         filters='uglifyjs',
         npm={
-            "almond": "~0.3.1",
-            "jquery": "~1.9.1"
+            'almond': '~0.3.1',
+            'jquery': '~1.9.1'
         }
     ),
     Bundle(
         'js/base.js',
         filters='requirejs',
+        output='gen/base.%(version)s.js',
     ),
     filters='jsmin',
     output="gen/packed.%(version)s.js",
@@ -86,11 +96,15 @@ js = Bundle(
 """Default JavaScript bundle with Almond, JQuery and RequireJS."""
 
 admin_js = NpmBundle(
-    'js/invenio_theme/admin.js',
+    'node_modules/jquery/jquery.js',
+    'node_modules/select2/dist/js/select2.js',
+    'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     'node_modules/admin-lte/dist/js/app.js',
     output='gen/admin.%(version)s.js',
-    filters='requirejs',
+    filters='jsmin',
     npm={
         'select2': '~4.0.2',
+        'jquery': '~1.9.1'
     }
 )
+"""AdminJS contains jquery, select2, bootstrap, and admin-lte."""

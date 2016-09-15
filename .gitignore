@@ -59,3 +59,8 @@ target/
 # Example instance folder
 examples/instance/
 examples/static/
+
+# IDE
+.idea/
+*.ipr
+*.iml

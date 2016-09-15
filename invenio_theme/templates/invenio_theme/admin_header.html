@@ -52,7 +52,7 @@
   </ul>
     <div class="navbar-custom-menu">
       <ul class="nav navbar-nav">
-        <li class="dropdown user user-menu">
+        <li class="dropdown user">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">
             <i class="glyphicon glyphicon-user"></i> {{ current_user.nickname|default(current_user.email) }}
             <b class="caret"></b>
@@ -60,11 +60,11 @@
           <ul class="dropdown-menu">
             <li>
               <div class="navbar-content">
-                <div class="row">
-                  <div class="col-md-3">
-                    <i class="fa fa-user fa-3x"></i>
+                <div class="row-fluid user-menu">
+                  <div class="col-md-2">
+                    <i class="fa fa-user fa-2x"></i>
                   </div>
-                  <div class="col-md-9">
+                  <div class="col-md-10">
                     <strong>
                       {{ current_user.nickname|default(current_user.email) }}
                     </strong>
