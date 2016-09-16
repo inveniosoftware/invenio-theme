@@ -38,7 +38,7 @@ def assert_template_blocks(template, blocks, base_tpl=None):
         base_tpl = """{%% extends '%s' %%}""" % template
 
     for b in blocks:
-        tpl = base_tpl + "{%% block %s %%}TPLTEST{%% endblock %%}" % b
+        tpl = base_tpl + '{%% block %s %%}TPLTEST{%% endblock %%}' % b
         assert 'TPLTEST' in render_template_string(tpl)
 
 
@@ -104,7 +104,7 @@ def test_page_template_blocks(app):
 
     with app.test_request_context():
         assert_template_blocks(
-            "invenio_theme/page.html", blocks, base_tpl=base_tpl)
+            'invenio_theme/page.html', blocks, base_tpl=base_tpl)
 
 
 def test_cover_template_blocks(app):
@@ -124,7 +124,7 @@ def test_cover_template_blocks(app):
 
     with app.test_request_context():
         assert_template_blocks(
-            "invenio_theme/page_cover.html", blocks, base_tpl=base_tpl)
+            'invenio_theme/page_cover.html', blocks, base_tpl=base_tpl)
 
 
 def test_settings_template_blocks(app):
@@ -154,7 +154,7 @@ def test_header_template_blocks(app):
     InvenioTheme(app)
     InvenioAssets(app)
     with app.test_request_context():
-        assert_template_blocks("invenio_theme/header.html", blocks)
+        assert_template_blocks('invenio_theme/header.html', blocks)
 
     app.config.update(dict(THEME_SEARCHBAR=False))
     with app.test_request_context():
@@ -162,3 +162,14 @@ def test_header_template_blocks(app):
             r'{% extends "invenio_theme/header.html" %}' \
             r'{% block navbar_search %}TPLTEST{% endblock %}'
         assert 'TPLTEST' not in render_template_string(tpl)
+
+
+def test_lazy_bundles(app):
+    """Test configurable bundles."""
+    InvenioTheme(app)
+    InvenioAssets(app)
+
+    with app.app_context():
+        from invenio_theme.bundles import admin_lte_css, lazy_skin
+
+        assert str(lazy_skin()) in admin_lte_css.contents
