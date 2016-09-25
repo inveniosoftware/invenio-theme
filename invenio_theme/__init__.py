@@ -31,8 +31,8 @@ predefined error handler for most common application exceptions.
 It mainly consists of:
 
 - `Menu and breadcrums` - for basic site navigation using `Flask-Menu
-  <https://pythonhosted.org/flask-menu/>`_ and `Flask-Breadcrumbs
-  <https://pythonhosted.org/flask-breadcrumbs/>`_.
+  <https://flask-menu.readthedocs.io/>`_ and `Flask-Breadcrumbs
+  <https://flask-breadcrumbs.readthedocs.io/>`_.
 - `Templates and static files` - for integration with `Bootstrap
   <https://getbootstrap.com/>`_ HTML, CSS and JS framework.
 - `Error handlers` - for showing user-friendly 401, 402, 404, and 500 error

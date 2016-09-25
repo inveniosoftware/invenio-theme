@@ -46,4 +46,4 @@ Invenio standard theme.
 *This is an experimental developer preview release.*
 
 * Free software: GPLv2 license
-* Documentation: https://pythonhosted.org/invenio-theme/
+* Documentation: https://invenio-theme.readthedocs.io/

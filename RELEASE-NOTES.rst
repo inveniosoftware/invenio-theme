@@ -24,7 +24,7 @@ Installation
 Documentation
 -------------
 
-   http://pythonhosted.org/invenio-theme/
+   http://invenio-theme.readthedocs.io/
 
 Happy hacking and thanks for flying Invenio Theme.
 
