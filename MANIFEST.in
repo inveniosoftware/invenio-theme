@@ -32,19 +32,9 @@ include LICENSE
 include babel.ini
 include docs/requirements.txt
 include pytest.ini
-recursive-include docs *.bat
-recursive-include docs *.py
-recursive-include docs *.rst
-recursive-include docs Makefile
-recursive-include invenio_theme *.html
-recursive-include invenio_theme *.js
-recursive-include invenio_theme *.scss
-recursive-include misc *.py
-recursive-include misc *.rst
+recursive-include docs *.bat *.py *.rst Makefile
+recursive-include invenio_theme *.html *.js *.scss
 recursive-include tests *.py
-
-# added by check_manifest.py
-recursive-include examples *.html
-recursive-include examples *.py
-recursive-include invenio_theme *.po
+recursive-include examples *.html *.py *.sh
+recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg

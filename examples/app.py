@@ -24,93 +24,25 @@
 
 """Minimal Flask application for development.
 
-Installing npm requirements
----------------------------
-
-First collect npm, requirements from registered bundles:
+Install the Invenio default theme and build assets:
 
 .. code-block:: console
 
-   $ cd examples
-   $ export FLASK_APP=app.py
-   $ flask npm
-   Writing static/package.json
-   $ cd static
-   $ cat package.json
-   {
-       "version": "",
-       "dependencies": {
-           "font-awesome": "~4.4.0",
-           "almond": "~0.3.1",
-           "bootstrap-sass": "~3.3.5"
-       },
-       "name": "app"
-   }
+    $ pip install -e .[all]
+    $ cd examples
+    $ ./app-setup.sh
 
-
-Now install npm requirements (requires that npm is already installed):
+Run the development server:
 
 .. code-block:: console
 
-   $ npm install
-   ...
-   $ cd node_modules
-   $ ls -1
-   almond
-   bootstrap-sass
-   font-awesome
-   jquery
+    $ FLASK_APP=app.py flask run --debugger -p 5000
 
-Collect static files
---------------------
-
-Next, we copy the static files from the Python packages into the Flask
-application's static folder:
+To be able to uninstall the example app:
 
 .. code-block:: console
 
-   $ cd ../../
-   $ flask collect -v
-   app
-   Collect static from blueprints
-   invenio_theme:js/base.js symbolink link created
-   invenio_theme:js/settings.js symbolink link created
-   invenio_theme:scss/body.scss symbolink link created
-   invenio_theme:scss/cover.scss symbolink link created
-   invenio_theme:scss/footer.scss symbolink link created
-   invenio_theme:scss/input-icon.scss symbolink link created
-   invenio_theme:scss/navbar.scss symbolink link created
-   invenio_theme:scss/sidebarnav.scss symbolink link created
-   invenio_theme:scss/styles.scss symbolink link created
-   invenio_theme:scss/type.scss symbolink link created
-   invenio_theme:scss/variables.scss symbolink link created
-   259 of 270 files already present
-   Done collecting.
-
-
-Building assets
----------------
-
-Next, we build the webassets bundles:
-
-.. code-block:: console
-
-   $ npm install -g node-sass clean-css requirejs uglify-js
-   $ cd ../../
-   $ flask assets build
-   app
-   Building bundle: gen/styles.%(version)s.css
-   Building bundle: gen/packed.%(version)s.js
-
-
-Run server
-----------
-
-Last but not least we start our test server:
-
-.. code-block:: console
-
-   $ flask --debug run
+    $ ./app-teardown.sh
 
 """
 
