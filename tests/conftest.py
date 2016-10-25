@@ -44,6 +44,9 @@ from invenio_theme import InvenioTheme
 def app():
     """Flask app fixture."""
     app = Flask('myapp')
+    app.config.update(
+        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+    )
     Babel(app)
     InvenioI18N(app)
     return app

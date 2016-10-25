@@ -22,7 +22,7 @@
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 #}
 <!DOCTYPE html>
-<html{% if html_css_classes %} class="{{ html_css_classes|join(' ') }}"{% endif %}{%- if g.ln %} lang="{{ g.ln|safe }}"{% endif %} dir="{{ current_i18n.locale.text_direction }}">
+<html{% if html_css_classes %} class="{{ html_css_classes|join(' ') }}"{% endif %} lang="{{ current_i18n.locale.language|safe }}" dir="{{ current_i18n.locale.text_direction }}">
   <head>
     {%- block head %}
     {%- block head_meta %}

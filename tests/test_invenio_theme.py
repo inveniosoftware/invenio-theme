@@ -173,3 +173,29 @@ def test_lazy_bundles(app):
         from invenio_theme.bundles import admin_lte_css, lazy_skin
 
         assert str(lazy_skin()) in admin_lte_css.contents
+
+
+def test_html_lang(app):
+    """Test HTML language attribute."""
+    base_tpl = r"""{% extends 'invenio_theme/page.html' %}
+    {% block css %}{% endblock %}
+    {% block javascript %}{% endblock %}
+    """
+
+    @app.route('/index')
+    def index():
+        """Render default page."""
+        return render_template_string(base_tpl)
+
+    InvenioTheme(app)
+    InvenioAssets(app)
+
+    with app.test_client() as client:
+        response = client.get('/index')
+        assert b'lang="en" ' in response.data
+
+        response = client.get('/index?ln=de')
+        assert b'lang="de" ' in response.data
+
+        response = client.get('/index?ln=en')
+        assert b'lang="en" ' in response.data
