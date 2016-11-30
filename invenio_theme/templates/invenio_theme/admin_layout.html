@@ -61,7 +61,7 @@
 {%- endmacro %}
 
 {% macro menu_overwrite() %}
-  {%- for item in admin_view.admin.menu() %}
+  {%- for item in admin_view.admin.menu()|sort(attribute='name') %}
     {%- if item.is_category() -%}
       {% set children = item.get_children() %}
       {%- if children %}
@@ -77,7 +77,7 @@
             <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-          {%- for child in children -%}
+          {%- for child in children|sort(attribute='name') -%}
             {% set class_name = child.get_class_name() %}
             {%- if child.is_active(admin_view) %}
             <li class="active">
