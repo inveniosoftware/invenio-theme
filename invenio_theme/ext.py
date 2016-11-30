@@ -91,8 +91,9 @@ class InvenioTheme(object):
         :param config: A dict like object where default values should be set.
         """
         config.setdefault('SASS_BIN', 'node-sass')
-        config.setdefault('THEME_SITENAME', _('Invenio'))
+        config.setdefault('THEME_SITENAME', 'Invenio')
         config.setdefault('THEME_LOGO', 'images/invenio-color.svg')
+        config.setdefault('THEME_LOGO_ADMIN', 'images/invenio-white.svg')
         config.setdefault('REQUIREJS_CONFIG', 'js/build.js')
         config.setdefault('THEME_GOOGLE_SITE_VERIFICATION', [])
         config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')
