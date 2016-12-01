@@ -78,11 +78,13 @@ def lazy_skin():
 
 admin_lte_css = LazyNpmBundle(
     'node_modules/admin-lte/dist/css/AdminLTE.min.css',
+    'node_modules/select2/dist/css/select2.min.css',
     make_lazy_string(lazy_skin),
     filters='cleancss',
     output='gen/styles.admin-lte.%(version)s.css',
     npm={
         'admin-lte': '~2.3.6',
+        'select2': '~4.0.2',
     }
 )
 """Admin LTE CSS."""
@@ -118,14 +120,14 @@ js = Bundle(
 
 admin_js = NpmBundle(
     'node_modules/jquery/jquery.js',
-    'node_modules/select2/dist/js/select2.js',
+    'node_modules/select2/dist/js/select2.full.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     'node_modules/admin-lte/dist/js/app.js',
     output='gen/admin.%(version)s.js',
     filters='jsmin',
     npm={
+        'jquery': '~1.9.1',
         'select2': '~4.0.2',
-        'jquery': '~1.9.1'
     }
 )
 """AdminJS contains jquery, select2, bootstrap, and admin-lte."""
