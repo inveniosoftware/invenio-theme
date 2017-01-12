@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015, 2016 CERN.
+# Copyright (C) 2015, 2016, 2017 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -63,7 +63,7 @@ css = NpmBundle(
         'almond': '~0.3.1',
         'bootstrap-sass': '~3.3.5',
         'font-awesome': '~4.4.0',
-        'jquery': '~1.9.1'
+        'jquery': '~1.9.1',
     }
 )
 """Default CSS bundle with Almond, Bootstrap, Font-Awesome and JQuery."""
@@ -105,7 +105,7 @@ js = Bundle(
         filters='uglifyjs',
         npm={
             'almond': '~0.3.1',
-            'jquery': '~1.9.1'
+            'jquery': '~1.9.1',
         }
     ),
     Bundle(
@@ -120,6 +120,7 @@ js = Bundle(
 
 admin_js = NpmBundle(
     'node_modules/jquery/jquery.js',
+    'node_modules/moment/moment.js',
     'node_modules/select2/dist/js/select2.full.js',
     'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     'node_modules/admin-lte/dist/js/app.js',
@@ -127,7 +128,8 @@ admin_js = NpmBundle(
     filters='jsmin',
     npm={
         'jquery': '~1.9.1',
+        'moment': '~2.9.0',
         'select2': '~4.0.2',
     }
 )
-"""AdminJS contains jquery, select2, bootstrap, and admin-lte."""
+"""AdminJS contains JQuery, Moment, Select2, Bootstrap, and Admin-LTE."""
