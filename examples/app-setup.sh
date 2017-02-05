@@ -12,7 +12,7 @@ cd $DIR
 export FLASK_APP=app.py
 
 # Install requirements
-npm install -g node-sass clean-css requirejs uglify-js
+npm install -g node-sass clean-css clean-css-cli requirejs uglify-js
 
 # Collect npm, requirements from registered bundles
 flask npm
