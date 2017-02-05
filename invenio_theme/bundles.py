@@ -57,7 +57,7 @@ class LazyNpmBundle(NpmBundle):
 css = NpmBundle(
     'scss/invenio_theme/styles.scss',
     depends=('scss/invenio_theme/*.scss', ),
-    filters='node-scss, cleancss',
+    filters='node-scss,cleancssurl',
     output='gen/styles.%(version)s.css',
     npm={
         'almond': '~0.3.1',
@@ -80,7 +80,7 @@ admin_lte_css = LazyNpmBundle(
     'node_modules/admin-lte/dist/css/AdminLTE.min.css',
     'node_modules/select2/dist/css/select2.min.css',
     make_lazy_string(lazy_skin),
-    filters='cleancss',
+    filters='cleancssurl',
     output='gen/styles.admin-lte.%(version)s.css',
     npm={
         'admin-lte': '~2.3.6',
@@ -91,7 +91,7 @@ admin_lte_css = LazyNpmBundle(
 
 admin_css = NpmBundle(
     'scss/invenio_theme/admin.scss',
-    filters='node-scss,cleancss',
+    filters='node-scss,cleancssurl',
     output='gen/styles.admin.%(version)s.css'
 )
 """Default style for admin interface."""
@@ -105,6 +105,7 @@ js = Bundle(
         filters='uglifyjs',
         npm={
             'almond': '~0.3.1',
+            'angular': '~1.4.9',
             'jquery': '~1.9.1',
         }
     ),

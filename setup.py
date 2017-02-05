@@ -46,7 +46,7 @@ tests_require = [
 
 extras_require = {
     'docs': [
-        'Sphinx>=1.4.2',
+        'Sphinx>=1.5.1',
     ],
     'tests': tests_require,
 }
@@ -65,8 +65,8 @@ install_requires = [
     'Flask-BabelEx>=0.9.2',
     'Flask-Breadcrumbs>=0.3.0',
     'Flask-Menu>=0.5.0',
-    'invenio-assets>=1.0.0b2',
-    'invenio-i18n>=1.0.0a4',
+    'invenio-assets>=1.0.0b5',
+    'invenio-i18n>=1.0.0b1',
     'jsmin>=2.1.6',
 ]
 

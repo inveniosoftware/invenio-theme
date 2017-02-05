@@ -6,4 +6,4 @@ cd $DIR
 export FLASK_APP=app.py
 
 # clean environment
-[ -e "$DIR/static" ] && rm $DIR/static/ -Rf
+[ -e "$DIR/static" ] && rm -Rf $DIR/static/
