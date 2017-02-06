@@ -31,6 +31,7 @@ from flask_babelex import lazy_gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
+from . import config
 from .views import insufficient_permissions, internal_error, page_not_found, \
     unauthorized
 
@@ -56,7 +57,7 @@ class InvenioTheme(object):
 
         :param app: An instance of :class:`~flask.Flask`.
         """
-        self.init_config(app.config)
+        self.init_config(app)
 
         # Initialize extensions
         self.menu_ext.init_app(app)
@@ -85,44 +86,19 @@ class InvenioTheme(object):
         # Save reference to self on object
         app.extensions['invenio-theme'] = self
 
-    def init_config(self, config):
+    def init_config(self, app):
         """Initialize configuration.
 
-        :param config: A dict like object where default values should be set.
+        :param app: An instance of :class:`~flask.Flask`.
         """
-        config.setdefault('SASS_BIN', 'node-sass')
-        config.setdefault('THEME_SITENAME', 'Invenio')
-        config.setdefault('THEME_LOGO', 'images/invenio-color.svg')
-        config.setdefault('THEME_LOGO_ADMIN', 'images/invenio-white.svg')
-        config.setdefault('REQUIREJS_CONFIG', 'js/build.js')
-        config.setdefault('THEME_GOOGLE_SITE_VERIFICATION', [])
-        config.setdefault('BASE_TEMPLATE', 'invenio_theme/page.html')
-        config.setdefault(
-            'COVER_TEMPLATE', 'invenio_theme/page_cover.html')
-        config.setdefault(
-            'SETTINGS_TEMPLATE', 'invenio_theme/page_settings.html')
-        config.setdefault(
-            'HEADER_TEMPLATE', 'invenio_theme/header.html')
-        config.setdefault(
-            'THEME_BASE_TEMPLATE', config['BASE_TEMPLATE'])
-        config.setdefault(
-            'THEME_COVER_TEMPLATE', config['COVER_TEMPLATE'])
-        config.setdefault(
-            'THEME_SETTINGS_TEMPLATE', config['SETTINGS_TEMPLATE'])
-        config.setdefault(
-            'THEME_ERROR_TEMPLATE', 'invenio_theme/error.html')
-        config.setdefault(
-            'THEME_401_TEMPLATE', 'invenio_theme/401.html')
-        config.setdefault(
-            'THEME_403_TEMPLATE', 'invenio_theme/403.html')
-        config.setdefault(
-            'THEME_404_TEMPLATE', 'invenio_theme/404.html')
-        config.setdefault(
-            'THEME_500_TEMPLATE', 'invenio_theme/500.html')
-
-        config.setdefault('THEME_SEARCHBAR', True)
-        config.setdefault('THEME_SEARCH_ENDPOINT', '/search')
-        config.setdefault('THEME_BREADCRUMB_ROOT_ENDPOINT', '')
-        # Integration with Invenio-Admin:
-        config.setdefault(
-            'ADMIN_BASE_TEMPLATE', 'invenio_theme/admin.html')
+        for k in dir(config):
+            if k.startswith('THEME') or k.endswith('TEMPLATE') or k in [
+                    'REQUIREJS_CONFIG', 'SASS_BIN']:
+                app.config.setdefault(k, getattr(config, k))
+        if app.config['THEME_BASE_TEMPLATE'] is None:
+            app.config['THEME_BASE_TEMPLATE'] = app.config['BASE_TEMPLATE']
+        if app.config['THEME_COVER_TEMPLATE'] is None:
+            app.config['THEME_COVER_TEMPLATE'] = app.config['COVER_TEMPLATE']
+        if app.config['THEME_SETTINGS_TEMPLATE'] is None:
+            app.config['THEME_SETTINGS_TEMPLATE'] = \
+                app.config['SETTINGS_TEMPLATE']
