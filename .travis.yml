@@ -44,6 +44,7 @@ python:
 matrix:
   allow_failures:
     - python: pypy
+  fast_finish: true
 
 before_install:
   - "nvm install 6; nvm use 6"
