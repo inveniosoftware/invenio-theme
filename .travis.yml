@@ -44,6 +44,7 @@ python:
 matrix:
   allow_failures:
     - python: pypy
+  fast_finish: true
 
 before_install:
   - "travis_retry pip install --upgrade pip setuptools py"

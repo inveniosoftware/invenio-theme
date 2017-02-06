@@ -22,31 +22,31 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-[aliases]
-test = pytest
 
-[build_sphinx]
-source-dir = docs/
-build-dir = docs/_build
-all_files = 1
+"""Configuration for Invenio-Theme."""
 
-[bdist_wheel]
-universal = 1
+REQUIREJS_CONFIG = 'js/build.js'
+SASS_BIN = 'node-sass'
 
-[compile_catalog]
-directory = invenio_theme/translations/
+# Integration with Invenio-Admin:
+ADMIN_BASE_TEMPLATE = 'invenio_theme/admin.html'
 
-[extract_messages]
-copyright_holder = CERN
-msgid_bugs_address = info@inveniosoftware.org
-mapping-file = babel.ini
-output-file = invenio_theme/translations/messages.pot
-add-comments = NOTE
-
-[init_catalog]
-input-file = invenio_theme/translations/messages.pot
-output-dir = invenio_theme/translations/
-
-[update_catalog]
-input-file = invenio_theme/translations/messages.pot
-output-dir = invenio_theme/translations/
+BASE_TEMPLATE = 'invenio_theme/page.html'
+COVER_TEMPLATE = 'invenio_theme/page_cover.html'
+HEADER_TEMPLATE = 'invenio_theme/header.html'
+SETTINGS_TEMPLATE = 'invenio_theme/page_settings.html'
+THEME_BASE_TEMPLATE = None
+THEME_BREADCRUMB_ROOT_ENDPOINT = ''
+THEME_COVER_TEMPLATE = None
+THEME_ERROR_TEMPLATE = 'invenio_theme/error.html'
+THEME_GOOGLE_SITE_VERIFICATION = []
+THEME_LOGO = 'images/invenio-color.svg'
+THEME_LOGO_ADMIN = 'images/invenio-white.svg'
+THEME_SEARCHBAR = True
+THEME_SEARCH_ENDPOINT = '/search'
+THEME_SETTINGS_TEMPLATE = None
+THEME_SITENAME = 'Invenio'
+THEME_401_TEMPLATE = 'invenio_theme/401.html'
+THEME_403_TEMPLATE = 'invenio_theme/403.html'
+THEME_404_TEMPLATE = 'invenio_theme/404.html'
+THEME_500_TEMPLATE = 'invenio_theme/500.html'
