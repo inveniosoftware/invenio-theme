@@ -1,5 +1,5 @@
 // This file is part of Invenio.
-// Copyright (C) 2015, 2016 CERN.
+// Copyright (C) 2016 CERN.
 //
 // Invenio is free software; you can redistribute it
 // and/or modify it under the terms of the GNU General Public License as
@@ -20,21 +20,25 @@
 // waive the privileges and immunities granted to it by virtue of its status
 // as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-@import "variables";
-
-// Setting the path to fonts files.
-$icon-font-path: "/static/node_modules/bootstrap-sass/assets/fonts/bootstrap/";
-$fa-font-path: "/static/node_modules/font-awesome/fonts";
-$invenio-font-awesome-path: "/static/fonts";
-
-@import "../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
-@import "../../node_modules/font-awesome/scss/font-awesome";
-
-@import "type";
-@import "navbar";
-@import "body";
-@import "cover";
-@import "header";
-@import "footer";
-@import "input-icon";
-@import "invenio-font-awesome";
+@font-face {
+    font-family: 'invenio font awesome';
+    src: url('#{$invenio-font-awesome-path}/invenio-font-awesome.eot');
+    src: url('#{$invenio-font-awesome-path}/invenio-font-awesome.eot?#iefix') format('embedded-opentype'),
+         url('#{$invenio-font-awesome-path}/invenio-font-awesome.woff') format('woff'),
+         url('#{$invenio-font-awesome-path}/invenio-font-awesome.ttf') format('truetype'),
+         url('#{$invenio-font-awesome-path}/invenio-font-awesome.svg#invenio-font-awesome') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='fa-']:before{
+   display: inline-block;
+   font-family: 'invenio font awesome';
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+}
+.fa-cern:before{content:'\0041';}
+.fa-orcid:before{content:'\0042';}
+.fa.fa-orcid {
+    color: #A6CE39 !important; /* Do not remove this rule as it is legally required by ORCID. */
+}

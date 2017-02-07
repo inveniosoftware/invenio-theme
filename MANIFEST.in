@@ -40,3 +40,6 @@ recursive-include tests *.py
 recursive-include examples *.html *.py *.sh
 recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg
+recursive-include invenio_theme *.eot
+recursive-include invenio_theme *.ttf
+recursive-include invenio_theme *.woff
