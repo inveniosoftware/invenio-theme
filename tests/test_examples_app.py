@@ -36,27 +36,34 @@ import pytest
 def example_app():
     """Example app fixture."""
     current_dir = os.getcwd()
-    # go to example directory
+
+    # Go to example directory
     project_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     exampleappdir = os.path.join(project_dir, 'examples')
     os.chdir(exampleappdir)
-    # setup example
+
+    # Setup example
     cmd = './app-setup.sh'
     exit_status = subprocess.call(cmd, shell=True)
     assert exit_status == 0
+
     # Starting example web app
     cmd = 'FLASK_APP=app.py flask run --debugger -p 5000 -h 0.0.0.0'
     webapp = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                               preexec_fn=os.setsid, shell=True)
     time.sleep(10)
-    # return webapp
+
+    # Return webapp
     yield webapp
-    # stop server
+
+    # Stop server
     os.killpg(webapp.pid, signal.SIGTERM)
-    # tear down example app
+
+    # Tear down example app
     cmd = './app-teardown.sh'
     subprocess.call(cmd, shell=True)
-    # return to the original directory
+
+    # Return to the original directory
     os.chdir(current_dir)
 
 
