@@ -43,7 +43,12 @@
 
 Invenio standard theme.
 
-*This is an experimental developer preview release.*
+Features:
 
-* Free software: GPLv2 license
-* Documentation: https://invenio-theme.readthedocs.io/
+* Default templates for displaying the page cover, settings, admin settings, breadcrumbs.
+
+* Different templates for error codes.
+
+* Jinja2 macro for displaying flashed messages.
+
+Further documentation available at https://invenio-theme.readthedocs.io/
