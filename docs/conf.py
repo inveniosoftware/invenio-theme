@@ -195,6 +195,15 @@ html_theme_options = {
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -329,6 +338,11 @@ texinfo_documents = [
 intersphinx_mapping = {
     'https://docs.python.org/': None,
     'flask': ('http://flask.pocoo.org/docs/latest/', None),
+    'flask_menu': ('https://flask-menu.readthedocs.io/en/latest/', None),
+    'flask_breadcrumbs':
+        ('https://flask-breadcrumbs.readthedocs.io/en/latest/', None),
+    'invenio_assets':
+        ('https://invenio-assets.readthedocs.io/en/latest/', None)
 }
 
 # Autodoc configuraton.
