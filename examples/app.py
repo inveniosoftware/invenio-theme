@@ -44,6 +44,32 @@ To be able to uninstall the example app:
 
     $ ./app-teardown.sh
 
+
+The example application demonstrates the default templates and the usage of
+menus and breadcrumbs. The views are registered to the application menu, which
+is visible on the page header. For more information about menus, see
+`Flask-Menu <https://flask-menu.readthedocs.io/>`_.
+
+The views displayed in the menu are:
+
+* Base page - Demonstrates the empty **page** template, which has an empty
+  **page_body** block.
+* Cover page - Demonstrates the **page_cover** template, which displays the
+  page logo.
+* Error pages - Demonstrates the different views for each one of the common
+  error codes.
+* Message flashing - Demonstrates the message flashing functionality and
+  flash template, with which you can display a flash message to the user using
+  the :func:`flask.flash` method provided by Flask.
+* Settings - Demonstrates the **page_settings** template. Inside, the submenu
+  **settings** of the current menu is displayed as a list on the left of the
+  page.
+
+On the views that have it, the breadcrumb trail is also displayed below the
+menu. It displays the location of the current view in the hierarchy. The user
+may click on the links in the breadcrumb to navigate to the previous views.
+To read more about breadcrumbs, see `Flask-Breadcrumbs
+<https://flask-breadcrumbs.readthedocs.io/>`_.`
 """
 
 from __future__ import absolute_import, print_function
@@ -87,7 +113,8 @@ app.config.update(
         '500': _('Internal server error'),
     },
     BABEL_DEFAULT_LOCALE='da',
-    SECRET_KEY='CHANGEME'
+    SECRET_KEY='CHANGEME',
+    THEME_BREADCRUMB_ROOT_ENDPOINT='index',
 )
 if InvenioI18N is not None:
     InvenioI18N(app)
@@ -125,7 +152,6 @@ for err, title in app.config['ERRORS'].items():
 
 
 @app.route('/')
-@register_breadcrumb(app, 'main.base', _('Base page'))
 @register_menu(app, 'main.base', _('Base page'), order=1)
 def index():
     """Simple test view."""
@@ -133,8 +159,7 @@ def index():
 
 
 @app.route('/cover')
-@register_breadcrumb(app, 'main.base', _('Cover page'))
-@register_menu(app, 'main.base', _('Cover page'), order=2)
+@register_menu(app, 'main.cover', _('Cover page'), order=2)
 def cover():
     """Simple test view."""
     flash('This is a message for the end user.',
@@ -143,6 +168,7 @@ def cover():
 
 
 @app.route('/errors/<err>/')
+@register_breadcrumb(app, '.error', _('Error page'))
 def error(err):
     """Render error."""
     if err in app.config['ERRORS']:
@@ -151,6 +177,7 @@ def error(err):
 
 
 @app.route('/flash/')
+@register_breadcrumb(app, '.flash', _('Flash page'))
 @register_menu(app, 'main.flash', _('Message flashing'), order=4)
 def flashmessage():
     """Flash a message."""
@@ -160,6 +187,7 @@ def flashmessage():
 
 
 @app.route('/settings/')
+@register_breadcrumb(app, '.settings', _('Settings page'))
 @register_menu(app, 'main.settings', _('Settings'), order=5)
 @register_menu(app, 'settings.example_app', _('Panel Header'), order=1)
 def settings():
@@ -168,7 +196,7 @@ def settings():
 
 
 @app.route('/settings/1/')
-@register_menu(app, 'settings.example_app.item1', _('Item 1'), order=1)
+@register_menu(app, 'settings.example_app_item1', _('Item 1'), order=2)
 def settings_item_1():
     """Setting form route and menu registration."""
     flash('This is a message for the end user.',
@@ -177,7 +205,7 @@ def settings_item_1():
 
 
 @app.route('/settings/2/')
-@register_menu(app, 'settings.example_app.item2', _('Item 2'), order=2)
+@register_menu(app, 'settings.example_app_item2', _('Item 2'), order=3)
 def settings_item_2():
     """Setting form route and menu registration."""
     return render_template('settings/item2.html')
