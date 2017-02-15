@@ -20,7 +20,7 @@
 # In applying this license, CERN does not
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
-#}
+-#}
 <!DOCTYPE html>
 <html{% if html_css_classes %} class="{{ html_css_classes|join(' ') }}"{% endif %} lang="{{ current_i18n.locale.language|safe }}" dir="{{ current_i18n.locale.text_direction }}">
   <head>
@@ -78,19 +78,19 @@
     {%- endblock browserupgrade %}
     {%- block body_inner %}
     {%- block page_header %}
-{% include "invenio_theme/header.html" %}
+{% include config.THEME_HEADER_TEMPLATE %}
     {%- endblock page_header %}
     {%- block page_body %}
 {% include "invenio_theme/body.html" %}
     {%- endblock page_body %}
     {%- block page_footer %}
-{% include "invenio_theme/footer.html" %}
+{% include config.THEME_FOOTER_TEMPLATE %}
     {%- endblock page_footer %}
     {%- endblock body_inner %}
     {%- block javascript %}
-{% include "invenio_theme/javascript.html" %}
+{% include config.THEME_JAVASCRIPT_TEMPLATE %}
     {%- endblock javascript %}
-    {%- block trackingcode %}{% include "invenio_theme/trackingcode.html" %}
+    {%- block trackingcode %}{% include config.THEME_TRACKINGCODE_TEMPLATE %}
     {%- endblock %}
     {%- endblock body %}
   </body>

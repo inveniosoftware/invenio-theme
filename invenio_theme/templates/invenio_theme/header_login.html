@@ -21,7 +21,7 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 #}
-{%- if config['ACCOUNTS'] %}
+{%- if config.ACCOUNTS %}
 {%- if not current_user.is_authenticated %}
 <form class="navbar-form navbar-right">
   <a href=" {{url_for_security('login', next=request.path)}}" class="btn btn-default"><i class="fa fa-sign-in"></i> {{_('Log in')}}</a>
@@ -29,7 +29,7 @@
 </form>
 {%- else %}
 <div class="navbar-form navbar-right">
-{%- if config['USERPROFILES'] %}
+{%- if config.USERPROFILES %}
   <div class="btn-group">
     <a class="btn btn-default" href="{{ url_for('invenio_userprofiles.profile')}}">
       <i class="fa fa-user"></i> {{current_user.email}}

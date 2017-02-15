@@ -24,12 +24,13 @@
 
 """JS/CSS bundles for theme.
 
-Include in page using:
+You include one of the bundles in a page like the example below (using ``js``
+bundle as an example):
 
 .. code-block:: html
 
-    {%- asset 'invenio_theme.bundles:css' %}
-    <script src='{{ASSET_URL}}' ></script>
+    {%- asset "invenio_theme.bundles:js" %}
+    <script src="{{ASSET_URL}}"  type="text/javascript"></script>
     {%- end asset %}
 """
 
@@ -66,7 +67,7 @@ css = NpmBundle(
         'jquery': '~1.9.1',
     }
 )
-"""Default CSS bundle with Almond, Bootstrap, Font-Awesome and JQuery."""
+"""Default CSS bundle with Bootstrap and Font-Awesome."""
 
 
 def lazy_skin():

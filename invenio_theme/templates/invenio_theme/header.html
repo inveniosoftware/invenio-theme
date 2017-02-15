@@ -45,7 +45,7 @@
       {%- block navbar_inner %}
       <div id="navbar" class="navbar-collapse collapse">
         {%- block navbar_nav %}
-        {%- if config['THEME_SEARCHBAR'] %}
+        {%- if config.THEME_SEARCHBAR %}
         {%- block navbar_search %}
         <form class="navbar-form navbar-left" action="{{config.THEME_SEARCH_ENDPOINT}}" role="search">
           <div class="form-group">
@@ -73,7 +73,7 @@
         </ul>
         {%- endblock navbar_nav %}
         {%- block navbar_right %}
-{%- include "invenio_theme/header_login.html" %}
+{%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
         {%- endblock navbar_right %}
       </div>
       {%- endblock navbar_inner %}

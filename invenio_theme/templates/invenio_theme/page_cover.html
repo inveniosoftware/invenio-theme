@@ -79,6 +79,6 @@
   {% block page_footer %}
   {% endblock page_footer %}
 </div>
-{%- block javascript %}{% include "invenio_theme/javascript.html" %}{% endblock javascript %}
-{%- block trackingcode %}{% include "invenio_theme/trackingcode.html" %}{% endblock %}
+{%- block javascript %}{% include config.THEME_JAVASCRIPT_TEMPLATE %}{% endblock javascript %}
+{%- block trackingcode %}{% include config.THEME_TRACKINGCODE_TEMPLATE %}{% endblock %}
 {%- endblock body %}
