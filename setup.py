@@ -40,7 +40,6 @@ tests_require = [
     'pytest-cov>=1.8.0',
     'pytest-pep8>=1.0.6',
     'pytest>=2.8.0',
-    'Jinja2>=2.8',
 ]
 
 extras_require = {
@@ -62,10 +61,10 @@ setup_requires = [
 install_requires = [
     'Flask>=0.11.1',
     'Flask-BabelEx>=0.9.2',
-    'Flask-Breadcrumbs>=0.3.0',
+    'Flask-Breadcrumbs>=0.4.0',
     'Flask-Menu>=0.5.0',
     'invenio-assets>=1.0.0b6',
-    'invenio-i18n>=1.0.0b1',
+    'invenio-i18n>=1.0.0b3',
     'jsmin>=2.1.6',
 ]
 
@@ -93,9 +92,6 @@ setup(
     include_package_data=True,
     platforms='any',
     entry_points={
-        'invenio_base.apps': [
-            'invenio_theme = invenio_theme:InvenioTheme',
-        ],
         'invenio_assets.bundles': [
             'invenio_theme_css = invenio_theme.bundles:css',
             'invenio_theme_admin_lte_css ='
@@ -103,6 +99,9 @@ setup(
             'invenio_theme_admin_css = invenio_theme.bundles:admin_css',
             'invenio_theme_js = invenio_theme.bundles:js',
             'invenio_theme_admin_js = invenio_theme.bundles:admin_js',
+        ],
+        'invenio_base.apps': [
+            'invenio_theme = invenio_theme:InvenioTheme',
         ],
         'invenio_i18n.translations': [
             'messages = invenio_theme',

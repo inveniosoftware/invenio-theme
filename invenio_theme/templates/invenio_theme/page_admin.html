@@ -21,10 +21,9 @@
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 -#}
 
-{%- import 'invenio_theme/admin_layout.html' as layout_overwrite with context
--%}
+{%- import 'invenio_theme/admin_layout.html' as layout_overwrite with context -%}
 {%- import 'admin/layout.html' as layout with context -%}
-{% import 'admin/static.html' as admin_static with context%}
+{%- import 'admin/static.html' as admin_static with context -%}
 
 <!DOCTYPE html>
 <html{% if html_css_classes %} class="{{ html_css_classes|join(' ') }}"{% endif %}{%- if g.ln %}
@@ -125,7 +124,7 @@
         {% block body %}{% endblock %}
       </section>
     </div>
-    {%- include 'invenio_theme/footer.html' -%}
+    {%- include config.THEME_FOOTER_TEMPLATE -%}
   </div>
 
   {%- block javascript %}
@@ -135,7 +134,7 @@
   {%- endblock javascript %}
 
   {%- block trackingcode %}
-    {% include "invenio_theme/trackingcode.html" %}
+    {% include config.THEME_TRACKINGCODE_TEMPLATE %}
   {%- endblock %}
 
   {% block tail %}{% endblock %}

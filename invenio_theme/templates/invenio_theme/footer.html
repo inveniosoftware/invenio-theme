@@ -22,21 +22,19 @@
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 #}
 <footer id="footer">
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-12" style="text-align: right;">
-        <hr />
-        <ul class="list-unstyled">
-          {% if config.I18N_LANGUAGES %}
-            {% from "invenio_i18n/macros/language_selector.html" import language_selector %}
-            <li>
-              {{ language_selector() }}
-            </li>
-          {% endif %}
-          <li>
-            {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
-          </li>
-        </ul>
+      <div class="col-xs-12"><hr /></div>
+    </div>
+    <div class="row">
+      {% if config.I18N_LANGUAGES %}
+      <div class="col-xs-6 col-xs-push-6" style="text-align: right;">
+        {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
+        {{ language_selector_dropdown() }}
+      </div>
+      {% endif %}
+      <div class="col-xs-6 col-xs-pull-6">
+        {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
       </div>
     </div>
   </div>

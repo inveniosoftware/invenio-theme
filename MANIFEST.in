@@ -22,22 +22,22 @@
 # waive the privileges and immunities granted to it by virtue of its status
 # as an Intergovernmental Organization or submit itself to any jurisdiction.
 
-include .editorconfig
 include .dockerignore
+include .editorconfig
+include .lgtm
 include .tx/config
 include *.rst
 include *.sh
 include *.txt
-include .lgtm
-include LICENSE
-include MAINTAINERS
 include babel.ini
 include docs/requirements.txt
+include LICENSE
+include MAINTAINERS
 include pytest.ini
 prune docs/_build
-recursive-include docs *.bat *.py *.rst Makefile
-recursive-include invenio_theme *.html *.js *.scss
-recursive-include tests *.py
+recursive-include docs *.bat *.py *.rst Makefile *.png
 recursive-include examples *.html *.py *.sh
+recursive-include invenio_theme *.html *.js *.scss
 recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg
+recursive-include tests *.py

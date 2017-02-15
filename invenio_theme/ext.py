@@ -93,11 +93,14 @@ class InvenioTheme(object):
         """
         _vars = ['BASE_TEMPLATE', 'COVER_TEMPLATE', 'SETTINGS_TEMPLATE']
 
+        # Sets RequireJS config and SASS binary as well if not already set.
         for k in dir(config):
             if k.startswith('THEME_') or k in [
                     'REQUIREJS_CONFIG', 'SASS_BIN'] + _vars:
                 app.config.setdefault(k, getattr(config, k))
 
+        # Set THEME_<name>_TEMPLATE from <name>_TEMPLATE variables if not
+        # already set.
         for varname in _vars:
             theme_varname = 'THEME_{}'.format(varname)
             if app.config[theme_varname] is None:

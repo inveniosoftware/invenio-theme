@@ -78,8 +78,7 @@ from os.path import dirname, join
 
 import jinja2
 from flask import Flask, flash, render_template, request
-from flask_babelex import gettext
-from flask_babelex import Babel
+from flask_babelex import Babel, gettext
 from flask_breadcrumbs import register_breadcrumb
 from flask_menu import register_menu
 from invenio_assets import InvenioAssets
@@ -112,7 +111,8 @@ app.config.update(
         '404': _('Page not found'),
         '500': _('Internal server error'),
     },
-    BABEL_DEFAULT_LOCALE='da',
+    BABEL_DEFAULT_LOCALE='en',
+    I18N_LANGUAGES=[('da', _('Danish')), ],
     SECRET_KEY='CHANGEME',
     THEME_BREADCRUMB_ROOT_ENDPOINT='index',
 )
