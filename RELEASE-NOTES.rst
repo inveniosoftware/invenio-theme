@@ -1,15 +1,13 @@
 =========================
- Invenio Theme v1.0.0a17
+ Invenio Theme v1.0.0b1
 =========================
 
-Invenio Theme v1.0.0a17 was released on February 6, 2017.
+Invenio Theme v1.0.0b1 was released on February 20, 2017.
 
 About
 -----
 
 Invenio standard theme.
-
-*This is an experimental developer preview release.*
 
 What's new
 ----------
@@ -19,18 +17,18 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-theme==1.0.0a17
+   $ pip install invenio-theme==1.0.0b1
 
 Documentation
 -------------
 
-   http://invenio-theme.readthedocs.io/
+   https://invenio-theme.readthedocs.io/
 
 Happy hacking and thanks for flying Invenio Theme.
 
 | Invenio Development Team
 |   Email: info@inveniosoftware.org
 |   IRC: #invenio on irc.freenode.net
-|   Twitter: http://twitter.com/inveniosoftware
+|   Twitter: https://twitter.com/inveniosoftware
 |   GitHub: https://github.com/inveniosoftware/invenio-theme
 |   URL: http://inveniosoftware.org
