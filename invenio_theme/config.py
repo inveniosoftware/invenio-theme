@@ -104,11 +104,20 @@ THEME_GOOGLE_SITE_VERIFICATION = []
 This adds the Google Site Verfication into the meta tags of all pages.
 """
 
-THEME_LOGO = 'images/invenio-color.svg'
+THEME_LOGO = 'images/invenio-white.svg'
 """The logo to be used on the header and on the cover."""
 
 THEME_LOGO_ADMIN = 'images/invenio-white.svg'
 """The logo to be used on the admin views header."""
+
+THEME_FRONTPAGE = False
+"""Enable or disable basic frontpage view."""
+
+THEME_FRONTPAGE_TITLE = 'Invenio'
+"""The title shown on the fronpage."""
+
+THEME_FRONTPAGE_TEMPLATE = 'invenio_theme/frontpage.html'
+"""Template for front page."""
 
 THEME_SEARCHBAR = True
 """Enable or disable the header search bar."""

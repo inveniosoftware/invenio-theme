@@ -21,6 +21,15 @@
 // as an Intergovernmental Organization or submit itself to any jurisdiction.
 
 header .alert {
-    margin-top: -$line-height-computed;
-    border-radius: 0px;
+  margin-top: -$line-height-computed;
+  border-radius: 0px;
+}
+
+header .frontpage-search {
+  padding-bottom: 50px;
+
+  h1 {
+    color: $navbar-default-brand-color;
+    padding-bottom: 15px;
+  }
 }

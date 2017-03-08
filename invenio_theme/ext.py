@@ -32,8 +32,8 @@ from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
 from . import config
-from .views import insufficient_permissions, internal_error, page_not_found, \
-    unauthorized
+from .views import blueprint, insufficient_permissions, internal_error, \
+    page_not_found, unauthorized
 
 
 class InvenioTheme(object):
@@ -65,13 +65,16 @@ class InvenioTheme(object):
         self.breadcrumbs.init_app(app)
 
         # Register blueprint in order to register template and static folder.
-        blueprint = Blueprint(
+        app.register_blueprint(Blueprint(
             'invenio_theme',
             __name__,
             template_folder='templates',
             static_folder='static',
-        )
-        app.register_blueprint(blueprint)
+        ))
+
+        # Register frontpage blueprint if enabled.
+        if app.config['THEME_FRONTPAGE']:
+            app.register_blueprint(blueprint)
 
         # Initialize breadcrumbs.
         item = self.menu.submenu('breadcrumbs')
@@ -105,3 +108,6 @@ class InvenioTheme(object):
             theme_varname = 'THEME_{}'.format(varname)
             if app.config[theme_varname] is None:
                 app.config[theme_varname] = app.config[varname]
+
+        app.config.setdefault(
+            'ADMIN_BASE_TEMPLATE', config.ADMIN_BASE_TEMPLATE)

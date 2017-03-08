@@ -24,15 +24,17 @@ $navbar-height: 60px;
 $brand-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $brand-font-size: 30px;
 
-$color1: #f5f5f5;
+$color1: rgba(13, 95, 137, 0.8);
 $color1-gradient: lighten($color1, 15%);
 $color2: #90C5A9;
 $color3: #7A9A95;
 $color4: #EF6D3B;
 $color5: #FA8B60;
 
+$navbar-default-toggle-icon-bar-bg: white;
 $navbar-brand-padding-vertical: 10px;
 $navbar-default-bg: $color1;
-$navbar-default-border: #e5e5e5;
+$navbar-default-brand-color: white;
+$navbar-default-border: darken($navbar-default-bg, 10%);
 
 $text-white: #fff;

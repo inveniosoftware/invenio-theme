@@ -26,7 +26,20 @@
 
 from __future__ import absolute_import, print_function
 
-from flask import current_app, render_template
+from flask import Blueprint, current_app, render_template
+
+blueprint = Blueprint(
+    'invenio_theme_frontpage',
+    __name__
+)
+
+
+@blueprint.route('/')
+def index():
+    """Simplistic front page view."""
+    return render_template(
+        current_app.config['THEME_FRONTPAGE_TEMPLATE'],
+    )
 
 
 def unauthorized(e):

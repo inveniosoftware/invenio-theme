@@ -25,3 +25,23 @@
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
+.marketing {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  h1, h2 {
+    font-weight: normal;
+    color: $color1;
+
+  }
+  h2 {
+    padding-bottom: 15px;
+  }
+  h1 {
+    padding-bottom: 50px;
+  }
+  .col-lg-4 {
+    text-align: center;
+  }
+}
