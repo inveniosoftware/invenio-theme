@@ -199,3 +199,24 @@ def test_html_lang(app):
 
         response = client.get('/index?ln=en')
         assert b'lang="en" ' in response.data
+
+
+def test_frontpage_not_exists(app):
+    """Test the frontpage that doesn't exist."""
+    # Before configure the frontpage
+    with app.test_client() as client:
+        response = client.get('/')
+        assert response.status_code == 404
+
+
+def test_frontpage_exists(app_frontpage_handler):
+    """Test the frontpage."""
+
+    app_frontpage_handler.config.update(dict(
+        THEME_FRONTPAGE_TITLE="Jessica Jones",
+    ))
+
+    # Check if exists
+    with app_frontpage_handler.test_client() as client:
+        response = client.get('/')
+        assert b'Jessica Jones' in response.data
