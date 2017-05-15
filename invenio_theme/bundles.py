@@ -97,8 +97,6 @@ admin_css = NpmBundle(
 )
 """Default style for admin interface."""
 
-# FIXME: This bundle doesn't build without the output
-# being added to the js/base.js bundle.
 js = Bundle(
     NpmBundle(
         'node_modules/almond/almond.js',
@@ -113,7 +111,6 @@ js = Bundle(
     Bundle(
         'js/base.js',
         filters='requirejs',
-        output='gen/base.%(version)s.js',
     ),
     filters='jsmin',
     output='gen/packed.%(version)s.js',
