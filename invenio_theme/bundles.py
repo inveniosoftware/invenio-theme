@@ -38,6 +38,8 @@ from __future__ import absolute_import, print_function
 
 from flask import current_app
 from flask_assets import Bundle
+from flask_webpackext import WebpackBundle
+
 from invenio_assets import NpmBundle
 from speaklater import is_lazy_string, make_lazy_string
 
@@ -132,3 +134,23 @@ admin_js = NpmBundle(
     }
 )
 """AdminJS contains JQuery, Moment, Select2, Bootstrap, and Admin-LTE."""
+
+
+theme = WebpackBundle(
+    __name__,
+    'assets',
+    entry={
+        'base': './js/invenio_theme/base.js',
+        'adminlte': 'admin-lte/dist/js/app.js',
+        'theme-admin': './scss/invenio_theme/admin.scss',
+        'theme': './scss/invenio_theme/styles.scss',
+    },
+    dependencies={
+        'bootstrap-sass': '~3.3.5',
+        'font-awesome': '~4.4.0',
+        'jquery': '~3.2.1',
+        'moment': '~2.9.0',
+        'select2': '~4.0.2',
+        'admin-lte': '~2.3.11',
+    }
+)
