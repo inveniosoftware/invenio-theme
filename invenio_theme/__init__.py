@@ -311,6 +311,26 @@ individual error pages you can set the variables:
 * :data:`invenio_theme.config.THEME_404_TEMPLATE`
 * :data:`invenio_theme.config.THEME_500_TEMPLATE`
 
+Front page
+~~~~~~~~~~
+The front page (``invenio_theme/frontpage.html``) is the homepage of the
+application. By default is ``disabled``.
+
+Enable the front page view by setting ``THEME_FRONTPAGE`` to ``True``
+:data:`invenio_theme.config.THEME_FRONTPAGE`
+
+Change the template by updating:
+:data:`invenio_theme.config.THEME_FRONTPAGE_TEMPLATE`
+
+The template provide a number of blocks which can be overridden. The most
+important ones are (please see the template file for full details):
+
+* ``page_header`` - Includes e.g. the logo and branding.
+
+* ``page_body`` - Renders the page body which includes a panel. The panel can
+  be customized via the template blocks ``panel`` and ``panel_content`` and by
+  setting the template variable ``panel_title``.
+
 Developing Invenio modules
 --------------------------
 .. note::
