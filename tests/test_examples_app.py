@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2016 CERN.
+# Copyright (C) 2016, 2017 CERN.
 #
 # Invenio is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
@@ -48,10 +48,10 @@ def example_app():
     assert exit_status == 0
 
     # Starting example web app
-    cmd = 'FLASK_APP=app.py flask run --debugger -p 5000 -h 0.0.0.0'
+    cmd = 'FLASK_APP=app.py flask run --debugger -p 5000'
     webapp = subprocess.Popen(cmd, stdout=subprocess.PIPE,
                               preexec_fn=os.setsid, shell=True)
-    time.sleep(10)
+    time.sleep(15)
 
     # Return webapp
     yield webapp
