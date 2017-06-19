@@ -24,6 +24,8 @@
 
 """Minimal Flask application for development.
 
+SPHINX-START
+
 Install the Invenio default theme and build assets:
 
 .. code-block:: console
@@ -70,6 +72,9 @@ menu. It displays the location of the current view in the hierarchy. The user
 may click on the links in the breadcrumb to navigate to the previous views.
 To read more about breadcrumbs, see `Flask-Breadcrumbs
 <https://flask-breadcrumbs.readthedocs.io/>`_.`
+
+SPHINX-END
+
 """
 
 from __future__ import absolute_import, print_function
