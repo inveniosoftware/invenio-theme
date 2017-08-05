@@ -125,6 +125,7 @@ theme = WebpackBundle(
     'assets',
     entry={
         'base': './js/invenio_theme/base.js',
+        # requires jquery, momoent, select2, bootstrap
         'adminlte': 'admin-lte/dist/js/app.js',
         'theme-admin': './scss/invenio_theme/admin.scss',
         'theme': './scss/invenio_theme/styles.scss',
