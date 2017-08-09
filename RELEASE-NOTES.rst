@@ -1,8 +1,8 @@
 =========================
- Invenio Theme v1.0.0b2
+ Invenio Theme v1.0.0b3
 =========================
 
-Invenio Theme v1.0.0b2 was released on March 8, 2017.
+Invenio Theme v1.0.0b3 was released on August 9, 2017.
 
 About
 -----
@@ -17,7 +17,7 @@ What's new
 Installation
 ------------
 
-   $ pip install invenio-theme==1.0.0b2
+   $ pip install invenio-theme==1.0.0b3
 
 Documentation
 -------------

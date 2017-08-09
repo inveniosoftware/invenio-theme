@@ -64,7 +64,7 @@ install_requires = [
     'Flask-Breadcrumbs>=0.4.0',
     'Flask-Menu>=0.5.0',
     'invenio-assets>=1.0.0b6',
-    'invenio-i18n>=1.0.0b3',
+    'invenio-i18n>=1.0.0b4',
     'jsmin>=2.1.6',
 ]
 
