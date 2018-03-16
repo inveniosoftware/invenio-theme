@@ -27,9 +27,10 @@ python:
   - "pypy"
 
 matrix:
+  fast_finish: true
   allow_failures:
     - python: pypy
-  fast_finish: true
+    - env: REQUIREMENTS=devel
 
 before_install:
   - "nvm install 6; nvm use 6"
