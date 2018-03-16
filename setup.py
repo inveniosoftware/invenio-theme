@@ -20,7 +20,6 @@ tests_require = [
     'coverage>=4.0',
     'isort>=4.2.2',
     'pydocstyle>=1.0.0',
-    'pytest-cache>=1.0',
     'pytest-cov>=1.8.0',
     'pytest-pep8>=1.0.6',
     'pytest>=2.8.0',
