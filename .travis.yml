@@ -24,12 +24,10 @@ env:
 python:
   - "2.7"
   - "3.5"
-  - "pypy"
 
 matrix:
   fast_finish: true
   allow_failures:
-    - python: pypy
     - env: REQUIREMENTS=devel
 
 before_install:
