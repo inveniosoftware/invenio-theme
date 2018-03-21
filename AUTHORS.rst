@@ -5,13 +5,22 @@
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
-Authors
-=======
+Contributors
+============
 
-Invenio standard theme.
-
-- Harris Tzovanakis <me@drjova.com>
-- Javier Delgado <JavierDelgado@outlook.com>
-- Jiri Kuncar <jiri.kuncar@cern.ch>
-- Lars Holm Nielsen <lars.holm.nielsen@cern.ch>
-- Sami Hiltunen <sami.mikael.hiltunen@cern.ch>
+- Alexander Ioannidis
+- Alizee Pace
+- Diego Rodriguez
+- Eamonn Maguire
+- Esteban J. G. Gabancho
+- Harri Hirvonsalo
+- Harris Tzovanakis
+- Javier Delgado
+- Jiri Kuncar
+- Lars Holm Nielsen
+- Leonardo Rossi
+- Nikos Filippakis
+- Orestis Melkonian
+- Paulina Lach
+- Sami Hiltunen
+- Tibor Simko
