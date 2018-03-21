@@ -8,7 +8,6 @@
 
 include .dockerignore
 include .editorconfig
-include .lgtm
 include .tx/config
 include *.rst
 include *.sh
@@ -16,7 +15,6 @@ include *.txt
 include babel.ini
 include docs/requirements.txt
 include LICENSE
-include MAINTAINERS
 include pytest.ini
 prune docs/_build
 recursive-include docs *.bat *.py *.rst Makefile *.png

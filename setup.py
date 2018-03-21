@@ -46,8 +46,8 @@ install_requires = [
     'Flask-BabelEx>=0.9.2',
     'Flask-Breadcrumbs>=0.4.0',
     'Flask-Menu>=0.5.0',
-    'invenio-assets>=1.0.0b6',
-    'invenio-i18n>=1.0.0b4',
+    'invenio-assets>=1.0.0',
+    'invenio-i18n>=1.0.0',
     'jsmin>=2.1.6',
 ]
 
@@ -107,7 +107,6 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython',
-        'Programming Language :: Python :: Implementation :: PyPy',
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
     ],
 )
