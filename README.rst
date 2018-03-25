@@ -9,6 +9,9 @@
  Invenio Theme
 ===============
 
+.. image:: https://img.shields.io/github/license/inveniosoftware/invenio-theme.svg
+        :target: https://github.com/inveniosoftware/invenio-theme/blob/master/LICENSE
+
 .. image:: https://img.shields.io/travis/inveniosoftware/invenio-theme.svg
         :target: https://travis-ci.org/inveniosoftware/invenio-theme
 
