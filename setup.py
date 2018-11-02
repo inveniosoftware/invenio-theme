@@ -84,7 +84,7 @@ setup(
             'invenio_theme_admin_js = invenio_theme.bundles:admin_js',
         ],
         'invenio_assets.webpack': [
-            'invenio_theme = invenio_theme.bundles:theme'
+            'invenio_theme = invenio_theme.webpack:theme'
         ],
         'invenio_base.apps': [
             'invenio_theme = invenio_theme:InvenioTheme',
