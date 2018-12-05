@@ -26,8 +26,8 @@ theme = WebpackBundle(
     'assets',
     entry={
         'base': './js/invenio_theme/base.js',
-        # requires jquery, momoent, select2, bootstrap
-        'adminlte': 'admin-lte/dist/js/app.js',
+        # requires jquery, moment, select2, bootstrap
+        'adminlte': './js/invenio_theme/admin.js',
         'theme-admin': './scss/invenio_theme/admin.scss',
         'theme': './scss/invenio_theme/styles.scss',
     },
@@ -37,6 +37,6 @@ theme = WebpackBundle(
         'jquery': '~3.2.1',
         'moment': '~2.9.0',
         'select2': '~4.0.2',
-        'admin-lte': '~2.3.11',
+        'admin-lte': '~2.4.8',
     }
 )

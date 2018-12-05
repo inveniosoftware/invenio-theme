@@ -86,7 +86,7 @@
 
     <aside class="main-sidebar">
       <section class="sidebar">
-        <ul class="sidebar-menu">
+        <ul data-widget="tree" class="sidebar-menu">
           {{ layout_overwrite.menu_overwrite() }}
         </ul>
       </section>
@@ -111,7 +111,45 @@
     {{ webpack['vendor.js'] }}
     {{ webpack['adminlte.js'] }}
      <script language="javascript">
-     jQuery = $;
+      jQuery = $;
+
+      // Manually register select2 as a jQuery plugin, since it doesn't work
+      // with Webpack + ES6 imports.
+      $.fn.select2 = function (options) {
+        options = options || {};
+        if (typeof options === 'object') {
+          this.each(function () {
+            var instanceOptions = $.extend(true, {}, options);
+            var instance = new select2($(this), instanceOptions);
+          });
+          return this;
+        } else if (typeof options === 'string') {
+          var ret;
+          var args = Array.prototype.slice.call(arguments, 1);
+          this.each(function () {
+            var instance = $(this).data('select2');
+            ret = instance[options].apply(instance, args);
+          });
+          if ($.inArray(options, ['open', 'close', 'destroy']) > -1) { return this; }
+          return ret;
+        } else { throw new Error('Invalid arguments for Select2: ' + options); }
+      };
+
+      $.fn.select2.defaults = {
+        closeOnSelect: true,
+        debug: false,
+        dropdownAutoWidth: false,
+        minimumInputLength: 0,
+        maximumInputLength: 0,
+        maximumSelectionLength: 0,
+        minimumResultsForSearch: 0,
+        selectOnClose: false,
+        sorter: function (data) { return data; },
+        templateResult: function (result) { return result.text; },
+        templateSelection: function (selection) { return selection.text; },
+        theme: 'default',
+        width: 'resolve'
+      };
      </script>
   {%- endblock javascript %}
 
