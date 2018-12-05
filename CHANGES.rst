@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.1.1 (released 2018-12-05)
+
+- Fixes issues with webpack and the AdminLTE theme.
+
 Version 1.1.0 (released 2018-11-06)
 
 - Introduce webpack support.
