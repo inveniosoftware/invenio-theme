@@ -35,7 +35,7 @@ theme = WebpackBundle(
         'bootstrap-sass': '~3.3.5',
         'font-awesome': '~4.4.0',
         'jquery': '~3.2.1',
-        'moment': '~2.9.0',
+        'moment': '~2.23.0',
         'select2': '~4.0.2',
         'admin-lte': '~2.4.8',
     }
