@@ -7,6 +7,9 @@
 
 Changes
 =======
+Version 1.1.2 (released 2019-02-15)
+
+- Upgraded moment to 2.23.0
 
 Version 1.1.1 (released 2018-12-05)
 
