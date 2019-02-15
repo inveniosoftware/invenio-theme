@@ -38,5 +38,6 @@ theme = WebpackBundle(
         'moment': '~2.23.0',
         'select2': '~4.0.2',
         'admin-lte': '~2.4.8',
+        'morris.js': 'github:morrisjs/morris.js',
     }
 )
