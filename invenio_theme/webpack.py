@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015-2018 CERN.
+# Copyright (C) 2015-2019 CERN.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -29,7 +29,7 @@ theme = WebpackBundle(
         # requires jquery, moment, select2, bootstrap
         'adminlte': './js/invenio_theme/admin.js',
         'theme-admin': './scss/invenio_theme/admin.scss',
-        'theme': './scss/invenio_theme/styles.scss',
+        'theme': './scss/invenio_theme/theme.scss',
     },
     dependencies={
         'bootstrap-sass': '~3.3.5',
