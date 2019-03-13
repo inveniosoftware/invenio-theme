@@ -1,12 +1,18 @@
 ..
     This file is part of Invenio.
-    Copyright (C) 2015-2018 CERN.
+    Copyright (C) 2015-2019 CERN.
 
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 Changes
 =======
+
+Version 1.1.3 (released 2019-03-13)
+
+- Restructure SCSS files, in order to allow easier customization and extension
+  in overlays.
+
 Version 1.1.2 (released 2019-02-15)
 
 - Upgraded moment to 2.23.0
