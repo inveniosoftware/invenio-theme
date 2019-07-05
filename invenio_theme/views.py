@@ -41,6 +41,11 @@ def page_not_found(e):
     return render_template(current_app.config['THEME_404_TEMPLATE']), 404
 
 
+def too_many_requests(e):
+    """Error handler to show a 429.html page in case of a 429 error."""
+    return render_template(current_app.config['THEME_429_TEMPLATE']), 429
+
+
 def internal_error(e):
     """Error handler to show a 500.html page in case of a 500 error."""
     return render_template(current_app.config['THEME_500_TEMPLATE']), 500

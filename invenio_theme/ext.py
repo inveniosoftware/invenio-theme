@@ -17,7 +17,7 @@ from flask_menu import Menu
 
 from . import config
 from .views import blueprint, insufficient_permissions, internal_error, \
-    page_not_found, unauthorized
+    page_not_found, unauthorized, too_many_requests
 
 
 class InvenioTheme(object):
@@ -68,6 +68,7 @@ class InvenioTheme(object):
         app.register_error_handler(401, unauthorized)
         app.register_error_handler(403, insufficient_permissions)
         app.register_error_handler(404, page_not_found)
+        app.register_error_handler(429, too_many_requests)
         app.register_error_handler(500, internal_error)
 
         # Save reference to self on object

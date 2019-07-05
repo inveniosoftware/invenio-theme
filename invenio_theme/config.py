@@ -124,5 +124,8 @@ THEME_403_TEMPLATE = 'invenio_theme/403.html'
 THEME_404_TEMPLATE = 'invenio_theme/404.html'
 """The template used for 404 Not Found errors."""
 
+THEME_429_TEMPLATE = 'invenio_theme/429.html'
+"""The template used for 429 Too Many Requests errors."""
+
 THEME_500_TEMPLATE = 'invenio_theme/500.html'
 """The template used for 500 Internal Server Error errors."""
