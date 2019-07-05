@@ -98,6 +98,7 @@ app.config.update(
         '401': _('Unauthorized'),
         '403': _('Forbidden'),
         '404': _('Page not found'),
+        '429': _('Too many requests'),
         '500': _('Internal server error'),
     },
     BABEL_DEFAULT_LOCALE='en',

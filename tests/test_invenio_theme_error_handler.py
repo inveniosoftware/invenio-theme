@@ -68,6 +68,28 @@ def test_page_error_handler_404(app_error_handler):
         assert b'could not be found.</p>' in response.data
 
 
+def test_page_error_handler_429(app_error_handler):
+    """Testing error handler with 429 error code."""
+    # Creation of Blueprint.
+    blueprint = Blueprint('simple_page', __name__,
+                          template_folder='templates')
+
+    # Routing to a method which launches a 429 error.
+    @blueprint.route('/error_429')
+    def error_429():
+        return abort(429)
+
+    app_error_handler.register_blueprint(blueprint)
+
+    with app_error_handler.test_client() as client:
+        response = client.get('/error_429')
+        assert response.status_code == 429
+        assert b'<h1><i class="fa fa-flash"></i>' in response.data
+        assert b'Too many requests</h1>' in response.data
+        assert b'<p>You have made too many consecutive ' in response.data
+        assert b'requests, please try again later.</p>' in response.data
+
+
 def test_page_error_handler_500(app_error_handler):
     """Testing error handler with 401 error code."""
     # Creation of Blueprint.
