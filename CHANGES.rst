@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.1.4 (released 2019-07-22)
+
+- Introduce handling of the error 429.
+
 Version 1.1.3 (released 2019-03-13)
 
 - Restructure SCSS files, in order to allow easier customization and extension
