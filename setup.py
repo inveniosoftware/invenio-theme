@@ -43,12 +43,13 @@ setup_requires = [
 
 install_requires = [
     'Flask>=0.11.1',
-    'Flask-BabelEx>=0.9.2',
+    'Flask-BabelEx>=0.9.3',
     'Flask-Breadcrumbs>=0.4.0',
     'Flask-Menu>=0.5.0',
     'invenio-assets>=1.1.0',
     'invenio-i18n>=1.1.0',
     'jsmin>=2.1.6',
+    'Werkzeug>=0.16.1,<1.0.0'
 ]
 
 packages = find_packages()
