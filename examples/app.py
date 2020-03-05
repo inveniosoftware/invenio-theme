@@ -78,6 +78,7 @@ from invenio_theme.bundles import css, js
 
 try:
     from invenio_i18n import InvenioI18N
+    from invenio_i18n.views import create_blueprint_from_app
 except ImportError:
     InvenioI18N = None
 
@@ -108,6 +109,7 @@ app.config.update(
 )
 if InvenioI18N is not None:
     InvenioI18N(app)
+    app.register_blueprint(create_blueprint_from_app(app))
 else:
     Babel(app)
 
