@@ -22,6 +22,7 @@ import pytest
 from flask import Flask
 from flask_babelex import Babel
 from invenio_i18n import InvenioI18N
+from invenio_i18n.views import create_blueprint_from_app
 
 from invenio_assets import InvenioAssets
 from invenio_theme import InvenioTheme
@@ -36,6 +37,7 @@ def app():
     )
     Babel(app)
     InvenioI18N(app)
+    app.register_blueprint(create_blueprint_from_app(app))
     return app
 
 
