@@ -20,6 +20,7 @@ You include one of the bundles in a page like the example below (using
 from __future__ import absolute_import, print_function
 
 from flask_webpackext import WebpackBundle
+# from invenio_assets.webpack import WebpackThemeBundle
 
 theme = WebpackBundle(
     __name__,
@@ -40,3 +41,39 @@ theme = WebpackBundle(
         'admin-lte': '~2.4.8',
     }
 )
+
+# TODO: Use when we configure Semantic-UI assets building
+# theme = WebpackThemeBundle(
+#     __name__,
+#     'assets',
+#     themes={
+#         'bootstrap3': dict(
+#             entry={
+#                 'base': './js/invenio_theme/base.js',
+#                 # requires jquery, moment, select2, bootstrap
+#                 'adminlte': './js/invenio_theme/admin.js',
+#                 'theme-admin': './scss/invenio_theme/admin.scss',
+#                 'theme': './scss/invenio_theme/theme.scss',
+#             },
+#             dependencies={
+#                 'bootstrap-sass': '~3.3.5',
+#                 'font-awesome': '~4.4.0',
+#                 'jquery': '~3.2.1',
+#                 'moment': '~2.23.0',
+#                 'select2': '~4.0.2',
+#                 'admin-lte': '~2.4.8',
+#             }
+#         ),
+#         'semantic-ui': dict(
+#             entry={
+#                 'base': './js/invenio_theme/base.js',
+#                 'theme': './scss/invenio_theme/theme.scss',
+#             },
+#             dependencies={
+#                 'semantic-ui-less': '~2.4.1',
+#                 'font-awesome': '~4.4.0',
+#                 'jquery': '~3.2.1',
+#             }
+#         ),
+#     }
+# )

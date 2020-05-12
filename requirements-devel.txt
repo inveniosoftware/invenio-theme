@@ -12,3 +12,6 @@
 -e git+https://github.com/inveniosoftware/invenio-base.git#egg=invenio-base
 -e git+https://github.com/inveniosoftware/invenio-assets.git#egg=invenio_assets
 
+# Semantic-UI dependencies
+-e git+git://github.com/inveniosoftware/invenio-app.git@jinja-prefix#egg=invenio-app
+-e git+git://github.com/inveniosoftware/invenio-assets.git@theme-prefix#egg=invenio-assets

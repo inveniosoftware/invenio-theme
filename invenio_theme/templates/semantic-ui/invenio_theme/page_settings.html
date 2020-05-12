@@ -1,0 +1,53 @@
+{# -*- coding: utf-8 -*-
+
+  This file is part of Invenio.
+  Copyright (C) 2015-2018 CERN.
+
+  Invenio is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+
+{%- extends config.THEME_BASE_TEMPLATE %}
+
+{%- block page_body scoped %}
+<div class="ui grid  container stackable">
+  <div class="three wide column">
+    {%- block settings_menu scoped %}
+      <div class="ui vertical menu">
+        <h3 class="header item">{{ _('Settings') }}</h3>
+        {%- for item in current_menu.submenu('settings').children if item.visible %}
+        {%- block settings_menu_item scoped %}
+          <a href="{{ item.url }}" class="item{% if item.active %} blue inverted active{% endif %}">
+            {{ item.text|safe }}
+          </a>
+        {%- endblock %}
+        {%- endfor %}
+      </div>
+    {%- endblock %}
+  </div>
+  <div class="one wide column"></div>
+  <div class="eight wide column">
+    {%- block settings_content scoped %}
+    <div class="ui segments">
+      <div class="ui segment secondary">
+          {%- block settings_content_title scoped %}
+          {%- if panel_icon %}
+          {%- block settings_content_title_icon scoped %}
+          <i class="{{panel_icon}}"></i>
+          {%- endblock %}
+          {%- endif %}
+          <span class="ui header">{{ panel_title|default("") }}</span>
+          {%- endblock %}
+      </div>
+        {%- block settings_body scoped %}
+        <div class="ui segment">
+          {%- block settings_form scoped %}
+          {%- endblock settings_form %}
+        </div>
+        {%- endblock settings_body %}
+      </div>
+    </div>
+    {%- endblock %}
+  </div>
+</div>
+{%- endblock %}
