@@ -18,7 +18,6 @@ include LICENSE
 include pytest.ini
 prune docs/_build
 recursive-include docs *.bat *.py *.rst Makefile *.png
-recursive-include examples *.html *.py *.sh
 recursive-include invenio_theme *.html *.js *.scss *.config
 recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg

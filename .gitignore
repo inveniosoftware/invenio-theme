@@ -59,10 +59,6 @@ target/
 # Vim swapfiles
 .*.sw?
 
-# Example instance folder
-examples/instance/
-examples/static/
-
 # IDE
 .idea/
 *.ipr

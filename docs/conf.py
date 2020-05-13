@@ -15,9 +15,6 @@ import sys
 
 import sphinx.environment
 
-# Plug example application into module path
-sys.path.append('examples')
-
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.

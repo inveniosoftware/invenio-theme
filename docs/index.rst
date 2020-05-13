@@ -19,7 +19,6 @@ Invenio-Theme.
    installation
    configuration
    usage
-   examplesapp
 
 
 API Reference
