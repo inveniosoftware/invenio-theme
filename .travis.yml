@@ -38,7 +38,6 @@ before_install:
   - "requirements-builder --level=dev --req requirements-devel.txt setup.py > .travis-devel-requirements.txt"
 
 install:
-  - "travis_retry pip install git+https://github.com/inveniosoftware/invenio-assets.git#egg=invenio-assets"
   - "travis_retry pip install -r .travis-${REQUIREMENTS}-requirements.txt"
   - "travis_retry pip install -e .[all]"
 
