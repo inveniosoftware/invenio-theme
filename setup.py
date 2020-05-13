@@ -74,14 +74,6 @@ setup(
     include_package_data=True,
     platforms='any',
     entry_points={
-        'invenio_assets.bundles': [
-            'invenio_theme_css = invenio_theme.bundles:css',
-            'invenio_theme_admin_lte_css ='
-            ' invenio_theme.bundles:admin_lte_css',
-            'invenio_theme_admin_css = invenio_theme.bundles:admin_css',
-            'invenio_theme_js = invenio_theme.bundles:js',
-            'invenio_theme_admin_js = invenio_theme.bundles:admin_js',
-        ],
         'invenio_assets.webpack': [
             'invenio_theme = invenio_theme.webpack:theme'
         ],

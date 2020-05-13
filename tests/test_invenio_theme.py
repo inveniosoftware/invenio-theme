@@ -13,7 +13,7 @@ from __future__ import absolute_import, print_function
 from flask import render_template_string
 from invenio_assets import InvenioAssets
 
-from invenio_theme import InvenioTheme, bundles
+from invenio_theme import InvenioTheme
 
 
 def assert_template_blocks(template, blocks, base_tpl=None):
@@ -30,12 +30,6 @@ def test_version():
     """Test version import."""
     from invenio_theme import __version__
     assert __version__
-
-
-def test_bundles():
-    """Test bundles."""
-    assert 'bootstrap-sass' in bundles.css.npm
-    assert bundles.js
 
 
 def test_init(app):
@@ -146,17 +140,6 @@ def test_header_template_blocks(app):
             r'{% extends "invenio_theme/header.html" %}' \
             r'{% block navbar_search %}TPLTEST{% endblock %}'
         assert 'TPLTEST' not in render_template_string(tpl)
-
-
-def test_lazy_bundles(app):
-    """Test configurable bundles."""
-    InvenioTheme(app)
-    InvenioAssets(app)
-
-    with app.app_context():
-        from invenio_theme.bundles import admin_lte_css, lazy_skin
-
-        assert str(lazy_skin()) in admin_lte_css.contents
 
 
 def test_html_lang(app):

@@ -31,11 +31,10 @@
       {%- if config.THEME_SEARCHBAR %}
       {%- block navbar_search %}
 
-
       <div class="ui basic segment">
         <form class="ui form" action="{{config.THEME_SEARCH_ENDPOINT}}" role="search">
           <div class="ui action icon input">
-            <input type="text" class="" name="q" placeholder="{{_('Search')}}">
+            <input type="text" name="q" placeholder="{{_('Search')}}">
             <button type="submit" class="ui icon button"><i class="icon search"></i></button>
           </div>
         </form>
