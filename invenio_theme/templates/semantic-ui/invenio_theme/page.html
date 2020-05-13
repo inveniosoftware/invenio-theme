@@ -45,8 +45,7 @@
     {%- endblock head_links %}
     {%- block header %}{% endblock header %}
     {%- block css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
-    {# {{ webpack['theme.css']}} #}
+    {{ webpack['theme.css'] }}
     {# assets "invenio_theme_css" %}<link href="{{ ASSET_URL }}" rel="stylesheet">{% endassets #}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -56,16 +55,6 @@
     {%- endblock css %}
     {%- endblock head %}
   </head>
-
-  <!-- TODO: remove -->
-  <style>
-    body {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
 
   <body ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
     {%- block body %}
