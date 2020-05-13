@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.0a1 (released 2020-05-13)
+
+- Integrates Semantic-UI templates and assets.
+- Removes webassets-based bundles.
+
 Version 1.2.0 (released 2020-03-20)
 
 - Replaces Flask dependency with ``invenio-base``.
