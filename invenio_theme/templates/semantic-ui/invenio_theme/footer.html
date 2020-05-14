@@ -19,15 +19,15 @@
     <div class="ui two column grid">
       <div class="row"></div>
       <div class="row">
-        {%- if config.I18N_LANGUAGES %}
         <div class="column">
+          {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
+        </div>
+        {%- if config.I18N_LANGUAGES %}
+        <div class="column right aligned"">
           {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
           {{ language_selector_dropdown() }}
         </div>
         {%- endif %}
-        <div class="column">
-          {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
-        </div>
       </div>
       <div class="row"></div>
     </div>
