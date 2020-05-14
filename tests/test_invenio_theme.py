@@ -37,7 +37,6 @@ def test_init(app):
     theme = InvenioTheme(app)
     assert theme.menu is not None
     assert 'THEME_SITENAME' in app.config
-    assert 'SASS_BIN' in app.config
 
 
 def test_init_app(app):
@@ -47,7 +46,6 @@ def test_init_app(app):
     theme.init_app(app)
     assert theme.menu is not None
     assert 'THEME_SITENAME' in app.config
-    assert 'SASS_BIN' in app.config
 
 
 def test_render_template(app):

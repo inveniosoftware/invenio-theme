@@ -8,10 +8,6 @@
 
 """Configuration for Invenio-Theme."""
 
-REQUIREJS_CONFIG = 'js/build.js'
-
-SASS_BIN = 'node-sass'
-
 BASE_TEMPLATE = 'invenio_theme/page.html'
 """Base template for user facing pages.
 
