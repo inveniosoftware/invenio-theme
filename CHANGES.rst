@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.0a2 (released 2020-05-15)
+
+- Fixes invenio theme styling
+- Fixes template layout and styles classes
+
 Version 1.3.0a1 (released 2020-05-13)
 
 - Integrates Semantic-UI templates and assets.
