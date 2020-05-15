@@ -1,10 +1,15 @@
 
+/* it is hardcoded because the searchbar is wrapped in <form>
+    and it can't be wrapped in invenio-search-ui
+*/
 #header-search-bar {
   .ui.input {
-    width: 100%;
+    width: 200px !important;
+    height: 38px !important;
 
     &>input {
-      width: 100% !important;
+      width: 200px !important;
+      height: 38px !important;
     }
 
   }
