@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.0a3 (released 2020-05-15)
+
+- Alignes the searchbar styling across the theme
+
 Version 1.3.0a2 (released 2020-05-15)
 
 - Fixes invenio theme styling
