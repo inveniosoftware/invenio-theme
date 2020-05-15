@@ -13,30 +13,33 @@
 {%- block navbar_search %}{% endblock %}
 
 {%- block navbar %}
-{{super()}}
+  {{ super() }}
 
-{%- block frontpage_search %}
-<div class="ui two column centered grid container cover-page">
-  <div class="row"></div>
-  <div class="sixteen wide column frontpage-search">
-    {%- block frontpage_title %}
-    <h1 class="ui center aligned header">
-        {{_(config.THEME_FRONTPAGE_TITLE)}}
-    </h1>
-    {%- endblock frontpage_title %}
-    {%- block frontpage_form %}
-    <form action="/search" class="ui form">
-      <div class="ui fluid action input">
-        <input type="text" name="q" class="form-control" placeholder="Type and press enter to search">
-          <button type="submit" class="ui icon button"><i class="search icon"></i></button>
+  {%- block frontpage_search %}
+    <div class="ui container fluid cover-page">
+      <div class="ui container two column centered middle aligned grid">
+        <div class="row middle aligned">
+          <div class="sixteen wide column frontpage-search">
+            {%- block frontpage_title %}
+              <h1 class="ui center aligned header">
+                {{ _(config.THEME_FRONTPAGE_TITLE) }}
+              </h1>
+            {%- endblock frontpage_title %}
+            {%- block frontpage_form %}
+              <form action="/search" class="ui form">
+                <div class="ui fluid action input">
+                  <input type="text" name="q" class="form-control"
+                         placeholder="Type and press enter to search">
+                  <button type="submit" class="ui icon button orange"><i
+                          class="search icon"></i></button>
+                </div>
+              </form>
+              <div class="ui divider hidden"></div>
+            {%- endblock frontpage_form %}
+          </div>
+        </div>
       </div>
-    </form>
-    {%- endblock frontpage_form %}
-  </div>
-  <div class="row"></div>
-  <div class="row"></div>
-</div>
-
-{%- endblock frontpage_search %}
+    </div>
+  {%- endblock frontpage_search %}
 
 {% endblock %}

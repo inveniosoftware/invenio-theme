@@ -11,72 +11,84 @@
 <header>
 
   {%- block navbar %}
-  <nav class="ui inverted menu">
-    <div class="ui container">
+    <nav class="ui inverted menu borderless">
+      <div class="ui container ">
 
-      {%- block navbar_header %}
-      {%- block brand %}
-      {%- if config.THEME_LOGO %}
-      <a href="/" class="header item"><img class="logo" src="{{ url_for('static', filename=config.THEME_LOGO)}}"
-          alt="{{_(config.THEME_SITENAME)}}" /></a>
-      {%- else %}
-      <a class="logo" href="/">{{_(config.THEME_SITENAME)}}</a>
-      {%- endif %}
-      {%- endblock %}
-      {%- endblock navbar_header %}
+        {%- block navbar_header %}
+          {%- block brand %}
+            <div class="item">
+              {%- if config.THEME_LOGO %}
+                <a href="/" class="ui image small">
+                  <img clas="middle aligned"
+                       src="{{ url_for('static', filename=config.THEME_LOGO) }}"
+                       alt="{{ _(config.THEME_SITENAME) }}"/></a>
+              {%- else %}
+                <a class="logo" href="/">{{ _(config.THEME_SITENAME) }}</a>
+              {%- endif %}
+            </div>
+          {%- endblock %}
+        {%- endblock navbar_header %}
 
-      {%- block navbar_inner %}
+        {%- block navbar_inner %}
 
-      {%- block navbar_nav %}
-      {%- if config.THEME_SEARCHBAR %}
-      {%- block navbar_search %}
+          {%- block navbar_nav %}
+            {%- if config.THEME_SEARCHBAR %}
+              {%- block navbar_search %}
 
-      <div class="ui basic segment">
-        <form class="ui form" action="{{config.THEME_SEARCH_ENDPOINT}}" role="search">
-          <div class="ui action icon input">
-            <input type="text" name="q" placeholder="{{_('Search')}}">
-            <button type="submit" class="ui icon button"><i class="icon search"></i></button>
-          </div>
-        </form>
-      </div>
+                <div class="item">
+                  <form class="form"
+                        action="{{ config.THEME_SEARCH_ENDPOINT }}"
+                        role="search">
+                    <div class="ui action icon input invenio-theme-search-button">
+                      <input type="text" name="q"
+                             placeholder="{{ _('Search') }}">
+                      <button type="submit" class="ui icon button orange">
+                        <i class="icon search"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
 
-      {%- endblock navbar_search %}
-      {%- endif %}
-
-      <div class="right menu">
-        <div class="item">
-          {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
-          {%- if item.children %}
-          <div class="dropdown{{ ' active' if item.active else ''}}">
-            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-              href="{{ item.url }}">{{ item.text|safe }} <b class="caret"></b></a>
-            <ul class="dropdown-menu">{{ loop(item.children|sort(attribute='order')) }}</ul>
-          </div>
-          {%- else %}
-          <li{{ ' class="active"'|safe if item.active and loop.depth == 1 else '' }}><a
-              href="{{ item.url }}">{{ item.text|safe }}</a></li>
+              {%- endblock navbar_search %}
             {%- endif %}
-            {%- endfor %}
-            {%- endblock navbar_nav %}
-            {%- block navbar_right %}
 
-            {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
-        </div>
+            <div class="right menu">
+            <div class="item">
+            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
+              {%- if item.children %}
+                <div class="dropdown{{ ' active' if item.active else '' }}">
+                  <a class="dropdown-toggle" data-toggle="dropdown"
+                     role="button" aria-haspopup="true" aria-expanded="false"
+                     href="{{ item.url }}">{{ item.text|safe }} <b
+                          class="caret"></b></a>
+                  <ul class="dropdown-menu">{{ loop(item.children|sort(attribute='order')) }}</ul>
+                </div>
+              {%- else %}
+                <li{{ ' class="active"'|safe if item.active and loop.depth == 1 else '' }}>
+                  <a
+                          href="{{ item.url }}">{{ item.text|safe }}</a></li>
+              {%- endif %}
+            {%- endfor %}
+          {%- endblock navbar_nav %}
+        {%- block navbar_right %}
+
+          {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
+          </div>
         {%- endblock navbar_right %}
         {%- endblock navbar_inner %}
 
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
 
 
   {%- endblock navbar %}
   {%- block flashmessages %}
-  {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
-  {{ flashed_messages() }}
+    {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
+    {{ flashed_messages() }}
   {%- endblock %}
   {%- block breadcrumbs %}
-  {%- include "invenio_theme/breadcrumbs.html" %}
+    {%- include "invenio_theme/breadcrumbs.html" %}
   {%- endblock breadcrumbs %}
 </header>
