@@ -1,0 +1,3 @@
+.ui.inverted.menu{
+  background: @brandColor;
+}

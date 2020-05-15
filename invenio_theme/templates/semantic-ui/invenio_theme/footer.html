@@ -7,29 +7,22 @@
   under the terms of the MIT License; see LICENSE file for more details.
 #}
 
-<style>
-  #footer {
-    margin-top: auto;
-  }
-</style>
 
 <footer id="footer">
-  <div class="ui container">
-    <div class="row ui fitted divider"></div>
-    <div class="ui two column grid">
-      <div class="row"></div>
+    <div class="ui divider"></div>
+    <div class="ui two column grid container">
+      <div class="ui divider fitted hidden"></div>
       <div class="row">
         <div class="column">
           {% trans link="http://inveniosoftware.org" %}Powered by <a href="{{link}}">Invenio</a>{% endtrans %}
         </div>
         {%- if config.I18N_LANGUAGES %}
-        <div class="column right aligned"">
+        <div class="column right aligned">
           {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
           {{ language_selector_dropdown() }}
         </div>
         {%- endif %}
       </div>
-      <div class="row"></div>
+      <div class="ui divider hidden"></div>
     </div>
-  </div>
 </footer>
