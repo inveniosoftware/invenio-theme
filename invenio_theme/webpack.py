@@ -55,6 +55,10 @@ theme = WebpackThemeBundle(
                 'font-awesome': '~4.4.0',
                 'jquery': '~3.2.1',
             },
+            aliases={
+                '@invenio_theme/less': 'less/invenio_theme',
+                'themes/invenio': 'less/invenio_theme/theme'
+            }
         ),
     }
 )
