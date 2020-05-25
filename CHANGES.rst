@@ -8,17 +8,10 @@
 Changes
 =======
 
-Version 1.3.0a3 (released 2020-05-15)
+Version 1.3.0a4 (released 2020-05-25)
 
 - Alignes the searchbar styling across the theme
-
-Version 1.3.0a2 (released 2020-05-15)
-
 - Fixes invenio theme styling
-- Fixes template layout and styles classes
-
-Version 1.3.0a1 (released 2020-05-13)
-
 - Integrates Semantic-UI templates and assets.
 - Removes webassets-based bundles.
 
