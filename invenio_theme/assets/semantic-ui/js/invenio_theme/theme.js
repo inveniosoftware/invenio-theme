@@ -10,3 +10,6 @@
 import jquery from "jquery/dist/jquery";
 import "semantic-ui-css/semantic.js";
 import "semantic-ui-less/semantic.less";
+
+// Initialize Semantic UI components
+jquery(".ui.dropdown.icon.button").dropdown();
