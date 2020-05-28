@@ -32,7 +32,7 @@
           <i class="user icon"></i> {{ current_user.email }}
         </a>
 
-        <div class="ui simple dropdown icon button">
+        <div class="ui dropdown icon button">
           <i class="dropdown icon"></i>
           <div class="menu">
             {%- for item in current_menu.submenu('settings').children if item.visible %}
