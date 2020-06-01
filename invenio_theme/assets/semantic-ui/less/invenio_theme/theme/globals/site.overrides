@@ -9,6 +9,7 @@ header{
 html.cover-page{
   background-color: @brandColor;
 }
+
 body.cover-page{
   background-color: transparent;
 }

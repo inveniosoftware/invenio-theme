@@ -3,4 +3,11 @@
 
 @brandColor      : rgba(13,95,137, 0.8);
 
+/*--- Sign up color ---*/
+
+@signupColor: @orange;
+@signupColorHover: saturate(darken(@signupColor, 5), 10, relative);
+@signupColorFocus: saturate(darken(@signupColor, 8), 20, relative);
+@signupColorDown: darken(@signupColor, 10);
+@signupColorActive: : saturate(darken(@signupColor, 5), 15, relative);
 

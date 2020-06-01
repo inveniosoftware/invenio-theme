@@ -1,0 +1,2 @@
+@signupColorTextColor: @invertedTextColor;
+@signupColorTextShadow: @invertedTextShadow;

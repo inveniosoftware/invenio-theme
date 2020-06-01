@@ -47,6 +47,19 @@ theme = WebpackThemeBundle(
         'semantic-ui': dict(
             entry={
                 'base': './js/invenio_theme/base.js',
+                # theme.js is the main file for the Semantic-UI theme.
+                # - theme.js imports semantic-ui-less/semantic.less
+                # - semantic-ui-less/semantic.less imports various files
+                #   that all import ""../../theme.config".
+                # - theme.config (must be provided by an Invenio instance, that
+                #   sets this as an alias) imports semantic-ui-less/theme.less.
+                # - semantic-ui-less/theme.less imports
+                #   1) the theme package: an invenio theme is configured below
+                #      via the "themes/invenio" alias). theme.config set the
+                #      respective variables to the "invenio" theme (e.g.
+                #      "@site: 'invenio';").
+                #   2) site theme: defined via the @siteFolder variable in
+                #      "theme.config".
                 'theme': './js/invenio_theme/theme.js',
             },
             dependencies={
@@ -57,6 +70,13 @@ theme = WebpackThemeBundle(
             },
             aliases={
                 '@invenio_theme/less': 'less/invenio_theme',
+                # Used for defining an 'invenio' theme for Semantic-UI. The
+                # code in "Semantic-UI-Less/theme.less" will look for e.g.
+                # themes/@{theme}/globals/site.variables". This will resolve
+                # to the path "less/invenio_theme/theme/global/site.variables".
+                # This means that you in "theme.config" can use "invenio" as a
+                # theme, e.g.:
+                #   @site: 'invenio';
                 'themes/invenio': 'less/invenio_theme/theme'
             }
         ),

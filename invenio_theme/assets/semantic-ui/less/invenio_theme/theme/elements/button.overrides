@@ -1,0 +1,27 @@
+/*--- Sign up color ---*/
+
+.ui.signup.button {
+  background-color: @signupColor;
+  color: @signupColorTextColor;
+  text-shadow: @signupColorTextShadow;
+  background-image: @coloredBackgroundImage;
+  box-shadow: @coloredBoxShadow;
+}
+
+.ui.signup.button:hover {
+  background-color: @signupColorHover;
+  color: @signupColorTextColor;
+  text-shadow: @signupColorTextShadow;
+}
+
+.ui.signup.button:focus {
+  background-color: @signupColorFocus;
+  color: @signupColorTextColor;
+  text-shadow: @signupColorTextShadow;
+}
+
+.ui.signup.button:active {
+  background-color: @signupColorDown;
+  color: @signupColorTextColor;
+  text-shadow: @signupColorTextShadow;
+}
