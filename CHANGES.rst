@@ -8,12 +8,9 @@
 Changes
 =======
 
-Version 1.3.0a5 (released 2020-05-29)
+Version 1.3.0a6 (released 2020-06-02)
 
 - Fixes issues in Semantic UI `header_login` and `header` templates.
-
-Version 1.3.0a4 (released 2020-05-25)
-
 - Alignes the searchbar styling across the theme
 - Fixes invenio theme styling
 - Integrates Semantic-UI templates and assets.
