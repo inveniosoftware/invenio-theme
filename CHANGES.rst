@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.0a7 (released 2020-06-03)
+
+- Fixes header login button height issue in Semantic UI.
+
 Version 1.3.0a6 (released 2020-06-02)
 
 - Fixes issues in Semantic UI `header_login` and `header` templates.
