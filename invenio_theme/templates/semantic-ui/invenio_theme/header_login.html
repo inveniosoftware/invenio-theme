@@ -14,11 +14,11 @@
         <i class="sign-in icon"></i>
         {{ _('Log in') }}</a>
       {% if security.registerable %}
-        <a href="{{ url_for_security('register') }}" class="ui button signup">
-          <i class="icons">
-            <i class="edit outline icon"></i>
-          </i> {{ _('Sign up') }}
-        </a>{% endif %}
+      <a href="{{ url_for_security('register') }}" class="ui button signup">
+        <i class="edit outline icon"></i>
+        {{ _('Sign up') }}
+      </a>
+      {% endif %}
     </form>
   {%- else %}
     {%- if config.USERPROFILES %}
