@@ -25,3 +25,31 @@
   color: @signupColorTextColor;
   text-shadow: @signupColorTextShadow;
 }
+
+/*--- Search icon button color ---*/
+
+.ui.search.button {
+  background-color: @searchButtonColor;
+  color: @searchButtonColorTextColor;
+  text-shadow: @searchButtonColorTextShadow;
+  background-image: @coloredBackgroundImage;
+  box-shadow: @coloredBoxShadow;
+}
+
+.ui.search.button:hover {
+  background-color: @searchButtonColorHover;
+  color: @searchButtonColorTextColor;
+  text-shadow: @searchButtonColorTextShadow;
+}
+
+.ui.search.button:focus {
+  background-color: @searchButtonColorFocus;
+  color: @searchButtonColorTextColor;
+  text-shadow: @searchButtonColorTextShadow;
+}
+
+.ui.search.button:active {
+  background-color: @searchButtonColorDown;
+  color: @searchButtonColorTextColor;
+  text-shadow: @searchButtonColorTextShadow;
+}
