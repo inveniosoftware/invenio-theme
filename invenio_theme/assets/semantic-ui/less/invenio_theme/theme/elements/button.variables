@@ -1,2 +1,5 @@
 @signupColorTextColor: @invertedTextColor;
 @signupColorTextShadow: @invertedTextShadow;
+
+@searchButtonColorTextColor: @invertedTextColor;
+@searchButtonColorTextShadow: @invertedTextShadow;
