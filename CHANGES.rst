@@ -8,12 +8,10 @@
 Changes
 =======
 
-Version 1.3.0a7 (released 2020-06-03)
+Version 1.3.0a8 (released 2020-06-09)
 
+- Parametrizes search button's color
 - Fixes header login button height issue in Semantic UI.
-
-Version 1.3.0a6 (released 2020-06-02)
-
 - Fixes issues in Semantic UI `header_login` and `header` templates.
 - Alignes the searchbar styling across the theme
 - Fixes invenio theme styling
