@@ -10,7 +10,7 @@
   {%- block messages %}
     {%- for category, msg in get_flashed_messages(with_categories=True) %}
       {%- set category = 'info' if category not in ['info', 'error', 'warning', 'success'] else category %}
-      <div class="ui {{ category }} message">
+      <div class="ui {{ category }} flashed message">
         <div class="container">
             <p>{{ msg }}</p>
         </div>
