@@ -1,0 +1,4 @@
+.ui.flashed.message {
+    margin-top: 0;
+    border-radius: 0;
+}
