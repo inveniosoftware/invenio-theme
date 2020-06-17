@@ -34,9 +34,10 @@
           <i class="dropdown icon"></i>
           <div class="menu">
             {%- for item in current_menu.submenu('settings').children if item.visible %}
-              <div class="item"><a style="color:black;"
-                                   href="{{ item.url }}">{{ item.text|safe }}</a>
-              </div>
+              <a class="item"
+                style="color:black;"
+                href="{{ item.url }}">{{ item.text|safe }}
+              </a>
               <div class="divider"></div>
             {%- endfor %}
             <div class="item"><a style="color:black;"
