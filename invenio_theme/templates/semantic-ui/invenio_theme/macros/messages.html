@@ -11,8 +11,13 @@
     {%- for category, msg in get_flashed_messages(with_categories=True) %}
       {%- set category = 'info' if category not in ['info', 'error', 'warning', 'success'] else category %}
       <div class="ui {{ category }} flashed message">
-        <div class="container">
+        <div class="ui grid container">
+          <div class="fourteen wide left aligned column">
             <p>{{ msg }}</p>
+          </div>
+          <div class="right aligned column">
+            <i class="flashed close icon"></i>
+          </div>
         </div>
       </div>
     {%- endfor %}

@@ -13,3 +13,11 @@ import "semantic-ui-less/semantic.less";
 
 // Initialize Semantic UI components
 jquery(".ui.dropdown.icon.button").dropdown();
+
+jquery(".message .close").on("click", function () {
+  $(this).closest(".message").transition({
+    animation: "fade",
+    duration: 0,
+    interval: 0,
+  });
+});
