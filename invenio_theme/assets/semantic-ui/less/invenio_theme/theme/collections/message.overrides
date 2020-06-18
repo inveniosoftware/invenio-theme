@@ -1,4 +1,15 @@
 .ui.flashed.message {
     margin-top: 0;
     border-radius: 0;
+    padding: 2px 0;
+}
+
+.flashed.close.icon {
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+    top: .78575em;
+    right: .5em;
+    opacity: .7;
+    transition: opacity .1s ease;
 }

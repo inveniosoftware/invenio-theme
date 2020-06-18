@@ -40,10 +40,10 @@
               </a>
               <div class="divider"></div>
             {%- endfor %}
-            <div class="item"><a style="color:black;"
-                                 href="{{ url_for_security('logout') }}"><i
-                    class="sign-out icon"></i>
-              {{ _('Log out') }}</a></div>
+            <a class="item" style="color:black;" href="{{ url_for_security('logout') }}">
+              <i class="sign-out icon"></i>
+              {{ _('Log out') }}
+            </a>
           </div>
         </div>
       </div>
