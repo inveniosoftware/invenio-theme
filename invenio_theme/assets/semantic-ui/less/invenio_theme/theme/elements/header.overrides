@@ -9,3 +9,7 @@
 .ui.login.segment {
     padding: 15px 40px 40px 40px;
 }
+
+.theme.header {
+    margin-bottom: 20px;
+}
