@@ -1,0 +1,4 @@
+.ui.breadcrumbs.segment {
+    border: none;
+    box-shadow: none;
+}
