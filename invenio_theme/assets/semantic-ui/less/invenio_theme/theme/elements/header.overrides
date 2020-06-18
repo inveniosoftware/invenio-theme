@@ -1,3 +1,11 @@
 .ui.reset-password.header {
     margin: 40px 0;
 }
+
+.ui.login.header {
+    margin: 40px 0;
+}
+
+.ui.login.segment {
+    padding: 15px 40px 40px 40px;
+}
