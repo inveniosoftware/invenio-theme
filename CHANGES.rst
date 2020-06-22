@@ -8,8 +8,9 @@
 Changes
 =======
 
-Version 1.3.0a8 (released 2020-06-09)
+Version 1.3.0a9 (released 2020-06-22)
 
+- Includes various Semantic-UI styling fixes
 - Parametrizes search button's color
 - Fixes header login button height issue in Semantic UI.
 - Fixes issues in Semantic UI `header_login` and `header` templates.
