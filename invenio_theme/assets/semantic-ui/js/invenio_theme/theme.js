@@ -15,7 +15,7 @@ import "semantic-ui-less/semantic.less";
 jquery(".ui.dropdown.icon.button").dropdown();
 
 jquery(".message .close").on("click", function () {
-  $(this).closest(".message").transition({
+  jquery(this).closest(".message").transition({
     animation: "fade",
     duration: 0,
     interval: 0,
