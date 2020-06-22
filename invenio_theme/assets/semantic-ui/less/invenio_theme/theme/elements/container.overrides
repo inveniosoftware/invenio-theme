@@ -1,6 +1,6 @@
-.ui.container.cover-page{
+.ui.container.cover-page {
   background-color: @brandColor;
-  margin-bottom: 3*@defaultMargin;
+  margin-bottom: @coverPageDefaultMargin;
   height: 20em;
   display: flex;
   align-items: center;

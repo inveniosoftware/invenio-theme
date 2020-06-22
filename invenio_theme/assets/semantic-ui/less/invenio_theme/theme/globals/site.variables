@@ -3,6 +3,10 @@
 
 @brandColor      : rgba(13,95,137, 0.8);
 
+/*--- Cover page margin ---*/
+
+@coverPageDefaultMargin: 3*@defaultMargin;
+
 /*--- Sign up color ---*/
 
 @signupColor: @orange;
