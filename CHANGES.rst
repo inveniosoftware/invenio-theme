@@ -8,7 +8,7 @@
 Changes
 =======
 
-Version 1.3.0a9 (released 2020-06-22)
+Version 1.3.0a10 (released 2020-06-22)
 
 - Includes various Semantic-UI styling fixes
 - Parametrizes search button's color
