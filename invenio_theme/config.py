@@ -8,6 +8,9 @@
 
 """Configuration for Invenio-Theme."""
 
+from flask_babelex import gettext as _
+
+
 BASE_TEMPLATE = 'invenio_theme/page.html'
 """Base template for user facing pages.
 
@@ -93,7 +96,7 @@ THEME_LOGO_ADMIN = 'images/invenio-white.svg'
 THEME_FRONTPAGE = False
 """Enable or disable basic frontpage view."""
 
-THEME_FRONTPAGE_TITLE = 'Invenio'
+THEME_FRONTPAGE_TITLE = _("Invenio")
 """The title shown on the fronpage."""
 
 THEME_FRONTPAGE_TEMPLATE = 'invenio_theme/frontpage.html'
@@ -108,7 +111,7 @@ THEME_SEARCH_ENDPOINT = '/search'
 THEME_BREADCRUMB_ROOT_ENDPOINT = ''
 """The endpoint for the Home view in the breadcrumbs."""
 
-THEME_SITENAME = 'Invenio'
+THEME_SITENAME = _("Invenio")
 """The name of the site to be used on the header and as a title."""
 
 THEME_401_TEMPLATE = 'invenio_theme/401.html'

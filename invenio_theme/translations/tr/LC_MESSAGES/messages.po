@@ -1,0 +1,144 @@
+# Translations template for invenio-theme.
+# Copyright (C) 2020 CERN
+# This file is distributed under the same license as the invenio-theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+# 
+# Translators:
+# Beraat Aldemir <berataldemir@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: invenio-theme 1.3.0a10\n"
+"Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
+"POT-Creation-Date: 2020-07-14 11:54+0300\n"
+"PO-Revision-Date: 2016-08-25 15:28+0000\n"
+"Last-Translator: Beraat Aldemir <berataldemir@gmail.com>, 2020\n"
+"Language-Team: Turkish (https://www.transifex.com/inveniosoftware/teams/23537/tr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+"Language: tr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: invenio_theme/ext.py:65
+msgid "Home"
+msgstr "Anasayfa"
+
+#: invenio_theme/templates/invenio_theme/401.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:13
+msgid "Unauthorized"
+msgstr "Yetkisiz"
+
+#: invenio_theme/templates/invenio_theme/401.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:14
+msgid "You need to be authenticated to view this page."
+msgstr "Bu sayfayı görüntüleyebilmek için giriş yapmış olmalısınız."
+
+#: invenio_theme/templates/invenio_theme/403.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:13
+msgid "Permission required"
+msgstr "İzin gerekli"
+
+#: invenio_theme/templates/invenio_theme/403.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:14
+msgid "You do not have sufficient permissions to view this page."
+msgstr "Bu sayfayı görüntüleyebilmek için yeterli izinlere sahip değilsiniz."
+
+#: invenio_theme/templates/invenio_theme/404.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:13
+msgid "Page not found"
+msgstr "Sayfa bulunamadı"
+
+#: invenio_theme/templates/invenio_theme/404.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:14
+msgid "The page you are looking for could not be found."
+msgstr "Aradığınız sayfa bulunamadı."
+
+#: invenio_theme/templates/invenio_theme/429.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:13
+msgid "Too many requests"
+msgstr "Çok fazla istek"
+
+#: invenio_theme/templates/invenio_theme/429.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:14
+msgid "You have made too many consecutive requests, please try again later."
+msgstr ""
+"Art arda çok fazla istekte bulundunuz, lütfen daha sonra tekrar deneyin."
+
+#: invenio_theme/templates/invenio_theme/500.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:13
+msgid "Internal server error"
+msgstr "İç sunucu hatası"
+
+#: invenio_theme/templates/invenio_theme/500.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:15
+msgid "Error identifier"
+msgstr "Hata belirteci"
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:17
+#: invenio_theme/templates/invenio_theme/header.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:17
+msgid "Toggle navigation"
+msgstr "Gezinmeyi değiştir"
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:63
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:63
+msgid "Logout"
+msgstr "Çıkış yap"
+
+#: invenio_theme/templates/invenio_theme/footer.html:20
+#, python-format
+msgid "Powered by <a href=\"%(link)s\">Invenio</a>"
+msgstr "<a href=\"%(link)s\">Invenio</a> üzerine inşa edilmiştir"
+
+#: invenio_theme/templates/invenio_theme/header.html:26
+#: invenio_theme/templates/semantic-ui/invenio_theme/header.html:28
+msgid "Search"
+msgstr "Ara"
+
+#: invenio_theme/templates/invenio_theme/header_frontpage.html:18
+msgid "Type and press enter to searchh"
+msgstr "Aramak istediklerinizi yazın ve enter'a basın"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:13
+msgid "Log in"
+msgstr "Giriş yap"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:11
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:17
+msgid "Sign up"
+msgstr "Kayıt ol"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:24
+#: invenio_theme/templates/invenio_theme/header_login.html:27
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:39
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:45
+msgid "Log out"
+msgstr "Çıkış yap"
+
+#: invenio_theme/templates/invenio_theme/page.html:15
+#: invenio_theme/templates/invenio_theme/page_admin.html:21
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:21
+msgid "Invenio"
+msgstr "Invenio"
+
+#: invenio_theme/templates/invenio_theme/page_settings.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:12
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/footer.html:18
+#, python-format
+msgid ""
+"Powered by\n"
+"            <a href=\"%(link)s\">Invenio</a>"
+msgstr "<a href=\"%(link)s\">Invenio</a> üzerine inşa edilmiştir"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_frontpage.html:20
+msgid "Type and press enter to search"
+msgstr "Aramak istediklerinizi yazın ve enter'a basın"
