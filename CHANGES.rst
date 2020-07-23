@@ -8,8 +8,10 @@
 Changes
 =======
 
-Version 1.3.0a10 (released 2020-06-22)
+Version 1.3.0a11 (released 2020-07-23)
 
+- Added Turkish translation
+- Marked strings for translation
 - Includes various Semantic-UI styling fixes
 - Parametrizes search button's color
 - Fixes header login button height issue in Semantic UI.
