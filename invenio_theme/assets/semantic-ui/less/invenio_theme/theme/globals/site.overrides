@@ -13,3 +13,12 @@ html.cover-page{
 body.cover-page{
   background-color: transparent;
 }
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('./../../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('./../../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

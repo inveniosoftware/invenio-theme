@@ -22,3 +22,10 @@
 @searchButtonColorFocus: saturate(darken(@searchButtonColor, 8), 20, relative);
 @searchButtonColorDown: darken(@searchButtonColor, 10);
 @searchButtonColorActive: : saturate(darken(@searchButtonColor, 5), 15, relative);
+
+@importGoogleFonts : false;
+@fontName          : 'robotolight';
+
+@headerFont        : @fontName, sans-serif;
+@pageFont          : @fontName, sans-serif;
+
