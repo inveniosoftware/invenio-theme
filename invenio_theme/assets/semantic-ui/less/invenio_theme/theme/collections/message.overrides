@@ -13,3 +13,7 @@
     opacity: .7;
     transition: opacity .1s ease;
 }
+
+.ui.success.flashed.message > .ui.grid.container {
+  padding-right: 0.5em;
+}
