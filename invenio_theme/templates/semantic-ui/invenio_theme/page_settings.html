@@ -14,7 +14,7 @@
   <div class="three wide column">
     {%- block settings_menu scoped %}
       <div class="ui vertical menu">
-        <h3 class="header item">{{ _('Settings') }}</h3>
+        <strong class="header item">{{ _('Settings') }}</strong>
         {%- for item in current_menu.submenu('settings').children if item.visible %}
         {%- block settings_menu_item scoped %}
           <a href="{{ item.url }}" class="item{% if item.active %} blue inverted active{% endif %}">
