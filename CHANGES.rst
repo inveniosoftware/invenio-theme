@@ -8,7 +8,7 @@
 Changes
 =======
 
-Version 1.3.0a11 (released 2020-07-23)
+Version 1.3.0a12 (released 2020-08-24)
 
 - Added Turkish translation
 - Marked strings for translation
@@ -20,6 +20,8 @@ Version 1.3.0a11 (released 2020-07-23)
 - Fixes invenio theme styling
 - Integrates Semantic-UI templates and assets.
 - Removes webassets-based bundles.
+- Adds ``@templates`` Webpack alias for JSX templates folder
+- Adds JS utilities for dynamicaly loading templates for ``react-overridable``
 
 Version 1.2.0 (released 2020-03-20)
 
