@@ -3,10 +3,6 @@
   border-radius: 0px;
 }
 
-.right.menu {
-    padding-right: 0em !important;
-}
-
 .ui.vertical.menu .active.item {
     background: #2185d0;
     pointer-events: none;

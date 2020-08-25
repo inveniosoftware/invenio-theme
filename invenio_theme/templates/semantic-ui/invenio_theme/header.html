@@ -16,7 +16,7 @@
 
         {%- block navbar_header %}
           {%- block brand %}
-            <div class="item">
+            <div class="item left-logo">
               {%- if config.THEME_LOGO %}
                 <a href="/" class="ui image small">
                   <img clas="middle aligned"
@@ -53,7 +53,7 @@
             {%- endif %}
 
             <div class="right menu">
-            <div class="item">
+            <div class="item right-menu">
             {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
               {%- if item.children %}
                 <div class="dropdown{{ ' active' if item.active else '' }}">
