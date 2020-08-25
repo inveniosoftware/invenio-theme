@@ -25,6 +25,15 @@ li ~ .item{
 .header.item{
   background: #f3f4f5 !important;
 }
+
+.item.right-menu {
+    padding-right: 0em !important;
+}
+
+.item.left-logo{
+  padding-left: 0em !important;
+}
+
 @font-face {
     font-family: 'robotolight';
     src: url('./../../fonts/roboto-light-webfont.woff2') format('woff2'),
