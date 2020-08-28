@@ -34,6 +34,10 @@ li ~ .item{
   padding-left: 0em !important;
 }
 
+.text-muted{
+  color: #777;
+}
+
 @font-face {
     font-family: 'robotolight';
     src: url('./../../fonts/roboto-light-webfont.woff2') format('woff2'),
