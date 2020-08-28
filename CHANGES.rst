@@ -8,7 +8,7 @@
 Changes
 =======
 
-Version 1.3.0a12 (released 2020-08-24)
+Version 1.3.0a13 (released 2020-08-28)
 
 - Added Turkish translation
 - Marked strings for translation
