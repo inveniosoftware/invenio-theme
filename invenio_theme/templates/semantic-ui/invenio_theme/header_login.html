@@ -27,7 +27,7 @@
       <div class="ui buttons">
         <a class="ui button"
            href="{{ url_for('invenio_userprofiles.profile') }}">
-          <i class="user icon"></i> {{ current_user.email }}
+          <i class="user icon"></i> {{ current_user.email|truncate(31,true) }}
         </a>
 
         <div class="ui dropdown icon button">
