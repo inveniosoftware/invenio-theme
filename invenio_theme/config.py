@@ -10,7 +10,6 @@
 
 from flask_babelex import gettext as _
 
-
 BASE_TEMPLATE = 'invenio_theme/page.html'
 """Base template for user facing pages.
 
