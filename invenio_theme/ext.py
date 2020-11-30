@@ -17,7 +17,7 @@ from flask_menu import Menu
 
 from . import config
 from .views import blueprint, insufficient_permissions, internal_error, \
-    page_not_found, unauthorized, too_many_requests
+    page_not_found, too_many_requests, unauthorized
 
 
 class InvenioTheme(object):

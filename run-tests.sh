@@ -6,9 +6,13 @@
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
+# Quit on errors
+set -o errexit
 
-pydocstyle invenio_theme && \
-# isort -rc -c -df **/*.py && \
-check-manifest --ignore ".travis-*" && \
-sphinx-build -qnNW docs docs/_build/html && \
+# Quit on unbound symbols
+set -o nounset
+
+pydocstyle invenio_theme
+python -m check_manifest --ignore ".*-requirements.txt"
+sphinx-build -qnNW docs docs/_build/html
 python setup.py test
