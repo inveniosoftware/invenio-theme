@@ -34,6 +34,10 @@ li ~ .item{
   padding-left: 0em !important;
 }
 
+.right.floated.right.aligned.column {
+    padding: 0.8em;
+}
+
 .text-muted{
   color: #777;
 }
