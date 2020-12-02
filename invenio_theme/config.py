@@ -19,6 +19,10 @@ facing templates usually extends from this template and thus changing this
 template allows to change design and layout of Invenio.
 """
 
+HEADER_TEMPLATE = 'invenio_theme/header.html'
+"""Base header template to be extended on custom headers."""
+
+
 ADMIN_BASE_TEMPLATE = 'invenio_theme/page_admin.html'
 """Base template for the administration interface.
 
