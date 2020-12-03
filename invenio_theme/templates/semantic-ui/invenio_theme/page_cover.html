@@ -9,10 +9,10 @@
 {% extends config.THEME_BASE_TEMPLATE %}
 
 {%- set html_css_classes=['cover-page'] %}
-{%- set body_css_classes=['ui grid doubling three column middle center aligned cover-page'] %}
+{%- set body_css_classes=['ui grid doubling middle center aligned cover-page'] %}
 
 {%- block body %}
-  <div class="column">
+  <div class="column centered">
     {%- block flashmessages %}
       {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
       {{ flashed_messages() }}

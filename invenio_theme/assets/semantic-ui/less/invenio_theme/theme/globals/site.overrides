@@ -12,6 +12,27 @@ html.cover-page{
 
 body.cover-page{
   background-color: transparent;
+  width: auto;
+}
+
+.ui.padded.segments.big.form {
+  margin-left: 0em;
+}
+
+.column.centered {
+  width: 33% !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .column.centered {
+  width: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .column.centered {
+  width: 90% !important;
+  }
 }
 
 .no-dots-list > .item {
