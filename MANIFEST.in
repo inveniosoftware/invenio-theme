@@ -20,6 +20,7 @@ prune docs/_build
 recursive-include docs *.bat *.py *.rst Makefile *.png
 recursive-include .github/workflows *.yml
 recursive-include invenio_theme *.html *.js *.scss *.config
+recursive-include invenio_theme *.less
 recursive-include invenio_theme *.overrides
 recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg

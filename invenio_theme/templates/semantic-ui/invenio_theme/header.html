@@ -9,11 +9,13 @@
 
 
 <header class="theme header">
+  <div class="outer-navbar">
 
   {%- block navbar %}
-    <nav class="ui inverted menu borderless">
-      <div class="ui container ">
-
+  <nav id="invenio-nav" class="ui inverted menu borderless">
+    <div class="ui grid container">
+      <ul class="navbar-menu">
+        <li class="logo">
         {%- block navbar_header %}
           {%- block brand %}
             <div class="item left-logo">
@@ -28,13 +30,13 @@
             </div>
           {%- endblock %}
         {%- endblock navbar_header %}
-
+        </li>
         {%- block navbar_inner %}
 
-          {%- block navbar_nav %}
+        {%- block navbar_nav %}
+        <li class="navbar-item">
             {%- if config.THEME_SEARCHBAR %}
               {%- block navbar_search %}
-
                 <div class="item" id="header-search-bar">
                   <form class="form"
                         action="{{ config.THEME_SEARCH_ENDPOINT }}"
@@ -51,11 +53,10 @@
 
               {%- endblock navbar_search %}
             {%- endif %}
-
-            <div class="right menu">
-            <div class="item right-menu">
+          </li>
             {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
               {%- if item.children %}
+              <li class="navbar-item navbar-options">
                 <div class="dropdown{{ ' active' if item.active else '' }}">
                   <a class="dropdown-toggle" data-toggle="dropdown"
                      role="button" aria-haspopup="true" aria-expanded="false"
@@ -63,24 +64,31 @@
                           class="caret"></b></a>
                   <ul class="dropdown-menu">{{ loop(item.children|sort(attribute='order')) }}</ul>
                 </div>
+              </li>
               {%- else %}
-                <li{{ ' class="active"'|safe if item.active and loop.depth == 1 else '' }}>
+                <li{{ ' class="navbar-item navbar-options active"'|safe if item.active and loop.depth == 1 else 'navbar-item navbar-options' }}>
                   <a
                           href="{{ item.url }}">{{ item.text|safe }}</a></li>
               {%- endif %}
             {%- endfor %}
           {%- endblock navbar_nav %}
+        <li class="navbar-item navbar-button">
+          <div class="right menu">
+            <div class="item right-menu">
         {%- block navbar_right %}
-
           {%- include config.THEME_HEADER_LOGIN_TEMPLATE %}
           </div>
         {%- endblock navbar_right %}
+            </div>
+          </div>
+        </li>
         {%- endblock navbar_inner %}
-
-        </div>
-      </div>
+      <li class="toggle">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      </li>
     </nav>
-
+  </div>
 
 
   {%- endblock navbar %}
