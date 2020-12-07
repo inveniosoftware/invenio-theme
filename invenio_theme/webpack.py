@@ -69,8 +69,6 @@ theme = WebpackThemeBundle(
             },
             aliases={
                 '@js/invenio_theme': 'js/invenio_theme',
-                # TODO: change to "@less/invenio_theme":
-                #   https://github.com/inveniosoftware/invenio-theme/issues/200
                 '@less/invenio_theme': 'less/invenio_theme',
                 # Used for defining an 'invenio' theme for Semantic-UI. The
                 # code in "Semantic-UI-Less/theme.less" will look for e.g.
