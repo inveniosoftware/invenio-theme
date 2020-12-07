@@ -4,7 +4,6 @@
   height: 20em;
   display: flex;
   align-items: center;
-  margin-top: -1em;
   &>.ui.container{
     vertical-align: middle;
   }
