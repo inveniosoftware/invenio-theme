@@ -78,7 +78,12 @@ theme = WebpackThemeBundle(
                 # theme, e.g.:
                 #   @site: 'invenio';
                 'themes/invenio': 'less/invenio_theme/theme',
-                # Used for loading overridden JSX templates
+                # The @templates alias is used for overwriting JSX templates.
+                # The alias assumes that a folder "templates" exists in the
+                # root of the var/instance/assets (root of webpack project).
+                # Cookiecutter-Invenio-Instance and Invenio-CLI is currently
+                # responsible for creating this folder. The build will fail
+                # if this folder is not created.
                 '@templates': 'templates',
             }
         ),
