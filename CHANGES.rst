@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.1 (released 2020-12-09)
+
+- Minor fix for SemanticUI dropdowns
+
 Version 1.3.0 (released 2020-12-09)
 
 - Major: New SemanticUI theme has been integrated. The Bootstrap 3 theme still
