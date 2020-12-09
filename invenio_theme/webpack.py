@@ -59,6 +59,8 @@ theme = WebpackThemeBundle(
                 #      "@site: 'invenio';").
                 #   2) site theme: defined via the @siteFolder variable in
                 #      "theme.config".
+                'theme-admin': './scss/invenio_theme/admin.scss',
+                'adminlte': './js/invenio_theme/admin.js',
                 'theme': './js/invenio_theme/theme.js',
             },
             dependencies={
@@ -66,6 +68,8 @@ theme = WebpackThemeBundle(
                 'semantic-ui-css': '~2.4.1',
                 'font-awesome': '~4.4.0',
                 'jquery': '~3.2.1',
+                'select2': '~4.0.2',
+                'admin-lte': '~2.4.8',
             },
             aliases={
                 '@js/invenio_theme': 'js/invenio_theme',

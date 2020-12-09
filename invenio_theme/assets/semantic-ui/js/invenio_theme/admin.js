@@ -8,8 +8,6 @@
 // eslint-disable-next-line no-unused-vars
 import jquery from "jquery";
 // eslint-disable-next-line no-unused-vars
-import bootstrap from "bootstrap-sass/assets/javascripts/bootstrap";
-// eslint-disable-next-line no-unused-vars
 import moment from "moment";
 // eslint-disable-next-line no-unused-vars
 import select2 from "select2";
