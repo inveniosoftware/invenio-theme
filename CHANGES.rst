@@ -8,14 +8,15 @@
 Changes
 =======
 
-Version 1.3.0a17 (released 2020-12-07)
+Version 1.3.0a18 (released 2020-12-09)
 
 - Added Turkish translation
 - Marked strings for translation
 - Includes various Semantic-UI styling fixes
 - Parametrizes search button's color
 - Fixes header login button height issue in Semantic UI.
-- Fixes issues in Semantic UI `header_login` and `header` templates.
+- Fixes issues in Semantic UI `header_login` and `header` templates,
+  doi badges and responsive navbar.
 - Alignes the searchbar styling across the theme
 - Fixes invenio theme styling
 - Integrates Semantic-UI templates and assets.
