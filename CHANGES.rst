@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.3 (released 2020-12-11)
+
+- Initializes semanticUI accordion components.
+
 Version 1.3.2 (released 2020-12-11)
 
 - Updates the Invenio logo and remove outdated versions.
