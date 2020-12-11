@@ -57,7 +57,7 @@ Invenio instance. Simply set the :data:`invenio_theme.config.THEME_LOGO` and
 :data:`invenio_theme.config.THEME_SITENAME` configuration variables:
 
 >>> app.config.update({
-... 'THEME_LOGO': 'images/invenio-black.svg',
+... 'THEME_LOGO': 'images/...',
 ... 'THEME_SITENAME': 'Awesome Site',
 ... })
 
