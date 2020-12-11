@@ -14,6 +14,7 @@ import "semantic-ui-less/semantic.less";
 // Initialize Semantic UI components
 jquery(".ui.selection.dropdown").dropdown();
 jquery(".ui.dropdown.icon.button").dropdown();
+jquery(".ui.accordion").accordion();
 
 jquery(".message .close").on("click", function () {
   jquery(this).closest(".message").transition({

@@ -61,6 +61,11 @@ li ~ .item{
   color: #777;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
+
 @font-face {
     font-family: 'robotolight';
     src: url('./../../fonts/roboto-light-webfont.woff2') format('woff2'),
