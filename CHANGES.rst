@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.2 (released 2020-12-11)
+
+- Updates the Invenio logo and remove outdated versions.
+- Fixes the dropdown to work on the user profile page.
+
 Version 1.3.1 (released 2020-12-09)
 
 - Minor fix for SemanticUI dropdowns
