@@ -1,3 +1,7 @@
+/*******************************
+     User Global Variables
+*******************************/
+
 @defaultPadding : 2em;
 @defaultMargin  : 2em;
 
@@ -6,6 +10,11 @@
 /*--- Cover page margin ---*/
 
 @coverPageDefaultMargin: 3*@defaultMargin;
+
+/*--- code tag color ---*/
+
+@codeColor: @pink;
+@codeBackgroundColor: lighten(@pink, 42);
 
 /*--- Sign up color ---*/
 
@@ -23,9 +32,10 @@
 @searchButtonColorDown: darken(@searchButtonColor, 10);
 @searchButtonColorActive: : saturate(darken(@searchButtonColor, 5), 15, relative);
 
+/*--- Fonts ---*/
+
 @importGoogleFonts : false;
-@fontName          : 'robotolight';
+// @fontName          : 'robotolight';
 
 @headerFont        : @fontName, sans-serif;
 @pageFont          : @fontName, sans-serif;
-

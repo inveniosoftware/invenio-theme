@@ -10,10 +10,10 @@
 {%- extends config.THEME_BASE_TEMPLATE %}
 
 {%- block page_body scoped %}
-<div class="ui relaxed grid container stackable">
-  <div class="three wide column">
+<div class="ui grid container stackable">
+  <div class="four wide column">
     {%- block settings_menu scoped %}
-      <div class="ui vertical menu">
+      <div class="ui vertical menu fluid">
         <strong class="header item">{{ _('Settings') }}</strong>
         {%- for item in current_menu.submenu('settings').children if item.visible %}
         {%- block settings_menu_item scoped %}
@@ -25,7 +25,7 @@
       </div>
     {%- endblock %}
   </div>
-  <div class="thirteen wide column">
+  <div class="twelve wide column">
     {%- block settings_content scoped %}
     <div class="ui segments">
       <div class="ui segment secondary">
@@ -47,6 +47,7 @@
       </div>
     </div>
     {%- endblock %}
+
   </div>
 </div>
 {%- endblock %}

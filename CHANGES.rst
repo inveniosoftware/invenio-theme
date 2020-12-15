@@ -8,6 +8,19 @@
 Changes
 =======
 
+Version 1.3.4 (released 2020-12-17)
+
+- Adds a full "invenio" Semantic UI packaged theme so we can easier customize
+  layout in the future.
+
+- Moves theme.config to theme.config.example and adds a note to make it
+  clear the file is not actually used, but is just an example.
+
+- Adds helper tool for supporting theme dependent icons.
+
+- Fixes many minor styling issues such as alignments, button locations,
+  grids.
+
 Version 1.3.3 (released 2020-12-11)
 
 - Initializes semanticUI accordion components.

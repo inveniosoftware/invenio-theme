@@ -71,6 +71,12 @@ class InvenioTheme(object):
         app.register_error_handler(429, too_many_requests)
         app.register_error_handler(500, internal_error)
 
+        # Register context processor
+        @app.context_processor
+        def _theme_icon_ctx_processor():
+            from invenio_theme.proxies import current_theme_icons
+            return dict(current_theme_icons=current_theme_icons)
+
         # Save reference to self on object
         app.extensions['invenio-theme'] = self
 

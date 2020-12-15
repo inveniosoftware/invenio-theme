@@ -1,0 +1,5 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@fontPath          : '../../themes/default/assets/fonts';

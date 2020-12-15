@@ -1,0 +1,12 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.form .field small {
+    color: @grey;
+    margin-top: 0.4em !important;
+}
+
+.ui.form .field input {
+
+}

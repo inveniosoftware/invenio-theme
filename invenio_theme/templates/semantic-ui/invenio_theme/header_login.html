@@ -22,15 +22,13 @@
     </form>
   {%- else %}
     {%- if config.USERPROFILES %}
-
-      <!-- <div class="ui simple pointing dropdown link item"> -->
       <div class="ui buttons">
         <a class="ui button"
            href="{{ url_for('invenio_userprofiles.profile') }}">
           <i class="user icon"></i> {{ current_user.email|truncate(31,true) }}
         </a>
 
-        <div class="ui dropdown icon button">
+        <div class="ui dropdown icon button floating">
           <i class="dropdown icon"></i>
           <div class="menu">
             {%- for item in current_menu.submenu('settings').children if item.visible %}
@@ -38,8 +36,9 @@
                 style="color:black;"
                 href="{{ item.url }}">{{ item.text|safe }}
               </a>
-              <div class="divider"></div>
+
             {%- endfor %}
+            <div class="divider"></div>
             <a class="item" style="color:black;" href="{{ url_for_security('logout') }}">
               <i class="sign-out icon"></i>
               {{ _('Log out') }}
