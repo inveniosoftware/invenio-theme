@@ -1,3 +1,7 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
 @signupColorTextColor: @invertedTextColor;
 @signupColorTextShadow: @invertedTextShadow;
 

@@ -131,3 +131,24 @@ THEME_429_TEMPLATE = 'invenio_theme/429.html'
 
 THEME_500_TEMPLATE = 'invenio_theme/500.html'
 """The template used for 500 Internal Server Error errors."""
+
+THEME_ICONS = {
+    'semantic-ui': {
+        'key': 'key icon',
+        'shield': 'shield alternate icon',
+        'user': 'user icon',
+        'codepen': 'codepen icon',
+        'cogs': 'cogs icon',
+        # Special catch all:
+        '*': '{} icon'
+    },
+    'bootstrap3': {
+        'key': 'fa fa-key fa-fw',
+        'shield': 'fa fa-shield fa-fw',
+        'user': 'fa fa-user fa-fw',
+        'codepen': 'fa fa-codepen fa-fw',
+        'cogs': 'fa fa-cogs fa-fw',
+        '*': 'fa fa-{} fa-fw',
+    }
+}
+"""Icon definitions per theme."""

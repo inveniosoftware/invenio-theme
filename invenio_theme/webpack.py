@@ -49,7 +49,7 @@ theme = WebpackThemeBundle(
                 # theme.js is the main file for the Semantic-UI theme.
                 # - theme.js imports semantic-ui-less/semantic.less
                 # - semantic-ui-less/semantic.less imports various files
-                #   that all import ""../../theme.config".
+                #   that all import "../../theme.config".
                 # - theme.config (must be provided by an Invenio instance, that
                 #   sets this as an alias) imports semantic-ui-less/theme.less.
                 # - semantic-ui-less/theme.less imports

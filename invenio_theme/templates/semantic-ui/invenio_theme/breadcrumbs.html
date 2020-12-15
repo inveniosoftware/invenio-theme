@@ -8,17 +8,17 @@
 #}
 {%- if breadcrumbs|length > 1 %}
   <div class="ui breadcrumbs segment secondary container">
-    <div class="ui large breadcrumb" itemprop="breadcrumb">
+    <div class="ui breadcrumb" itemprop="breadcrumb">
       {%- for breadcrumb in breadcrumbs %}
         {%- if loop.last %}
-          <a class="active section">
+          <div class="active section">
             {{ breadcrumb.text|safe }}
-          </a>
+          </div>
         {%- else %}
           <a href="{{ breadcrumb.url }}" class="section">
             {{ breadcrumb.text|safe }}
           </a>
-          <span class="divider">/</span>
+          <i class="right angle icon divider"></i>
         {%- endif %}
       {%- endfor %}
     </div>

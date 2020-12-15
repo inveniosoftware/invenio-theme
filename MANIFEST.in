@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015-2018 CERN.
+# Copyright (C) 2015-2020 CERN.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -17,8 +17,9 @@ include docs/requirements.txt
 include LICENSE
 include pytest.ini
 prune docs/_build
-recursive-include docs *.bat *.py *.rst Makefile *.png
 recursive-include .github/workflows *.yml
+recursive-include docs *.bat *.py *.rst Makefile *.png
+recursive-include invenio_theme *.example
 recursive-include invenio_theme *.html *.js *.scss *.config
 recursive-include invenio_theme *.less
 recursive-include invenio_theme *.overrides
