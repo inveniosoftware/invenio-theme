@@ -14,7 +14,6 @@ import "semantic-ui-less/semantic.less";
 // Initialize Semantic UI components
 jquery(".ui.dropdown").dropdown();
 jquery(".ui.accordion").accordion();
-jquery('.ui.checkbox').checkbox();
 
 jquery(".message .close").on("click", function () {
   jquery(this).closest(".message").transition({
@@ -29,10 +28,10 @@ const toggle = document.querySelector(".menu-icon");
 const menu = document.querySelector(".navbar-menu");
 /* Toggle mobile menu */
 function toggleMenu() {
-    if (menu.classList.contains("active")) {
-        menu.classList.remove("active");
-    } else {
-        menu.classList.add("active");
-    }
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  } else {
+    menu.classList.add("active");
+  }
 }
 toggle.addEventListener("click", toggleMenu, false);
