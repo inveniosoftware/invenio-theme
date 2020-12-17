@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.5 (released 2020-12-17)
+
+- Fixes checkbox.overrides in `invenio` SUI packaged theme.
+
 Version 1.3.4 (released 2020-12-17)
 
 - Adds a full "invenio" Semantic UI packaged theme so we can easier customize
