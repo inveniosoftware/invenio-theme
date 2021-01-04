@@ -135,6 +135,7 @@ THEME_500_TEMPLATE = 'invenio_theme/500.html'
 THEME_ICONS = {
     'semantic-ui': {
         'key': 'key icon',
+        'link': 'linkify icon',
         'shield': 'shield alternate icon',
         'user': 'user icon',
         'codepen': 'codepen icon',
@@ -144,6 +145,7 @@ THEME_ICONS = {
     },
     'bootstrap3': {
         'key': 'fa fa-key fa-fw',
+        'link': 'fa fa-link fa-fw',
         'shield': 'fa fa-shield fa-fw',
         'user': 'fa fa-user fa-fw',
         'codepen': 'fa fa-codepen fa-fw',
