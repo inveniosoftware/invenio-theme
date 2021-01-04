@@ -66,5 +66,5 @@ class ThemeIcons:
                 # e.g. the smeantic ui pattern is ``{} icon`` and the
                 # bootstrap3 pattern is ``fa fa-{} fa-fw``.
                 elif '*' in self._theme_icons[theme]:
-                    return self._theme_icons[theme][key].format(key)
+                    return self._theme_icons[theme]["*"].format(key)
         return ""
