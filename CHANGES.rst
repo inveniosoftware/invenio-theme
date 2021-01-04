@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.6 (released 2021-01-04)
+
+- Adds `link` theme icon
+- Fixes wildcard icon resolution
+
 Version 1.3.5 (released 2020-12-17)
 
 - Fixes checkbox.overrides in `invenio` SUI packaged theme.
