@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.7 (released 2021-01-25)
+
+- Adds brand color in segments
+
 Version 1.3.6 (released 2021-01-04)
 
 - Adds `link` theme icon
