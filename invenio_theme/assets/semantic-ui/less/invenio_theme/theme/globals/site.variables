@@ -5,7 +5,9 @@
 @defaultPadding : 2em;
 @defaultMargin  : 2em;
 
-@brandColor      : rgba(13,95,137, 0.8);
+/*--- Brand main colors ---*/
+@brandColor     : rgba(13, 95, 137, 0.8);
+
 
 /*--- Cover page margin ---*/
 
