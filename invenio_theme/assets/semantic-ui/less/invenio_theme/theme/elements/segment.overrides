@@ -11,3 +11,12 @@
     color: black;
     padding: 0.7em;
 }
+
+/* Brand */
+.ui.brand.segment:not(.inverted) {
+  border-top: @coloredBorderSize solid @brandColor !important;
+}
+.ui.inverted.brand.segment {
+  background-color: @brandColor !important;
+  color: @white !important;
+}
