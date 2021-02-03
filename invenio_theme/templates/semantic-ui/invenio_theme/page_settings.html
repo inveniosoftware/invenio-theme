@@ -17,7 +17,7 @@
         <strong class="header item">{{ _('Settings') }}</strong>
         {%- for item in current_menu.submenu('settings').children if item.visible %}
         {%- block settings_menu_item scoped %}
-          <a href="{{ item.url }}" class="item{% if item.active %} blue inverted active{% endif %}">
+          <a href="{{ item.url }}" class="brand item{% if item.active %} active{% endif %}">
             {{ item.text|safe }}
           </a>
         {%- endblock %}
