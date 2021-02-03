@@ -2,14 +2,8 @@
          Site Overrides
 *******************************/
 
-.ui.inverted.menu{
-  background: @brandColor;
+.ui.inverted.menu {
   border-radius: 0px;
-}
-
-.ui.vertical.menu .active.item {
-    background: @primaryColor;
-    pointer-events: none;
 }
 
 .ui.vertical.menu .item i.icon {
@@ -17,10 +11,22 @@
     margin-right: 0.5em;
 }
 
-.ui.menu .blue.active.item {
-    color: white !important;
+/* Brand */
+.ui.inverted.menu .brand.active.item,
+.ui.inverted.brand.menu {
+  background-color: @brandColor;
+}
+.ui.inverted.brand.menu .item:before {
+  background-color: @invertedColoredDividerBackground;
+}
+.ui.inverted.brand.menu .active.item {
+  background-color: @invertedColoredActiveBackground !important;
 }
 
-.ui.vertical.menu .active.item:hover {
-    background-color: @primaryColor;
+.ui.menu .brand.active.item,
+.ui.brand.menu .active.item {
+  border-color: @brandColor !important;
+  background-color: @brandColor;
+  color: @white !important;
+  pointer-events: none;
 }
