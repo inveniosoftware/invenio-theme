@@ -2,11 +2,6 @@
          Site Overrides
 *******************************/
 
-.ui.breadcrumbs.segment {
-    border: none;
-    box-shadow: none;
-}
-
 .ui.secondary.segment {
     color: black;
     padding: 0.7em;
