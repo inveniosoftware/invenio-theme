@@ -1,3 +1,36 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.row.no-padding,
+.row .column.no-padding {
+    padding: 0px !important;
+}
+
+.row.no-padding-lr,
+.row .column.no-padding-lr {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.row.no-padding-tb,
+.row .column.no-padding-tb {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/** Deposit */
+.row.deposit-result-header {
+    background-color: #d7d7d7;
+
+    &.padding-tb-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+    &.small {
+        font-size: small;
+    }
+    .padding-r-5.column {
+        padding-right: 5px !important;
+    }
+}
