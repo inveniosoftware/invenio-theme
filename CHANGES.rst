@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.8 (released 2021-02-10)
+
+- Adds brand color to menu items
+
 Version 1.3.7 (released 2021-01-25)
 
 - Adds brand color in segments
