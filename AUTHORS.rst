@@ -24,3 +24,4 @@ Contributors
 - Paulina Lach
 - Sami Hiltunen
 - Tibor Simko
+- Mojib Wali
