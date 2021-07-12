@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.9 (released 2021-07-12)
+
+- Adds german translations
+
 Version 1.3.8 (released 2021-02-10)
 
 - Adds brand color to menu items
