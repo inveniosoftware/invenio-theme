@@ -37,7 +37,6 @@
 /*--- Fonts ---*/
 
 @importGoogleFonts : false;
-// @fontName          : 'robotolight';
 
 @headerFont        : @fontName, sans-serif;
 @pageFont          : @fontName, sans-serif;
