@@ -11,7 +11,7 @@
 
 {%- block page_body scoped %}
 <div class="ui grid container stackable">
-  <div class="four wide column">
+  <nav class="four wide column" aria-label="Account settings">
     {%- block settings_menu scoped %}
       <div class="ui vertical menu fluid">
         <strong class="header item">{{ _('Settings') }}</strong>
@@ -24,8 +24,8 @@
         {%- endfor %}
       </div>
     {%- endblock %}
-  </div>
-  <div class="twelve wide column">
+  </nav>
+  <main class="twelve wide column" id="main">
     {%- block settings_content scoped %}
     <div class="ui segments">
       <div class="ui segment secondary">
@@ -48,6 +48,6 @@
     </div>
     {%- endblock %}
 
-  </div>
+  </main>
 </div>
 {%- endblock %}
