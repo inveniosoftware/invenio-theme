@@ -2,6 +2,7 @@
 
   This file is part of Invenio.
   Copyright (C) 2015-2018 CERN.
+  Copyright (C) 2021 New York University.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -10,12 +11,12 @@
 {% extends config.THEME_BASE_TEMPLATE %}
 
 {% block page_body %}
-<div class="ui grid container error-page">
+<main id="main" class="ui grid container error-page">
 <div class="ui divider hidden"></div>
   <div class="row">
     <div class="column">
       {% block message %}{% endblock message %}
     </div>
   </div>
-</div>
+</main>
 {% endblock %}
