@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.10 (released 2021-11-23)
+
+- Web accessibility fix.
+
 Version 1.3.9 (released 2021-07-12)
 
 - Adds german translations
