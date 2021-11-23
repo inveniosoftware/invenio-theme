@@ -2,6 +2,7 @@
 
   This file is part of Invenio.
   Copyright (C) 2015-2018 CERN.
+  Copyright (C) 2021 New York University.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -55,7 +56,7 @@
     {%- endblock head %}
   </head>
 
-  <body ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
+  <body{% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
     {%- block body %}
     {%- block browserupgrade %}
     <!--[if lt IE 8]>
