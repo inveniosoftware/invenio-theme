@@ -62,7 +62,7 @@ li ~ .item{
 }
 
 .text-muted{
-  color: #6e6c6c;
+  color: #757575;
 }
 
 .inline-block {
