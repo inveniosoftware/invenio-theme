@@ -67,9 +67,11 @@
     {%- block page_header %}
 {% include config.THEME_HEADER_TEMPLATE %}
     {%- endblock page_header %}
+    <main id="main">
     {%- block page_body %}
 {% include "invenio_theme/body.html" %}
     {%- endblock page_body %}
+    </main>
     {%- block page_footer %}
 {% include config.THEME_FOOTER_TEMPLATE %}
     {%- endblock page_footer %}
