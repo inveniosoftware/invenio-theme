@@ -1,6 +1,6 @@
 /*
  * This file is part of Invenio.
- * Copyright (C) 2017-2020 CERN.
+ * Copyright (C) 2017-2022 CERN.
  *
  * Invenio is free software; you can redistribute it and/or modify it
  * under the terms of the MIT License; see LICENSE file for more details.
@@ -44,4 +44,9 @@ function toggleMenu() {
     menu.classList.add("active");
   }
 }
-toggle.addEventListener("click", toggleMenu, false);
+toggle && toggle.addEventListener("click", toggleMenu, false);
+
+// Make sure screen reader picks up the flashed messages on page load
+document.addEventListener('DOMContentLoaded', event => {
+  jquery("#flash-message #alert-content").css('display', 'block');
+})

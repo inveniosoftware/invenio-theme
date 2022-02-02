@@ -61,4 +61,8 @@
     {% block page_footer %}
     {% endblock page_footer %}
   </div>
+
+  {%- block javascript %}
+    {{ webpack['theme.js']}}
+  {%- endblock javascript %}
 {%- endblock body %}

@@ -25,12 +25,12 @@
       <div class="ui {{ category }} flashed message">
         <div class="ui grid {{gridClass}}">
 
-          <div class="{{ firstColWidth }} left aligned column">
-            <p>{{ msg }}</p>
+          <div role="alert" id="flash-message" class="{{ firstColWidth }} left aligned column">
+            <p id="alert-content" style="display:none;">{{ msg }}</p>
           </div>
 
           <div class="{{ secondColWidth }} right aligned column">
-            <button class="iconhold close-btn" aria-label="{{_('Close') }}">
+            <button class="ui icon button iconhold close-btn" aria-label="{{_('Close') }}">
               <i class="flashed close icon"></i>
             </button>
           </div>
