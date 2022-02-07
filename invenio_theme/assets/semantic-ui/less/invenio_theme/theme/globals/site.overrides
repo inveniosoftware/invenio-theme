@@ -82,3 +82,39 @@ code {
     font-weight: normal;
     font-style: normal;
 }
+
+.generate-margins(@max, @direction, @alias, @i: 5) when (@i =< @max) {
+  .m@{alias}-@{i} {
+    margin-@{direction}: unit(@i, px) !important;
+  }
+  .generate-margins(@max, @direction, @alias, (@i + 5));
+}
+
+/*
+* The following classses will be generated:
+* .mr-{5,10,15,20,25,30} {
+*     margin-right {
+*       {5,10,15,20,25,30}px !important;
+*     }
+* }
+* .ml-{5,10,15,20,25,30} {
+*     margin-left {
+*       {5,10,15,20,25,30}px !important;
+*     }
+* }
+* .mt-{5,10,15,20,25,30} {
+*     margin-top {
+*       {5,10,15,20,25,30}px !important;
+*     }
+* }
+* .mb-{5,10,15,20,25,30} {
+*     margin-bottom {
+*       {5,10,15,20,25,30}px !important;
+*     }
+* }
+*/
+
+.generate-margins(30, right, r);
+.generate-margins(30, left, l);
+.generate-margins(30, bottom, b);
+.generate-margins(30, top, t);
