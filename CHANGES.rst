@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.11 (released 2022-02-08)
+
+- Adds margin generator.
+- Adds A11y page landmarks.
+
 Version 1.3.10 (released 2021-11-23)
 
 - Web accessibility fix.
