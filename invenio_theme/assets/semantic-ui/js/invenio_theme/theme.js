@@ -23,6 +23,16 @@ jquery(".message .close").on("click", function () {
   });
 });
 
+jquery(".message .close-btn").on("keydown", function (event) {
+  if(event.key === "Enter") {
+    jquery(this).closest(".message").transition({
+      animation: "fade",
+      duration: 0,
+      interval: 0,
+    });
+  }
+});
+
 /* Expand and collapse navbar  */
 const toggle = document.querySelector(".menu-icon");
 const menu = document.querySelector(".navbar-menu");

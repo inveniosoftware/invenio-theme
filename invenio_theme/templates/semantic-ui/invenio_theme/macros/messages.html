@@ -12,11 +12,13 @@
       {%- set category = 'info' if category not in ['info', 'error', 'warning', 'success'] else category %}
       <div class="ui {{ category }} flashed message">
         <div class="ui grid container">
-          <div class="fifteen wide left aligned column">
+          <div class="fourteen wide left aligned column">
             <p>{{ msg }}</p>
           </div>
-          <div class="right aligned column">
-            <i class="flashed close icon"></i>
+          <div class="two wide right aligned column">
+            <button class="iconhold close-btn" aria-label="{{_('Close') }}">
+              <i class="flashed close icon"></i>
+            </button>
           </div>
         </div>
       </div>

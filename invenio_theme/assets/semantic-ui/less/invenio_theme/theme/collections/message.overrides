@@ -10,10 +10,7 @@
 
 .flashed.close.icon {
     cursor: pointer;
-    position: absolute;
     margin: 0;
-    top: 1em;
-    right: .5em;
     opacity: .7;
     transition: opacity .1s ease;
 }
