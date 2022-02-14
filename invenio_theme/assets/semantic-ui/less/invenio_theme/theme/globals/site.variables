@@ -8,7 +8,7 @@
 /*--- Brand main colors ---*/
 @brandColor     : rgba(13, 95, 137, 0.8);
 
-
+@mutedTextColor      :  #757575;
 /*--- Cover page margin ---*/
 
 @coverPageDefaultMargin: 3*@defaultMargin;
