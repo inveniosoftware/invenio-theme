@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.12 (released 2022-02-14)
+
+- Fixes A11y issue with the close button in flash messages.
+
 Version 1.3.11 (released 2022-02-08)
 
 - Adds margin generator.
