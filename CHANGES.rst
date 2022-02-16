@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.14 (released 2022-02-16)
+
+- Fix issue with Lato font not being loaded in Semantic UI theme.
+- Sets Semantic UI @mutedTextColor.
+
 Version 1.3.13 (released 2022-02-16)
 
 - Ensure compiled translation message catalogs are included in the
