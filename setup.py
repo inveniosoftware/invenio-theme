@@ -16,12 +16,12 @@ readme = open('README.rst').read()
 history = open('CHANGES.rst').read()
 
 tests_require = [
-    'pytest-invenio>=1.4.0',
+    'pytest-invenio>=1.4.2',
 ]
 
 extras_require = {
     'docs': [
-        'Sphinx>=1.5.1',
+        'Sphinx==4.2.0',
     ],
     'tests': tests_require,
 }
@@ -31,17 +31,16 @@ for reqs in extras_require.values():
     extras_require['all'].extend(reqs)
 
 setup_requires = [
-    'Babel>=1.3',
-    'pytest-runner>=2.6.2',
+    'Babel>=2.8',
 ]
 
 install_requires = [
     'Flask-Breadcrumbs>=0.4.0',
     'Flask-Menu>=0.5.0',
-    'invenio-assets>=1.2.2',
-    'invenio-base>=1.2.3',
-    'invenio-i18n>=1.2.0',
-    'jsmin>=2.1.6',
+    'invenio-assets>=1.2.7',
+    'invenio-base>=1.2.5',
+    'invenio-i18n>=1.3.1',
+    'jsmin>=3.0.0',
 ]
 
 packages = find_packages()

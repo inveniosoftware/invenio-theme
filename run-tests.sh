@@ -12,7 +12,6 @@ set -o errexit
 # Quit on unbound symbols
 set -o nounset
 
-pydocstyle invenio_theme
 python -m check_manifest --ignore ".*-requirements.txt"
 sphinx-build -qnNW docs docs/_build/html
-python setup.py test
+python -m pytest
