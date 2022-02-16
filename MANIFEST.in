@@ -28,4 +28,5 @@ recursive-include invenio_theme *.svg
 recursive-include invenio_theme *.variables
 recursive-include invenio_theme *.woff
 recursive-include invenio_theme *.woff2
+recursive-include invenio_theme *.po *.pot *.mo
 recursive-include tests *.py
