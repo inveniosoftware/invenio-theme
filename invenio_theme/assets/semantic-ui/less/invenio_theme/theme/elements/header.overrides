@@ -14,9 +14,6 @@
     padding: 15px 40px 40px 40px;
 }
 
-.theme.header {
-    margin-bottom: 20px;
-}
 
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)  {
     font-size: 1em;
