@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.13 (released 2022-02-16)
+
+- Ensure compiled translation message catalogs are included in the
+  distributions uploaded on PyPI.
+
 Version 1.3.12 (released 2022-02-14)
 
 - Fixes A11y issue with the close button in flash messages.
