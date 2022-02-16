@@ -8,9 +8,6 @@ footer{
   margin-top: 3*@defaultMargin;
 }
 
-header{
-  margin-bottom: @defaultMargin;
-}
 
 html.cover-page{
   background-color: @brandColor;

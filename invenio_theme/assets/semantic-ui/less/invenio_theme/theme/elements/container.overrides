@@ -20,5 +20,4 @@
 .ui.breadcrumbs.container {
     padding-top: 14px;
     padding-bottom: 14px;
-    margin-top: -15px;
 }
