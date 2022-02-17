@@ -27,6 +27,7 @@ recursive-include invenio_theme *.po *.pot *.mo
 recursive-include invenio_theme *.po *.svg
 recursive-include invenio_theme *.svg
 recursive-include invenio_theme *.png
+recursive-include invenio_theme *.ico
 recursive-include invenio_theme *.ttf
 recursive-include invenio_theme *.variables
 recursive-include invenio_theme *.woff
