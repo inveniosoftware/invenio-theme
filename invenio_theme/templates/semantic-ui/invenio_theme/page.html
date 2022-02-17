@@ -27,23 +27,31 @@
     {%- set title = title or _(config.THEME_SITENAME) or _('Invenio') %}
     <title>{{title}}</title>
     {%- endblock head_title %}
+
     {%- block head_links %}
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
-    {%- if keywords %}<link rel="canonical" href="{{ canonical_url }}"/>{% endif %}
-    {%- block head_links_langs %}
-      {%- if alternate_urls %}
-        {%- for alt_ln, alternate_url in alternate_urls.items() %}
-    <link rel="alternate" hreflang="{{ alt_ln }}" href="{{ alternate_url }}"/>
+      <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}"/>
+
+      {%- if keywords %}
+        <link rel="canonical" href="{{ canonical_url }}"/>
+      {% endif %}
+
+      {%- block head_links_langs %}
+        {%- if alternate_urls %}
+          {%- for alt_ln, alternate_url in alternate_urls.items() %}
+            <link rel="alternate" hreflang="{{ alt_ln }}" href="{{ alternate_url }}"/>
+          {%- endfor %}
+        {%- endif %}
+      {%- endblock %}
+
+      {%- block head_apple_icons %}
+        {%- for size in [120, 152, 167, 180] %}
+          {%- set icon_name = 'apple-touch-icon-%d.png' | format(size) %}
+          <link rel="apple-touch-icon" sizes="{{ size }}x{{ size }}" href="{{ url_for('static', filename=icon_name) }}"/>
         {%- endfor %}
-      {%- endif %}
-    {%- endblock %}
-    {%- block head_apple_icons %}
-    {%- for size in [144, 114, 72, 57] %}
-      {%- set icon_name = 'apple-touch-icon-%d-precomposed.png' | format(size) %}
-    <link rel="apple-touch-icon-precomposed" sizes="{{ size }}x{{ size }}" href="{{ url_for('static', filename=icon_name) }}"/>
-    {%- endfor %}
-    {%- endblock head_apple_icons %}
+      {%- endblock head_apple_icons %}
+
     {%- endblock head_links %}
+
     {%- block header %}{% endblock header %}
     {%- block css %}
     {{ webpack['theme.css'] }}
