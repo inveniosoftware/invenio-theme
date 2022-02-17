@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.15 (released 2022-02-17)
+
+- Remove custom margin from classes to improve CSS overridability.
+
 Version 1.3.14 (released 2022-02-16)
 
 - Fix issue with Lato font not being loaded in Semantic UI theme.
