@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.16 (released 2022-02-17)
+
+- Add common `square-placeholder.png` image for general use.
+
 Version 1.3.15 (released 2022-02-17)
 
 - Remove custom margin from classes to improve CSS overridability.
