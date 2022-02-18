@@ -6,20 +6,35 @@
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
 #}
-{%- macro flashed_messages() -%}
-  {%- block messages %}
-    {%- for category, msg in get_flashed_messages(with_categories=True) %}
+{%- macro flashed_messages(center_text=false) -%}
+
+  {%- block messages scoped %}
+  {%- for category, msg in get_flashed_messages(with_categories=True) %}
       {%- set category = 'info' if category not in ['info', 'error', 'warning', 'success'] else category %}
+
+      {%- set gridClass = 'container' %}
+      {%- set firstColWidth = 'fourteen wide' %}
+      {%- set secondColWidth = 'two wide' %}
+
+      {%- if center_text %}
+        {%- set gridClass = 'centered' %}
+        {%- set firstColWidth = 'twelve wide mobile six wide tablet four wide computer' %}
+        {%- set secondColWidth = 'two wide tablet one wide computer' %}
+      {% endif %}
+
       <div class="ui {{ category }} flashed message">
-        <div class="ui grid container">
-          <div class="fourteen wide left aligned column">
+        <div class="ui grid {{gridClass}}">
+
+          <div class="{{ firstColWidth }} left aligned column">
             <p>{{ msg }}</p>
           </div>
-          <div class="two wide right aligned column">
+
+          <div class="{{ secondColWidth }} right aligned column">
             <button class="iconhold close-btn" aria-label="{{_('Close') }}">
               <i class="flashed close icon"></i>
             </button>
           </div>
+
         </div>
       </div>
     {%- endfor %}
