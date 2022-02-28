@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.17 (released 2022-02-28)
+
+- Adds favicon
+- Fix issue with flash message on login page not being side to side.
+
 Version 1.3.16 (released 2022-02-17)
 
 - Add common `square-placeholder.png` image for general use.
