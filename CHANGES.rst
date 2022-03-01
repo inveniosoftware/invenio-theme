@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.18 (released 2022-03-01)
+
+- Revert font back to default sans-sarif font instead of Lato.
+
 Version 1.3.17 (released 2022-02-28)
 
 - Adds favicon
