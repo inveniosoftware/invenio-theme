@@ -62,7 +62,6 @@ theme = WebpackThemeBundle(
                 'theme-admin': './scss/invenio_theme/admin.scss',
                 'adminlte': './js/invenio_theme/admin.js',
                 'theme': './js/invenio_theme/theme.js',
-                'truncate': './js/invenio_theme/truncate.js',
             },
             dependencies={
                 'semantic-ui-less': '~2.4.1',
