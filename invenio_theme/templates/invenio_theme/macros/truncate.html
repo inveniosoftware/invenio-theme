@@ -1,0 +1,17 @@
+{#
+    Copyright (C) 2022 CERN.
+  
+    Invenio RDM Records is free software; you can redistribute it and/or modify
+    it under the terms of the MIT License; see LICENSE file for more details.
+#}
+
+
+{% macro truncate_text(text) %}
+  <div class="truncate-container">
+    <p class="truncate-text truncate-2">{{ text|safe }}</p>
+    <a href="javascript:void(0)" class="truncate-button" hidden>Show more</a>
+    <a href="javascript:void(0)" class="truncate-button" hidden>Show less</a>
+  </div>
+{%- endmacro %}
+
+
