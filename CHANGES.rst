@@ -1,12 +1,16 @@
 ..
     This file is part of Invenio.
-    Copyright (C) 2015-2020 CERN.
+    Copyright (C) 2015-2022 CERN.
 
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 Changes
 =======
+
+Version 1.3.19 (released 2022-03-04)
+
+- Add a reusable Jinja macro to truncate long text.
 
 Version 1.3.18 (released 2022-03-01)
 
