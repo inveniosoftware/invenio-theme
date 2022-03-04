@@ -87,7 +87,7 @@
 *******************************/
 
 /* Path to theme packages */
-@themesFolder : 'themes';
+@themesFolder : '~semantic-ui-less/themes';
 
 /* Path to site override folder */
 @siteFolder  : '../../less/my-site/site';
@@ -96,7 +96,7 @@
          Import Theme
 *******************************/
 
-@import (multiple) "~semantic-ui-less/theme.less";
+@import (multiple) "themes/invenio/theme.less";
 
 @fontPath : "../../../themes/@{theme}/assets/fonts";
 

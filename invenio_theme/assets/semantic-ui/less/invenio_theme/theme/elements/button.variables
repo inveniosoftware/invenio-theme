@@ -1,9 +1,16 @@
-/*******************************
-    User Variable Overrides
-*******************************/
+/***********************************************
+         Invenio Theme Button Variables
+***********************************************/
+
+@searchButtonColor: @orange;
+@searchButtonColorHover: saturate(darken(@searchButtonColor, 5), 10, relative);
+@searchButtonColorFocus: saturate(darken(@searchButtonColor, 8), 20, relative);
+@searchButtonColorDown: darken(@searchButtonColor, 10);
+@searchButtonColorActive: saturate(darken(@searchButtonColor, 5), 15, relative);
 
 @signupColorTextColor: @invertedTextColor;
 @signupColorTextShadow: @invertedTextShadow;
 
 @searchButtonColorTextColor: @invertedTextColor;
 @searchButtonColorTextShadow: @invertedTextShadow;
+
