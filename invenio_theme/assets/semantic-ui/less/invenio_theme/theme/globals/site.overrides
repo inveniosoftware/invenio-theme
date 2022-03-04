@@ -1,8 +1,9 @@
-/*******************************
-         Site Overrides
-*******************************/
+/***********************************************
+         Invenio Theme Site Overrides
+***********************************************/
 
-@import "../navbar/navbar.less";
+
+@import "../../navbar/navbar.less";
 
 footer{
   margin-top: 3*@defaultMargin;

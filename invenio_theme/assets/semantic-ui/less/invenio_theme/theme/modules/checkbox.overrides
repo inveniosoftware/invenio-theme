@@ -1,6 +1,6 @@
-/*******************************
-         Site Overrides
-*******************************/
+/***********************************************
+         Invenio Theme Checkbox Overrides
+***********************************************/
 
 /* We need to import the `themes/default/modules/checkbox.overrides` in order to make the checkbox working properly.
    This is needed because SUI is relying explicitly to your custom theme's `<component>.overrides`.

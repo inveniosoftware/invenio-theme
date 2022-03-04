@@ -1,6 +1,6 @@
-/*******************************
-         Site Overrides
-*******************************/
+/***********************************************
+         Invenio Theme Container Overrides
+***********************************************/
 
 .ui.container.cover-page {
   background-color: @brandColor;

@@ -1,6 +1,6 @@
-/*******************************
-         Site Overrides
-*******************************/
+/***********************************************
+         Invenio Theme Input Overrides
+***********************************************/
 
 /* it is hardcoded because the searchbar is wrapped in <form>
     and it can't be wrapped in invenio-search-ui

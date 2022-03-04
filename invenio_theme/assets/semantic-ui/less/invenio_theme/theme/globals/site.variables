@@ -1,6 +1,6 @@
-/*******************************
-     User Global Variables
-*******************************/
+/***********************************************
+         Invenio Theme Site Variables
+***********************************************/
 
 @defaultPadding : 2em;
 @defaultMargin  : 2em;
@@ -24,15 +24,7 @@
 @signupColorHover: saturate(darken(@signupColor, 5), 10, relative);
 @signupColorFocus: saturate(darken(@signupColor, 8), 20, relative);
 @signupColorDown: darken(@signupColor, 10);
-@signupColorActive: : saturate(darken(@signupColor, 5), 15, relative);
-
-/*--- Search button color ---*/
-
-@searchButtonColor: @orange;
-@searchButtonColorHover: saturate(darken(@searchButtonColor, 5), 10, relative);
-@searchButtonColorFocus: saturate(darken(@searchButtonColor, 8), 20, relative);
-@searchButtonColorDown: darken(@searchButtonColor, 10);
-@searchButtonColorActive: : saturate(darken(@searchButtonColor, 5), 15, relative);
+@signupColorActive: saturate(darken(@signupColor, 5), 15, relative);
 
 /*--- Fonts ---*/
 
