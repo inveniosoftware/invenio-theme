@@ -8,6 +8,7 @@
 
 // eslint-disable-next-line no-unused-vars
 import jquery from "jquery/dist/jquery";
+import "./truncate.js";
 import "semantic-ui-css/semantic.js";
 import "semantic-ui-less/semantic.less";
 

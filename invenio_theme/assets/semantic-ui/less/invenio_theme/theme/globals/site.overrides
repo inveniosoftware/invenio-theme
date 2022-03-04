@@ -107,3 +107,15 @@ code {
 .generate-margins(30, left, l);
 .generate-margins(30, bottom, b);
 .generate-margins(30, top, t);
+
+.generate-truncate-classes(@max, @i: 1) when (@i =< @max){
+  .truncate-lines-@{i} {
+    display: -webkit-box !important;
+    -webkit-line-clamp: @i;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .generate-truncate-classes(@max, (@i + 1));
+}
+
+.generate-truncate-classes(5);
