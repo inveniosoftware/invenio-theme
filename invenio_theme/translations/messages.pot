@@ -139,3 +139,11 @@ msgstr ""
 msgid "Account settings"
 msgstr ""
 
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:12
+msgid "Show more"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:13
+msgid "Show less"
+msgstr ""
+
