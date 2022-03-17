@@ -9,6 +9,8 @@
 @brandColor     : rgba(13, 95, 137, 0.8);
 
 @mutedTextColor      :  #757575;
+@textMutedColorDarken:  #4A4A4A;
+
 /*--- Cover page margin ---*/
 
 @coverPageDefaultMargin: 3*@defaultMargin;
