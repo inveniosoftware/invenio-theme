@@ -8,6 +8,12 @@
 Changes
 =======
 
+Version 1.3.20 (released 2022-03-17)
+
+- refactor page template
+- add semantic ui invenio packaged theme configuration
+- extend utils CSS classes
+
 Version 1.3.19 (released 2022-03-04)
 
 - Add a reusable Jinja macro to truncate long text.
