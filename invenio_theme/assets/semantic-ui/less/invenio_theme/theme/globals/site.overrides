@@ -32,7 +32,7 @@ li ~ .item{
 }
 
 .item.left-logo{
-  padding-left: 0em !important;
+  padding-left: 0 !important;
 }
 
 .text-muted{
