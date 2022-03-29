@@ -190,3 +190,11 @@ code {
 }
 
 .generate-truncate-classes(5);
+
+.skip-link {
+  position: absolute;
+  z-index: -999;
+  &:focus {
+    z-index: 999;
+  }
+}
