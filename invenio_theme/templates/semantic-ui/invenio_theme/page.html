@@ -71,6 +71,10 @@
 
     {%- block body %}
 
+      {%- block bypasslinks %}
+      <a id="skip-to-main" class="ui button primary ml-5 mt-5 skip-link" href="#main">{{_('Skip to main')}}</a>
+      {%- endblock bypasslinks %}
+
       {%- block browserupgrade %}
       <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
