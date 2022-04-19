@@ -13,8 +13,12 @@
 
 {%- block page_body scoped %}
 
+<div class="ui container mt-25 mb-15">
+  <h1 class="ui header">{{ _("My account") }}</h1>
+</div>
+
 <div class="ui grid container stackable">
-  <nav class="four wide column" aria-label="{{ _('Account settings') }}">
+  <nav class="five wide tablet four wide computer column" aria-label="{{ _('Account settings') }}">
 
     {%- block settings_menu scoped %}
       <div class="ui vertical menu fluid">
@@ -32,7 +36,8 @@
     {%- endblock %}
 
   </nav>
-  <article class="twelve wide column">
+
+  <article class="eleven wide tablet twelve wide computer column">
 
     {%- block settings_content scoped %}
       <div class="ui segments">
