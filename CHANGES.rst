@@ -8,6 +8,9 @@
 Changes
 =======
 
+Version 1.3.22 (released 2022-04-21)
+
+
 Version 1.3.21 (released 2022-03-29)
 
 - fix html tags in templates
