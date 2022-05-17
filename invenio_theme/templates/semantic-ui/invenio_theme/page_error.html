@@ -11,12 +11,19 @@
 {% extends config.THEME_BASE_TEMPLATE %}
 
 {% block page_body %}
-<div class="ui grid container error-page">
-<div class="ui divider hidden"></div>
-  <div class="row">
-    <div class="column">
-      {% block message %}{% endblock message %}
+  <div class="ui grid container error-page">
+    <div class="ui divider hidden"></div>
+    <div class="row">
+      <div class="column">
+        {% block message %}{% endblock message %}
+      </div>
     </div>
   </div>
-</div>
 {% endblock %}
+
+{% block css %}
+  {{ super() }}
+  {{ webpack['theme.css'] | string | safe }}
+{% endblock %}
+
+
