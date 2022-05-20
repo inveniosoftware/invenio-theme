@@ -2,40 +2,39 @@
          Invenio Theme Site Overrides
 ***********************************************/
 
-
 @import "../../navbar/navbar.less";
 
-footer{
+footer {
   margin-top: 3*@defaultMargin;
 }
 
 
-html.cover-page{
+html.cover-page {
   background-color: @brandColor;
 }
 
-body.cover-page{
+body.cover-page {
   background-color: transparent;
   width: auto;
 }
 
 .no-dots-list > .item {
-    padding-left: 3em !important;
+  padding-left: 3em !important;
 }
 
-li ~ .item{
+li ~ .item {
   padding-left: 2em !important;
 }
 
-.header.item{
+.header.item {
   background: #f3f4f5 !important;
 }
 
-.item.left-logo{
+.item.left-logo {
   padding-left: 0 !important;
 }
 
-.text-muted{
+.text-muted {
   color: @mutedTextColor;
 }
 
@@ -58,48 +57,71 @@ code {
 }
 
 
-/* Negative spaces */
+/* Automatic margins */
 
-.m-0{
-  margin:0 !important;
+.m-auto {
+  margin: auto !important;
 }
 
-.mt-0{
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+
+/* Negative spaces */
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mt-0 {
   margin-top: 0 !important;
 }
 
-.mb-0{
+.mb-0 {
   margin-bottom: 0 !important;
 }
 
-.ml-0{
+.ml-0 {
   margin-left: 0 !important;
 }
 
-.mr-0{
+.mr-0 {
   margin-right: 0 !important;
 }
 
 
 // paddings
 
-.p-0{
-  padding:0 !important;
+.p-0 {
+  padding: 0 !important;
 }
 
-.pt-0{
+.pt-0 {
   padding-top: 0 !important;
 }
 
-.pb-0{
+.pb-0 {
   padding-bottom: 0 !important;
 }
 
-.pl-0{
+.pl-0 {
   padding-left: 0 !important;
 }
 
-.pr-0{
+.pr-0 {
   padding-right: 0 !important;
 }
 
@@ -179,7 +201,7 @@ code {
 .generate-relative-padding(5, top, t);
 
 
-.generate-truncate-classes(@max, @i: 1) when (@i =< @max){
+.generate-truncate-classes(@max, @i: 1) when (@i =< @max) {
   .truncate-lines-@{i} {
     display: -webkit-box !important;
     -webkit-line-clamp: @i;
@@ -194,6 +216,7 @@ code {
 .skip-link {
   position: absolute;
   z-index: -999;
+
   &:focus {
     z-index: 999;
   }
