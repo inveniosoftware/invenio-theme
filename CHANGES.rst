@@ -8,8 +8,17 @@
 Changes
 =======
 
+Version 1.3.24 (released 2022-05-23)
+
+- add global CSS classes for margins auto
+
+Version 1.3.23 (released 2022-05-19)
+
+- add accessibility to ui-accordions
+
 Version 1.3.22 (released 2022-04-21)
 
+- improve semantic styling of My account page
 
 Version 1.3.21 (released 2022-03-29)
 
