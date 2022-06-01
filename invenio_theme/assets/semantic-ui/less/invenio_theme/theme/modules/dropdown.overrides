@@ -1,3 +1,10 @@
 /***********************************************
          Invenio Theme Dropdown Overrides
 ***********************************************/
+
+.ui.scrolling.dropdown{
+  .menu {
+    min-width: @menuMinWidth !important;
+  }
+}
+
