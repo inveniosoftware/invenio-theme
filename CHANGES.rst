@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.3.25 (released 2022-06-27)
+
+- add German translations
+- fix dropdown scroll misalignment
+
 Version 1.3.24 (released 2022-05-23)
 
 - add global CSS classes for margins auto
