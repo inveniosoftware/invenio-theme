@@ -16,8 +16,14 @@ from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
 from . import config
-from .views import blueprint, insufficient_permissions, internal_error, \
-    page_not_found, too_many_requests, unauthorized
+from .views import (
+    blueprint,
+    insufficient_permissions,
+    internal_error,
+    page_not_found,
+    too_many_requests,
+    unauthorized,
+)
 
 
 class InvenioTheme(object):
@@ -45,24 +51,26 @@ class InvenioTheme(object):
 
         # Initialize extensions
         self.menu_ext.init_app(app)
-        self.menu = app.extensions['menu']
+        self.menu = app.extensions["menu"]
         self.breadcrumbs.init_app(app)
 
         # Register blueprint in order to register template and static folder.
-        app.register_blueprint(Blueprint(
-            'invenio_theme',
-            __name__,
-            template_folder='templates',
-            static_folder='static',
-        ))
+        app.register_blueprint(
+            Blueprint(
+                "invenio_theme",
+                __name__,
+                template_folder="templates",
+                static_folder="static",
+            )
+        )
 
         # Register frontpage blueprint if enabled.
-        if app.config['THEME_FRONTPAGE']:
+        if app.config["THEME_FRONTPAGE"]:
             app.register_blueprint(blueprint)
 
         # Initialize breadcrumbs.
-        item = self.menu.submenu('breadcrumbs')
-        item.register(app.config['THEME_BREADCRUMB_ROOT_ENDPOINT'], _('Home'))
+        item = self.menu.submenu("breadcrumbs")
+        item.register(app.config["THEME_BREADCRUMB_ROOT_ENDPOINT"], _("Home"))
 
         # Register errors handlers.
         app.register_error_handler(401, unauthorized)
@@ -75,28 +83,28 @@ class InvenioTheme(object):
         @app.context_processor
         def _theme_icon_ctx_processor():
             from invenio_theme.proxies import current_theme_icons
+
             return dict(current_theme_icons=current_theme_icons)
 
         # Save reference to self on object
-        app.extensions['invenio-theme'] = self
+        app.extensions["invenio-theme"] = self
 
     def init_config(self, app):
         """Initialize configuration.
 
         :param app: An instance of :class:`~flask.Flask`.
         """
-        _vars = ['BASE_TEMPLATE', 'COVER_TEMPLATE', 'SETTINGS_TEMPLATE']
+        _vars = ["BASE_TEMPLATE", "COVER_TEMPLATE", "SETTINGS_TEMPLATE"]
 
         for k in dir(config):
-            if k.startswith('THEME_') or k in _vars:
+            if k.startswith("THEME_") or k in _vars:
                 app.config.setdefault(k, getattr(config, k))
 
         # Set THEME_<name>_TEMPLATE from <name>_TEMPLATE variables if not
         # already set.
         for varname in _vars:
-            theme_varname = 'THEME_{}'.format(varname)
+            theme_varname = "THEME_{}".format(varname)
             if app.config[theme_varname] is None:
                 app.config[theme_varname] = app.config[varname]
 
-        app.config.setdefault(
-            'ADMIN_BASE_TEMPLATE', config.ADMIN_BASE_TEMPLATE)
+        app.config.setdefault("ADMIN_BASE_TEMPLATE", config.ADMIN_BASE_TEMPLATE)

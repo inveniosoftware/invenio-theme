@@ -22,13 +22,14 @@ def assert_template_blocks(template, blocks, base_tpl=None):
         base_tpl = """{%% extends '%s' %%}""" % template
 
     for b in blocks:
-        tpl = base_tpl + '{%% block %s %%}TPLTEST{%% endblock %%}' % b
-        assert 'TPLTEST' in render_template_string(tpl)
+        tpl = base_tpl + "{%% block %s %%}TPLTEST{%% endblock %%}" % b
+        assert "TPLTEST" in render_template_string(tpl)
 
 
 def test_version():
     """Test version import."""
     from invenio_theme import __version__
+
     assert __version__
 
 
@@ -36,7 +37,7 @@ def test_init(app):
     """Initialization."""
     theme = InvenioTheme(app)
     assert theme.menu is not None
-    assert 'THEME_SITENAME' in app.config
+    assert "THEME_SITENAME" in app.config
 
 
 def test_init_app(app):
@@ -45,7 +46,7 @@ def test_init_app(app):
     assert theme.menu is None
     theme.init_app(app)
     assert theme.menu is not None
-    assert 'THEME_SITENAME' in app.config
+    assert "THEME_SITENAME" in app.config
 
 
 def test_render_template(app):
@@ -71,16 +72,26 @@ def test_page_template_blocks(app):
 
     # Test template API
     blocks = [
-        'head', 'head_meta', 'head_title', 'head_links', 'head_links_langs',
-        'head_apple_icons', 'header', 'body', 'browserupgrade', 'page_header',
-        'page_body', 'page_footer', 'trackingcode', 'body_inner'
+        "head",
+        "head_meta",
+        "head_title",
+        "head_links",
+        "head_links_langs",
+        "head_apple_icons",
+        "header",
+        "body",
+        "browserupgrade",
+        "page_header",
+        "page_body",
+        "page_footer",
+        "trackingcode",
+        "body_inner",
     ]
     InvenioTheme(app)
     InvenioAssets(app)
 
     with app.test_request_context():
-        assert_template_blocks(
-            'invenio_theme/page.html', blocks, base_tpl=base_tpl)
+        assert_template_blocks("invenio_theme/page.html", blocks, base_tpl=base_tpl)
 
 
 def test_cover_template_blocks(app):
@@ -93,14 +104,19 @@ def test_cover_template_blocks(app):
 
     # Test template API
     blocks = [
-        'panel', 'page_header', 'page_body', 'page_footer', 'panel_content',
+        "panel",
+        "page_header",
+        "page_body",
+        "page_footer",
+        "panel_content",
     ]
     InvenioTheme(app)
     InvenioAssets(app)
 
     with app.test_request_context():
         assert_template_blocks(
-            'invenio_theme/page_cover.html', blocks, base_tpl=base_tpl)
+            "invenio_theme/page_cover.html", blocks, base_tpl=base_tpl
+        )
 
 
 def test_settings_template_blocks(app):
@@ -110,34 +126,41 @@ def test_settings_template_blocks(app):
     {% block javascript %}{% endblock %}
     """
 
-    blocks = [
-        'page_body', 'settings_menu', 'settings_content', 'settings_form'
-    ]
+    blocks = ["page_body", "settings_menu", "settings_content", "settings_form"]
     InvenioTheme(app)
     InvenioAssets(app)
 
     with app.test_request_context():
         assert_template_blocks(
-            'invenio_theme/page_settings.html', blocks, base_tpl=base_tpl)
+            "invenio_theme/page_settings.html", blocks, base_tpl=base_tpl
+        )
 
 
 def test_header_template_blocks(app):
     """Test template blokcs in header.html."""
     blocks = [
-        'navbar', 'navbar_header', 'brand', 'navbar_inner', 'navbar_right',
-        'breadcrumbs', 'flashmessages', 'navbar_nav', 'navbar_search',
+        "navbar",
+        "navbar_header",
+        "brand",
+        "navbar_inner",
+        "navbar_right",
+        "breadcrumbs",
+        "flashmessages",
+        "navbar_nav",
+        "navbar_search",
     ]
     InvenioTheme(app)
     InvenioAssets(app)
     with app.test_request_context():
-        assert_template_blocks('invenio_theme/header.html', blocks)
+        assert_template_blocks("invenio_theme/header.html", blocks)
 
     app.config.update(dict(THEME_SEARCHBAR=False))
     with app.test_request_context():
-        tpl = \
-            r'{% extends "invenio_theme/header.html" %}' \
-            r'{% block navbar_search %}TPLTEST{% endblock %}'
-        assert 'TPLTEST' not in render_template_string(tpl)
+        tpl = (
+            r'{% extends "invenio_theme/header.html" %}'
+            r"{% block navbar_search %}TPLTEST{% endblock %}"
+        )
+        assert "TPLTEST" not in render_template_string(tpl)
 
 
 def test_html_lang(app):
@@ -147,7 +170,7 @@ def test_html_lang(app):
     {% block javascript %}{% endblock %}
     """
 
-    @app.route('/index')
+    @app.route("/index")
     def index():
         """Render default page."""
         return render_template_string(base_tpl)
@@ -156,13 +179,13 @@ def test_html_lang(app):
     InvenioAssets(app)
 
     with app.test_client() as client:
-        response = client.get('/index')
+        response = client.get("/index")
         assert b'lang="en" ' in response.data
 
-        response = client.get('/index?ln=de')
+        response = client.get("/index?ln=de")
         assert b'lang="de" ' in response.data
 
-        response = client.get('/index?ln=en')
+        response = client.get("/index?ln=en")
         assert b'lang="en" ' in response.data
 
 
@@ -170,18 +193,20 @@ def test_frontpage_not_exists(app):
     """Test the frontpage that doesn't exist."""
     # Before configure the frontpage
     with app.test_client() as client:
-        response = client.get('/')
+        response = client.get("/")
         assert response.status_code == 404
 
 
 def test_frontpage_exists(app_frontpage_handler):
     """Test the frontpage."""
 
-    app_frontpage_handler.config.update(dict(
-        THEME_FRONTPAGE_TITLE="Jessica Jones",
-    ))
+    app_frontpage_handler.config.update(
+        dict(
+            THEME_FRONTPAGE_TITLE="Jessica Jones",
+        )
+    )
 
     # Check if exists
     with app_frontpage_handler.test_client() as client:
-        response = client.get('/')
-        assert b'Jessica Jones' in response.data
+        response = client.get("/")
+        assert b"Jessica Jones" in response.data

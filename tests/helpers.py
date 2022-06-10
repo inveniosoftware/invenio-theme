@@ -23,9 +23,9 @@ def make_fake_template(content=""):
     :returns: The temprorary directory.
     """
     temp_dir = tempfile.mkdtemp()
-    invenio_theme_dir = os.path.join(temp_dir, 'invenio_theme')
+    invenio_theme_dir = os.path.join(temp_dir, "invenio_theme")
     os.mkdir(invenio_theme_dir)
-    fake_file = open(os.path.join(invenio_theme_dir, 'fake.html'), 'w+')
+    fake_file = open(os.path.join(invenio_theme_dir, "fake.html"), "w+")
     fake_file.write(content)
     fake_file.close()
     return temp_dir
