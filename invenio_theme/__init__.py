@@ -521,6 +521,7 @@ template.
 from __future__ import absolute_import, print_function
 
 from .ext import InvenioTheme
-from .version import __version__
+
+__version__ = '1.3.25'
 
 __all__ = ('__version__', 'InvenioTheme')
