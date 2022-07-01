@@ -2,6 +2,9 @@
          Invenio Theme Button Variables
 ***********************************************/
 
+
+/*--- Search button color ---*/
+
 @searchButtonColor: @orange;
 @searchButtonColorHover: saturate(darken(@searchButtonColor, 5), 10, relative);
 @searchButtonColorFocus: saturate(darken(@searchButtonColor, 8), 20, relative);
@@ -14,3 +17,18 @@
 @searchButtonColorTextColor: @invertedTextColor;
 @searchButtonColorTextShadow: @invertedTextShadow;
 
+
+/*--- Warning button color ---*/
+
+@warningButtonColor: @warningColor;
+@warningButtonHover: saturate(darken(@warningButtonColor, 5), 10, relative);
+@warningButtonFocus: saturate(darken(@warningButtonColor, 8), 20, relative);
+@warningButtonDown: darken(@warningButtonColor, 10);
+@warningButtonActive: saturate(darken(@warningButtonColor, 5), 15, relative);
+@warningButtonTextColor: @invertedTextColor;
+@warningButtonTextShadow: @invertedTextShadow;
+
+
+/*--- Transparent button color ---*/
+
+@transparentButtonTextColor: @black;

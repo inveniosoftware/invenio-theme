@@ -2,6 +2,7 @@
          Invenio Theme Button Overrides
 ***********************************************/
 
+
 /*--- Sign up color ---*/
 
 .ui.signup.button {
@@ -30,6 +31,7 @@
   text-shadow: @signupColorTextShadow;
 }
 
+
 /*--- Search icon button color ---*/
 
 .ui.search.button {
@@ -56,4 +58,42 @@
   background-color: @searchButtonColorDown;
   color: @searchButtonColorTextColor;
   text-shadow: @searchButtonColorTextShadow;
+}
+
+
+/*--- Warning button color ---*/
+
+.ui.warning.button {
+  background-color: @warningButtonColor;
+  color: @warningButtonTextColor;
+  text-shadow: @warningButtonTextShadow;
+  background-image: @coloredBackgroundImage;
+  box-shadow: @coloredBoxShadow;
+}
+
+.ui.warning.button:hover {
+  background-color: @warningButtonHover;
+  color: @warningButtonTextColor;
+  text-shadow: @warningButtonTextShadow;
+}
+
+.ui.warning.button:focus {
+  background-color: @warningButtonFocus;
+  color: @warningButtonTextColor;
+  text-shadow: @warningButtonTextShadow;
+}
+
+.ui.warning.button:active {
+  background-color: @warningButtonDown;
+  color: @warningButtonTextColor;
+  text-shadow: @warningButtonTextShadow;
+}
+
+
+/*--- Transparent button color ---*/
+
+.ui.button.transparent {
+  background-color: transparent;
+  color: @transparentButtonTextColor;
+  padding: 0;
 }
