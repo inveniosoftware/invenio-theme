@@ -2,3 +2,4 @@
          Invenio Theme Header Variables
 ***********************************************/
 
+@negativeHover: @redHover;
