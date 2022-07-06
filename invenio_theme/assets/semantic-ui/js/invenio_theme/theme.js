@@ -12,6 +12,13 @@ import "./truncate.js";
 import "semantic-ui-css/semantic.js";
 import "semantic-ui-less/semantic.less";
 
+function imagePlaceholder() {
+  this.onerror=null;
+  this.src='/static/images/square-placeholder.png';
+}
+
+$(".has-placeholder").attr('onerror', imagePlaceholder);
+
 // Initialize Semantic UI components
 jquery(".ui.dropdown").dropdown();
 
