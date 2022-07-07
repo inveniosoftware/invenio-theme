@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.26 (released 2022-07-07)
+
+- add image placeholder on load error
+
 Version 1.3.25 (released 2022-06-27)
 
 - add German translations
