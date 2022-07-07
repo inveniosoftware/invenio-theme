@@ -17,7 +17,7 @@ function imagePlaceholder() {
   this.src='/static/images/square-placeholder.png';
 }
 
-$(".has-placeholder").attr('onerror', imagePlaceholder);
+jquery(".has-placeholder").attr('onerror', imagePlaceholder);
 
 // Initialize Semantic UI components
 jquery(".ui.dropdown").dropdown();
