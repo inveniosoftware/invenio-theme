@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.27 (released 2022-07-07)
+
+- fix jquery reference
+
 Version 1.3.26 (released 2022-07-07)
 
 - add image placeholder on load error
