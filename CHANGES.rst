@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.28 (released 2022-07-08)
+
+- add styling classes with action color coding
+
 Version 1.3.27 (released 2022-07-07)
 
 - fix jquery reference
