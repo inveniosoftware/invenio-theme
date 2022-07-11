@@ -8,3 +8,7 @@
   }
 }
 
+.ui.floating.dropdown > .menu.fluid-menu-mobile{
+  width: calc(100vw - 2 * @defaultPadding);
+  left: calc(-100vw/2 + 100%/2 + @defaultPadding);
+}

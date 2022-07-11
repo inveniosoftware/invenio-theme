@@ -218,6 +218,10 @@ code {
   margin-left: auto;
 }
 
+.centered {
+  text-align: center !important;
+}
+
 /* Automatic margins */
 
 .m-auto {
