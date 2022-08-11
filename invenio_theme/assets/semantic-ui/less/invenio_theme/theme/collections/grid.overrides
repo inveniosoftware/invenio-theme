@@ -84,3 +84,25 @@
   color: @positiveTextColor;
   border-radius: @defaultBorderRadius @defaultBorderRadius 0em 0em !important;
 }
+
+
+// Administration styles
+
+.invenio-administration.ui.grid {
+
+  .column.inverted {
+    background-color: @invertedBackground;
+    color: @invertedTextColor;
+  }
+
+  & > .side-bar.column {
+    min-height: 100vh;
+    background-color: @adminInvertedBackgroundColor;
+
+    &.hidden {
+      position: absolute;
+      top: @relative75px;
+      transform: translateX(-100%);
+    }
+  }
+}
