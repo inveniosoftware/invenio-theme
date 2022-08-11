@@ -7,3 +7,5 @@
 
 @expiredBackgroundColor: @orangeBackground;
 @expiredTextColor: @orangeTextColor;
+
+@invertedBackground: @brandColor;
