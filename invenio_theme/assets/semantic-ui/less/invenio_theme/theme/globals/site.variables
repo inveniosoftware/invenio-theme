@@ -39,7 +39,5 @@
 
 /*--- Fonts ---*/
 
+@fontName          : 'Lato';
 @importGoogleFonts : false;
-
-@headerFont        : @fontName, sans-serif;
-@pageFont          : @fontName, sans-serif;
