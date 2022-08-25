@@ -1,0 +1,83 @@
+# -*- coding: utf-8 -*-
+#
+# Copyright (C) 2022 Graz University of Technology.
+#
+# Invenio-RDM-Records is free software; you can redistribute it and/or modify
+# it under the terms of the MIT License; see LICENSE file for more details.
+
+name: i18n:pull translations
+on: workflow_dispatch # manually trigger
+
+jobs:
+  i18n-pull:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+          python-version: [3.7, 3.8, 3.9]
+          requirements-level: [pypi]
+    env:
+      EXTRAS: tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # setup python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # generate dependencies
+      - name: Generate dependencies
+        run: |
+          pip install wheel requirements-builder
+          requirements-builder -e "$EXTRAS" --level=${{ matrix.requirements-level }} setup.py > .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
+
+      # cache pip
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('.${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt') }}
+
+      # install dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r .${{matrix.requirements-level}}-${{ matrix.python-version }}-requirements.txt
+          pip install .[$EXTRAS]
+          pip freeze
+
+      # install transifex client
+      - name: transifex-client
+        run: |
+          pip install transifex-client
+
+      # store token
+      - name: store token
+        run: |
+          touch ~/.transifexrc
+          echo [https://www.transifex.com] >> ~/.transifexrc
+          echo api_hostname=https://api.transifex.com >> ~/.transifexrc
+          echo hostname=https://www.transifex.com >> ~/.transifexrc
+          echo password=${{ secrets.TRANSIFEX_TOKEN }} >> ~/.transifexrc
+          echo username=api  >> ~/.transifexrc
+
+      # pull all lang
+      - name: pull translations
+        run: |
+          tx pull -a
+
+      # remove transifex credential file
+      - name: remove transifexrc file
+        uses: JesseTG/rm@v1.0.2
+        with:
+          path: ~/.transifexrc
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: i18n:pulled translations
+          title: i18n:pulled translations
+          body: i18n:pulled translations
+          branch: 101-translations  # name of branch which PR is created from
+          delete-branch: true  # delete branch once merged,closed
