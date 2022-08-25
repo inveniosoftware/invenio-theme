@@ -3,6 +3,7 @@
   This file is part of Invenio.
   Copyright (C) 2015-2018 CERN.
   Copyright (C) 2021 New York University.
+  Copyright (C) 2022 TU Wien.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -11,44 +12,61 @@
 {%- extends config.THEME_BASE_TEMPLATE %}
 
 {%- block page_body scoped %}
+
+<div class="ui container mt-25 mb-15">
+  <h1 class="ui header">{{ _("My account") }}</h1>
+</div>
+
 <div class="ui grid container stackable">
-  <nav class="four wide column" aria-label="{{ _('Account settings') }}">
+  <nav class="five wide tablet four wide computer column" aria-label="{{ _('Account settings') }}">
+
     {%- block settings_menu scoped %}
       <div class="ui vertical menu fluid">
         <strong class="header item">{{ _('Settings') }}</strong>
         {%- for item in current_menu.submenu('settings').children if item.visible %}
-        {%- block settings_menu_item scoped %}
-          <a href="{{ item.url }}" class="brand item{% if item.active %} active{% endif %}">
-            {{ item.text|safe }}
-          </a>
-        {%- endblock %}
+
+          {%- block settings_menu_item scoped %}
+            <a href="{{ item.url }}" class="brand item{% if item.active %} active{% endif %}">
+              {{ item.text|safe }}
+            </a>
+          {%- endblock %}
+
         {%- endfor %}
       </div>
     {%- endblock %}
+
   </nav>
-  <article class="twelve wide column">
+
+  <article class="eleven wide tablet twelve wide computer column">
+
     {%- block settings_content scoped %}
-    <div class="ui segments">
-      <div class="ui segment secondary">
+      <div class="ui segments">
+        <div class="ui segment secondary">
+
           {%- block settings_content_title scoped %}
-          {%- if panel_icon %}
-          {%- block settings_content_title_icon scoped %}
-          <i class="{{panel_icon}}"></i>
+            {%- if panel_icon %}
+
+              {%- block settings_content_title_icon scoped %}
+                <i class="{{ panel_icon }}"></i>
+              {%- endblock %}
+
+            {%- endif %}
+            <strong class="header item">{{ panel_title|default("") }}</strong>
           {%- endblock %}
-          {%- endif %}
-          <strong class="header item">{{ panel_title|default("") }}</strong>
-          {%- endblock %}
-      </div>
-        {%- block settings_body scoped %}
-        <div class="ui segment">
-          {%- block settings_form scoped %}
-          {%- endblock settings_form %}
+
         </div>
+
+        {%- block settings_body scoped %}
+          <div class="ui segment">
+            {%- block settings_form scoped %}
+            {%- endblock settings_form %}
+          </div>
         {%- endblock settings_body %}
+
       </div>
-    </div>
     {%- endblock %}
 
   </article>
 </div>
+
 {%- endblock %}

@@ -1,3 +1,9 @@
 /***********************************************
          Invenio Theme Grid Variables
 ***********************************************/
+
+@neutralBackgroundColor: #F8F8F9;
+@neutralTextColor: @textColor;
+
+@expiredBackgroundColor: @orangeBackground;
+@expiredTextColor: @orangeTextColor;

@@ -8,6 +8,45 @@
 Changes
 =======
 
+Version 1.3.28 (released 2022-07-08)
+
+- add styling classes with action color coding
+
+Version 1.3.27 (released 2022-07-07)
+
+- fix jquery reference
+
+Version 1.3.26 (released 2022-07-07)
+
+- add image placeholder on load error
+
+Version 1.3.25 (released 2022-06-27)
+
+- add German translations
+- fix dropdown scroll misalignment
+
+Version 1.3.24 (released 2022-05-23)
+
+- add global CSS classes for margins auto
+
+Version 1.3.23 (released 2022-05-19)
+
+- add accessibility to ui-accordions
+
+Version 1.3.22 (released 2022-04-21)
+
+- improve semantic styling of My account page
+
+Version 1.3.21 (released 2022-03-29)
+
+- fix html tags in templates
+
+Version 1.3.20 (released 2022-03-17)
+
+- refactor page template
+- add semantic ui invenio packaged theme configuration
+- extend utils CSS classes
+
 Version 1.3.19 (released 2022-03-04)
 
 - Add a reusable Jinja macro to truncate long text.

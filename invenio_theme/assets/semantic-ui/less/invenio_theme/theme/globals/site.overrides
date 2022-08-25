@@ -2,64 +2,39 @@
          Invenio Theme Site Overrides
 ***********************************************/
 
-
 @import "../../navbar/navbar.less";
 
-footer{
+footer {
   margin-top: 3*@defaultMargin;
 }
 
 
-html.cover-page{
+html.cover-page {
   background-color: @brandColor;
 }
 
-body.cover-page{
+body.cover-page {
   background-color: transparent;
   width: auto;
 }
 
-.ui.padded.segments.big.form {
-  margin-left: 0em;
-}
-
-.column.centered {
-  width: 33% !important;
-}
-
-@media only screen and (max-width: 1024px) {
-  .column.centered {
-  width: 50% !important;
-  }
-}
-
-@media only screen and (max-width: 540px) {
-  .column.centered {
-  width: 90% !important;
-  }
-}
-
 .no-dots-list > .item {
-    padding-left: 3em !important;
+  padding-left: 3em !important;
 }
 
-li ~ .item{
+li ~ .item {
   padding-left: 2em !important;
 }
 
-.header.item{
+.header.item {
   background: #f3f4f5 !important;
 }
 
-.item.left-logo{
-  padding-left: 0em !important;
+.item.left-logo {
+  padding-left: 0 !important;
 }
 
-.right.floated.right.aligned.column {
-    padding: 0.8em;
-}
-
-.text-muted{
+.text-muted {
   color: @mutedTextColor;
 }
 
@@ -73,6 +48,85 @@ code {
   padding: 3px;
 }
 
+.text-muted {
+  color: @mutedTextColor;
+}
+
+.text-muted-darken {
+  color: @textMutedColorDarken;
+}
+
+
+/* Automatic margins */
+
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+
+/* Negative spaces */
+
+.m-0 {
+  margin: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+
+// paddings
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+/* Generator functions */
+
 .generate-margins(@max, @direction, @alias, @i: 5) when (@i =< @max) {
   .m@{alias}-@{i} {
     margin-@{direction}: unit(@i, px) !important;
@@ -80,8 +134,29 @@ code {
   .generate-margins(@max, @direction, @alias, (@i + 5));
 }
 
+.generate-padding(@max, @direction, @alias, @i: 5) when (@i =< @max) {
+  .p@{alias}-@{i} {
+    padding-@{direction}: unit(@i, px) !important;
+  }
+  .generate-padding(@max, @direction, @alias, (@i + 5));
+}
+
+.generate-relative-margins(@max, @direction, @alias, @i: 1) when (@i =< @max) {
+  .rel-m@{alias}-@{i} {
+    margin-@{direction}: unit(@i, em) !important;
+  }
+  .generate-relative-margins(@max, @direction, @alias, (@i + 1));
+}
+
+.generate-relative-padding(@max, @direction, @alias, @i: 1) when (@i =< @max) {
+  .rel-p@{alias}-@{i} {
+    padding-@{direction}: unit(@i, em) !important;
+  }
+  .generate-relative-padding(@max, @direction, @alias, (@i + 1));
+}
+
 /*
-* The following classses will be generated:
+* The following classes will be generated:
 * .mr-{5,10,15,20,25,30} {
 *     margin-right {
 *       {5,10,15,20,25,30}px !important;
@@ -109,7 +184,24 @@ code {
 .generate-margins(30, bottom, b);
 .generate-margins(30, top, t);
 
-.generate-truncate-classes(@max, @i: 1) when (@i =< @max){
+.generate-padding(30, right, r);
+.generate-padding(30, left, l);
+.generate-padding(30, bottom, b);
+.generate-padding(30, top, t);
+
+
+.generate-relative-margins(5, right, r);
+.generate-relative-margins(5, left, l);
+.generate-relative-margins(5, bottom, b);
+.generate-relative-margins(5, top, t);
+
+.generate-relative-padding(5, right, r);
+.generate-relative-padding(5, left, l);
+.generate-relative-padding(5, bottom, b);
+.generate-relative-padding(5, top, t);
+
+
+.generate-truncate-classes(@max, @i: 1) when (@i =< @max) {
   .truncate-lines-@{i} {
     display: -webkit-box !important;
     -webkit-line-clamp: @i;
@@ -120,3 +212,12 @@ code {
 }
 
 .generate-truncate-classes(5);
+
+.skip-link {
+  position: absolute;
+  z-index: -999;
+
+  &:focus {
+    z-index: 999;
+  }
+}

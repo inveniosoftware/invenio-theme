@@ -5,18 +5,28 @@
 @defaultPadding : 2em;
 @defaultMargin  : 2em;
 
+
 /*--- Brand main colors ---*/
+
 @brandColor     : rgba(13, 95, 137, 0.8);
 
 @mutedTextColor      :  #757575;
+@textMutedColorDarken:  #4A4A4A;
+
+@neutralColor: @grey;
+
+@warningColor: @yellow;
+
 /*--- Cover page margin ---*/
 
 @coverPageDefaultMargin: 3*@defaultMargin;
+
 
 /*--- code tag color ---*/
 
 @codeColor: @pink;
 @codeBackgroundColor: lighten(@pink, 42);
+
 
 /*--- Sign up color ---*/
 
@@ -25,6 +35,7 @@
 @signupColorFocus: saturate(darken(@signupColor, 8), 20, relative);
 @signupColorDown: darken(@signupColor, 10);
 @signupColorActive: saturate(darken(@signupColor, 5), 15, relative);
+
 
 /*--- Fonts ---*/
 

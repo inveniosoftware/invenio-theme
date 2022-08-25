@@ -13,8 +13,7 @@ from werkzeug.local import LocalProxy
 
 current_theme_icons = LocalProxy(
     lambda: ThemeIcons(
-        current_app.config['APP_THEME'],
-        current_app.config['THEME_ICONS']
+        current_app.config["APP_THEME"], current_app.config["THEME_ICONS"]
     )
 )
 """Proxy to the theme icon finder."""
@@ -65,6 +64,6 @@ class ThemeIcons:
                 # If an icon is not defined we create it via a pattern -
                 # e.g. the smeantic ui pattern is ``{} icon`` and the
                 # bootstrap3 pattern is ``fa fa-{} fa-fw``.
-                elif '*' in self._theme_icons[theme]:
+                elif "*" in self._theme_icons[theme]:
                     return self._theme_icons[theme]["*"].format(key)
         return ""

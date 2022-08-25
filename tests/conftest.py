@@ -30,9 +30,9 @@ from invenio_theme import InvenioTheme
 @pytest.fixture()
 def app():
     """Flask app fixture."""
-    app = Flask('myapp')
+    app = Flask("myapp")
     app.config.update(
-        I18N_LANGUAGES=[('en', 'English'), ('de', 'German')],
+        I18N_LANGUAGES=[("en", "English"), ("de", "German")],
     )
     Babel(app)
     InvenioI18N(app)
@@ -43,7 +43,7 @@ def app():
 @pytest.fixture()
 def app_error_handler(request):
     """Flask app error handler fixture."""
-    app = Flask('myapp')
+    app = Flask("myapp")
 
     # Creation of a fake theme error template file.
     temp_dir = make_fake_template(
@@ -52,17 +52,17 @@ def app_error_handler(request):
         "{% endblock message %}"
     )
     # Adding the temporal path to jinja engine.
-    app.jinja_loader = jinja2.ChoiceLoader([
-        jinja2.FileSystemLoader(temp_dir),
-        app.jinja_loader
-    ])
+    app.jinja_loader = jinja2.ChoiceLoader(
+        [jinja2.FileSystemLoader(temp_dir), app.jinja_loader]
+    )
 
     # Setting by default fake.html as a THEME_ERROR_TEMPLATE
-    app.config['THEME_ERROR_TEMPLATE'] = 'invenio_theme/fake.html'
+    app.config["THEME_ERROR_TEMPLATE"] = "invenio_theme/fake.html"
 
     # Tear down method to clean the temp directory.
     def tear_down():
         shutil.rmtree(temp_dir)
+
     request.addfinalizer(tear_down)
 
     app.testing = True
@@ -75,7 +75,7 @@ def app_error_handler(request):
 @pytest.fixture()
 def app_frontpage_handler(request):
     """Flask app error handler fixture."""
-    app = Flask('myapp')
+    app = Flask("myapp")
 
     # Creation of a fake theme error template file.
     temp_dir = make_fake_template(
@@ -85,18 +85,18 @@ def app_frontpage_handler(request):
     )
 
     # Adding the temporal path to jinja engine.
-    app.jinja_loader = jinja2.ChoiceLoader([
-        jinja2.FileSystemLoader(temp_dir),
-        app.jinja_loader
-    ])
+    app.jinja_loader = jinja2.ChoiceLoader(
+        [jinja2.FileSystemLoader(temp_dir), app.jinja_loader]
+    )
 
     # Setting by default fake.html as a BASE_TEMPLATE
-    app.config['BASE_TEMPLATE'] = 'invenio_theme/fake.html'
-    app.config['THEME_FRONTPAGE'] = True
+    app.config["BASE_TEMPLATE"] = "invenio_theme/fake.html"
+    app.config["THEME_FRONTPAGE"] = True
 
     # Tear down method to clean the temp directory.
     def tear_down():
         shutil.rmtree(temp_dir)
+
     request.addfinalizer(tear_down)
 
     app.testing = True

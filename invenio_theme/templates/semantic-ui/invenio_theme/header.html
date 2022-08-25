@@ -21,7 +21,7 @@
             <div class="item left-logo">
               {%- if config.THEME_LOGO %}
                 <a href="/" class="ui image small">
-                  <img clas="middle aligned"
+                  <img class="middle aligned"
                        src="{{ url_for('static', filename=config.THEME_LOGO) }}"
                        alt="{{ _(config.THEME_SITENAME) }}"/></a>
               {%- else %}
@@ -86,6 +86,8 @@
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
       </li>
+        </ul>
+      </div>
     </nav>
   </div>
 
