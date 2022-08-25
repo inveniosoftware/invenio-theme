@@ -65,7 +65,7 @@ jobs:
       # pull all lang
       - name: pull translations
         run: |
-          tx pull -a
+          tx pull -a -f
 
       # remove transifex credential file
       - name: remove transifexrc file
