@@ -50,3 +50,14 @@
 
 @75px : unit( (75 / @emSize), rem);
 @relative75px : unit( (75 / @emSize), em);
+
+
+/*-------------------
+    Breakpoints
+IMPORTANT: align changes with Media.js
+--------------------*/
+@mobileBreakpoint            : 320px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 1300px;
+@largeMonitorBreakpoint      : 1680px;
+@widescreenMonitorBreakpoint : 1920px;

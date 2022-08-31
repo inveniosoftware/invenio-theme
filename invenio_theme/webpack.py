@@ -70,6 +70,7 @@ theme = WebpackThemeBundle(
                 "jquery": "~3.2.1",
                 "select2": "~4.0.2",
                 "admin-lte": "~2.4.8",
+                "@artsy/fresnel": "^6.1.0",
             },
             aliases={
                 "@js/invenio_theme": "js/invenio_theme",
