@@ -3,7 +3,7 @@
 ***********************************************/
 
 .ui.inverted.menu {
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 .ui.vertical.menu .item i.icon {
@@ -38,11 +38,25 @@
 // Administration styles
 
 .invenio-administration {
+
+  .ui.vertical.menu .item {
+    display: flex;
+    align-items: baseline;
+  }
+
+
+  .ui.vertical.menu .item i.icon {
+    float: left;
+    margin-right: 0.5em;
+  }
+
+
   .side-menu-toggle {
 
     &:hover {
       cursor: pointer;
     }
+
     .icon.hidden {
       display: none;
     }
