@@ -240,126 +240,113 @@ code {
   margin-right: auto !important;
 }
 
-
-/* Negative spaces */
-
-.m-0 {
-  margin: 0 !important;
-}
-
-.mt-0 {
-  margin-top: 0 !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-
-.ml-0 {
-  margin-left: 0 !important;
-}
-
-.mr-0 {
-  margin-right: 0 !important;
-}
-
-
-// paddings
-
-.p-0 {
-  padding: 0 !important;
-}
-
-.pt-0 {
-  padding-top: 0 !important;
-}
-
-.pb-0 {
-  padding-bottom: 0 !important;
-}
-
-.pl-0 {
-  padding-left: 0 !important;
-}
-
-.pr-0 {
-  padding-right: 0 !important;
-}
-
 /* Generator functions */
 
-.generate-margins(@max, @direction, @alias, @i: 5) when (@i =< @max) {
+.generate-margins(@max, @direction, @alias, @i: 0) when (@i =< @max) {
   .m@{alias}-@{i} {
-    margin-@{direction}: unit(@i, px) !important;
+    margin@{direction}: unit(@i, px) !important;
   }
   .generate-margins(@max, @direction, @alias, (@i + 5));
 }
 
-.generate-padding(@max, @direction, @alias, @i: 5) when (@i =< @max) {
+.generate-padding(@max, @direction, @alias, @i: 0) when (@i =< @max) {
   .p@{alias}-@{i} {
-    padding-@{direction}: unit(@i, px) !important;
+    padding@{direction}: unit(@i, px) !important;
   }
   .generate-padding(@max, @direction, @alias, (@i + 5));
 }
 
 .generate-relative-margins(@max, @direction, @alias, @i: 1) when (@i =< @max) {
   .rel-m@{alias}-@{i} {
-    margin-@{direction}: unit(@i, em) !important;
+    margin@{direction}: unit(@i, em) !important;
   }
   .generate-relative-margins(@max, @direction, @alias, (@i + 1));
 }
 
 .generate-relative-padding(@max, @direction, @alias, @i: 1) when (@i =< @max) {
   .rel-p@{alias}-@{i} {
-    padding-@{direction}: unit(@i, em) !important;
+    padding@{direction}: unit(@i, em) !important;
   }
   .generate-relative-padding(@max, @direction, @alias, (@i + 1));
 }
 
 /*
 * The following classes will be generated:
-* .mr-{5,10,15,20,25,30} {
-*     margin-right {
-*       {5,10,15,20,25,30}px !important;
+* .{m,p}-{0,5,10,15,20,25,30} {
+*     {margin, padding} {
+*       {0,5,10,15,20,25,30}px !important;
 *     }
 * }
-* .ml-{5,10,15,20,25,30} {
+* .{m,p}r-{0,5,10,15,20,25,30} {
+*     {margin, padding}-right {
+*       {0,5,10,15,20,25,30}px !important;
+*     }
+* }
+* .{m,p}l-{0,5,10,15,20,25,30} {
 *     margin-left {
-*       {5,10,15,20,25,30}px !important;
+*       {0,5,10,15,20,25,30}px !important;
 *     }
 * }
-* .mt-{5,10,15,20,25,30} {
+* .{m,p}t-{0,5,10,15,20,25,30} {
 *     margin-top {
-*       {5,10,15,20,25,30}px !important;
+*       {0,5,10,15,20,25,30}px !important;
 *     }
 * }
-* .mb-{5,10,15,20,25,30} {
+* .{m,p}b-{0,5,10,15,20,25,30} {
 *     margin-bottom {
-*       {5,10,15,20,25,30}px !important;
+*       {0,5,10,15,20,25,30}px !important;
+*     }
+* }
+* .{rel-m,rel-p}-{1,2,3,4,5} {
+*     {margin, padding} {
+*       {1,2,3,4,5}em !important;
+*     }
+* }
+* .{rel-m,rel-p}r-{1,2,3,4,5} {
+*     {margin, padding}-right {
+*       {1,2,3,4,5}em !important;
+*     }
+* }
+* .{rel-m,rel-p}l-{1,2,3,4,5} {
+*     margin-left {
+*       {1,2,3,4,5}em !important;
+*     }
+* }
+* .{rel-m,rel-p}t-{1,2,3,4,5} {
+*     margin-top {
+*       {1,2,3,4,5}em !important;
+*     }
+* }
+* .{rel-m,rel-p}b-{1,2,3,4,5} {
+*     margin-bottom {
+*       {1,2,3,4,5}em !important;
 *     }
 * }
 */
 
-.generate-margins(30, right, r);
-.generate-margins(30, left, l);
-.generate-margins(30, bottom, b);
-.generate-margins(30, top, t);
+.generate-margins(30, ~'', ~'');
+.generate-margins(30, -right, r);
+.generate-margins(30, -left, l);
+.generate-margins(30, -bottom, b);
+.generate-margins(30, -top, t);
 
-.generate-padding(30, right, r);
-.generate-padding(30, left, l);
-.generate-padding(30, bottom, b);
-.generate-padding(30, top, t);
+.generate-padding(30, ~'', ~'');
+.generate-padding(30, -right, r);
+.generate-padding(30, -left, l);
+.generate-padding(30, -bottom, b);
+.generate-padding(30, -top, t);
 
+.generate-relative-margins(5, ~'', ~'');
+.generate-relative-margins(5, -right, r);
+.generate-relative-margins(5, -left, l);
+.generate-relative-margins(5, -bottom, b);
+.generate-relative-margins(5, -top, t);
 
-.generate-relative-margins(5, right, r);
-.generate-relative-margins(5, left, l);
-.generate-relative-margins(5, bottom, b);
-.generate-relative-margins(5, top, t);
-
-.generate-relative-padding(5, right, r);
-.generate-relative-padding(5, left, l);
-.generate-relative-padding(5, bottom, b);
-.generate-relative-padding(5, top, t);
+.generate-relative-padding(5, ~'', ~'');
+.generate-relative-padding(5, -right, r);
+.generate-relative-padding(5, -left, l);
+.generate-relative-padding(5, -bottom, b);
+.generate-relative-padding(5, -top, t);
 
 
 .generate-truncate-classes(@max, @i: 1) when (@i =< @max) {
