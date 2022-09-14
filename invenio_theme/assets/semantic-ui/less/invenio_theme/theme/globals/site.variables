@@ -17,7 +17,7 @@
 
 @warningColor: @yellow;
 
-@adminInvertedBackgroundColor: #0047a8;
+@adminSideNavColor: #e0e1e2;
 
 /*--- Cover page margin ---*/
 

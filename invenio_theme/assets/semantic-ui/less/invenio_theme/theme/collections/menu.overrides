@@ -39,9 +39,23 @@
 
 .invenio-administration {
 
-  .ui.vertical.menu .item {
-    display: flex;
-    align-items: baseline;
+  .ui.vertical.menu {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    .ui.header.item{
+      background-color: transparent !important;
+    }
+    .item {
+      display: flex;
+      align-items: baseline;
+      box-shadow: none;
+      border: none;
+      &:before{
+        background-color: transparent;
+      }
+    }
+
   }
 
 
