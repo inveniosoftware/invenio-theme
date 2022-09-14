@@ -97,7 +97,7 @@
 
   & > .side-bar.column {
     min-height: 100vh;
-    background-color: @adminInvertedBackgroundColor;
+    background-color: @adminSideNavColor;
 
     &.hidden {
       position: absolute;
