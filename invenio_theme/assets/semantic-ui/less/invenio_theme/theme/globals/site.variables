@@ -17,6 +17,8 @@
 
 @warningColor: @yellow;
 
+@adminInvertedBackgroundColor: #0047a8;
+
 /*--- Cover page margin ---*/
 
 @coverPageDefaultMargin: 3*@defaultMargin;
@@ -39,7 +41,5 @@
 
 /*--- Fonts ---*/
 
+@fontName          : 'Lato';
 @importGoogleFonts : false;
-
-@headerFont        : @fontName, sans-serif;
-@pageFont          : @fontName, sans-serif;

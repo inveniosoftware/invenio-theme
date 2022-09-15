@@ -140,6 +140,10 @@ THEME_ICONS = {
         "user": "user icon",
         "codepen": "codepen icon",
         "cogs": "cogs icon",
+        "home": "home icon",
+        "exchange": "exchange icon",
+        "star_outline": "star outline icon",
+        "users": "users icon",
         # Special catch all:
         "*": "{} icon",
     },
