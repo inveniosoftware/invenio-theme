@@ -27,25 +27,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # generate dependencies
-      - name: Generate dependencies
-        run: |
-          pip install wheel requirements-builder
-          requirements-builder -e "$EXTRAS" --level=${{ matrix.requirements-level }} setup.py > .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
-
-      # cache pip
-      - name: Cache pip
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('.${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt') }}
-
       # install dependencies
       - name: Install dependencies
         run: |
-          pip install -r .${{matrix.requirements-level}}-${{ matrix.python-version }}-requirements.txt
-          pip install .[$EXTRAS]
-          pip freeze
+          pip install -e ".[all]"  
 
       # install transifex client
       - name: transifex-client
