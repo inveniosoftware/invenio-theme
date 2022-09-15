@@ -6,32 +6,33 @@
 # 
 # Translators:
 # Berat Aldemir <berataldemir@gmail.com>, 2020
+# Ben Translation and Interpreting Services <info@bentercume.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme 1.3.11\n"
+"Project-Id-Version: invenio-theme 1.3.28\n"
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
-"POT-Creation-Date: 2022-02-10 12:24+0100\n"
+"POT-Creation-Date: 2022-09-15 14:06+0000\n"
 "PO-Revision-Date: 2016-08-25 15:28+0000\n"
-"Last-Translator: Berat Aldemir <berataldemir@gmail.com>, 2020\n"
+"Last-Translator: Ben Translation and Interpreting Services <info@bentercume.com>, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/inveniosoftware/teams/23537/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.10.3\n"
 "Language: tr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: invenio_theme/config.py:102 invenio_theme/config.py:117
 #: invenio_theme/templates/invenio_theme/page.html:26
 #: invenio_theme/templates/invenio_theme/page_admin.html:34
-#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:27
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:29
 #: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:34
 msgid "Invenio"
 msgstr "Invenio"
 
-#: invenio_theme/ext.py:65
+#: invenio_theme/ext.py:73
 msgid "Home"
 msgstr "Anasayfa"
 
@@ -130,9 +131,17 @@ msgid "Log out"
 msgstr "Çıkış yap"
 
 #: invenio_theme/templates/invenio_theme/page_settings.html:19
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:18
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:25
 msgid "Settings"
 msgstr "Ayarlar"
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:12
+msgid "Show more"
+msgstr "Daha fazla göster"
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:13
+msgid "Show less"
+msgstr ""
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/footer.html:17
 #, python-format
@@ -141,6 +150,18 @@ msgid ""
 "        <a href=\"%(link)s\">Invenio</a>"
 msgstr ""
 
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:75
+msgid "Skip to main"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:17
+msgid "My account"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:21
 msgid "Account settings"
 msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/macros/messages.html:33
+msgid "Close"
+msgstr "Kapat"
