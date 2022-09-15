@@ -64,5 +64,5 @@ jobs:
           commit-message: i18n:pulled translations
           title: i18n:pulled translations
           body: i18n:pulled translations
-          branch: 101-translations  # name of branch which PR is created from
+          branch: 101-translations-pull  # name of branch which PR is created from
           delete-branch: true  # delete branch once merged,closed

@@ -69,5 +69,5 @@ jobs:
           commit-message: i18n:push translations
           title: i18n:push translations
           body: i18n:push translations
-          branch: 101-translations  # name of branch which PR is created from
+          branch: 101-translations-push  # name of branch which PR is created from
           delete-branch: true  # delete branch once merged,closed
