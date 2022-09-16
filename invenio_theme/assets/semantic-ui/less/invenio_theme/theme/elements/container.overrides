@@ -8,16 +8,27 @@
   display: flex;
   align-items: center;
 
-  &>.ui.container{
+  & > .ui.container {
     vertical-align: middle;
   }
 
-  .ui.header{
+  .ui.header {
     color: @invertedTextColor;
   }
 }
 
 .ui.breadcrumbs.container {
-    padding-top: 14px;
-    padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+
+.invenio-administration {
+  .ui.container.error-handler {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
 }
