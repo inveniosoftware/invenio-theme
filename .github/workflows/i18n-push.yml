@@ -11,21 +11,17 @@ on: workflow_dispatch # manually trigger
 jobs:
   i18n-extract:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-          python-version: [3.9]
-          requirements-level: [pypi]
     env:
-      EXTRAS: tests
+      PYTHON-VERSION: 3.9
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       # setup python
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python ${{ env.PYTHON-VERSION }}
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: ${{ env.PYTHON-VERSION }}
 
       # install dependencies
       - name: Install dependencies
