@@ -97,3 +97,12 @@
   color: @transparentButtonTextColor;
   padding: 0;
 }
+
+.ui.buttons.relaxed {
+  .button{
+    &:not(:last-child) {
+      margin-right: 0.5em !important;
+    }
+    border-radius: @borderRadius;
+  }
+}
