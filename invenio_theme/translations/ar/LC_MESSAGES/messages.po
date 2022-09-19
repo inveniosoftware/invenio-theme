@@ -5,8 +5,9 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
 # 
 # Translators:
-# Tibor Simko <tibor.simko@cern.ch>, 2022
-# Jesús Martín <jesusmartin@sallep.net>, 2022
+# Tibor Simko <tibor.simko@cern.ch>, 2016
+# Salaheddine Ben Ali <salaheddine.benali@cnudst.tn>, 2022
+# Bessem Aamira <bessemamira@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,14 +16,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2022-09-15 14:06+0000\n"
 "PO-Revision-Date: 2016-08-25 15:28+0000\n"
-"Last-Translator: Jesús Martín <jesusmartin@sallep.net>, 2022\n"
-"Language-Team: Spanish (https://www.transifex.com/inveniosoftware/teams/23537/es/)\n"
+"Last-Translator: Bessem Aamira <bessemamira@gmail.com>, 2022\n"
+"Language-Team: Arabic (https://www.transifex.com/inveniosoftware/teams/23537/ar/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
-"Language: es\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: invenio_theme/config.py:102 invenio_theme/config.py:117
 #: invenio_theme/templates/invenio_theme/page.html:26
@@ -34,115 +35,113 @@ msgstr "Invenio"
 
 #: invenio_theme/ext.py:73
 msgid "Home"
-msgstr "Página principal"
+msgstr "الإستقبــال"
 
 #: invenio_theme/templates/invenio_theme/401.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/401.html:13
 msgid "Unauthorized"
-msgstr "No autorizado"
+msgstr "غير مرخّص"
 
 #: invenio_theme/templates/invenio_theme/401.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/401.html:14
 msgid "You need to be authenticated to view this page."
-msgstr "Necesita autenticarse para ver esta página."
+msgstr "عرض الصّفحة يستوجب تسجيل الدّخول."
 
 #: invenio_theme/templates/invenio_theme/403.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/403.html:13
 msgid "Permission required"
-msgstr "Permiso requerido"
+msgstr "يلزمك إذن"
 
 #: invenio_theme/templates/invenio_theme/403.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/403.html:14
 msgid "You do not have sufficient permissions to view this page."
-msgstr "No tiene suficientes permisos para ver esta página."
+msgstr "صلوحيّاتك لا تمكّنك من عرض هذه الصّفحة."
 
 #: invenio_theme/templates/invenio_theme/404.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:13
 msgid "Page not found"
-msgstr "No se ha encontrado la página"
+msgstr "الصّفحة غير متوفّرة"
 
 #: invenio_theme/templates/invenio_theme/404.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:14
 msgid "The page you are looking for could not be found."
-msgstr "La página que esta´buscando no se encuentra."
+msgstr "لا يمكن العثور على الصفحة."
 
 #: invenio_theme/templates/invenio_theme/429.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/429.html:13
 msgid "Too many requests"
-msgstr "Demasiadas peticiones"
+msgstr "طلبات كثيرة"
 
 #: invenio_theme/templates/invenio_theme/429.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/429.html:14
 msgid "You have made too many consecutive requests, please try again later."
-msgstr ""
-"Ha hecho demasiadas peticiones consecutivas. Por favor, inténtelo de nuevo "
-"más tarde."
+msgstr "أرسلت طلبات متتالية و كثيرة، جرّب لاحقا من فضلك."
 
 #: invenio_theme/templates/invenio_theme/500.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/500.html:13
 msgid "Internal server error"
-msgstr "Error interno del servidor"
+msgstr "خطأ بالموزّع الدّاخلي"
 
 #: invenio_theme/templates/invenio_theme/500.html:15
 #: invenio_theme/templates/semantic-ui/invenio_theme/500.html:15
 msgid "Error identifier"
-msgstr "Identificador del error"
+msgstr "خطأ في المعرّف"
 
 #: invenio_theme/templates/invenio_theme/admin_header.html:17
 #: invenio_theme/templates/invenio_theme/header.html:16
 #: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:17
 msgid "Toggle navigation"
-msgstr "Conmutar navegación"
+msgstr "غيّر صيغة الإبحار"
 
 #: invenio_theme/templates/invenio_theme/admin_header.html:72
 #: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:72
 msgid "Logout"
-msgstr "Salir"
+msgstr "خروج"
 
 #: invenio_theme/templates/invenio_theme/footer.html:22
 #, python-format
 msgid "Powered by <a href=\"%(link)s\">Invenio</a>"
-msgstr "Powered by <a href=\"%(link)s\">Invenio</a>"
+msgstr "جميع الحقوق محفوظة لـ <a href=\"%(link)s\">Invenio</a>"
 
 #: invenio_theme/templates/invenio_theme/header.html:38
 #: invenio_theme/templates/semantic-ui/invenio_theme/header.html:46
 msgid "Search"
-msgstr "Buscar"
+msgstr "بحث"
 
 #: invenio_theme/templates/invenio_theme/header_frontpage.html:29
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_frontpage.html:32
 msgid "Type and press enter to search"
-msgstr "Teclee y pulse \"Enter\" para buscar"
+msgstr "للبحث، أكتب ثمّ أضغط على زر الإدخال."
 
 #: invenio_theme/templates/invenio_theme/header_login.html:12
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:15
 msgid "Log in"
-msgstr "Entrar"
+msgstr "تسجيل الدّخول"
 
 #: invenio_theme/templates/invenio_theme/header_login.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:19
 msgid "Sign up"
-msgstr "Registrarse"
+msgstr "سجّل"
 
 #: invenio_theme/templates/invenio_theme/header_login.html:30
 #: invenio_theme/templates/invenio_theme/header_login.html:34
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:44
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:52
 msgid "Log out"
-msgstr "Salir"
+msgstr "خروج"
 
 #: invenio_theme/templates/invenio_theme/page_settings.html:19
 #: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:25
 msgid "Settings"
-msgstr "Configuración"
+msgstr "إعدادات"
 
 #: invenio_theme/templates/invenio_theme/macros/truncate.html:12
 msgid "Show more"
-msgstr "Mostrar más"
+msgstr "عرض المزيد"
 
 #: invenio_theme/templates/invenio_theme/macros/truncate.html:13
 msgid "Show less"
-msgstr "Mostrar menos"
+msgstr "أظهر أقل"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/footer.html:17
 #, python-format
@@ -150,21 +149,21 @@ msgid ""
 "Powered by\n"
 "        <a href=\"%(link)s\">Invenio</a>"
 msgstr ""
-"Desarrollado por\n"
-"        <a href=\"%(link)s\">Invenio</a>"
+"جميع الحقوق محفوظة لـ \n"
+"<a href=\"%(link)s\">Invenio</a>"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/page.html:75
 msgid "Skip to main"
-msgstr "Ir al principal"
+msgstr "الرجوع للاستقبال"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:17
 msgid "My account"
-msgstr "Mi cuenta"
+msgstr "حسابي"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:21
 msgid "Account settings"
-msgstr "Configuraciones de la cuenta"
+msgstr "إعدادات حسابك"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/macros/messages.html:33
 msgid "Close"
-msgstr "Cerrar"
+msgstr "غلق"
