@@ -400,3 +400,7 @@ code {
     padding-right: 2.5em;
   }
 }
+
+.text-align-center {
+  text-align: center;
+}
