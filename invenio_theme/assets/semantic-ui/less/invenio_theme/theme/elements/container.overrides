@@ -24,11 +24,25 @@
 
 
 .invenio-administration {
-  .ui.container.error-handler {
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+
+  .ui.container {
+
+    &.error-handler {
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+
+    &.dashboard {
+      .dashboard-header{
+        display: flex !important;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        text-align: end;
+      }
+    }
   }
 }
