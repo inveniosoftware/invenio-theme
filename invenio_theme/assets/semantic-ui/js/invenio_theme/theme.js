@@ -12,6 +12,9 @@ import "./truncate.js";
 import "semantic-ui-css/semantic.js";
 import "semantic-ui-less/semantic.less";
 
+// import own .js after semantic.js to override
+import "./transition.js";
+
 function imagePlaceholder() {
   this.onerror=null;
   this.src='/static/images/square-placeholder.png';
