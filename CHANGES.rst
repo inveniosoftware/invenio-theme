@@ -7,6 +7,10 @@
 
 Changes
 =======
+Version 1.3.29 (released 2022-09-22)
+
+- add administration panel styling
+- add translation workflow
 
 Version 1.3.28 (released 2022-07-08)
 
