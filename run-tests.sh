@@ -14,5 +14,6 @@ set -o errexit
 set -o nounset
 
 python -m check_manifest
+python -m setup extract_messages --dry-run
 sphinx-build -qnNW docs docs/_build/html
 python -m pytest
