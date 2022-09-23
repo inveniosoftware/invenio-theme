@@ -41,5 +41,5 @@
 
 /*--- Fonts ---*/
 
-@fontName          : 'Lato';
+@fontName          : 'Helvetica';
 @importGoogleFonts : false;
