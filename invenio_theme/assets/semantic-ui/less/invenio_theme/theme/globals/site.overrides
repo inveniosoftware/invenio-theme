@@ -391,3 +391,7 @@ code {
 .text-align-center {
   text-align: center;
 }
+
+.word-break-all {
+  word-break: break-all;
+}
