@@ -7,6 +7,11 @@
 
 Changes
 =======
+
+Version 1.3.30 (released 2022-09-26)
+
+- add styling to administration dashboard page
+
 Version 1.3.29 (released 2022-09-22)
 
 - add administration panel styling
