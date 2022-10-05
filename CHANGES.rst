@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.0 (released 2022-10-05)
+
+- change global font to Lato
+
 Version 1.3.31 (released 2022-10-05)
 
 - add missing theme variables
