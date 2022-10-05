@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.3.31 (released 2022-10-05)
+
+- add missing theme variables
+
 Version 1.3.30 (released 2022-09-26)
 
 - add styling to administration dashboard page
