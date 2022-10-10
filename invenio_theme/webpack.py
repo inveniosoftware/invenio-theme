@@ -64,8 +64,8 @@ theme = WebpackThemeBundle(
                 "theme": "./js/invenio_theme/theme.js",
             },
             dependencies={
-                "semantic-ui-less": "~2.4.1",
-                "semantic-ui-css": "~2.4.1",
+                "semantic-ui-less": "^2.4.1",
+                "semantic-ui-css": "^2.4.1",
                 "font-awesome": "~4.4.0",
                 "jquery": "~3.2.1",
                 "select2": "~4.0.2",
