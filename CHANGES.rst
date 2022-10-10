@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.1 (released 2022-10-10)
+
+- bump SemanticUI
+
 Version 1.4.0 (released 2022-10-05)
 
 - change global font to Lato
