@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.2 (released 2022-10-26)
+
+- add Media to support responsive react components
+
 Version 1.4.1 (released 2022-10-10)
 
 - bump SemanticUI
