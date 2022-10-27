@@ -188,6 +188,17 @@ code {
   border: 0 !important;
 }
 
+.media-inline-block > *{
+  display: inline-block;
+}
+
+.computer-flex-header{
+  @media screen and (min-width: @largestMobileScreen) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 /* FACETS */
 .facet-wrapper.content:not(.parent) {
   padding: .5em 0;
