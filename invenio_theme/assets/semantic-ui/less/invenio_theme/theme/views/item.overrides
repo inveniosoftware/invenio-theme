@@ -19,5 +19,5 @@
 }
 
 .ui.items > .item .extra > *:last-child {
-  margin: (@extraRowSpacing / 2) 0em (@extraRowSpacing / 2) 0em;
+  margin: (@extraRowSpacing / 2) 0 (@extraRowSpacing / 2) 0;
 }

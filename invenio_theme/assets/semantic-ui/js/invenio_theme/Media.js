@@ -10,6 +10,7 @@ import { createMedia } from "@artsy/fresnel";
 
 // IMPORTANT: align changes with site.variables
 export const breakpoints = {
+  void: 0,
   mobile: 320,
   tablet: 768,
   computer: 1300,
