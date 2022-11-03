@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 1.4.3 (released 2022-11-03)
+
+- add styling for dropdown menu items
+- fix missing Media component range
+
 Version 1.4.2 (released 2022-10-26)
 
 - add Media to support responsive react components
