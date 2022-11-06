@@ -106,3 +106,7 @@
     border-radius: @borderRadius;
   }
 }
+
+.ui.labeled.icon.button > .icon::before{
+  height: calc(1em + 2px);
+}
