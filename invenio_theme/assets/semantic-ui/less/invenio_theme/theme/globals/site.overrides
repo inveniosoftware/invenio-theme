@@ -255,6 +255,26 @@ code {
   margin-right: auto !important;
 }
 
+.flex {
+  display: flex !important;
+
+  &.column {
+    flex-direction: column !important;
+  }
+
+  &.wrap {
+    flex-wrap: wrap !important;
+  }
+}
+
+.block {
+  display: block !important;
+}
+
+.inline{
+  display: inline !important;
+}
+
 /* Generator functions */
 
 .generate-margins(@max, @direction, @alias, @i: 0) when (@i =< @max) {
