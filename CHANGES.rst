@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.4 (released 2022-11-18)
+
+- Add pulled translations
+
 Version 1.4.3 (released 2022-11-03)
 
 - add styling for dropdown menu items
