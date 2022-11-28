@@ -10,9 +10,9 @@
 """Invenio standard theme."""
 
 from flask import Blueprint
-from flask_babelex import lazy_gettext as _
 from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
+from invenio_i18n import lazy_gettext as _
 
 from . import config
 from .views import (
