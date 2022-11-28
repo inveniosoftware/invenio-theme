@@ -17,10 +17,9 @@ import tempfile
 import jinja2
 import pytest
 from flask import Flask
-from flask_babelex import Babel
 from helpers import make_fake_template
 from invenio_assets import InvenioAssets
-from invenio_i18n import InvenioI18N
+from invenio_i18n import Babel, InvenioI18N
 from invenio_i18n.views import create_blueprint_from_app
 
 from invenio_theme import InvenioTheme
