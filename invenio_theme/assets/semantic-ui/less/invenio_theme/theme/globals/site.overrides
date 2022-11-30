@@ -394,7 +394,7 @@ code {
   .generate-truncate-classes(@max, (@i + 1));
 }
 
-.generate-truncate-classes(5);
+.generate-truncate-classes(10);
 
 .skip-link {
   position: absolute;
