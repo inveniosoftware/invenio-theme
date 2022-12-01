@@ -8,6 +8,12 @@
 Changes
 =======
 
+Version 1.4.5 (released 2022-12-01)
+
+- fix search result item styling
+- add global behaviour classes
+- add placeholder image handle
+
 Version 1.4.4 (released 2022-11-18)
 
 - Add pulled translations

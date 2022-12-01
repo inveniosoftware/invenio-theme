@@ -522,6 +522,6 @@ from __future__ import absolute_import, print_function
 
 from .ext import InvenioTheme
 
-__version__ = "1.4.4"
+__version__ = "1.4.5"
 
 __all__ = ("__version__", "InvenioTheme")
