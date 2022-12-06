@@ -271,8 +271,8 @@ code {
   display: block !important;
 }
 
-.inline{
-  display: inline !important;
+.inline {
+  display: inline;
 }
 
 /* Generator functions */
