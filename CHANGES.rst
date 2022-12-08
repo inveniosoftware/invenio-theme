@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.6 (released 2022-12-08)
+
+- fix styling for inline class, affecting form fields
+
 Version 1.4.5 (released 2022-12-01)
 
 - fix search result item styling
