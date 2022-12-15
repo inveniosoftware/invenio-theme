@@ -19,6 +19,16 @@
 }
 
 .ui.items > .item {
+    &.community-header {
+        @media all and (max-width: @largestMobileScreen) {
+            text-align: center !important;
+
+            .image {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+    }
 
     .extra > *:last-child {
         margin: (@extraRowSpacing / 2) 0 (@extraRowSpacing / 2) 0;
