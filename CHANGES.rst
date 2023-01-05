@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.7 (released 2023-01-05)
+
+- add truncate lines styles
+
 Version 1.4.6 (released 2022-12-08)
 
 - fix styling for inline class, affecting form fields
