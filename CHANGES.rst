@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.4.8 (released 2023-02-07)
+
+- theme: add auto-column-grid class
+
 Version 1.4.7 (released 2023-01-05)
 
 - add truncate lines styles
