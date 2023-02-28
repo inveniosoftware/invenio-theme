@@ -199,6 +199,16 @@ code {
   }
 }
 
+pre {
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+.vertical-align-top{
+  vertical-align: top;
+}
+
 /* FACETS */
 .facet-wrapper.content:not(.parent) {
   padding: .5em 0;
@@ -442,7 +452,7 @@ code {
   align-items: center;
   column-gap: 2rem;
 
-  @media all and (max-width: @largestTabletScreen) {
+  @media all and (max-width: @largestMobileScreen) {
     grid-auto-flow: row;
     grid-auto-columns: 100%;
     align-items: flex-start;
