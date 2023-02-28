@@ -180,10 +180,10 @@ def test_html_lang(app):
     with app.test_client() as client:
         response = client.get("/index")
         assert b'lang="en" ' in response.data
-
+    with app.test_client() as client:
         response = client.get("/index?ln=de")
         assert b'lang="de" ' in response.data
-
+    with app.test_client() as client:
         response = client.get("/index?ln=en")
         assert b'lang="en" ' in response.data
 

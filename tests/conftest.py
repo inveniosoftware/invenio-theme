@@ -35,6 +35,16 @@ def app():
     Babel(app)
     InvenioI18N(app)
     app.register_blueprint(create_blueprint_from_app(app))
+
+    def delete_locale_from_cache(exception):
+        """Unset locale from `flask.g` when the request is tearing down."""
+        from flask import g
+
+        if "_flask_babel" in g:
+            g._flask_babel.babel_locale = None
+
+    app.teardown_request(delete_locale_from_cache)
+
     return app
 
 
