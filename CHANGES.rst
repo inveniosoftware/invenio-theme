@@ -8,6 +8,12 @@
 Changes
 =======
 
+Version 2.0.0 (released 2023-02-28)
+
+- drop python 2.7 support
+- remove flask_babelex imports
+- upgrade invenio_i18n
+
 Version 1.4.8 (released 2023-02-07)
 
 - theme: add auto-column-grid class

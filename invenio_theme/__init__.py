@@ -521,6 +521,6 @@ template.
 
 from .ext import InvenioTheme
 
-__version__ = "1.4.8"
+__version__ = "2.0.0"
 
 __all__ = ("__version__", "InvenioTheme")
