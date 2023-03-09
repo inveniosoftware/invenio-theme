@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 2.0.1 (released 2023-03-09)
+
+- fix styling for buttons
+- move global class for auto grid
+
 Version 2.0.0 (released 2023-02-28)
 
 - drop python 2.7 support
