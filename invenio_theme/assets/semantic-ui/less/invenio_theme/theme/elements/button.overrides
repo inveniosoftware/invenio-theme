@@ -106,3 +106,15 @@
     border-radius: @borderRadius;
   }
 }
+
+.auto-column-grid {
+  .ui.button.dropdown {
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media all and (max-width: @largestMobileScreen) {
+      margin-bottom: .5rem;
+    }
+  }
+}
