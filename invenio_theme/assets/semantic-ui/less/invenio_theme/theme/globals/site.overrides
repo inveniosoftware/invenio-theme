@@ -199,11 +199,6 @@ code {
   }
 }
 
-pre {
-  font-family: inherit;
-  font-size: inherit;
-  margin: 0;
-}
 
 .vertical-align-top{
   vertical-align: top;
