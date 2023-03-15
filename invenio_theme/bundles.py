@@ -43,7 +43,7 @@ class LazyNpmBundle(NpmBundle):
 css = NpmBundle(
     'scss/invenio_theme/theme.scss',
     depends=('scss/invenio_theme/*.scss', ),
-    filters='node-scss,cleancssurl',
+    filters='scss,cleancssurl',
     output='gen/styles.%(version)s.css',
     npm={
         'almond': '~0.3.1',
@@ -77,7 +77,7 @@ admin_lte_css = LazyNpmBundle(
 
 admin_css = NpmBundle(
     'scss/invenio_theme/admin.scss',
-    filters='node-scss,cleancssurl',
+    filters='scss,cleancssurl',
     output='gen/styles.admin.%(version)s.css'
 )
 """Default style for admin interface."""

@@ -10,7 +10,7 @@
 
 REQUIREJS_CONFIG = 'js/build.js'
 
-SASS_BIN = 'node-sass'
+SASS_BIN = 'sass'
 
 BASE_TEMPLATE = 'invenio_theme/page.html'
 """Base template for user facing pages.
