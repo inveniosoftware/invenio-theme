@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 1.1.5 (released 2023-03-17)
+
+- Replaces node-scss with scss to support ARM-based CPUs.
+
 Version 1.1.4 (released 2019-07-22)
 
 - Introduce handling of the error 429.
