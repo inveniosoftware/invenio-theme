@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.1.0 (released 2023-03-28)
+
+- add global utility styling classes
+
 Version 2.0.1 (released 2023-03-09)
 
 - fix styling for buttons
