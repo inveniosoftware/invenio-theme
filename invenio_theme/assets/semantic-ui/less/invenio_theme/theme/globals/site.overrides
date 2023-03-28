@@ -460,3 +460,63 @@ code {
     }
   }
 }
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.align-items-start {
+  align-items: start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.align-self-center {
+  align-self: center;
+}
+
+.align-self-end {
+  align-self: end;
+}
+
+.align-self-baseline {
+  align-self: baseline;
+}
+
+.shadowless {
+  box-shadow: none !important;
+}
+
+.right-floated {
+  float: right;
+}
+
+.left-floated {
+  float: left;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.display-inline-block {
+  display: inline-block;
+}
+
+.green-color {
+  color: @green;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
