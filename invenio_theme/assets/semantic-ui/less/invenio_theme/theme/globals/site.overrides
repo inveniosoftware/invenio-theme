@@ -509,14 +509,22 @@ code {
   display: inline-block;
 }
 
+.display-inline {
+  display: inline !important;
+}
+
 .green-color {
   color: @green;
 }
 
 .full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 .flex-direction-column {
   flex-direction: column;
+}
+
+.display-contents {
+  display: contents !important;
 }
