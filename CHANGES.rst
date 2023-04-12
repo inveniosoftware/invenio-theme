@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 2.1.2 (released 2023-04-12)
+
+- add flex utility classes
+- add text sizes classes
+
 Version 2.1.1 (released 2023-04-06)
 
 - add display utility classes
