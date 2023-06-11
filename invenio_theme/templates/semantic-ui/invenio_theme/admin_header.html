@@ -2,6 +2,7 @@
 
   This file is part of Invenio.
   Copyright (C) 2015-2018 CERN.
+  Copyright (C) 2023 Graz University of Technology.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -20,7 +21,7 @@
     <span class="icon-bar"></span>
   </a>
   <ul class="nav navbar-nav">
-  {%- for item in current_menu.submenu('main').children if item.visible recursive %}
+  {%- for item in menu.submenu('main').children if item.visible recursive %}
     {%- if item.children -%}
         <li class="dropdown">.
           <a href="{{ item.url }}" style="display: inline-block; padding-right: 5px;"> {{ item.text|safe }} </a>
@@ -62,7 +63,7 @@
                 </div>
               </div>
             </li>
-            {%- for item in current_menu.submenu('settings').children if item.visible %}
+            {%- for item in menu.submenu('settings').children if item.visible %}
             {% if loop.first %}<li class="divider"></li>{% endif -%}
             <li><a href="{{ item.url }}">{{ item.text|safe }}</a></li>
             {%- endfor %}

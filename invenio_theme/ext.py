@@ -10,10 +10,9 @@
 """Invenio standard theme."""
 
 from flask import Blueprint
-from flask_menu import Menu
-from invenio_i18n import lazy_gettext as _
 
 from . import config
+from .shared import menu
 from .views import (
     blueprint,
     insufficient_permissions,
@@ -33,9 +32,6 @@ class InvenioTheme(object):
         :param app: An instance of :class:`~flask.Flask`.
         :param \**kwargs: Keyword arguments are passed to ``init_app`` method.
         """
-        self.menu_ext = Menu()
-        self.menu = None
-
         if app:
             self.init_app(app, **kwargs)
 
@@ -45,10 +41,6 @@ class InvenioTheme(object):
         :param app: An instance of :class:`~flask.Flask`.
         """
         self.init_config(app)
-
-        # Initialize extensions
-        self.menu_ext.init_app(app)
-        self.menu = app.extensions["menu"]
 
         # Register blueprint in order to register template and static folder.
         app.register_blueprint(
@@ -78,6 +70,8 @@ class InvenioTheme(object):
 
             return dict(current_theme_icons=current_theme_icons)
 
+        app.context_processor(lambda: {"menu": menu})
+
         # Save reference to self on object
         app.extensions["invenio-theme"] = self
 
@@ -95,7 +89,7 @@ class InvenioTheme(object):
         # Set THEME_<name>_TEMPLATE from <name>_TEMPLATE variables if not
         # already set.
         for varname in _vars:
-            theme_varname = "THEME_{}".format(varname)
+            theme_varname = "THEME{}".format(varname)
             if app.config[theme_varname] is None:
                 app.config[theme_varname] = app.config[varname]
 

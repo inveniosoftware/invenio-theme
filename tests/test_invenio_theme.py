@@ -34,17 +34,14 @@ def test_version():
 
 def test_init(app):
     """Initialization."""
-    theme = InvenioTheme(app)
-    assert theme.menu is not None
+    InvenioTheme(app)
     assert "THEME_SITENAME" in app.config
 
 
 def test_init_app(app):
     """Initialization."""
     theme = InvenioTheme()
-    assert theme.menu is None
     theme.init_app(app)
-    assert theme.menu is not None
     assert "THEME_SITENAME" in app.config
 
 
