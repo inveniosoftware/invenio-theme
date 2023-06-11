@@ -2,6 +2,7 @@
 
   This file is part of Invenio.
   Copyright (C) 2015-2018 CERN.
+  Copyright (C) 2023 Graz University of Technology.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -54,7 +55,7 @@
               {%- endblock navbar_search %}
             {%- endif %}
           </li>
-            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
+            {%- for item in menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
               {%- if item.children %}
               <li class="navbar-item navbar-options">
                 <div class="dropdown{{ ' active' if item.active else '' }}">
