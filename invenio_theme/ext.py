@@ -2,7 +2,7 @@
 #
 # This file is part of Invenio.
 # Copyright (C) 2015-2018 CERN.
-# Copyright (C) 2022 Graz University of Technology.
+# Copyright (C) 2022-2023 Graz University of Technology.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -10,7 +10,6 @@
 """Invenio standard theme."""
 
 from flask import Blueprint
-from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 from invenio_i18n import lazy_gettext as _
 
@@ -36,7 +35,6 @@ class InvenioTheme(object):
         """
         self.menu_ext = Menu()
         self.menu = None
-        self.breadcrumbs = Breadcrumbs()
 
         if app:
             self.init_app(app, **kwargs)
@@ -51,7 +49,6 @@ class InvenioTheme(object):
         # Initialize extensions
         self.menu_ext.init_app(app)
         self.menu = app.extensions["menu"]
-        self.breadcrumbs.init_app(app)
 
         # Register blueprint in order to register template and static folder.
         app.register_blueprint(
@@ -66,10 +63,6 @@ class InvenioTheme(object):
         # Register frontpage blueprint if enabled.
         if app.config["THEME_FRONTPAGE"]:
             app.register_blueprint(blueprint)
-
-        # Initialize breadcrumbs.
-        item = self.menu.submenu("breadcrumbs")
-        item.register(app.config["THEME_BREADCRUMB_ROOT_ENDPOINT"], _("Home"))
 
         # Register errors handlers.
         app.register_error_handler(401, unauthorized)

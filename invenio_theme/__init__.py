@@ -15,9 +15,9 @@ Invenio-Theme mainly consits of:
   <https://getbootstrap.com/>`_ HTML, CSS and JS framework.
 - `Error handlers` - for showing user-friendly 401, 402, 404, and 500 error
   pages.
-- `Menu and breadcrumbs` - for basic site navigation using `Flask-Menu
-  <https://flask-menu.readthedocs.io/>`_ and `Flask-Breadcrumbs
-  <https://flask-breadcrumbs.readthedocs.io/>`_.
+- `Menu` - for basic site navigation using `Flask-Menu
+  <https://flask-menu.readthedocs.io/>`_
+
 
 
 Initialization
@@ -152,7 +152,7 @@ Header section template
 ~~~~~~~~~~~~~~~~~~~~~~~~
 The header template (``invenio_theme/header.html``) is reponsible for rendering
 the navigation bar (including logo, search bar, menu and login/sign up
-buttons), flash messages and the breadcrumbs.
+buttons) and flash messages
 
 Change the template by updating
 :data:`invenio_theme.config.THEME_HEADER_TEMPLATE`.
@@ -165,8 +165,6 @@ important ones are (please see the template file for full details):
 
 * ``flashmessages`` - Displays small notification messages such as
   "Successfully logged in."
-
-* ``breadcrumbs`` - Displays the breadcrumbs.
 
 Header login section template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -441,33 +439,6 @@ The following menus exists:
 
 To read more about the creation and usage of menus, see :mod:`~flask_menu`.
 
-Breadcrumbs
-~~~~~~~~~~~
-Breadcrumbs works similar to menus, just use the
-:func:`~flask_breadcrumbs.register_breadcrumb` instead.
-
->>> from flask_breadcrumbs import register_breadcrumb
-
-Using this decorator, you can specify the position of the view in a
-hierarchical manner, as well as the title in the breadcrumb. By default, the
-current breadcrumb is displayed inside the ``page_header`` block in the base
-template.
-
->>> @app.route('/part1')
-... @register_breadcrumb(app, '.', 'Index')
-... def part1():
-...     return ""
->>> @app.route('/part2')
-... @register_breadcrumb(app, '.p2', 'Part 2')
-... def part2():
-...     return ""
->>> @app.route('/part3')
-... @register_breadcrumb(app, '.p2.p3', 'Part 3')
-... def part3():
-...     return ""
-
-To learn more about the usage of breadcrumbs, see :mod:`~flask_breadcrumbs`.
-
 User settings
 ~~~~~~~~~~~~~
 If your module allows your users to configure some settings, you can provide
@@ -489,7 +460,6 @@ Next, when creating the view register the view n the ``settings`` menu:
 .. code-block:: python
 
     @app.route('/settings/')
-    @register_breadcrumb(app, '.settings', 'Settings page')
     @register_menu(app, 'settings.item1', 'Item 1', order=2)
     def settings_item_1():
         return render_template('invenio_foo/foo_settings.html')

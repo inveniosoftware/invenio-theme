@@ -143,7 +143,6 @@ def test_header_template_blocks(app):
         "brand",
         "navbar_inner",
         "navbar_right",
-        "breadcrumbs",
         "flashmessages",
         "navbar_nav",
         "navbar_search",
