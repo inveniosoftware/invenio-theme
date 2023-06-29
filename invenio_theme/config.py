@@ -112,9 +112,6 @@ THEME_SEARCHBAR = True
 THEME_SEARCH_ENDPOINT = "/search"
 """The endpoint for the search bar."""
 
-THEME_BREADCRUMB_ROOT_ENDPOINT = ""
-"""The endpoint for the Home view in the breadcrumbs."""
-
 THEME_SITENAME = _("Invenio")
 """The name of the site to be used on the header and as a title."""
 
