@@ -12,6 +12,8 @@
 from flask import Blueprint
 
 from . import config
+from .icons import ThemeIcons
+from .proxies import current_theme_icons
 from .shared import menu
 from .views import (
     blueprint,
@@ -32,7 +34,10 @@ class InvenioTheme(object):
         :param app: An instance of :class:`~flask.Flask`.
         :param \**kwargs: Keyword arguments are passed to ``init_app`` method.
         """
+        self.app = None
+
         if app:
+            self.app = app
             self.init_app(app, **kwargs)
 
     def init_app(self, app, **kwargs):
@@ -66,9 +71,7 @@ class InvenioTheme(object):
         # Register context processor
         @app.context_processor
         def _theme_icon_ctx_processor():
-            from invenio_theme.proxies import current_theme_icons
-
-            return dict(current_theme_icons=current_theme_icons)
+            return {"current_theme_icons": current_theme_icons}
 
         app.context_processor(lambda: {"menu": menu})
 
@@ -89,8 +92,13 @@ class InvenioTheme(object):
         # Set THEME_<name>_TEMPLATE from <name>_TEMPLATE variables if not
         # already set.
         for varname in _vars:
-            theme_varname = "THEME{}".format(varname)
+            theme_varname = f"THEME_{varname}"
             if app.config[theme_varname] is None:
                 app.config[theme_varname] = app.config[varname]
 
         app.config.setdefault("ADMIN_BASE_TEMPLATE", config.ADMIN_BASE_TEMPLATE)
+
+    @property
+    def icons(self):
+        """Return icons."""
+        return ThemeIcons(self.app.config["APP_THEME"], self.app.config["THEME_ICONS"])
