@@ -1,0 +1,161 @@
+# Translations template for invenio-theme.
+# Copyright (C) 2022 CERN
+# This file is distributed under the same license as the invenio-theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: invenio-theme 1.3.28\n"
+"Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
+"POT-Creation-Date: 2022-09-16 08:40+0000\n"
+"PO-Revision-Date: 2016-08-25 15:28+0000\n"
+"Language-Team: Hindi (India) (https://app.transifex.com/inveniosoftware/teams/23537/hi_IN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.10.3\n"
+"Language: hi_IN\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: invenio_theme/config.py:102 invenio_theme/config.py:117
+#: invenio_theme/templates/invenio_theme/page.html:26
+#: invenio_theme/templates/invenio_theme/page_admin.html:34
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:29
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:34
+msgid "Invenio"
+msgstr ""
+
+#: invenio_theme/ext.py:73
+msgid "Home"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/401.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:13
+msgid "Unauthorized"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/401.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:14
+msgid "You need to be authenticated to view this page."
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/403.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:13
+msgid "Permission required"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/403.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:14
+msgid "You do not have sufficient permissions to view this page."
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/404.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:13
+msgid "Page not found"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/404.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:14
+msgid "The page you are looking for could not be found."
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/429.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:13
+msgid "Too many requests"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/429.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:14
+msgid "You have made too many consecutive requests, please try again later."
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/500.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:13
+msgid "Internal server error"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/500.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:15
+msgid "Error identifier"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:17
+#: invenio_theme/templates/invenio_theme/header.html:16
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:17
+msgid "Toggle navigation"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:72
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:72
+msgid "Logout"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/footer.html:22
+#, python-format
+msgid "Powered by <a href=\"%(link)s\">Invenio</a>"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/header.html:38
+#: invenio_theme/templates/semantic-ui/invenio_theme/header.html:46
+msgid "Search"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/header_frontpage.html:29
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_frontpage.html:32
+msgid "Type and press enter to search"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/header_login.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:15
+msgid "Log in"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/header_login.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:19
+msgid "Sign up"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/header_login.html:30
+#: invenio_theme/templates/invenio_theme/header_login.html:34
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:44
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:52
+msgid "Log out"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/page_settings.html:19
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:25
+msgid "Settings"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:12
+msgid "Show more"
+msgstr ""
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:13
+msgid "Show less"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/footer.html:17
+#, python-format
+msgid ""
+"Powered by\n"
+"        <a href=\"%(link)s\">Invenio</a>"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:75
+msgid "Skip to main"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:17
+msgid "My account"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:21
+msgid "Account settings"
+msgstr ""
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/macros/messages.html:33
+msgid "Close"
+msgstr ""

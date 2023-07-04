@@ -7,6 +7,8 @@
 # Translators:
 # Tibor Simko <tibor.simko@cern.ch>, 2020
 # Sam Arbid, 2022
+# yyones, 2023
+# Rim Sharif, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,8 +17,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2022-09-16 08:40+0000\n"
 "PO-Revision-Date: 2016-08-25 15:28+0000\n"
-"Last-Translator: Sam Arbid, 2022\n"
-"Language-Team: Swedish (https://www.transifex.com/inveniosoftware/teams/23537/sv/)\n"
+"Last-Translator: Rim Sharif, 2023\n"
+"Language-Team: Swedish (https://app.transifex.com/inveniosoftware/teams/23537/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,12 +56,12 @@ msgstr "Tillstånd krävs"
 #: invenio_theme/templates/invenio_theme/403.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/403.html:14
 msgid "You do not have sufficient permissions to view this page."
-msgstr "Du har inte tillräckliga behörigheter för att se den här sidan."
+msgstr "Du har inte behörigheten för att se den här sidan."
 
 #: invenio_theme/templates/invenio_theme/404.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:13
 msgid "Page not found"
-msgstr "sidan hittas inte"
+msgstr "Sidan hittas inte"
 
 #: invenio_theme/templates/invenio_theme/404.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:14
@@ -69,7 +71,7 @@ msgstr "Sidan du letar efter kunde inte hittas."
 #: invenio_theme/templates/invenio_theme/429.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/429.html:13
 msgid "Too many requests"
-msgstr "För många begäran"
+msgstr "För många förfrågningar"
 
 #: invenio_theme/templates/invenio_theme/429.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/429.html:14
@@ -120,7 +122,7 @@ msgstr "Logga in"
 #: invenio_theme/templates/invenio_theme/header_login.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:19
 msgid "Sign up"
-msgstr "Skriva upp"
+msgstr "Registrera konto"
 
 #: invenio_theme/templates/invenio_theme/header_login.html:30
 #: invenio_theme/templates/invenio_theme/header_login.html:34
@@ -132,7 +134,7 @@ msgstr "Logga ut"
 #: invenio_theme/templates/invenio_theme/page_settings.html:19
 #: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:25
 msgid "Settings"
-msgstr "inställningar"
+msgstr "Inställningar"
 
 #: invenio_theme/templates/invenio_theme/macros/truncate.html:12
 msgid "Show more"
@@ -165,4 +167,4 @@ msgstr "Kontoinställningar"
 
 #: invenio_theme/templates/semantic-ui/invenio_theme/macros/messages.html:33
 msgid "Close"
-msgstr "Stänga"
+msgstr "Stäng"
