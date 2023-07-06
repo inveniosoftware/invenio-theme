@@ -55,7 +55,7 @@
               {%- endblock navbar_search %}
             {%- endif %}
           </li>
-            {%- for item in menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
+            {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
               {%- if item.children %}
               <li class="navbar-item navbar-options">
                 <div class="dropdown{{ ' active' if item.active else '' }}">

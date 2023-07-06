@@ -21,7 +21,7 @@
     <span class="icon-bar"></span>
   </a>
   <ul class="nav navbar-nav">
-  {%- for item in menu.submenu('main').children if item.visible recursive %}
+  {%- for item in current_menu.submenu('main').children if item.visible recursive %}
     {%- if item.children -%}
         <li class="dropdown">.
           <a href="{{ item.url }}" style="display: inline-block; padding-right: 5px;"> {{ item.text|safe }} </a>
@@ -63,7 +63,7 @@
                 </div>
               </div>
             </li>
-            {%- for item in menu.submenu('settings').children if item.visible %}
+            {%- for item in current_menu.submenu('settings').children if item.visible %}
             {% if loop.first %}<li class="divider"></li>{% endif -%}
             <li><a href="{{ item.url }}">{{ item.text|safe }}</a></li>
             {%- endfor %}

@@ -32,7 +32,7 @@
         <div class="ui dropdown icon button floating">
           <i class="dropdown icon"></i>
           <div class="menu">
-            {%- for item in menu.submenu('settings').children if item.visible %}
+            {%- for item in current_menu.submenu('settings').children if item.visible %}
               <a class="item"
                 style="color:black;"
                 href="{{ item.url }}">{{ item.text|safe }}
