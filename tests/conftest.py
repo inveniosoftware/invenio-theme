@@ -2,7 +2,7 @@
 #
 # This file is part of Invenio.
 # Copyright (C) 2015-2018 CERN.
-# Copyright (C) 2022 Graz University of Technology.
+# Copyright (C) 2022-2023 Graz University of Technology.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -10,19 +10,47 @@
 
 """Pytest configuration."""
 
-import os
+
 import shutil
-import tempfile
 
 import jinja2
 import pytest
 from flask import Flask
+from flask_webpackext.manifest import (
+    JinjaManifest,
+    JinjaManifestEntry,
+    JinjaManifestLoader,
+)
 from helpers import make_fake_template
 from invenio_assets import InvenioAssets
 from invenio_i18n import Babel, InvenioI18N
 from invenio_i18n.views import create_blueprint_from_app
 
 from invenio_theme import InvenioTheme
+from invenio_theme.views import create_blueprint
+
+
+#
+# Mock the webpack manifest to avoid having to compile the full assets.
+#
+class MockJinjaManifest(JinjaManifest):
+    """Mock manifest."""
+
+    def __getitem__(self, key):
+        """Get a manifest entry."""
+        return JinjaManifestEntry(key, [key])
+
+    def __getattr__(self, name):
+        """Get a manifest entry."""
+        return JinjaManifestEntry(name, [name])
+
+
+class MockManifestLoader(JinjaManifestLoader):
+    """Manifest loader creating a mocked manifest."""
+
+    def load(self, filepath):
+        """Load the manifest."""
+        return MockJinjaManifest()
 
 
 @pytest.fixture()
@@ -31,10 +59,15 @@ def app():
     app = Flask("myapp")
     app.config.update(
         I18N_LANGUAGES=[("en", "English"), ("de", "German")],
+        THEME_FRONTPAGE=False,
+        APP_THEME=["semantic-ui"],
+        WEBPACKEXT_MANIFEST_LOADER=MockManifestLoader,
     )
     Babel(app)
     InvenioI18N(app)
+
     app.register_blueprint(create_blueprint_from_app(app))
+    app.register_blueprint(create_blueprint(app))
 
     def delete_locale_from_cache(exception):
         """Unset locale from `flask.g` when the request is tearing down."""
@@ -67,6 +100,8 @@ def app_error_handler(request):
     # Setting by default fake.html as a THEME_ERROR_TEMPLATE
     app.config["THEME_ERROR_TEMPLATE"] = "invenio_theme/fake.html"
 
+    app.config["APP_THEME"] = ["semantic-ui"]
+
     # Tear down method to clean the temp directory.
     def tear_down():
         shutil.rmtree(temp_dir)
@@ -77,6 +112,8 @@ def app_error_handler(request):
     Babel(app)
     InvenioI18N(app)
     InvenioTheme(app)
+
+    app.register_blueprint(create_blueprint(app))
     return app
 
 
@@ -100,6 +137,7 @@ def app_frontpage_handler(request):
     # Setting by default fake.html as a BASE_TEMPLATE
     app.config["BASE_TEMPLATE"] = "invenio_theme/fake.html"
     app.config["THEME_FRONTPAGE"] = True
+    app.config["APP_THEME"] = ["semantic-ui"]
 
     # Tear down method to clean the temp directory.
     def tear_down():
@@ -112,4 +150,6 @@ def app_frontpage_handler(request):
     InvenioI18N(app)
     InvenioTheme(app)
     InvenioAssets(app)
+
+    app.register_blueprint(create_blueprint(app))
     return app
