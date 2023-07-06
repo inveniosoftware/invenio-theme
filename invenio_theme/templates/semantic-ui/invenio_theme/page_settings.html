@@ -26,7 +26,7 @@
     {%- block settings_menu scoped %}
       <div class="ui vertical menu fluid">
         <strong class="header item">{{ _('Settings') }}</strong>
-        {%- for item in menu.submenu('settings').children if item.visible %}
+        {%- for item in current_menu.submenu('settings').children if item.visible %}
 
           {%- block settings_menu_item scoped %}
             <a

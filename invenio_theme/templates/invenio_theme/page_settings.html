@@ -19,7 +19,7 @@
           <div class="panel panel-default">
             <div class="panel-heading"><strong>{{ _('Settings') }}</strong></div>
             <ul class="list-group">
-            {%- for item in menu.submenu('settings').children if item.visible %}
+            {%- for item in current_menu.submenu('settings').children if item.visible %}
             {%- block settings_menu_item scoped %}
               <a
                 href="{{ item.url }}"
