@@ -8,6 +8,6 @@
 
 """Invenio standard theme."""
 
-from flask_menu.menu import MenuRoot
+from flask_menu.menu import MenuNode
 
-menu = MenuRoot("", None)
+menu = MenuNode("", None)

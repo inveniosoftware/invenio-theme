@@ -187,6 +187,8 @@ def test_html_lang(app):
 def test_frontpage_not_exists(app):
     """Test the frontpage that doesn't exist."""
     # Before configure the frontpage
+    InvenioTheme(app)
+    InvenioAssets(app)
     with app.test_client() as client:
         response = client.get("/")
         assert response.status_code == 404

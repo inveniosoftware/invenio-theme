@@ -9,20 +9,10 @@
 
 """Invenio standard theme."""
 
-from flask import Blueprint
+from flask_menu import Menu
 
 from . import config
 from .icons import ThemeIcons
-from .proxies import current_theme_icons
-from .shared import menu
-from .views import (
-    blueprint,
-    insufficient_permissions,
-    internal_error,
-    page_not_found,
-    too_many_requests,
-    unauthorized,
-)
 
 
 class InvenioTheme(object):
@@ -47,33 +37,9 @@ class InvenioTheme(object):
         """
         self.init_config(app)
 
-        # Register blueprint in order to register template and static folder.
-        app.register_blueprint(
-            Blueprint(
-                "invenio_theme",
-                __name__,
-                template_folder="templates",
-                static_folder="static",
-            )
-        )
+        self.menu_ext = Menu(app)
 
-        # Register frontpage blueprint if enabled.
-        if app.config["THEME_FRONTPAGE"]:
-            app.register_blueprint(blueprint)
-
-        # Register errors handlers.
-        app.register_error_handler(401, unauthorized)
-        app.register_error_handler(403, insufficient_permissions)
-        app.register_error_handler(404, page_not_found)
-        app.register_error_handler(429, too_many_requests)
-        app.register_error_handler(500, internal_error)
-
-        # Register context processor
-        @app.context_processor
-        def _theme_icon_ctx_processor():
-            return {"current_theme_icons": current_theme_icons}
-
-        app.context_processor(lambda: {"menu": menu})
+        app.context_processor(lambda: {"current_theme_icons": self.icons})
 
         # Save reference to self on object
         app.extensions["invenio-theme"] = self
