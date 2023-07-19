@@ -20,7 +20,11 @@
             <ul class="list-group">
             {%- for item in current_menu.submenu('settings').children if item.visible %}
             {%- block settings_menu_item scoped %}
-              <a href="{{ item.url }}" class="list-group-item{% if item.active %} active{% endif %}">
+              <a
+                href="{{ item.url }}"
+                class="list-group-item {% if item.active %}active{% endif %}"
+                {% if item.active %} aria-current="page" {% endif %}
+              >
                 {{ item.text|safe }}
               </a>
             {%- endblock %}

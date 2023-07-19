@@ -265,6 +265,17 @@ code {
 
   &.column {
     flex-direction: column !important;
+
+    &-mobile {
+      @media screen and (max-width: @largestMobileScreen) {
+        flex-direction: column !important;
+      }
+    }
+    &-tablet {
+      @media screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+        flex-direction: column !important;
+      }
+    }
   }
 
   &.wrap {
@@ -468,6 +479,10 @@ code {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .align-items-start {
   align-items: start;
 }
@@ -564,5 +579,13 @@ code {
   }
   &.mini {
     font-size: @fontSize * @miniSize !important;
+  }
+}
+
+.no-style-list {
+  list-style-type: none !important;
+
+  li {
+    list-style-type: none !important;
   }
 }

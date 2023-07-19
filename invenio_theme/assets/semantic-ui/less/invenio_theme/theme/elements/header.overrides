@@ -23,11 +23,35 @@
 
 /*--- Negative ---*/
 .ui.negative.header {
-  color: @negativeColor !important;
+  color: @negativeHeaderColor !important;
 }
 a.ui.negative.header:hover {
   color: @negativeHover !important;
 }
 .ui.negative.dividing.header {
-  border-bottom: @dividedColoredBorderWidth solid @negativeColor;
+  border-bottom: @dividedColoredBorderWidth solid @negativeHeaderColor;
+}
+
+/*--- Positive ---*/
+
+.ui.positive.header {
+  color: @positiveHeaderColor !important;
+}
+a.ui.positive.header:hover {
+  color: @positiveHover !important;
+}
+.ui.positive.dividing.header {
+  border-bottom: @dividedColoredBorderWidth solid @positiveHeaderColor;
+}
+
+/*--- Warning ---*/
+
+.ui.warning.header {
+  color: @warningHeaderColor !important;
+}
+a.ui.warning.header:hover {
+  color: @warningHover !important;
+}
+.ui.warning.dividing.header {
+  border-bottom: @dividedColoredBorderWidth solid @warningHeaderColor;
 }

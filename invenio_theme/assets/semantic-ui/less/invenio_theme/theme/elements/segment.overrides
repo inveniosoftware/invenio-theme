@@ -19,11 +19,46 @@
 
 
 /* Negative */
-.ui.negative.segment:not(.inverted) {
+.ui.negative.segment:not(.inverted):not(.left-border) {
   border-top: @coloredBorderSize solid @negativeColor;
 }
 .ui.inverted.negative.segment {
   background-color: @negativeColor;
   color: @white;
+}
+
+.ui.segment.left-border {
+
+  &.negative {
+    border-left: @coloredLeftBorderSize solid @negativeSegmentColor;
+  }
+
+  &.positive {
+    border-left: @coloredLeftBorderSize solid @positiveSegmentColor;
+  }
+
+  &.warning {
+    border-left: @coloredLeftBorderSize solid @warningSegmentColor;
+  }
+}
+
+.ui.segments {
+  &.no-border {
+    border: 0;
+  }
+
+  &.no-border-radius-top {
+    border-radius: 0 0 @borderRadius @borderRadius !important;
+  }
+
+}
+
+.ui.segment.no-border-radius {
+  border-radius: 0 !important;
+
+  &-top {
+    border-radius: 0 0 @borderRadius @borderRadius !important;
+
+  }
 }
 

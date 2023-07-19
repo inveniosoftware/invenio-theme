@@ -24,3 +24,8 @@ i.positive.icon {
 i.negative.icon {
   color: @negativeIconColor;
 }
+
+/* Warning */
+i.warning-color.icon {
+  color: @warningIconColor;
+}

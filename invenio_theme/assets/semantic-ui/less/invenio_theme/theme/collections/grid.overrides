@@ -85,6 +85,18 @@
   border-radius: @defaultBorderRadius @defaultBorderRadius 0em 0em !important;
 }
 
+/*
+  Use .stackable-tablet-mobile.row instead of .stackable.row
+  to stack content on mobile AND tablet screens
+*/
+.ui.grid > .stackable.tablet-mobile.row > .column {
+  @media screen and (max-width: @largestTabletScreen) {
+    width: 100% !important;
+    margin: 0em 0em !important;
+    box-shadow: none !important;
+    padding: 1rem 1rem !important;
+  }
+}
 
 // Administration styles
 
