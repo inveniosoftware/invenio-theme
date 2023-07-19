@@ -1,3 +1,10 @@
 /***********************************************
          Invenio Theme Segment Variables
 ***********************************************/
+
+@positiveSegmentColor: @positiveColor;
+@negativeSegmentColor: @negativeColor;
+@neutralSegmentColor: @neutralColor;
+@warningSegmentColor: @warningColor;
+
+@coloredLeftBorderSize: .45rem;

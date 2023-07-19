@@ -39,3 +39,50 @@
 .dash:before  { content: '\e801'; }
 .plus:before { content: '\e802'; }
 */
+
+.ui.toggle.checkbox.on-off {
+  position: relative;
+
+  label {
+    position: relative;
+    height: @onOffLabelHeight;
+    padding-left: @onOffLabelWidth;
+
+    &::before {
+      content: "OFF";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: @onOffLabelWidth;
+      height: @onOffLabelHeight;
+      padding: .25rem .3rem;
+      border-radius: @onOffBorderRadius;
+      color: #fff;
+      font-size: @small;
+      font-weight: 300;
+    }
+
+    &::after {
+      border-radius: @onOffBorderRadius;
+      width: @onOffToggleHeight;
+      height: @onOffToggleHeight;
+    }
+  }
+
+  input {
+    height: @onOffLabelHeight;
+
+    &:checked {
+      & ~ label {
+        &::before {
+          content: "ON";
+          text-align: left;
+        }
+
+        &:after {
+          left: (@onOffLabelWidth + .1rem) - @onOffToggleWidth;
+        }
+      }
+    }
+  }
+}

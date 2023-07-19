@@ -10,3 +10,4 @@
 @neutralIconColor: @neutralColor;
 @positiveIconColor: @positiveColor;
 @negativeIconColor: @negativeColor;
+@warningIconColor: @warningColor;

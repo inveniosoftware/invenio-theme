@@ -13,8 +13,10 @@
 
 {%- block page_body scoped %}
 
-<div class="ui container mt-25 mb-15">
-  <h1 class="ui header">{{ _("My account") }}</h1>
+<div class="ui container fluid page-subheader-outer compact ml-0-mobile mr-0-mobile">
+  <div class="ui container page-subheader">
+    <h1 class="ui large header">{{_("My account")}}</h1>
+  </div>
 </div>
 
 <div class="ui grid container stackable">
@@ -26,7 +28,11 @@
         {%- for item in current_menu.submenu('settings').children if item.visible %}
 
           {%- block settings_menu_item scoped %}
-            <a href="{{ item.url }}" class="brand item{% if item.active %} active{% endif %}">
+            <a
+              href="{{ item.url }}"
+              class="brand item {% if item.active %}active{% endif %}"
+              {% if item.active %} aria-current="page" {% endif %}
+            >
               {{ item.text|safe }}
             </a>
           {%- endblock %}

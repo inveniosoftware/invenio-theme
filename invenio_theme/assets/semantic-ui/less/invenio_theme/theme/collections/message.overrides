@@ -26,3 +26,23 @@
 .ui.message.code {
   overflow: auto !important;
 }
+
+.ui.message {
+
+  &.scroll-overflow {
+    overflow-x: scroll;
+  }
+
+  &.no-border-radius {
+    border-radius: 0 !important;
+  }
+
+  &.icon {
+    .small.icon {
+      font-size: @small !important;
+    }
+    .large.icon {
+      font-size: @large !important;
+    }
+  }
+}

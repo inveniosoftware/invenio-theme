@@ -1,3 +1,10 @@
 /***********************************************
          Invenio Theme Checkbox Variables
 ***********************************************/
+
+@onOffLabelHeight: 1.7rem;
+@onOffLabelWidth: 4rem;
+
+@onOffToggleHeight: 1.7rem;
+@onOffToggleWidth: 1.7rem;
+@onOffBorderRadius: .3rem;
