@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.1.3 (released 2023-07-24)
+
+- messages: add z-index
+
 Version 2.1.2 (released 2023-04-12)
 
 - add flex utility classes
