@@ -22,7 +22,25 @@ jquery("img.has-placeholder").each(function() {
 })
 
 // Initialize Semantic UI components
-jquery(".ui.dropdown").dropdown();
+jquery(".ui.dropdown").dropdown({
+  onShow: function() {
+    const dropdownElem = jquery(this);
+    dropdownElem.attr("aria-expanded", true);
+  },
+  onHide: function() {
+    const dropdownElem = jquery(this);
+    dropdownElem.attr("aria-expanded", false);
+  },
+  onChange: function(value, text, $selectedOption) {
+    const dropdownElem = jquery(this);
+    const options = dropdownElem.find(".item");
+
+    options.each((index, option) => {
+      jquery(option).attr("aria-selected", false);
+    })
+    $selectedOption.attr("aria-selected", true);
+  }
+});
 
 jquery(".ui.accordion").accordion({
   selector: {
