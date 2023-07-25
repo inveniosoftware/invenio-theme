@@ -46,18 +46,18 @@
   <article class="eleven wide tablet twelve wide computer column">
 
     {%- block settings_content scoped %}
-      <div class="ui segments">
+      <section aria-label="{{ _(panel_title|default('')) }}" class="ui segments">
         <div class="ui segment secondary">
 
           {%- block settings_content_title scoped %}
             {%- if panel_icon %}
 
               {%- block settings_content_title_icon scoped %}
-                <i class="{{ panel_icon }}"></i>
+                <i class="{{ panel_icon }}" aria-hidden="true"></i>
               {%- endblock %}
 
             {%- endif %}
-            <strong class="header item">{{ panel_title|default("") }}</strong>
+            <h2 class="ui tiny header inline-block m-0">{{ panel_title|default("") }}</h2>
           {%- endblock %}
 
         </div>
@@ -69,7 +69,7 @@
           </div>
         {%- endblock settings_body %}
 
-      </div>
+        </section>
     {%- endblock %}
 
   </article>
