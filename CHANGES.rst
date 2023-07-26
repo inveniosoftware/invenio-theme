@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.2.0 (released 2023-07-26)
+
+- theme: add general style improvements
+
 Version 2.1.3 (released 2023-07-24)
 
 - messages: add z-index
