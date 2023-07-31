@@ -114,7 +114,23 @@
     }
 
     @media all and (max-width: @largestMobileScreen) {
+      margin-right: 0;
       margin-bottom: .5rem;
     }
+  }
+}
+
+
+.ui.fluid.fluid-computer-only {
+  @media all and (max-width: @largestTabletScreen) {
+    display: inline-block;
+    width: auto !important;
+  }
+}
+
+.ui.fluid.labeled.icon.button {
+  padding-left: @labeledIconWidth + @horizontalPadding !important;
+  &.compact {
+    padding-left: @labeledIconWidth + @compactHorizontalPadding !important;
   }
 }

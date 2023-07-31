@@ -457,12 +457,14 @@ code {
   // [   COL1 (auto fill remaining space)  ] [  COL2 (max-content width)   ]
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: auto max-content;
+  grid-template-columns: auto max-content;
+  grid-auto-columns: max-content;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1rem;
 
-  @media all and (max-width: @largestMobileScreen) {
+  @media all and (max-width: @largestTabletScreen) {
     grid-auto-flow: row;
+    grid-template-columns: minmax(100%, 100%);
     grid-auto-columns: 100%;
     align-items: flex-start;
     row-gap: 1rem;
@@ -481,6 +483,10 @@ code {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .align-items-start {

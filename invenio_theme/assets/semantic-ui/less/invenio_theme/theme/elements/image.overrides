@@ -15,3 +15,8 @@
     max-width: 100%;
   }
 }
+
+.ui.avatar.image {
+  min-width: @avatarSize;
+  min-height: @avatarSize;
+}
