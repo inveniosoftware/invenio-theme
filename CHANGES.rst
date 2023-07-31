@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.3.0 (released 2023-07-31)
+
+- settings page: Improve template for a11y
+
 Version 2.2.0 (released 2023-07-26)
 
 - theme: add general style improvements
