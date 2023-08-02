@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.4.0 (released 2023-08-02)
+
+- theme: add some general classes and fixes alignment for labeled fluid buttons
+
 Version 2.3.0 (released 2023-07-31)
 
 - settings page: Improve template for a11y
