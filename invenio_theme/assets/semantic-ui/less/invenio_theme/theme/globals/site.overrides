@@ -491,6 +491,12 @@ code {
 
 .align-items-start {
   align-items: start;
+
+  &-mobile {
+    @media all and (max-width: @largestMobileScreen) {
+      align-items: flex-start !important;
+    }
+  }
 }
 
 .align-items-baseline {
@@ -503,6 +509,12 @@ code {
 
 .align-items-end {
   align-items: flex-end;
+
+  &-tablet {
+    @media all and (max-width: @largestTabletScreen) {
+      align-items: flex-end !important;
+    }
+  }
 }
 
 .align-self-center {
