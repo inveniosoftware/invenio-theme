@@ -294,6 +294,10 @@ code {
   display: inline;
 }
 
+.display-grid {
+  display: grid !important;
+}
+
 /* Generator functions */
 
 .generate-margins(@max, @direction, @alias, @i: 0) when (@i =< @max) {
@@ -462,6 +466,16 @@ code {
   align-items: center;
   column-gap: 1rem;
 
+  &.no-wrap {
+    @media all and (max-width: @largestTabletScreen) {
+      grid-auto-flow: column;
+      grid-template-columns: auto max-content;
+      grid-auto-columns: max-content;
+      align-items: center;
+      column-gap: 1rem;
+    }
+  }
+
   @media all and (max-width: @largestTabletScreen) {
     grid-auto-flow: row;
     grid-template-columns: minmax(100%, 100%);
@@ -563,6 +577,10 @@ code {
 
 .half-width {
   width: 50% !important;
+}
+
+.min-width-max {
+  min-width: max-content !important;
 }
 
 .flex-direction-column {
