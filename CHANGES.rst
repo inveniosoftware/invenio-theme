@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.1 (released 2023-08-14)
+
+- theme: bugfix to decrease z-index value
+
 Version 2.5.0 (released 2023-08-09)
 
 - theme: add utility classes
