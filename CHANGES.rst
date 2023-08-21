@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version 3.0.0 (released 2024-03-19)
+
+- global: remove breadcrumb support
+- global: introduce shared menu
+- global: preparation for compatibility with Flask v2.3.x deprecations
+- refactor: current_theme_icons without application context
+
 Version 2.5.10 (released 2024-01-28)
 
 - installation: fix sphinx dependency
