@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.2 (released 2023-08-14)
+
+- installation: pin Flask-Menu to ``<v1.0.0``.
+
 Version 2.5.1 (released 2023-08-14)
 
 - theme: bugfix to decrease z-index value
