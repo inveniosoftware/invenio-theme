@@ -1,12 +1,17 @@
 ..
     This file is part of Invenio.
     Copyright (C) 2015-2022 CERN.
+    Copyright (C) 2023 Northwestern University.
 
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 Changes
 =======
+
+Version 1.3.32 (released 2023-08-23)
+
+- backport fix: installation: pin Flask-Menu to ``<v1.0.0``.
 
 Version 1.3.31 (released 2022-10-05)
 
