@@ -591,6 +591,10 @@ code {
   display: contents !important;
 }
 
+.top-0 {
+  top: 0 !important;
+}
+
 .text.size {
   &.massive {
     font-size: @fontSize * @massiveSize !important;
