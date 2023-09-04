@@ -132,6 +132,13 @@ https://github.com/Semantic-Org/Semantic-UI/issues/5642
 
 @import "../../navbar/navbar.less";
 
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 footer {
   margin-top: 3*@defaultMargin;
 }
