@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.3 (released 2023-08-08)
+
+- stylesheets: add preformatted tag styling font
+
 Version 2.5.2 (released 2023-08-14)
 
 - installation: pin Flask-Menu to ``<v1.0.0``.
