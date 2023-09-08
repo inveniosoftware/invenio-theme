@@ -47,10 +47,10 @@ body.cover-page {
   .panel-footer {
     padding-left: $cover-panel-padding;
     padding-right: $cover-panel-padding;
-    padding-top: $cover-panel-padding/2;
-    padding-bottom: $cover-panel-padding/2;
-    border-bottom-left-radius: $border-radius-large * 2;
-    border-bottom-right-radius: $border-radius-large * 2;
+    padding-top: calc(($cover-panel-padding)/2);
+    padding-bottom: calc(($cover-panel-padding)/2);
+    border-bottom-left-radius: calc(($border-radius-large) * 2);
+    border-bottom-right-radius: calc(($border-radius-large) * 2);
     background-color: $cover-panel-footer-bg;
   }
   .panel-container a.text-muted {
