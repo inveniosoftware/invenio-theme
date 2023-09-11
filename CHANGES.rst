@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.4 (released 2023-09-11)
+
+- scss: fix compatibility with latest less version
+
 Version 2.5.3 (released 2023-08-08)
 
 - stylesheets: add preformatted tag styling font
