@@ -465,13 +465,17 @@ code {
   // used on a container with two children <div>
   // provides auto adjustment to the content of the left column
   // and auto fills the width on the right
-  // [   COL1 (auto fill remaining space)  ] [  COL2 (max-content width)   ]
+  // [ COL0 (max-content width) ]  [ COL1 (auto fill remaining space)  ] [  COL2 (max-content width)   ]
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto max-content;
   grid-auto-columns: max-content;
   align-items: center;
   column-gap: 1rem;
+
+  &.triple {
+    grid-template-columns: max-content auto max-content;
+  }
 
   &.no-wrap {
     @media all and (max-width: @largestTabletScreen) {
