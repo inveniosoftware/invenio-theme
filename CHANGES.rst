@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.5 (released 2023-09-19)
+
+- styling: add 3 column template class
+
 Version 2.5.4 (released 2023-09-11)
 
 - scss: fix compatibility with latest less version
