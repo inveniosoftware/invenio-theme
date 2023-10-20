@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.6 (released 2023-10-20)
+
+- don't override links style in flashed messages
+
 Version 2.5.5 (released 2023-09-19)
 
 - styling: add 3 column template class
