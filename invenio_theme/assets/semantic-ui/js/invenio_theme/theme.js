@@ -12,15 +12,6 @@ import "./truncate.js";
 import "semantic-ui-css/semantic.js";
 import "semantic-ui-less/semantic.less";
 
-// Add placeholder image if image not found
-jquery("img.has-placeholder").each(function() {
-  const $image = jquery(this);
-
-  if(this.naturalHeight === 0) {
-    $image.attr("src", "/static/images/square-placeholder.png");
-  }
-})
-
 // Initialize Semantic UI components
 jquery(".ui.dropdown").dropdown({
   onShow: function() {
