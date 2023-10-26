@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.7 (released 2023-10-26)
+
+- community logo: fix rendering a placeholder
+
 Version 2.5.6 (released 2023-10-20)
 
 - don't override links style in flashed messages
