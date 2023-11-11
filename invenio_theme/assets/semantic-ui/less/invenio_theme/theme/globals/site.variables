@@ -12,7 +12,7 @@
 
 @mutedTextColor      :  #757575;
 @textMutedColorDarken:  #4A4A4A;
-
+@lightGray: #C5C5C5;
 @neutralColor: @grey;
 @darkGray: #333;
 @warningColor: @yellow;
