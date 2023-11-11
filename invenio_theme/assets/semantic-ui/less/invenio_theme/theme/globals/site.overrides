@@ -636,3 +636,18 @@ code {
     list-style-type: none !important;
   }
 }
+
+/* TinyMCE Editor Output */
+.rich-input-content
+ {
+  table, td, th {
+      border: 1px dashed @lightGray;
+      border-collapse: collapse;
+      padding: 1rem;
+  }
+}
+blockquote{
+  border-left: 4px solid @lightGray;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+}
