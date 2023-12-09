@@ -27,7 +27,6 @@ First create a Flask application and initialize
 
 >>> from flask import Flask, render_template_string
 >>> from invenio_theme import InvenioTheme
->>> from flask_menu import register_menu
 >>> app = Flask('myapp')
 >>> theme = InvenioTheme(app)
 
@@ -421,9 +420,8 @@ Invenio-Theme defines are couple of menus that Invenio modules can plug into.
 For instance if you want to plug an menu item in the navigation bar you can do
 it like this:
 
->>> from flask_menu import register_menu
+>>> menu.submenu(".main.myitem").register("myview2", "My item", order=1)
 >>> @app.route('/myview2')
-... @register_menu(app, 'main.myitem', 'My item', order=1)
 ... def myview2():
 ...     return ""
 
@@ -459,8 +457,8 @@ Next, when creating the view register the view n the ``settings`` menu:
 
 .. code-block:: python
 
+    menu.submenu(".settings.item1").register("settings_item_1", "Item 1", order=2)
     @app.route('/settings/')
-    @register_menu(app, 'settings.item1', 'Item 1', order=2)
     def settings_item_1():
         return render_template('invenio_foo/foo_settings.html')
 
