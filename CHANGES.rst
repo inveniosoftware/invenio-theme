@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.8 (released 2023-12-12)
+
+- replace ckeditor with tinymce due to license issue
+
 Version 2.5.7 (released 2023-10-26)
 
 - community logo: fix rendering a placeholder
