@@ -7,8 +7,9 @@
  */
 
 // Setting the path to fonts files.
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$fa-font-path: "~font-awesome/fonts";
+// double slash for escaping, single slash is interpreted as division
+$icon-font-path: "~bootstrap-sass//assets//fonts//bootstrap//";
+$fa-font-path: "~font-awesome//fonts";
 
 @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
 @import "~font-awesome/scss/font-awesome";

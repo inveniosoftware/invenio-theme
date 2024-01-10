@@ -7,7 +7,7 @@
  */
 
 header .alert {
-  margin-top: -$line-height-computed;
+  margin-top: calc(-1 * $line-height-computed);
   border-radius: 0px;
 }
 
