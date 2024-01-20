@@ -316,7 +316,7 @@ texinfo_documents = [
 
 # Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
-    "https://docs.python.org/": None,
+    "python": ("https://docs.python.org/", None),
     "flask": ("http://flask.pocoo.org/docs/latest/", None),
     "flask_menu": ("https://flask-menu.readthedocs.io/en/latest/", None),
     "flask_breadcrumbs": ("https://flask-breadcrumbs.readthedocs.io/en/latest/", None),
