@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version 2.5.10 (released 2024-01-28)
+
+- installation: fix sphinx dependency
+
 Version 2.5.9 (released 2024-01-28)
 
 - global: change math operation to be compatible with sass2.0
