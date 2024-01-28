@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #
 # This file is part of Invenio.
-# Copyright (C) 2015-2018 CERN.
+# Copyright (C) 2015-2024 CERN.
 # Copyright (C) 2022 Graz University of Technology.
 #
 # Invenio is free software; you can redistribute it and/or modify it
@@ -521,6 +521,6 @@ template.
 
 from .ext import InvenioTheme
 
-__version__ = "2.5.8"
+__version__ = "2.5.9"
 
 __all__ = ("__version__", "InvenioTheme")
