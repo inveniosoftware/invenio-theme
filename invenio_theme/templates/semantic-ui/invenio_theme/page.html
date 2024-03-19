@@ -26,8 +26,7 @@
     {%- endblock head_meta %}
 
     {%- block head_title %}
-      {%- set title = title or _(config.THEME_SITENAME) or _('Invenio') %}
-      <title>{{title}}</title>
+      <title>{%- if title %}{{title}} | {% endif -%}{{ _(config.THEME_SITENAME) or _('Invenio') }}</title>
     {%- endblock head_title %}
 
     {%- block head_links %}
