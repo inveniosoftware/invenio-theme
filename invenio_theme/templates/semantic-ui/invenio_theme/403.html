@@ -9,6 +9,8 @@
 
 {% extends config.THEME_ERROR_TEMPLATE %}
 
+{%- set title = _("Permission required") %}
+
 {% block message %}
   <h1><i class="bolt icon"></i> {{_('Permission required')}}</h1>
   <p>{{_('You do not have sufficient permissions to view this page.')}}</p>
