@@ -9,6 +9,8 @@
 
 {% extends config.THEME_ERROR_TEMPLATE %}
 
+{%- set title = _("Too many requests") %}
+
 {% block message %}
   <h1><i class="bolt icon"></i> {{_('Too many requests')}}</h1>
   <p>{{_('You have made too many consecutive requests, please try again later.')}}</p>

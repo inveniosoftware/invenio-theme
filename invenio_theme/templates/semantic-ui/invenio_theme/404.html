@@ -9,6 +9,8 @@
 
 {% extends config.THEME_ERROR_TEMPLATE %}
 
+{%- set title = _("Page not found") %}
+
 {% block message %}
   <h1><i class="bolt icon"></i> {{_('Page not found')}}</h1>
   <p>{{_('The page you are looking for could not be found.')}}</p>
