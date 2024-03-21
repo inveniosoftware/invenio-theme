@@ -9,6 +9,8 @@
 
 """Invenio standard theme."""
 
+from flask import Blueprint
+from flask_breadcrumbs import Breadcrumbs
 from flask_menu import Menu
 
 from . import config
@@ -24,7 +26,9 @@ class InvenioTheme(object):
         :param app: An instance of :class:`~flask.Flask`.
         :param \**kwargs: Keyword arguments are passed to ``init_app`` method.
         """
-        self.app = None
+        self.menu_ext = Menu()
+        self.menu = None
+        self.breadcrumbs = Breadcrumbs()
 
         if app:
             self.app = app
@@ -40,6 +44,42 @@ class InvenioTheme(object):
         self.menu_ext = Menu(app)
 
         app.context_processor(lambda: {"current_theme_icons": self.icons})
+        # Initialize extensions
+        self.menu_ext.init_app(app)
+        self.menu = app.extensions["menu"]
+        self.breadcrumbs.init_app(app)
+
+        # Register blueprint in order to register template and static folder.
+        app.register_blueprint(
+            Blueprint(
+                "invenio_theme",
+                __name__,
+                template_folder="templates",
+                static_folder="static",
+            )
+        )
+
+        # Register frontpage blueprint if enabled.
+        if app.config["THEME_FRONTPAGE"]:
+            app.register_blueprint(blueprint)
+
+        # Initialize breadcrumbs.
+        item = self.menu.submenu("breadcrumbs")
+        item.register(app.config["THEME_BREADCRUMB_ROOT_ENDPOINT"], _("Home"))
+
+        # Register errors handlers.
+        app.register_error_handler(401, unauthorized)
+        app.register_error_handler(403, insufficient_permissions)
+        app.register_error_handler(404, page_not_found)
+        app.register_error_handler(429, too_many_requests)
+        app.register_error_handler(500, internal_error)
+
+        # Register context processor
+        @app.context_processor
+        def _theme_icon_ctx_processor():
+            from invenio_theme.proxies import current_theme_icons
+
+            return dict(current_theme_icons=current_theme_icons)
 
         # Save reference to self on object
         app.extensions["invenio-theme"] = self

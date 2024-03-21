@@ -319,6 +319,7 @@ intersphinx_mapping = {
     "https://docs.python.org/": None,
     "flask": ("http://flask.pocoo.org/docs/latest/", None),
     "flask_menu": ("https://flask-menu.readthedocs.io/en/latest/", None),
+    "flask_breadcrumbs": ("https://flask-breadcrumbs.readthedocs.io/en/latest/", None),
     "invenio_assets": ("https://invenio-assets.readthedocs.io/en/latest/", None),
 }
 
