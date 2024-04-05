@@ -26,14 +26,9 @@
     {%- endblock head_meta %}
 
     {%- block head_title %}
-      {% set show_title = true %}
       {% set sitename = _(config.THEME_SITENAME) or _('Invenio') %}
-      {% if title %}
-        {% if title == sitename %}
-          {% set show_title = false %}
-        {% endif -%}
-      {% endif -%}
-      <title>{%- if show_title and title %}{{title}} | {% endif -%}{{ sitename }}</title>
+      {% set show_title = title and title != sitename %}
+      <title>{%- if show_title %}{{title}} | {% endif -%}{{ sitename }}</title>
     {%- endblock head_title %}
 
     {%- block head_links %}
