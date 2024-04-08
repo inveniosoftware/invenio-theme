@@ -645,6 +645,10 @@ code {
       border-collapse: collapse;
       padding: 1rem;
   }
+
+  pre {
+    white-space: pre-wrap;
+  }
 }
 blockquote{
   border-left: 4px solid @lightGray;
