@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version 3.1.0 (released 2024-04-10)
+
+- css: fix overflow for description in record details
+- bug: add missing ``<title>s``
+
 Version 3.0.0 (released 2024-03-19)
 
 - global: remove breadcrumb support
