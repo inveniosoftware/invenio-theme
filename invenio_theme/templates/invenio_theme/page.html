@@ -21,6 +21,10 @@
     <meta name="google-site-verification" content="{{google_id}}"/>
       {%- endfor %}
     {%- endif %}
+    {% set meta_generator = get_meta_generator() %}
+    {% if meta_generator %}
+    <meta name="generator" content="{{ meta_generator }}"/>
+    {%- endif %}
     {%- endblock head_meta %}
     {%- block head_title %}
     {%- set title = title or _(config.THEME_SITENAME) or _('Invenio') %}
