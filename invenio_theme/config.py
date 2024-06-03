@@ -85,10 +85,16 @@ Defaults to value of :const:`SETTINGS_TEMPLATE`.
 THEME_ERROR_TEMPLATE = "invenio_theme/page_error.html"
 """Base template for error pages."""
 
+THEME_GENERATOR = "Invenio"
+"""Generator meta tag to identify the software that generated the page.
+
+Accepts a string or a func returning a string. Set it to `None` to disable it.
+"""
+
 THEME_GOOGLE_SITE_VERIFICATION = []
 """List of Google Site Verification tokens to be used.
 
-This adds the Google Site Verfication into the meta tags of all pages.
+This adds the Google Site Verification into the meta tags of all pages.
 """
 
 THEME_LOGO = "images/invenio-white.svg"
@@ -101,7 +107,7 @@ THEME_FRONTPAGE = False
 """Enable or disable basic frontpage view."""
 
 THEME_FRONTPAGE_TITLE = _("Invenio")
-"""The title shown on the fronpage."""
+"""The title shown on the frontpage."""
 
 THEME_FRONTPAGE_TEMPLATE = "invenio_theme/frontpage.html"
 """Template for front page."""

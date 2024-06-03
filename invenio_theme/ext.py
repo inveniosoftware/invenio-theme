@@ -10,6 +10,7 @@
 """Invenio standard theme."""
 
 from flask_menu import Menu
+from invenio_base.utils import load_or_import_from_config
 
 from . import config
 from .icons import ThemeIcons
@@ -63,6 +64,13 @@ class InvenioTheme(object):
                 app.config[theme_varname] = app.config[varname]
 
         app.config.setdefault("ADMIN_BASE_TEMPLATE", config.ADMIN_BASE_TEMPLATE)
+
+        # inject the Meta-Generator string as a func in Jinja
+        def _generator_func_or_str():
+            value = app.config.get("THEME_GENERATOR")
+            return value() if callable(value) else value
+
+        app.jinja_env.globals["get_meta_generator"] = _generator_func_or_str
 
     @property
     def icons(self):

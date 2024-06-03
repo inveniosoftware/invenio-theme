@@ -207,3 +207,29 @@ def test_frontpage_exists(app_frontpage_handler):
     with app_frontpage_handler.test_client() as client:
         response = client.get("/")
         assert b"Jessica Jones" in response.data
+
+
+def test_meta_generator(app):
+    """Test meta generator tag."""
+    # remove css/js to avoid generating assets
+    base_tpl = r"""{% extends 'invenio_theme/page.html' %}
+    {% block css %}{% endblock %}
+    {% block javascript %}{% endblock %}
+    """
+
+    InvenioTheme(app)
+    InvenioAssets(app)
+
+    with app.test_request_context():
+        app.config.update(dict(THEME_GENERATOR=None))
+        assert '<meta name="generator"' not in render_template_string(base_tpl)
+
+        app.config.update(dict(THEME_GENERATOR="Invenio"))
+        assert '<meta name="generator" content="Invenio"' in render_template_string(
+            base_tpl
+        )
+
+        app.config.update(dict(THEME_GENERATOR=lambda: "App-version"))
+        assert '<meta name="generator" content="App-version"' in render_template_string(
+            base_tpl
+        )
