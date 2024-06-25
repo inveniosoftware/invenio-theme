@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version 3.2.0 (released 2024-06-25)
+
+- global: add meta generator tag
+    - Allows defining the value of the ``<meta generator>`` header tag by a
+      string or a callable. Can be disabled by setting it to None.
+    - See inveniosoftware/invenio-app-rdm#2689
+
 Version 3.1.0 (released 2024-04-10)
 
 - css: fix overflow for description in record details
