@@ -16,17 +16,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     {%- if description %}<meta name="description" content="{{ description }}" />{% endif %}
     {%- if keywords %}<meta name="keywords" content="{{ keywords }}" />{% endif %}
+
     {%- if config.get('THEME_GOOGLE_SITE_VERIFICATION', None) %}
       {%- for google_id in config.THEME_GOOGLE_SITE_VERIFICATION %}
     <meta name="google-site-verification" content="{{google_id}}"/>
       {%- endfor %}
     {%- endif %}
+
     {% set meta_generator = get_meta_generator() %}
     {% if meta_generator %}
     <meta name="generator" content="{{ meta_generator }}"/>
     {%- endif %}
+
+    {# Add meta tags from an existing "meta_robot_tags" Jinja variable or config #}
+    {% set meta_robot_tags = meta_robot_tags or config.get("THEME_META_ROBOT_TAGS") %}
+    {% for meta_tag in meta_robot_tags %}
+      <meta {{ meta_tag | xmlattr }}>
+    {% endfor %}
+
     {%- endblock head_meta %}
 
     {%- block head_title %}

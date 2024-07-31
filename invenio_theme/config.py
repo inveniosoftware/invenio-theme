@@ -91,6 +91,26 @@ THEME_GENERATOR = "Invenio"
 Accepts a string or a func returning a string. Set it to `None` to disable it.
 """
 
+THEME_META_ROBOT_TAGS = []
+"""Robots meta tag to control indexing of the page.
+
+Accepts a list of dicts that will be converted into meta tag attributes, e.g.:
+
+.. code-block:: python
+
+    THEME_META_ROBOT_TAGS = [
+        {"name": "robots", "content": "noindex, nofollow"},
+        {"name": "googlebot", "content": "noimageindex"},
+    ]
+
+will generate:
+
+.. code-block:: html
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noimageindex">
+"""
+
 THEME_GOOGLE_SITE_VERIFICATION = []
 """List of Google Site Verification tokens to be used.
 
