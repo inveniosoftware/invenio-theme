@@ -8,6 +8,13 @@
 Changes
 =======
 
+Version v3.3.0 (released 2024-08-01)
+
+- templates: add meta robot tags
+    * Generate robots meta tags from the `THEME_META_ROBOT_TAGS` config or
+      exlicitly set via the `meta_robot_tags` Jinja variable.
+- header: increase invenio menu z-index
+
 Version 3.2.0 (released 2024-06-25)
 
 - global: add meta generator tag
