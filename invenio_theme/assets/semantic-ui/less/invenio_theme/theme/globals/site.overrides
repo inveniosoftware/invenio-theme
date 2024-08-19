@@ -641,7 +641,7 @@ code {
 .rich-input-content
  {
   table, td, th {
-      border: 1px dashed @lightGray;
+      border: 1px solid @lightGray;
       border-collapse: collapse;
       padding: 1rem;
   }
