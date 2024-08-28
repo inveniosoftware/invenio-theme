@@ -182,3 +182,6 @@ THEME_ICONS = {
     },
 }
 """Icon definitions per theme."""
+
+THEME_MATHJAX_CDN = ""
+"""MathJax configuration for rendering mathematical formulas."""
