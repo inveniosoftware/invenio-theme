@@ -115,6 +115,19 @@
       {%- endblock body_inner %}
 
       {%- block javascript %}
+
+        {% if config.THEME_MATHJAX_CDN %}
+          <script type="text/javascript">
+            window.MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                processEscapes: true // Allows escaping $ signs if needed
+              }
+            };
+          </script>
+          <script type="text/javascript" src="{{ config.THEME_MATHJAX_CDN }}"></script>
+        {% endif %}
+
         {% include config.THEME_JAVASCRIPT_TEMPLATE %}
       {%- endblock javascript %}
 
