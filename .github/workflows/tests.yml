@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2020 CERN.
+# Copyright (C) 2024 CERN.
 # Copyright (C) 2022 Graz University of Technology.
 #
 # Invenio-Drafts-Resources is free software; you can redistribute it and/or modify
@@ -25,39 +25,7 @@ on:
 
 jobs:
   Tests:
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-          python-version: [3.7, 3.8, 3.9]
-          requirements-level: [pypi]
-    env:
-      EXTRAS: tests
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Generate dependencies
-        run: |
-          pip install wheel requirements-builder
-          requirements-builder -e "$EXTRAS" --level=${{ matrix.requirements-level }} setup.py > .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
-
-      - name: Cache pip
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('.${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt') }}
-
-      - name: Install dependencies
-        run: |
-          pip install -r .${{matrix.requirements-level}}-${{ matrix.python-version }}-requirements.txt
-          pip install .[$EXTRAS]
-          pip freeze
-
-      - name: Run tests
-        run: |
-          ./run-tests.sh
+    uses: inveniosoftware/workflows/.github/workflows/tests-python.yml@master
+    with:
+      db-service: '[""]'
+      search-service: '[""]'
