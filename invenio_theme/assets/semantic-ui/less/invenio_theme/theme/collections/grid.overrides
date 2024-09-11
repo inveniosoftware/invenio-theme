@@ -108,13 +108,19 @@
   }
 
   & > .side-bar.column {
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - @relative75px);
     background-color: @adminSideNavColor;
 
     &.hidden {
       position: absolute;
       top: @relative75px;
       transform: translateX(-100%);
+    }
+
+    > .versions {
+      margin-top: auto;
     }
   }
 }
