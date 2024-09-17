@@ -8,6 +8,12 @@
 Changes
 =======
 
+Version v3.4.0 (released 2024-09-17)
+
+- config: add MathJax support
+- navbar: fix logo size in non-desktop devices
+- css: update table border style
+
 Version v3.3.0 (released 2024-08-01)
 
 - templates: add meta robot tags
