@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v3.4.1 (released 2024-09-26)
+
+- administration: style packages versions badges
+
 Version v3.4.0 (released 2024-09-17)
 
 - config: add MathJax support
