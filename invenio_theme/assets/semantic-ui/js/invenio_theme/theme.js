@@ -104,3 +104,8 @@ toggle && toggle.addEventListener("click", toggleMenu, false);
 document.addEventListener('DOMContentLoaded', event => {
   jquery("#flash-message #alert-content").css('display', 'block');
 })
+
+// Declare global Invenio object to be used by JS applications in various modules
+window.invenio = {
+  onSearchResultsRendered: () => {},
+}
