@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v3.4.2 (released 2024-10-02)
+
+- js: add an empty global Invenio plugin, to be used by Invenio modules for
+    callbacks or other functionalities.
+
 Version v3.4.1 (released 2024-09-26)
 
 - administration: style packages versions badges
