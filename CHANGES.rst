@@ -8,6 +8,10 @@
 Changes
 =======
 
+Version v3.4.3 (released 2024-10-03)
+
+- inject MathJax config to JS via data attribute in base html pages
+
 Version v3.4.2 (released 2024-10-02)
 
 - js: add an empty global Invenio plugin, to be used by Invenio modules for
