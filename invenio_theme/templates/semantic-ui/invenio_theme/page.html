@@ -40,8 +40,9 @@
     {%- endblock head_meta %}
 
     {%- block head_title %}
-      {%- set title = title or _(config.THEME_SITENAME) or _('Invenio') %}
-      <title>{{title}}</title>
+      {% set sitename = _(config.THEME_SITENAME) or _('Invenio') %}
+      {% set show_title = title and title != sitename %}
+      <title>{%- if show_title %}{{title}} | {% endif -%}{{ sitename }}</title>
     {%- endblock head_title %}
 
     {%- block head_links %}
