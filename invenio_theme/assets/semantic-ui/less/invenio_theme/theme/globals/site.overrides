@@ -655,3 +655,7 @@ blockquote{
   margin-left: 1.5rem;
   padding-left: 1rem;
 }
+
+.font-weight-normal {
+  font-weight: normal;
+}
