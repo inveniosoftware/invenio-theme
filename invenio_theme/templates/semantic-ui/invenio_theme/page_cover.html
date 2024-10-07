@@ -13,6 +13,8 @@
 
 {%- block body %}
   <div class="sixteen wide column centered">
+    {%- block site_banner %}{%- endblock site_banner %}
+
     {%- block flashmessages %}
       {%- from "invenio_theme/macros/messages.html" import flashed_messages with context -%}
       {{ flashed_messages(center_text=true) }}
