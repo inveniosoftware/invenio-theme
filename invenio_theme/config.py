@@ -9,7 +9,7 @@
 
 """Configuration for Invenio-Theme."""
 
-from invenio_i18n import gettext as _
+from invenio_i18n import lazy_gettext as _
 
 BASE_TEMPLATE = "invenio_theme/page.html"
 """Base template for user facing pages.
