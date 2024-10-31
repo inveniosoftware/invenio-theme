@@ -2,24 +2,15 @@
          Invenio Theme Header Overrides
 ***********************************************/
 
-
-.ui.reset-password.header {
-    margin: 40px 0;
-}
-
 .ui.login.header {
     margin: 40px 0;
 }
-
 .ui.login.segment {
     padding: 15px 40px 40px 40px;
 }
-
-
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6)  {
     font-size: 1em;
 }
-
 
 /*--- Negative ---*/
 .ui.negative.header {
