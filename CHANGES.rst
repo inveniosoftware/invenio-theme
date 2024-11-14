@@ -8,6 +8,11 @@
 Changes
 =======
 
+Version v3.5.0 (released 2024-11-14)
+
+- templates: page_cover: Add banner to login template
+- site: add font-weight normal
+
 Version v3.4.3 (released 2024-10-03)
 
 - inject MathJax config to JS via data attribute in base html pages
