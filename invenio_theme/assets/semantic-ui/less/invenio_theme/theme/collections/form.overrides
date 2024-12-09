@@ -39,3 +39,7 @@
     flex: 1 1 auto;
   }
 }
+
+.ui.form .flashed.message {
+  z-index: 0 !important;
+}
