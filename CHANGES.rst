@@ -9,6 +9,11 @@
 Changes
 =======
 
+Version 3.5.2 (release 2024-12-13)
+
+- theme: fix flash message overlap
+- theme: fix disable text contrast
+
 Version 3.5.1 (release 2024-11-30)
 
 - setup: change to reusable workflows
