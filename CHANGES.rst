@@ -9,6 +9,10 @@
 Changes
 =======
 
+Version v4.0.1 (released 2024-12-16)
+
+- form: some UI fixed for the deposit form
+
 Version 4.0.0 (released 2024-12-02)
 
 - setup: bump major dependencies
