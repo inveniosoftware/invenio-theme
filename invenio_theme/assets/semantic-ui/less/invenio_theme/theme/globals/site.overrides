@@ -401,17 +401,17 @@ code {
 .generate-padding(30, -bottom, b);
 .generate-padding(30, -top, t);
 
-.generate-relative-margins(5, ~'', ~'');
-.generate-relative-margins(5, -right, r);
-.generate-relative-margins(5, -left, l);
-.generate-relative-margins(5, -bottom, b);
-.generate-relative-margins(5, -top, t);
+.generate-relative-margins(10, ~'', ~'');
+.generate-relative-margins(10, -right, r);
+.generate-relative-margins(10, -left, l);
+.generate-relative-margins(10, -bottom, b);
+.generate-relative-margins(10, -top, t);
 
-.generate-relative-padding(5, ~'', ~'');
-.generate-relative-padding(5, -right, r);
-.generate-relative-padding(5, -left, l);
-.generate-relative-padding(5, -bottom, b);
-.generate-relative-padding(5, -top, t);
+.generate-relative-padding(10, ~'', ~'');
+.generate-relative-padding(10, -right, r);
+.generate-relative-padding(10, -left, l);
+.generate-relative-padding(10, -bottom, b);
+.generate-relative-padding(10, -top, t);
 
 
 .generate-truncate-classes(@max, @i: 1) when (@i =< @max) {
