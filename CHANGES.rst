@@ -1,13 +1,17 @@
 ..
     This file is part of Invenio.
     Copyright (C) 2015-2024 CERN.
-    Copyright (C) 2024 Graz University of Technology.
+    Copyright (C) 2024-2025 Graz University of Technology.
 
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 Changes
 =======
+
+Version unreleased
+
+- fix: ModuleWarning: Deprecation Warning
 
 Version v4.0.1 (released 2024-12-16)
 

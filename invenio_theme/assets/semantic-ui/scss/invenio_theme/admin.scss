@@ -6,9 +6,9 @@
  * under the terms of the MIT License; see LICENSE file for more details.
  */
 
-@import "~admin-lte/dist/css/AdminLTE";
-@import "~admin-lte/dist/css/skins/skin-blue";
-@import "~select2/dist/css/select2";
+@use "~admin-lte/dist/css/AdminLTE";
+@use "~admin-lte/dist/css/skins/skin-blue";
+@use "~select2/dist/css/select2";
 
 .main-header {
   background-color: #2c3e50;
