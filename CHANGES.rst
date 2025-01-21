@@ -9,6 +9,10 @@
 Changes
 =======
 
+Version 3.6.1 (release 2025-01-21)
+
+- fix version in __init__.py
+
 Version 3.6.0 (release 2025-01-21)
 
 - theme: expand generator classes
