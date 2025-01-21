@@ -9,6 +9,10 @@
 Changes
 =======
 
+Version 3.6.0 (release 2025-01-21)
+
+- theme: expand generator classes
+
 Version 3.5.2 (release 2024-12-13)
 
 - theme: fix flash message overlap
