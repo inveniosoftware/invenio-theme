@@ -659,3 +659,7 @@ blockquote{
 .font-weight-normal {
   font-weight: normal;
 }
+
+.max-width-100 {
+  max-width: 100%;
+}
