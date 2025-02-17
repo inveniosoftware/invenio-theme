@@ -8,6 +8,11 @@
 
 Changes
 =======
+Version v4.1.1 (released 2025-XX-YY)
+
+- setup: bump invenio-base
+- blueprints: get rather than [] THEME_FRONTPAGE
+
 Version v4.1.0 (released 2025-01-20)
 
 - theme: expand generator classes
