@@ -27,6 +27,7 @@ from invenio_i18n import Babel, InvenioI18N
 from invenio_i18n.views import create_blueprint_from_app
 
 from invenio_theme import InvenioTheme
+from invenio_theme.ext import finalize_app
 from invenio_theme.views import create_blueprint
 
 
@@ -114,6 +115,7 @@ def app_error_handler(request):
     InvenioTheme(app)
 
     app.register_blueprint(create_blueprint(app))
+    finalize_app(app)
     return app
 
 
