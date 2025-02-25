@@ -9,7 +9,7 @@
 Changes
 =======
 
-Version unreleased
+Version v4.1.1 (released 2025-02-25)
 
 - fix: ModuleWarning: Deprecation Warning
 
