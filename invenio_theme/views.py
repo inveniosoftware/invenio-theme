@@ -3,6 +3,7 @@
 # This file is part of Invenio.
 # Copyright (C) 2015-2018 CERN.
 # Copyright (C) 2022-2023 Graz University of Technology.
+# Copyright (C) 2025 Northwestern University.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -23,12 +24,6 @@ def create_blueprint(app):
 
     if app.config["THEME_FRONTPAGE"]:
         blueprint.add_url_rule("/", "index", view_func=index)
-
-    app.register_error_handler(401, unauthorized)
-    app.register_error_handler(403, insufficient_permissions)
-    app.register_error_handler(404, page_not_found)
-    app.register_error_handler(429, too_many_requests)
-    app.register_error_handler(500, internal_error)
 
     return blueprint
 
