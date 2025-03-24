@@ -13,7 +13,7 @@ export const breakpoints = {
   void: 0,
   mobile: 320,
   tablet: 768,
-  computer: 1300,
+  computer: 1280,
   largeScreen: 1680,
   widescreen: 1920,
 };
