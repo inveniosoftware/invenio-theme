@@ -58,6 +58,6 @@ IMPORTANT: align changes with Media.js
 --------------------*/
 @mobileBreakpoint            : 320px;
 @tabletBreakpoint            : 768px;
-@computerBreakpoint          : 1300px;
+@computerBreakpoint          : 1280px;
 @largeMonitorBreakpoint      : 1680px;
 @widescreenMonitorBreakpoint : 1920px;
