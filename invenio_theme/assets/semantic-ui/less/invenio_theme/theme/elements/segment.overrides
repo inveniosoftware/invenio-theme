@@ -62,3 +62,39 @@
   }
 }
 
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.log-line {
+  font-family: monospace;
+  animation: fadeIn 0.3s ease-in;
+  &.debug {
+    background-color: #f9f9f9;
+    color: #999;
+  }
+
+  &.warning {
+    background-color: #fff7e6;
+    color: #b26a00;
+  }
+
+  &.error {
+    background-color: #fdecea;
+    color: #c00;
+  }
+
+  &.critical {
+    background-color: #ffe6e6;
+    color: #900;
+    font-weight: bold;
+  }
+}
