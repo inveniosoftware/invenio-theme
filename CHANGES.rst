@@ -9,6 +9,13 @@
 Changes
 =======
 
+Version v4.2.0 (released 2025-04-28)
+
+- theme: set breakpoint for low resolution screens
+- fix: setuptools require underscores instead of dashes
+- i18n: removed deprecated messages
+- overrides: add table and grid log values
+
 Version v4.1.1 (released 2025-02-25)
 
 - fix: ModuleWarning: Deprecation Warning
