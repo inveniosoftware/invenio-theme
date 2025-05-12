@@ -3,6 +3,7 @@
 # This file is part of Invenio.
 # Copyright (C) 2015-2018 CERN.
 # Copyright (C) 2022-2023 Graz University of Technology.
+# Copyright (C) 2025 Northwestern University.
 #
 # Invenio is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
@@ -14,6 +15,13 @@ from invenio_base.utils import load_or_import_from_config
 
 from . import config
 from .icons import ThemeIcons
+from .views import (
+    insufficient_permissions,
+    internal_error,
+    page_not_found,
+    too_many_requests,
+    unauthorized,
+)
 
 
 class InvenioTheme(object):
@@ -37,6 +45,7 @@ class InvenioTheme(object):
         :param app: An instance of :class:`~flask.Flask`.
         """
         self.init_config(app)
+        self.register_error_handlers(app)
 
         self.menu_ext = Menu(app)
 
@@ -71,6 +80,14 @@ class InvenioTheme(object):
             return value() if callable(value) else value
 
         app.jinja_env.globals["get_meta_generator"] = _generator_func_or_str
+
+    def register_error_handlers(self, app):
+        """Register error handlers."""
+        app.register_error_handler(401, unauthorized)
+        app.register_error_handler(403, insufficient_permissions)
+        app.register_error_handler(404, page_not_found)
+        app.register_error_handler(429, too_many_requests)
+        app.register_error_handler(500, internal_error)
 
     @property
     def icons(self):
