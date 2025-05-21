@@ -9,6 +9,11 @@
 Changes
 =======
 
+Version v4.3.0 (released 2025-05-21)
+
+- app: register error handling in ext.py (app loading)
+- css: add small and italic
+
 Version v4.2.0 (released 2025-04-28)
 
 - theme: set breakpoint for low resolution screens
