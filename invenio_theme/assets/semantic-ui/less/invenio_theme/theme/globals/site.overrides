@@ -659,3 +659,11 @@ blockquote{
 .font-weight-normal {
   font-weight: normal;
 }
+
+.font-size-small {
+  font-size: @small;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
