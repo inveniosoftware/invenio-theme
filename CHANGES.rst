@@ -9,6 +9,11 @@
 Changes
 =======
 
+Version v4.4.0 (released 2025-07-17)
+
+- i18n: pulled translations
+- fix: translation only applied on app start
+
 Version v4.3.0 (released 2025-05-21)
 
 - app: register error handling in ext.py (app loading)
