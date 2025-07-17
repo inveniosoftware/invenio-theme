@@ -1,8 +1,8 @@
 # Translations template for invenio-theme.
-# Copyright (C) 2022 CERN
+# Copyright (C) 2024 CERN
 # This file is distributed under the same license as the invenio-theme
 # project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
 # Martin Jantson <martinjantson97@gmail.com>, 2022
@@ -10,91 +10,92 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: invenio-theme 1.3.28\n"
+"Project-Id-Version: invenio-theme 3.3.0\n"
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
-"POT-Creation-Date: 2022-09-16 08:40+0000\n"
+"POT-Creation-Date: 2024-08-06 08:56+0000\n"
 "PO-Revision-Date: 2016-08-25 15:28+0000\n"
 "Last-Translator: Martin Jantson <martinjantson97@gmail.com>, 2022\n"
 "Language-Team: Estonian (https://app.transifex.com/inveniosoftware/teams/23537/et/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.10.3\n"
+"Generated-By: Babel 2.15.0\n"
 "Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: invenio_theme/config.py:102 invenio_theme/config.py:117
-#: invenio_theme/templates/invenio_theme/page.html:26
-#: invenio_theme/templates/invenio_theme/page_admin.html:34
-#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:29
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:34
+#: invenio_theme/config.py:129 invenio_theme/config.py:141
+#: invenio_theme/templates/invenio_theme/page.html:40
+#: invenio_theme/templates/invenio_theme/page_admin.html:40
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:43
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:40
 msgid "Invenio"
 msgstr "Invenio"
 
-#: invenio_theme/ext.py:73
-msgid "Home"
-msgstr "Avaleht"
-
 #: invenio_theme/templates/invenio_theme/401.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:15
 msgid "Unauthorized"
 msgstr "Autoriseerimata"
 
 #: invenio_theme/templates/invenio_theme/401.html:14
-#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:16
 msgid "You need to be authenticated to view this page."
 msgstr "Selle lehe nägemiseks pead olema autentitud."
 
 #: invenio_theme/templates/invenio_theme/403.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:15
 msgid "Permission required"
 msgstr "Puudub luba"
 
 #: invenio_theme/templates/invenio_theme/403.html:14
-#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:16
 msgid "You do not have sufficient permissions to view this page."
 msgstr "Sul ei ole selle lehe vaatamiseks ei ole piisavalt õigusi."
 
 #: invenio_theme/templates/invenio_theme/404.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:15
 msgid "Page not found"
 msgstr "Lehte ei leitud"
 
 #: invenio_theme/templates/invenio_theme/404.html:14
-#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:16
 msgid "The page you are looking for could not be found."
 msgstr "Otsitavat lehte ei leitud."
 
 #: invenio_theme/templates/invenio_theme/429.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:15
 msgid "Too many requests"
 msgstr "Liiga palju päringuid"
 
 #: invenio_theme/templates/invenio_theme/429.html:14
-#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:16
 msgid "You have made too many consecutive requests, please try again later."
 msgstr ""
 "Oled teinud liiga palju järjestikuseid päringuid, palun proovi hiljem "
 "uuesti."
 
 #: invenio_theme/templates/invenio_theme/500.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:12
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:15
 msgid "Internal server error"
 msgstr "Sisemine serveritõrge"
 
 #: invenio_theme/templates/invenio_theme/500.html:15
-#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:17
 msgid "Error identifier"
 msgstr "Vea identifikaator"
 
-#: invenio_theme/templates/invenio_theme/admin_header.html:17
-#: invenio_theme/templates/invenio_theme/header.html:16
-#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:17
+#: invenio_theme/templates/invenio_theme/admin_header.html:18
+#: invenio_theme/templates/invenio_theme/header.html:17
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:18
 msgid "Toggle navigation"
 msgstr "Lülita navigeerimine sisse"
 
-#: invenio_theme/templates/invenio_theme/admin_header.html:72
-#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:72
+#: invenio_theme/templates/invenio_theme/admin_header.html:73
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:73
 msgid "Logout"
 msgstr "Logi välja"
 
@@ -103,8 +104,8 @@ msgstr "Logi välja"
 msgid "Powered by <a href=\"%(link)s\">Invenio</a>"
 msgstr "Powered by <a href=\"%(link)s\">Invenio</a>"
 
-#: invenio_theme/templates/invenio_theme/header.html:38
-#: invenio_theme/templates/semantic-ui/invenio_theme/header.html:46
+#: invenio_theme/templates/invenio_theme/header.html:39
+#: invenio_theme/templates/semantic-ui/invenio_theme/header.html:47
 msgid "Search"
 msgstr "Otsi"
 
@@ -113,25 +114,26 @@ msgstr "Otsi"
 msgid "Type and press enter to search"
 msgstr "Trüki ja vajuta otsimiseks enterit"
 
-#: invenio_theme/templates/invenio_theme/header_login.html:12
-#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:15
+#: invenio_theme/templates/invenio_theme/header_login.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:16
 msgid "Log in"
 msgstr "Logi sisse"
 
-#: invenio_theme/templates/invenio_theme/header_login.html:13
-#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:19
+#: invenio_theme/templates/invenio_theme/header_login.html:14
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:20
 msgid "Sign up"
 msgstr "Registreeru"
 
-#: invenio_theme/templates/invenio_theme/header_login.html:30
-#: invenio_theme/templates/invenio_theme/header_login.html:34
-#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:44
-#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:52
+#: invenio_theme/templates/invenio_theme/header_login.html:31
+#: invenio_theme/templates/invenio_theme/header_login.html:35
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:50
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:58
 msgid "Log out"
 msgstr "Logi välja"
 
-#: invenio_theme/templates/invenio_theme/page_settings.html:19
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:25
+#: invenio_theme/templates/invenio_theme/page_settings.html:20
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:15
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:30
 msgid "Settings"
 msgstr "Seaded"
 
@@ -152,15 +154,15 @@ msgstr ""
 "Powered by\n"
 "        <a href=\"%(link)s\">Invenio</a>"
 
-#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:75
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:89
 msgid "Skip to main"
 msgstr "Edasi põhilehe juurde"
 
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:17
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:21
 msgid "My account"
 msgstr "Minu konto"
 
-#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:21
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:26
 msgid "Account settings"
 msgstr "Konto seaded"
 

@@ -5,7 +5,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
 # 
 # Translators:
-# Tibor Simko <tibor.simko@cern.ch>, 2020
+# Minjae Kwon, 2023
 # 
 #, fuzzy
 msgid ""
@@ -14,14 +14,14 @@ msgstr ""
 "Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
 "POT-Creation-Date: 2024-08-06 08:56+0000\n"
 "PO-Revision-Date: 2016-08-25 15:28+0000\n"
-"Last-Translator: Tibor Simko <tibor.simko@cern.ch>, 2020\n"
-"Language-Team: Lithuanian (https://app.transifex.com/inveniosoftware/teams/23537/lt/)\n"
+"Last-Translator: Minjae Kwon, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/inveniosoftware/teams/23537/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.15.0\n"
-"Language: lt\n"
-"Plural-Forms: nplurals=4; plural=(n % 10 == 1 && (n % 100 > 19 || n % 100 < 11) ? 0 : (n % 10 >= 2 && n % 10 <=9) && (n % 100 > 19 || n % 100 < 11) ? 1 : n % 1 != 0 ? 2: 3);\n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: invenio_theme/config.py:129 invenio_theme/config.py:141
 #: invenio_theme/templates/invenio_theme/page.html:40
@@ -57,7 +57,7 @@ msgstr ""
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:12
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:15
 msgid "Page not found"
-msgstr "Puslapis nerastas"
+msgstr ""
 
 #: invenio_theme/templates/invenio_theme/404.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/404.html:16
@@ -95,7 +95,7 @@ msgstr ""
 #: invenio_theme/templates/invenio_theme/admin_header.html:73
 #: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:73
 msgid "Logout"
-msgstr "Atsijungti"
+msgstr "로그아웃"
 
 #: invenio_theme/templates/invenio_theme/footer.html:22
 #, python-format
@@ -105,7 +105,7 @@ msgstr ""
 #: invenio_theme/templates/invenio_theme/header.html:39
 #: invenio_theme/templates/semantic-ui/invenio_theme/header.html:47
 msgid "Search"
-msgstr "Ieškoti"
+msgstr "검색"
 
 #: invenio_theme/templates/invenio_theme/header_frontpage.html:29
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_frontpage.html:32
@@ -115,12 +115,12 @@ msgstr ""
 #: invenio_theme/templates/invenio_theme/header_login.html:13
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:16
 msgid "Log in"
-msgstr ""
+msgstr "로그인"
 
 #: invenio_theme/templates/invenio_theme/header_login.html:14
 #: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:20
 msgid "Sign up"
-msgstr ""
+msgstr "가입"
 
 #: invenio_theme/templates/invenio_theme/header_login.html:31
 #: invenio_theme/templates/invenio_theme/header_login.html:35
