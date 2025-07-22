@@ -667,3 +667,38 @@ blockquote{
 .font-style-italic {
   font-style: italic;
 }
+
+:not(.ui.grid).only {
+
+  &.mobile:not(.tablet) {
+    @media all and (min-width: @tabletBreakpoint) {
+      display: none !important;
+    }
+  }
+
+  &.tablet {
+    &.mobile {
+      @media all and (min-width: @computerBreakpoint) {
+        display: none !important;
+      }
+    }
+
+    &.computer {
+      @media all and (max-width: @largestMobileScreen) {
+        display: none !important;
+      }
+    }
+
+    &:not(.computer):not(.mobile) {
+      @media not all and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+        display: none !important;
+      }
+    }
+  }
+
+  &.computer:not(.tablet) {
+    @media all and (max-width: @largestTabletScreen) {
+      display: none !important;
+    }
+  }
+}
