@@ -22,7 +22,7 @@ def create_blueprint(app):
         static_folder="static",
     )
 
-    if app.config["THEME_FRONTPAGE"]:
+    if app.config.get("THEME_FRONTPAGE"):
         blueprint.add_url_rule("/", "index", view_func=index)
 
     return blueprint
