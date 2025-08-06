@@ -9,6 +9,10 @@
 Changes
 =======
 
+Version v4.4.1 (released 2025-08-06)
+
+-  theme: move invenio-administration styles
+
 Version v4.4.0 (released 2025-07-17)
 
 - i18n: pulled translations
