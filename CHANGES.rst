@@ -2,12 +2,18 @@
     This file is part of Invenio.
     Copyright (C) 2015-2025 CERN.
     Copyright (C) 2024-2025 Graz University of Technology.
+    Copyright (C) 2025 KTH Royal Institute of Technology.
 
     Invenio is free software; you can redistribute it and/or modify it
     under the terms of the MIT License; see LICENSE file for more details.
 
 Changes
 =======
+
+Version v4.4.2 (released 2025-10-22)
+
+- i18n: pulled translations
+- views: use .get() for THEME_FRONTPAGE to avoid hard dependency
 
 Version v4.4.1 (released 2025-08-06)
 
