@@ -43,3 +43,10 @@
 .ui.form .flashed.message {
   z-index: 0 !important;
 }
+
+/* Avoid adding the * in the helptext for required fields */
+.ui.form .required.field > label.helptext:after,
+.ui.form .required.fields.grouped > label.helptext:after,
+.ui.form .required.fields:not(.grouped) > .field > label.helptext:after {
+  content: none !important;
+}
