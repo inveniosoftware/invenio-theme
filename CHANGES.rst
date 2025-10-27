@@ -10,6 +10,10 @@
 Changes
 =======
 
+Version v4.4.3 (released 2025-10-27)
+
+- remove wrong '*' from label help text when a field is required
+
 Version v4.4.2 (released 2025-10-22)
 
 - i18n: pulled translations
