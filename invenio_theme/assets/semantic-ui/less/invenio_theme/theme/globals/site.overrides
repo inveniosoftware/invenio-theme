@@ -650,10 +650,16 @@ code {
     white-space: pre-wrap;
   }
 }
-blockquote{
-  border-left: 4px solid @lightGray;
-  margin-left: 1.5rem;
+
+blockquote {
+  margin-left: 0.5rem;
   padding-left: 1rem;
+  color: @mutedTextColor;
+  border-left: 4px solid @lightGray;
+
+  & > blockquote {
+    margin-left: 0;
+  }
 }
 
 .font-weight-normal {
