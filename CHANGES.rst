@@ -10,6 +10,11 @@
 Changes
 =======
 
+Version v4.5.0 (released 2025-12-05)
+
+- css: reduce margin on blockquotes site-wide
+- tests: extend support to Python 3.14
+
 Version v4.4.3 (released 2025-10-27)
 
 - remove wrong '*' from label help text when a field is required
