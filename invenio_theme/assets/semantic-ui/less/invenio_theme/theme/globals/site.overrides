@@ -305,6 +305,14 @@ code {
   display: grid !important;
 }
 
+.display-inline-flex {
+  display: inline-flex;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
 /* Generator functions */
 
 .generate-margins(@max, @direction, @alias, @i: 0) when (@i =< @max) {
