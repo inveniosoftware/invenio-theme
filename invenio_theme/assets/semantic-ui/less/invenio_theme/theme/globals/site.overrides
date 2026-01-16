@@ -716,3 +716,9 @@ blockquote {
     }
   }
 }
+
+.rel-mobile-pt-1 {
+  @media all and (max-width: @largestMobileScreen) {
+    padding-top: 1rem !important;
+  }
+}
