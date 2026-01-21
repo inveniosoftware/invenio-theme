@@ -716,3 +716,20 @@ blockquote {
     }
   }
 }
+
+/*-------------------------
+   Job Logs Styling
+-------------------------*/
+
+/* Log table container */
+.job-log-table {
+  max-height: 80vh;
+  overflow-y: auto;
+
+  /* Subtask container - subtle indentation for subtask logs without border */
+  .subtask-container {
+    padding: 0.5em;
+    margin: 0.5em 0 0.5em 1em;
+    background-color: #fafafa;
+  }
+}
