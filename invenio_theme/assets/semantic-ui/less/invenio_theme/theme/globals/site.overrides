@@ -733,3 +733,31 @@ blockquote {
     background-color: #fafafa;
   }
 }
+
+/*-------------------------
+   Collections Table Styling
+   (Used by invenio-communities)
+-------------------------*/
+
+/* Background color for nested collections based on depth */
+.generate-depth-backgrounds(@i: 1) when (@i <= 10) {
+  .collection-depth-bg[data-depth="@{i}"] {
+    background-color: rgba(0, 0, 0, (@i * 0.05)) !important;
+  }
+  .generate-depth-backgrounds(@i + 1);
+}
+.generate-depth-backgrounds();
+
+/* Padding for nested collections based on depth */
+.collection-depth-padding[data-depth="0"],
+.collection-depth-padding[data-depth="1"] {
+  padding-left: 1rem !important;
+}
+
+.generate-depth-padding(@i: 2) when (@i <= 10) {
+  .collection-depth-padding[data-depth="@{i}"] {
+    padding-left: (@i * 1rem) !important;
+  }
+  .generate-depth-padding(@i + 1);
+}
+.generate-depth-padding();
