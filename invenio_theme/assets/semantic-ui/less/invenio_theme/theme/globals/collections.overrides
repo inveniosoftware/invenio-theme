@@ -1,0 +1,348 @@
+/*-------------------------
+   Collections Table Styling
+   (Used by invenio-communities)
+-------------------------*/
+
+/* Collection Tree (Category) Section */
+.collection-tree-section {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &.drag-over {
+    border-left: 3px solid #2185d0;
+  }
+}
+
+/* Drag and Drop Handles */
+.tree-drag-handle,
+.child-drag-handle,
+.parent-drag-handle {
+  cursor: grab;
+  margin-right: 0.5rem;
+
+  &:active,
+  &.grabbing {
+    cursor: grabbing;
+  }
+}
+
+/* Category controls */
+.category-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.category-toggle {
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.category-header {
+  margin-bottom: 0;
+}
+
+/* Collection Cards */
+.collection-card {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &.drag-over {
+    border-left: 3px solid #2185d0;
+  }
+}
+
+.collection-grid-column {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &.drag-over {
+    border-left: 3px solid #2185d0;
+  }
+}
+
+.collection-title {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* Child Collections */
+.collection-child-item {
+  position: relative;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &.dragging {
+    opacity: 0.5;
+  }
+
+  &.drag-over {
+    border-left: 3px solid #2185d0;
+  }
+
+  .child-collection-row {
+    min-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .child-collection-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    min-width: 0; // Important for flex truncation
+
+    .truncated {
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .collection-link {
+      flex: 1;
+      margin: 0;
+      min-width: 0; // Important for flex truncation
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .truncated {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .child-collection-label {
+    flex-shrink: 0;
+  }
+
+  .child-collection-actions {
+    flex-shrink: 0;
+  }
+}
+
+/* Collection action menus - fix icon spacing */
+.collection-actions-menu {
+  .item > i.icon {
+    margin-right: 0.5rem !important;
+  }
+}
+
+/*-------------------------
+   Collections CRUD/Browse Styling - Additional Styles
+-------------------------*/
+
+.collection-actions-menu {
+  &.ui.button.icon {
+    padding: 0.5rem;
+    background: transparent;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    i.icon {
+      margin: 0;
+      opacity: 0.6;
+    }
+  }
+}
+
+.collection-number {
+  text-align: right;
+}
+
+.collection-browse-card {
+  transition: all 0.2s ease;
+  position: relative;
+
+  .collection-actions-menu {
+    cursor: pointer;
+  }
+
+  .parent-drag-handle {
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: grab;
+    font-size: 1.2em;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &:hover .parent-drag-handle {
+    opacity: 0.5;
+  }
+
+  // Parent collection title should be bold
+  .collection-title,
+  h4.collection-title.header {
+    font-weight: bold !important;
+  }
+}
+
+.collection-link {
+  color: @linkColor;
+  text-decoration: none;
+  padding-left: 1.5rem;
+
+  &:hover {
+    color: @linkHoverColor;
+    text-decoration: underline;
+  }
+
+  h4.header, h5.header {
+    color: inherit;
+  }
+}
+
+.collection-grid-column {
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+  }
+}
+
+.collection-child-item {
+  border-radius: 4px;
+  padding: 0.15rem 0;
+  margin-bottom: 0.15rem !important;
+  margin-top: 0 !important;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+
+    .child-drag-handle {
+      opacity: 0.5;
+    }
+  }
+
+  .child-drag-handle {
+    margin-right: 0.5rem;
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: grab;
+    font-size: 0.9em;
+    flex-shrink: 0;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  h5.header {
+    font-size: 1em;
+    margin: 0 !important;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ui.label.tiny {
+    padding: 0.2em 0.4em;
+    font-size: 0.75rem;
+  }
+}
+
+.collection-tree-section {
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+
+  .collection-tree-content {
+    margin-top: 1rem;
+  }
+
+  .ui.divider {
+    margin-top: 1.5rem;
+  }
+
+  .tree-drag-handle {
+    color: #999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: grab;
+    font-size: 1.2em;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &:hover .tree-drag-handle {
+    opacity: 0.5;
+  }
+}
+
+// Nested collection item with visual hierarchy
+.nested-collection-item {
+  border-left: 2px solid #e0e0e0;
+  padding-left: 10px;
+  margin-top: 5px;
+
+  // Indentation levels for nested collections (up to 10 levels)
+  &[data-nesting-level="1"] {
+    margin-left: 20px;
+  }
+
+  &[data-nesting-level="2"] {
+    margin-left: 40px;
+  }
+
+  &[data-nesting-level="3"] {
+    margin-left: 60px;
+  }
+
+  &[data-nesting-level="4"] {
+    margin-left: 80px;
+  }
+
+  &[data-nesting-level="5"] {
+    margin-left: 100px;
+  }
+
+  &[data-nesting-level="6"] {
+    margin-left: 120px;
+  }
+
+  &[data-nesting-level="7"] {
+    margin-left: 140px;
+  }
+
+  &[data-nesting-level="8"] {
+    margin-left: 160px;
+  }
+
+  &[data-nesting-level="9"] {
+    margin-left: 180px;
+  }
+
+  &[data-nesting-level="10"] {
+    margin-left: 200px;
+  }
+}
+
+// Nested children container
+.nested-children {
+  margin-top: 5px;
+}
