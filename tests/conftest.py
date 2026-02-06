@@ -10,7 +10,6 @@
 
 """Pytest configuration."""
 
-
 import shutil
 
 import jinja2
