@@ -10,6 +10,10 @@
 Changes
 =======
 
+Version v4.6.0 (released 2026-03-09)
+
+- css: add styling for logs (invenio-jobs)
+
 Version v4.5.0 (released 2025-12-05)
 
 - css: reduce margin on blockquotes site-wide
