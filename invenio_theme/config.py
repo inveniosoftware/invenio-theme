@@ -168,6 +168,7 @@ THEME_ICONS = {
         "exchange": "exchange icon",
         "star_outline": "star outline icon",
         "users": "users icon",
+        "storage": "hdd icon",
         # Special catch all:
         "*": "{} icon",
     },
