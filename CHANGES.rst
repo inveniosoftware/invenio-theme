@@ -10,6 +10,11 @@
 Changes
 =======
 
+Version v4.7.0 (released 2026-04-23)
+
+- collections: adds css required for collection CRUD UI
+- site: add collections rules
+
 Version v4.6.0 (released 2026-03-09)
 
 - css: add styling for logs (invenio-jobs)
