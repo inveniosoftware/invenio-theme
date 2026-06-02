@@ -10,6 +10,10 @@
 Changes
 =======
 
+Version v4.8.0 (released 2026-06-02)
+
+- ux: Add THEME_SITENAME as a suffix in <head>
+
 Version v4.7.0 (released 2026-04-23)
 
 - collections: adds css required for collection CRUD UI
