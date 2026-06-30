@@ -1,4 +1,107 @@
-[build-system]
-requires = ["setuptools", "wheel", "babel>2.8"]
-build-backend = "setuptools.build_meta"
+# SPDX-FileCopyrightText: 2015-2024 CERN.
+# SPDX-FileCopyrightText: 2022-2024 Graz University of Technology.
+# SPDX-FileCopyrightText: 2026 TU Wien.
+# SPDX-License-Identifier: MIT
 
+[project]
+name = "invenio-theme"
+description = "Invenio standard theme."
+readme = "README.rst"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+  { name = "Invenio Collaboration", email = "info@inveniosoftware.org" },
+]
+keywords = [
+  "invenio",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+]
+dependencies = [
+  "flask-menu>=1.0.0",
+  "invenio-assets>=4.0.0,<5.0.0",
+  "invenio-base>=2.0.0,<3.0.0",
+  "invenio-i18n>=4.0.0,<5.0.0",
+  "jsmin>=3.0.0",
+]
+dynamic = ["version"]
+
+[project.urls]
+Repository = "https://github.com/inveniosoftware/invenio-theme"
+
+[project.entry-points."invenio_assets.webpack"]
+invenio_theme = "invenio_theme.webpack:theme"
+
+[project.entry-points."invenio_base.apps"]
+invenio_theme = "invenio_theme:InvenioTheme"
+
+[project.entry-points."invenio_base.blueprints"]
+invenio_theme = "invenio_theme.views:create_blueprint"
+
+[project.entry-points."invenio_i18n.translations"]
+messages = "invenio_theme"
+
+[project.optional-dependencies]
+docs = []
+tests = [
+  "pytest-black-ng>=0.4.0",
+  "pytest-invenio>=3.0.0,<4.0.0",
+  "sphinx>=5",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# see https://babel.pocoo.org/en/latest/messages.html#toml-configuration-format
+[tool.babel]
+[tool.babel.compile_catalog]
+directory = "invenio_theme/translations/"
+use_fuzzy = true
+
+[tool.babel.extract_messages]
+copyright_holder = "CERN"
+msgid_bugs_address = "info@inveniosoftware.org"
+mapping_file = "pyproject.toml"
+output_file = "invenio_theme/translations/messages.pot"
+add_comments = "NOTE"
+
+[tool.babel.init_catalog]
+input_file = "invenio_theme/translations/messages.pot"
+output_dir = "invenio_theme/translations/"
+
+[[tool.babel.mappings]]
+method = "javascript"
+pattern = "**.js"
+encoding = "utf-8"
+extract_messages = "$._, jQuery._"
+
+[[tool.babel.mappings]]
+method = "python"
+pattern = "**.py"
+encoding = "utf-8"
+
+[[tool.babel.mappings]]
+method = "jinja2"
+pattern = "**/templates/**.html"
+encoding = "utf-8"
+
+[tool.hatch.version]
+path = "invenio_theme/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/invenio_theme",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.pydocstyle]
+add_ignore = ""
+
+[tool.pytest.ini_options]
+addopts = '--black --isort --pydocstyle --doctest-glob="*.rst" --doctest-modules --cov=invenio_theme --cov-report=term-missing'
+testpaths = "tests invenio_theme"
+live_server_scope = "module"

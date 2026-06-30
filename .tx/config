@@ -11,9 +11,9 @@
 # Transifex integration
 #
 # 1) Create message catalog:
-#    $ python setup.py extract_messages
-#    $ python setup.py init_catalog -l <lang>
-#    $ python setup.py compile_catalog
+#    $ pybabel extract -F pyproject.toml -o invenio_theme/translations/messages.pot invenio_theme
+#    $ pybabel init -i invenio_theme/translations/messages.pot -d invenio_theme/translations -l <lang>
+#    $ pybabel compile -d invenio_theme/translations --use-fuzzy
 # 2) Ensure project has been created on Transifex under the inveniosoftware
 #    organisation.
 # 3) Install the transifex-client
