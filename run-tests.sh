@@ -9,7 +9,6 @@ set -o errexit
 # Quit on unbound symbols
 set -o nounset
 
-python -m check_manifest
-python -m setup extract_messages --output-file /dev/null
+pybabel extract -F pyproject.toml invenio_theme --output-file /dev/null
 sphinx-build -qnNW docs docs/_build/html
 python -m pytest
