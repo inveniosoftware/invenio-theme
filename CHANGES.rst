@@ -7,6 +7,10 @@
 Changes
 =======
 
+Version v5.0.2 (released 2026-07-01)
+
+- fix(publish): use the appropriate translation step in the publication workflow
+
 Version v5.0.1 (released 2026-07-01)
 
 - chore(setup): migrate build backend from setuptools to hatchling
