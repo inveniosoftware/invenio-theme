@@ -7,6 +7,10 @@
 Changes
 =======
 
+Version v5.0.1 (released 2026-07-01)
+
+- chore(setup): migrate build backend from setuptools to hatchling
+
 Version v5.0.0 (released 2026-06-16)
 
 - chore(setup): bump dependencies
