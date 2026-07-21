@@ -7,6 +7,12 @@
 Changes
 =======
 
+Version v4.8.1 (released 2026-07-21)
+
+- fix(publish): use the right translation step in the publication workflow
+- chore(setup): migrate from setuptools to hatchling
+- chore(licenses): update license headers to use SPDX
+
 Version v4.8.0 (released 2026-06-02)
 
 - ux: Add THEME_SITENAME as a suffix in <head>

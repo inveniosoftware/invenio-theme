@@ -486,7 +486,6 @@ template.
 from .ext import InvenioTheme
 from .shared import menu
 
-__version__ = "4.8.0"
-
+__version__ = "4.8.1"
 
 __all__ = ("__version__", "InvenioTheme", "menu")
