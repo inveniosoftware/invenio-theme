@@ -1,0 +1,167 @@
+# Translations template for invenio-theme.
+# Copyright (C) 2026 CERN
+# This file is distributed under the same license as the invenio-theme
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# 
+# Translators:
+# Suthep Yonphimai <tomztt@gmail.com>, 2026
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: invenio-theme 4.8.0\n"
+"Report-Msgid-Bugs-To: info@inveniosoftware.org\n"
+"POT-Creation-Date: 2026-06-22 20:29+0000\n"
+"PO-Revision-Date: 2016-08-25 15:28+0000\n"
+"Last-Translator: Suthep Yonphimai <tomztt@gmail.com>, 2026\n"
+"Language-Team: Thai (https://app.transifex.com/inveniosoftware/teams/23537/th/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+"Language: th\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: invenio_theme/config.py:124 invenio_theme/config.py:136
+#: invenio_theme/templates/invenio_theme/page.html:36
+#: invenio_theme/templates/invenio_theme/page_admin.html:36
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:39
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_admin.html:36
+msgid "Invenio"
+msgstr "Invenio"
+
+#: invenio_theme/templates/invenio_theme/401.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:8
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:11
+msgid "Unauthorized"
+msgstr "ไม่ได้รับอนุญาต"
+
+#: invenio_theme/templates/invenio_theme/401.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/401.html:12
+msgid "You need to be authenticated to view this page."
+msgstr "คุณต้องเข้าสู่ระบบก่อนจึงจะดูหน้านี้ได้"
+
+#: invenio_theme/templates/invenio_theme/403.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:8
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:11
+msgid "Permission required"
+msgstr "ต้องการสิทธิ์เข้าถึง"
+
+#: invenio_theme/templates/invenio_theme/403.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/403.html:12
+msgid "You do not have sufficient permissions to view this page."
+msgstr "คุณไม่มีสิทธิ์เพียงพอในการดูหน้านี้"
+
+#: invenio_theme/templates/invenio_theme/404.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:8
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:11
+msgid "Page not found"
+msgstr "ไม่พบหน้า"
+
+#: invenio_theme/templates/invenio_theme/404.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/404.html:12
+msgid "The page you are looking for could not be found."
+msgstr "ไม่พบหน้าที่คุณกำลังค้นหา"
+
+#: invenio_theme/templates/invenio_theme/429.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:8
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:11
+msgid "Too many requests"
+msgstr "คำขอมากเกินไป"
+
+#: invenio_theme/templates/invenio_theme/429.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/429.html:12
+msgid "You have made too many consecutive requests, please try again later."
+msgstr "คุณส่งคำขอติดต่อกันมากเกินไป กรุณาลองอีกครั้งในภายหลัง"
+
+#: invenio_theme/templates/invenio_theme/500.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:8
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:11
+msgid "Internal server error"
+msgstr "เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์"
+
+#: invenio_theme/templates/invenio_theme/500.html:11
+#: invenio_theme/templates/semantic-ui/invenio_theme/500.html:13
+msgid "Error identifier"
+msgstr "รหัสข้อผิดพลาด"
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:14
+#: invenio_theme/templates/invenio_theme/header.html:13
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:14
+msgid "Toggle navigation"
+msgstr "สลับการนำทาง"
+
+#: invenio_theme/templates/invenio_theme/admin_header.html:69
+#: invenio_theme/templates/semantic-ui/invenio_theme/admin_header.html:69
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: invenio_theme/templates/invenio_theme/footer.html:18
+#, python-format
+msgid "Powered by <a href=\"%(link)s\">Invenio</a>"
+msgstr "ขับเคลื่อนโดย <a href=\"%(link)s\">Invenio</a>"
+
+#: invenio_theme/templates/invenio_theme/header.html:35
+#: invenio_theme/templates/semantic-ui/invenio_theme/header.html:43
+msgid "Search"
+msgstr "ค้นหา"
+
+#: invenio_theme/templates/invenio_theme/header_frontpage.html:25
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_frontpage.html:28
+msgid "Type and press enter to search"
+msgstr "พิมพ์แล้วกด Enter เพื่อค้นหา"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:9
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:12
+msgid "Log in"
+msgstr "เข้าสู่ระบบ"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:10
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:16
+msgid "Sign up"
+msgstr "สมัครสมาชิก"
+
+#: invenio_theme/templates/invenio_theme/header_login.html:27
+#: invenio_theme/templates/invenio_theme/header_login.html:31
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:46
+#: invenio_theme/templates/semantic-ui/invenio_theme/header_login.html:54
+msgid "Log out"
+msgstr "ออกจากระบบ"
+
+#: invenio_theme/templates/invenio_theme/page_settings.html:16
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:11
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:26
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:10
+msgid "Show more"
+msgstr "แสดงเพิ่มเติม"
+
+#: invenio_theme/templates/invenio_theme/macros/truncate.html:11
+msgid "Show less"
+msgstr "แสดงน้อยลง"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/footer.html:13
+#, python-format
+msgid ""
+"Powered by\n"
+"        <a href=\"%(link)s\">Invenio</a>"
+msgstr "ขับเคลื่อนโดย <a href=\"%(link)s\">Invenio</a>"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page.html:86
+msgid "Skip to main"
+msgstr "ข้ามไปยังเนื้อหาหลัก"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:17
+msgid "My account"
+msgstr "บัญชีของฉัน"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/page_settings.html:22
+msgid "Account settings"
+msgstr "การตั้งค่าบัญชี"
+
+#: invenio_theme/templates/semantic-ui/invenio_theme/macros/messages.html:29
+msgid "Close"
+msgstr "ปิด"
