@@ -77,8 +77,8 @@
       {%- endblock css %}
     {%- endblock head %}
   </head>
-
-  <body data-invenio-config='{{ { "isMathJaxEnabled": config.THEME_MATHJAX_CDN, } | tojson }}' {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
+  {% set is_math_jax_enabled = config.THEME_MATHJAX_CDN is defined and config.THEME_MATHJAX_CDN is not none and config.THEME_MATHJAX_CDN != "" %}
+  <body data-invenio-config='{{ { "isMathJaxEnabled": is_math_jax_enabled, } | tojson }}' {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
 
     {%- block body %}
 
@@ -88,7 +88,7 @@
 
       {%- block browserupgrade %}
       <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
       {%- endblock browserupgrade %}
       {%- block body_inner %}
@@ -127,6 +127,13 @@
 
         {% include config.THEME_JAVASCRIPT_TEMPLATE %}
       {%- endblock javascript %}
+
+      {%- block javascript_overridable %}
+        {#
+          empty placeholder: required to inject the overridable-registry
+          JS file always as last.
+        #}
+      {%- endblock javascript_overridable %}
 
       {%- block trackingcode %}
         {% include config.THEME_TRACKINGCODE_TEMPLATE %}

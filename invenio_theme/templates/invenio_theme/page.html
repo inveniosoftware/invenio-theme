@@ -72,29 +72,68 @@
     {%- endblock css %}
     {%- endblock head %}
   </head>
-  <body data-invenio-config='{{ { "isMathJaxEnabled": config.THEME_MATHJAX_CDN, } | tojson }}' ng-csp {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
+  {% set is_math_jax_enabled = config.THEME_MATHJAX_CDN is defined and config.THEME_MATHJAX_CDN is not none and config.THEME_MATHJAX_CDN != "" %}
+  <body data-invenio-config='{{ { "isMathJaxEnabled": is_math_jax_enabled, } | tojson }}' {% if body_css_classes %} class="{{ body_css_classes|join(' ') }}"{% endif %}{% if g.ln %} lang="{{ g.ln.split('_', 1)[0]|safe }}"{% if rtl_direction %} {{ rtl_direction|safe }}{% endif %}{% endif %} itemscope itemtype="http://schema.org/WebPage" data-spy="scroll" data-target=".scrollspy-target">
+
     {%- block body %}
-    {%- block browserupgrade %}
-    <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    {%- endblock browserupgrade %}
-    {%- block body_inner %}
-    {%- block page_header %}
-{% include config.THEME_HEADER_TEMPLATE %}
-    {%- endblock page_header %}
-    {%- block page_body %}
-{% include "invenio_theme/body.html" %}
-    {%- endblock page_body %}
-    {%- block page_footer %}
-{% include config.THEME_FOOTER_TEMPLATE %}
-    {%- endblock page_footer %}
-    {%- endblock body_inner %}
-    {%- block javascript %}
-{% include config.THEME_JAVASCRIPT_TEMPLATE %}
-    {%- endblock javascript %}
-    {%- block trackingcode %}{% include config.THEME_TRACKINGCODE_TEMPLATE %}
-    {%- endblock %}
+
+      {%- block bypasslinks %}
+      <a id="skip-to-main" class="ui button primary ml-5 mt-5 skip-link" href="#main">{{_('Skip to main')}}</a>
+      {%- endblock bypasslinks %}
+
+      {%- block browserupgrade %}
+      <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      {%- endblock browserupgrade %}
+      {%- block body_inner %}
+
+        {%- block page_header %}
+          {% include config.THEME_HEADER_TEMPLATE %}
+        {%- endblock page_header %}
+
+        <main id="main">
+        <div class="invenio-page-body">
+          {%- block page_body %}
+            {% include "invenio_theme/body.html" %}
+          {%- endblock page_body %}
+        </div>
+        </main>
+
+        {%- block page_footer %}
+          {% include config.THEME_FOOTER_TEMPLATE %}
+        {%- endblock page_footer %}
+
+      {%- endblock body_inner %}
+
+      {%- block javascript %}
+
+        {% if config.THEME_MATHJAX_CDN %}
+          <script type="text/javascript">
+            window.MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                processEscapes: true // Allows escaping $ signs if needed
+              }
+            };
+          </script>
+          <script type="text/javascript" src="{{ config.THEME_MATHJAX_CDN }}"></script>
+        {% endif %}
+
+        {% include config.THEME_JAVASCRIPT_TEMPLATE %}
+      {%- endblock javascript %}
+
+      {%- block javascript_overridable %}
+        {#
+          empty placeholder: required to inject the overridable-registry
+          JS file always as last.
+        #}
+      {%- endblock javascript_overridable %}
+
+      {%- block trackingcode %}
+        {% include config.THEME_TRACKINGCODE_TEMPLATE %}
+      {%- endblock %}
+
     {%- endblock body %}
   </body>
 </html>
