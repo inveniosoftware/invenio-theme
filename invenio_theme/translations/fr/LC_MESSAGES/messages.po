@@ -10,7 +10,6 @@
 # Alizee Pace <alizee.pace@gmail.com>, 2022
 # Keziah Okyere, 2024
 # 
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme 3.3.0\n"
