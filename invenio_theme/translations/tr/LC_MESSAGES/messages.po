@@ -9,7 +9,6 @@
 # Ben Translation and Interpreting Services <info@bentercume.com>, 2022
 # BEN TERCÜME, 2024
 # 
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: invenio-theme 3.3.0\n"
